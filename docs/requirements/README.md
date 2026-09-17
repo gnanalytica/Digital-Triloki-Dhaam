@@ -5,7 +5,15 @@ pandit can comment on it directly:
 
 **[Mandir Triloki Dhaam Eindhoven — Digital Revamp Requirements (v0.1 DRAFT)](https://docs.google.com/document/d/1akGXltT6FMmDjNoK3zEaNTnJufHHhu6opvkHWwZnsNs/edit)**
 
-Drive folder: [Digital Triloki Dhaam](https://drive.google.com/drive/folders/1qQZNgu8gygbgCLSnL1WYkufHUt7jmhTr)
+It lives in the **Digital Triloki Dhaam shared drive**:
+<https://drive.google.com/drive/folders/0AFZjants0p6PUk9PVA>
+
+A shared drive rather than someone's personal Drive is the right home for this,
+and worth keeping to for everything that follows. Files in a shared drive are
+owned by the drive, not by an individual — so nothing the temple depends on
+disappears when a volunteer's account is closed or handed over. For an
+organisation whose last three website redesigns each left content stranded,
+that matters more than it sounds.
 
 `requirements-v0.1.html` is the source that document was generated from, kept
 here so the text is diffable and the Doc can be regenerated. **The Doc is
