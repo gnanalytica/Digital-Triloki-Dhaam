@@ -1,0 +1,157 @@
+# Courses and classes, school year 2025/2026.
+#
+# SOURCE: legacy "Activiteiten" page (/activiteiten/).
+#
+# NOTE ON DATES: the session list below runs to 12 April 2026 and is the
+# 2025/2026 year. Today's date is past several of these. Before the new site
+# goes live, either (a) publish the 2026/2027 dates, or (b) mark the year as
+# finished and say when the next one starts. A visitor landing on a list of
+# past dates assumes the temple is inactive — which is the opposite of true.
+#
+# All sign-ups currently go to one gmail inbox with no form, no confirmation
+# and no capacity tracking (audit finding C1). Several classes are advertised
+# as "na voldoende aanmeldingen zal er een groep worden gemaakt" (a group will
+# be formed once there are enough sign-ups) — but nothing tells a would-be
+# participant how many have signed up or whether it is going ahead, so there
+# is no reason to believe an e-mail will lead anywhere. This is the clearest
+# candidate for the first automation.
+
+signup:
+  method: email
+  email: trilokidhaam@gmail.com
+  instruction:
+    nl: Meld u aan via trilokidhaam@gmail.com
+    en: Register by e-mailing trilokidhaam@gmail.com
+  weaknesses:
+    - no confirmation that a registration was received
+    - no record of who signed up for what
+    - no way to tell a waiting list it is now going ahead
+    - no capacity limit, so a session can be oversubscribed silently
+    - no reminder before the session
+
+# Sessions shared by Hindu Basics and the Hindi classes — they run on the same
+# Sundays, back to back (Hindi 12:00-13:00, then Hindu Basics 13:00-15:30).
+academic_year_2025_2026_sessions:
+  - { n: 1, date: 2025-09-07 }
+  - { n: 2, date: 2025-10-05 }
+  - { n: 3, date: 2025-11-02 }
+  - { n: 4, date: 2025-12-07 }
+  - { n: 5, date: 2026-01-04 }
+  - { n: 6, date: 2026-02-01 }
+  - { n: 7, date: 2026-03-01 }
+  - { n: 8, date: 2026-04-12 }
+
+courses:
+  - id: hindu-basics
+    name:
+      nl: Cursus Hindoe Basics
+      en: Hindu Basics course
+    description:
+      nl: >-
+        Deze cursus biedt een uitgebreide inleiding tot de fundamenten van het
+        Sanatan Dharma, inclusief filosofie, rituelen en cultuur.
+      en: >-
+        A broad introduction to the foundations of Sanatan Dharma, covering
+        philosophy, ritual and culture.
+    schedule:
+      start: "13:00"
+      end: "15:30"
+      day: sunday
+    sessions_ref: academic_year_2025_2026_sessions
+    audience:
+      nl: Voor deelnemers, ook samen met kinderen
+      en: For adults, and for parents attending together with their children
+    total_sessions_planned: "8-10"
+    status: running
+    note: >-
+      The homepage bundles this with "hindiles / kinderprogramma" in a single
+      heading reading "Onderdeel van 8-10 sessies periode 2025-2026", while
+      this page lists exactly 8 dated sessions. Decide whether there are 8 or
+      10 and say the same thing in both places.
+
+  - id: hindi-classes
+    name:
+      nl: Hindilessen
+      en: Hindi classes
+    description:
+      nl: >-
+        Hindilessen voor kinderen en volwassenen, aansluitend op de zondagse
+        programmering.
+      en: >-
+        Hindi language classes for children and adults, running alongside the
+        Sunday programme.
+    schedule:
+      start: "12:00"
+      end: "13:00"
+      day: sunday
+    sessions_ref: academic_year_2025_2026_sessions
+    status: running
+    content_bug: >-
+      On the legacy site this class reuses the Hindu Basics description
+      verbatim ("een uitgebreide inleiding tot de fundamenten van het Sanatan
+      Dharma"), which does not describe a language class at all. Needs its own
+      copy: what level, which script (Devanagari?), which age groups.
+
+  - id: harmonium
+    name:
+      nl: Harmoniumles
+      en: Harmonium lessons
+    description:
+      nl: >-
+        Leer de basis en gevorderde technieken van het harmonium spelen onder
+        begeleiding van ervaren muzikanten. Onze lessen zijn geschikt voor alle
+        niveaus.
+      en: >-
+        Learn harmonium from the basics through to advanced technique, guided
+        by experienced musicians. Suitable for all levels.
+    status: on_demand
+    gating:
+      nl: Na voldoende aanmeldingen zal er een groep worden gemaakt
+      en: A group will be formed once there are enough registrations
+
+  - id: dhol
+    name:
+      nl: Dholles
+      en: Dhol lessons
+    description:
+      nl: Ontdek de ritmische wereld van de dhol.
+      en: Discover the rhythmic world of the dhol.
+    status: on_demand
+    gating:
+      nl: Na voldoende aanmeldingen zal er een groep worden gemaakt
+      en: A group will be formed once there are enough registrations
+
+  - id: music-for-children
+    name:
+      nl: Muziekles voor Kinderen
+      en: Music lessons for children
+    description:
+      nl: >-
+        Speciaal ontworpen voor kinderen, deze lessen introduceren de
+        kleintjes in de wereld van muziek op een speelse en educatieve manier.
+      en: >-
+        Designed for children, these lessons introduce the youngest members to
+        music in a playful, educational way.
+    status: on_demand
+    gating:
+      nl: Na voldoende aanmeldingen zal er een groep worden gemaakt
+      en: A group will be formed once there are enough registrations
+    note: >-
+      Anything aimed at children needs a stated safeguarding position and,
+      under GDPR, explicit parental consent before a child's name or photo is
+      collected or published. Neither exists today. See docs/roadmap.md.
+
+  - id: yoga-meditation
+    name:
+      nl: Yoga en Meditatie
+      en: Yoga and Meditation
+    description:
+      nl: >-
+        Verhoog je welzijn met onze yoga- en meditatiesessies, ontworpen om
+        lichaam en geest in balans te brengen.
+      en: >-
+        Sessions designed to bring body and mind into balance.
+    status: on_demand
+    gating:
+      nl: Na voldoende aanmeldingen zal er een groep worden gemaakt
+      en: A group will be formed once there are enough registrations

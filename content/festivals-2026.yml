@@ -1,0 +1,212 @@
+# Annual programme (Jaarprogramma) 2026.
+#
+# SOURCE
+# Transcribed from the two poster images that are the *entire* content of the
+# legacy /jaarprogramma/ page:
+#   Dutch  : wp-content/uploads/IMG-20260104-WA0004.jpg
+#   English: wp-content/uploads/IMG-20260104-WA0003.jpg
+#
+# WHY THIS FILE EXISTS
+# On the legacy site this programme is only a picture. That means it cannot be
+# searched, indexed by Google, read by a screen reader, translated, or added to
+# anyone's calendar — and a visitor on a phone has to pinch-zoom to read it.
+# It is the single most valuable piece of information the temple publishes all
+# year, and it is locked in a JPEG (audit finding B1).
+#
+# From this file we can generate: the website's calendar, an .ics feed people
+# subscribe to, schema.org/Event markup, social posts, and next year's poster.
+#
+# VERIFICATION STATUS
+# Dates below are transcribed faithfully from the poster. Transcription has
+# been cross-checked between the Dutch and English versions, which agree on
+# every date. One date conflicts with the astronomical panchang — see the
+# `verify` block on `divali`. Have the pandit confirm the whole list before
+# publishing, and record the outcome here.
+
+year: 2026
+timezone: Europe/Amsterdam
+
+# Applies to every festival unless the entry overrides it.
+defaults:
+  start_time: "18:00"
+  # Poster wording is "Vanaf 18:00 uur" / "From 18:00 hours" — a start time
+  # with no published end time.
+  end_time: null
+
+# Repeated weekly, stated at the foot of the poster in both languages.
+weekly:
+  note:
+    nl: De mandir is elke zondag geopend van 13:00 – 15:30 uur
+    en: The mandir is open every Sunday from 13:00 – 15:30 hours
+  # Canonical definition lives in content/temple.yml -> weekly_service.
+
+festivals:
+  - id: makar-sankranti
+    date: 2026-01-14
+    weekday: wednesday
+    name:
+      nl: Makar Sakranti
+      en: Makar Sakranti
+    deity: surya
+
+  - id: vasant-panchami
+    date: 2026-01-23
+    weekday: friday
+    name:
+      nl: Vasant Panchami / Saraswati Puja
+      en: Vasant Panchami / Saraswati Puja
+    deity: saraswati
+
+  - id: maha-shivratri
+    date: 2026-02-15
+    weekday: sunday
+    start_time: "17:00"   # earlier than the 18:00 default
+    name:
+      nl: Maha Shivratri
+      en: Maha Shivratri
+    deity: shiva
+    # The homepage promotes this event but omits the 17:00 start time, so a
+    # visitor reading only the homepage would arrive an hour late (audit A4).
+    tagline:
+      nl: Kom en ervaar de kracht van Shivji
+      en: Come and experience the power of Shivji
+
+  - id: holika-dahan
+    date: 2026-03-02
+    weekday: monday
+    name:
+      nl: Holika Dahan
+      en: Hollka Dahan   # poster's English panel; correct spelling is "Holika"
+    spelling_note: >-
+      The English poster reads "Hollka Dahan". Correct to "Holika Dahan" when
+      the poster is next reprinted.
+
+  - id: chaitra-navratri
+    date: 2026-03-18
+    end_date: 2026-03-27
+    weekday: wednesday
+    name:
+      nl: Chaitra Nevratri
+      en: Chaitra Navratri
+    deity: durga
+    spelling_note: >-
+      The Dutch poster reads "Nevratri", the English "Navratri". Standardise on
+      "Navratri" in both languages.
+    verify: true
+    verify_note: >-
+      A nine-night festival listed as spanning ten days (18–27 March), with
+      Ramnaumi falling on 26 March — the day before the stated end. Confirm
+      whether 27 March is intentional (e.g. including Dashami) or a typo.
+
+  - id: ramnavami
+    date: 2026-03-26
+    weekday: thursday
+    name:
+      nl: Ramnaumi
+      en: Ramnaumi
+    deity: rama
+
+  - id: hanuman-jayanti
+    date: 2026-04-01
+    weekday: wednesday
+    name:
+      nl: Hanuman Jayanti
+      en: Hanuman Jayanti
+    deity: hanuman
+
+  - id: shravan-somvaar
+    dates:
+      - 2026-08-03
+      - 2026-08-10
+      - 2026-08-17
+      - 2026-08-24
+    weekday: monday
+    name:
+      nl: Shravan Somvaar Shivpuja
+      en: Shravan Somvaar Shivpuja
+    deity: shiva
+    recurring: true
+
+  - id: krishna-janmashtami
+    date: 2026-09-03
+    weekday: thursday
+    name:
+      nl: Krishna Janamashtmi
+      en: Krishna Janamashtmi
+    deity: krishna
+
+  - id: ganesh-chaturthi
+    date: 2026-09-14
+    weekday: monday
+    name:
+      nl: Ganesh Chaturthi
+      en: Ganesh Chaturthi
+    deity: ganesha
+
+  - id: shardiya-navratri
+    date: 2026-10-11
+    end_date: 2026-10-19
+    weekday: sunday
+    name:
+      nl: Shardiya Navratri
+      en: Shardiya Navratri
+    deity: durga
+    every_evening: true
+    note:
+      nl: Elke avond vanaf 18:00 uur
+      en: Every evening from 18:00 hours
+    # This is the deadline anchor for the stage-1 website — see docs/roadmap.md.
+
+  - id: vijaya-dashami
+    date: 2026-10-20
+    weekday: tuesday
+    name:
+      nl: Vijaya Dashmi (Dussehra)
+      en: Vijaya Dashmi (Dussehra)
+    deity: rama
+    spelling_note: >-
+      The Dutch poster reads "Oussehra"; correct to "Dussehra".
+
+  - id: divali
+    date: 2026-11-09
+    weekday: monday
+    name:
+      nl: Divali
+      en: Divali
+    deity: lakshmi
+    verify: true
+    verify_note: >-
+      Worth one confirming question, but probably correct as printed. The
+      poster says Monday 9 November; widely published (India-based) panchang
+      sources place Diwali / Lakshmi Puja 2026 on Sunday 8 November.
+      The temple's own legacy page on the Vedic calendar
+      (content/legacy/vedische-astrologie.md) explains precisely why this gap
+      arises: festival dates are computed from the tithi present at sunrise,
+      and because sunrise in the Netherlands is much later than in India, the
+      Dutch vedic calendar can legitimately place a festival a day apart from
+      the Indian one. The poster's spacing from Dussehra (20 Oct) is also
+      internally consistent with 9 November. So treat 9 November as
+      intentional unless the pandit says otherwise — just confirm it, and make
+      sure the website, poster and socials all carry the same date. This is
+      the highest-attendance date of the year.
+    editorial_note: >-
+      Publish the reasoning, not just the date. A short note explaining that
+      the mandir follows the vedic calendar computed for the Netherlands
+      pre-empts the "but Google says the 8th" question from every visitor, and
+      shows the temple knows exactly what it is doing.
+
+  - id: geeta-jayanti
+    date: 2026-12-20
+    weekday: sunday
+    start_time: "13:00"   # daytime, unlike the rest
+    name:
+      nl: Geeta Jayanti
+      en: Geeta Jayanti
+
+# Poster footer, transcribed. Both language versions carry a typo in at least
+# one field; the low resolution of the source images means the exact characters
+# could not be read with confidence. Proofread the footer against the original
+# artwork before reprinting, paying attention to the street name, the city
+# name, the phone number and the website domain. The authoritative values are
+# in content/temple.yml.
+poster_footer_needs_proofread: true

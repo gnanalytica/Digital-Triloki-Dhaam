@@ -1,0 +1,208 @@
+# Rituals, samskars and ceremonies the mandir performs for families.
+#
+# SOURCE
+# The twelve names come from the legacy "Rituelen en Ceremoniën" page
+# (/diensten/). On that page they are the *only* content: twelve headings with
+# completely empty description bodies (audit finding B2).
+#
+# WHY THAT MATTERS
+# Several of these are ceremonies a family needs at the hardest moments of
+# their life — antyeshti (funeral rites), shradh (rites for the departed),
+# grah shanti. Someone bereaved on a Tuesday evening is searching for how to
+# reach a pandit right now. A page that gives them a word with no explanation,
+# no lead time, no indication of cost and no way to book is failing them at
+# the exact moment it matters most. Filling in `description` and `booking`
+# below is the single highest-value content job on the site.
+#
+# Descriptions marked `source: legacy` are recovered from the temple's own
+# 2015 pages and are safe to publish. Those marked `needs_drafting: true` must
+# be written with the pandit — do not invent them, and do not let an AI tool
+# generate them. Getting a samskar's description wrong is a matter of respect,
+# not just accuracy.
+
+contact_for_all:
+  email: trilokidhaam@gmail.com   # canonical source: content/temple.yml
+  phone_display: 06-45461229
+
+# Open question for the board, applies to every entry below.
+open_questions:
+  - >-
+    Is there a fee, a suggested donation, or nothing, for each ceremony?
+    Families consistently want to know and are often too polite to ask.
+  - >-
+    How much notice does the pandit need? Antyeshti in particular is
+    time-critical and cannot wait for an e-mail reply on Monday.
+  - >-
+    Is there an out-of-hours route for funeral rites? If yes, publish it
+    prominently. If no, say what a family should do instead.
+  - >-
+    Can these be performed at home / at a crematorium / only at the mandir?
+
+services:
+  - id: havan
+    name:
+      nl: Havan Ceremonie
+      en: Havan Ceremony
+    category: ceremony
+    needs_drafting: true
+
+  - id: puja
+    name:
+      nl: Puja Ritueel
+      en: Puja Ritual
+    category: ceremony
+    source: legacy
+    legacy_page: content/legacy/puja.md
+    description:
+      nl: >-
+        Een Puja is een Vedische ceremonie die al gauw een paar uur duurt. In
+        het algemeen is ze bedoeld om hindernissen uit de weg te ruimen of
+        positieve tendensen te bevorderen. Dit kan worden bepaald aan de hand
+        van een geboortekaart uit de horoscoop, maar ook de eigen wensen van de
+        persoon zijn belangrijk. De Puja wordt uitgevoerd door een daartoe
+        opgeleide Vedische Pandit, die de relevante mantra's uit de Veda's
+        reciteert.
+      en: >-
+        A puja is a Vedic ceremony that typically lasts a few hours. Broadly,
+        it is performed to clear obstacles or to strengthen positive
+        tendencies. What is needed can be determined from the birth chart, but
+        the wishes of the person requesting it matter just as much. The puja is
+        performed by a trained Vedic pandit who recites the relevant mantras
+        from the Vedas.
+
+  - id: yagya
+    name:
+      nl: Yagya
+      en: Yagya
+    category: ceremony
+    source: legacy
+    legacy_page: content/legacy/yagya.md
+    description:
+      nl: >-
+        Yagyas zijn rituelen met een levensondersteunend of levensbevorderlijk
+        effect, uitgevoerd door een of meer Vedische Pandits voor het welzijn
+        van een persoon, een familie, een organisatie of een samenleving. De
+        wijze waarop ze verricht moeten worden en hun effecten worden
+        uitvoerig in de Veda's beschreven.
+      en: >-
+        Yagyas are rituals with a life-supporting effect, performed by one or
+        more Vedic pandits for the wellbeing of a person, a family, an
+        organisation or a community. The manner in which they are to be
+        performed, and their effects, are described at length in the Vedas.
+    # Present on the legacy site but NOT listed on the current rituals page —
+    # an existing service the temple has stopped advertising.
+    missing_from_current_site: true
+
+  - id: grah-shanti
+    name:
+      nl: Grah Shanti
+      en: Grah Shanti
+    category: ceremony
+    needs_drafting: true
+
+  - id: griha-pravesh
+    name:
+      nl: Griha Pravesh
+      en: Griha Pravesh
+    category: ceremony
+    occasion: moving into a new home
+    needs_drafting: true
+
+  - id: hindu-horoscope
+    name:
+      nl: Hindoe Horoscoop
+      en: Hindu Horoscope
+    category: consultation
+    related_legacy_page: content/legacy/vedische-astrologie.md
+    needs_drafting: true
+    note: >-
+      The legacy Vedic-astrology page is substantive and credits a named
+      source (Bhaskaranand, of ashram Sada Shiva Dham in Loenen). Confirm he is
+      still associated with the mandir before republishing, and confirm he
+      consents to his e-mail address remaining on a public page.
+
+  - id: shradh
+    name:
+      nl: Shradh
+      en: Shradh
+    category: samskar
+    occasion: rites for the departed
+    sensitive: true
+    needs_drafting: true
+
+  - id: vivah-samskar
+    name:
+      nl: Vivah samskar
+      en: Vivah samskar
+    category: samskar
+    occasion: marriage
+    needs_drafting: true
+    note: >-
+      Couples plan a year ahead and compare venues. This deserves a proper
+      page: what the ceremony involves, capacity of the mandir, what the
+      family provides, lead time, and whether the pandit travels to a venue.
+
+  - id: antyeshti-samskar
+    name:
+      nl: Antyeshti samskar
+      en: Antyeshti samskar
+    category: samskar
+    occasion: funeral rites
+    sensitive: true
+    time_critical: true
+    needs_drafting: true
+    note: >-
+      Highest priority of the twelve. A bereaved family needs a phone number
+      and a lead time, immediately and in both languages.
+
+  - id: mundan-samskar
+    name:
+      nl: Mundan samskar
+      en: Mundan samskar
+    category: samskar
+    occasion: first haircut
+    needs_drafting: true
+
+  - id: sundarkand-path
+    name:
+      nl: Sundarkand path
+      en: Sundarkand path
+    category: recitation
+    needs_drafting: true
+
+  - id: kirtan-bhajan
+    name:
+      nl: Kirtan / bhajan
+      en: Kirtan / bhajan
+    category: music
+    needs_drafting: true
+
+  - id: lezingen
+    name:
+      nl: Lezingen
+      en: Lectures
+    category: teaching
+    needs_drafting: true
+
+# Also offered, per the "Levensvragen" (spiritual care) page.
+pastoral_care:
+  id: geestelijke-verzorging
+  name:
+    nl: Geestelijke begeleiding
+    en: Spiritual care and guidance
+  provider: Pandit Vinay Narain
+  description:
+    nl: >-
+      Bij Mandir Triloki Dhaam zijn er mogelijkheden voor individuele
+      spirituele begeleiding en ondersteuning. Onze geestelijk verzorger kan
+      samen met u nagaan of persoonlijke begeleiding past in uw situatie.
+    en: >-
+      Mandir Triloki Dhaam offers individual spiritual guidance and support.
+      Our spiritual carer can explore with you whether personal guidance fits
+      your situation.
+  intake_route: email
+  note: >-
+    A contact form or a simple request form would serve this better than an
+    e-mail address, because people asking for pastoral support often do not
+    know what to write in a blank e-mail. Keep it short and make clear who
+    reads it and how confidential it is.

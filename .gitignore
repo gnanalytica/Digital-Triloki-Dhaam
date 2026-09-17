@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.pnp*
+# Build output
+dist/
+build/
+.astro/
+.next/
+.output/
+# Environment — never commit secrets or donor/hosting credentials
+.env
+.env.*
+!.env.example
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+# Scratch
+*.log
+tmp/

@@ -1,0 +1,153 @@
+# Canonical facts about the mandir.
+#
+# WHY THIS FILE EXISTS
+# The legacy site states the opening hours three different ways and the e-mail
+# address two different ways (see docs/discovery/legacy-site-audit.md, finding
+# A1). That happened because each page carried its own copy of the facts.
+# Everything that renders these facts — website, socials, posters, connectors —
+# must read them from here so they can only ever drift in one place.
+#
+# Fields marked `verify: true` are NOT yet confirmed by the temple. Do not
+# publish them until someone from Stichting Senskaar Triloki Dhaam confirms.
+
+organisation:
+  # Legal entity that holds the bank account.
+  legal_name: Stichting Senskaar Triloki Dhaam
+  # Public-facing name. Use this in all copy and metadata.
+  public_name: Mandir Triloki Dhaam Eindhoven
+  short_name: Mandir Triloki Dhaam
+  motto:
+    sa: Dharmo Rakshati Rakshitah
+    nl: De Dharma beschermt degenen die haar beschermen
+    en: Dharma protects those who protect it
+
+address:
+  street: Tongelresestraat 371
+  postal_code: 5642 NC
+  city: Eindhoven
+  country_code: NL
+  # Written out, for one-line display.
+  one_line: Tongelresestraat 371, 5642 NC Eindhoven
+  # Not yet sourced — needed for maps, schema.org and the "plan your visit" page.
+  latitude: null
+  longitude: null
+
+contact:
+  # The gmail address is the one actually used across the live site and on the
+  # 2026 poster. contact@trilokidhaam.nl appears on one orphaned legacy page
+  # and has not been verified as active — see audit finding A1.
+  email: trilokidhaam@gmail.com
+  email_alternate:
+    address: contact@trilokidhaam.nl
+    verify: true
+    note: >-
+      Appears only on the orphaned legacy contact page. Confirm whether this
+      mailbox exists and is monitored; if it does, prefer it over gmail for a
+      more trustworthy public presence. If it does not, remove it everywhere.
+  phone_display: 06-45461229
+  phone_e164: "+31645461229"
+
+# The single weekly service. This is the fact the legacy site most often gets
+# wrong; treat it as authoritative.
+weekly_service:
+  day: sunday
+  start: "13:00"
+  end: "15:30"
+  timezone: Europe/Amsterdam
+  label:
+    nl: Zondagdienst
+    en: Sunday service
+  # Source: 2026 annual programme poster (both language versions) and the
+  # Zondagdienst page. Two orphaned legacy pages disagree; they are wrong.
+  programme:
+    - start: "13:00"
+      end: "14:00"
+      title:
+        nl: Puja en Bhajan
+        en: Puja and Bhajan
+      description:
+        nl: Offeren aan de goden en het samen zingen van religieuze liederen.
+        en: Offerings to the deities and communal singing of devotional songs.
+    - start: "14:00"
+      end: "15:00"
+      title:
+        nl: Parvachan
+        en: Parvachan (discourse)
+      description:
+        nl: Lezing over een onderwerp uit het Hindoeïsme, soms interactief.
+        en: >-
+          A discourse on a topic from Hinduism. Sessions are sometimes
+          interactive, with room for questions.
+    - start: "15:00"
+      end: "15:30"
+      title:
+        nl: Aarti en Prasadh
+        en: Aarti and Prasadh
+      description:
+        nl: Eerbetuiging aan de goden met muziek, gevolgd door prasadh en panchamrit.
+        en: >-
+          Homage to the deities accompanied by music, followed by prasadh and
+          panchamrit (milk with five ingredients).
+
+# IMPORTANT: the mandir is NOT open outside the Sunday service and the dates in
+# content/festivals-2026.yml. The legacy FAQ page claims "open daily from 8 AM
+# to 8 PM" — that is fabricated and must never be reproduced (audit A2).
+opening_model: by_service_only
+
+donations:
+  iban: NL90INGB0007660527
+  account_holder: Stichting Senskaar Triloki Dhaam
+  bank: ING
+  methods:
+    - bank_transfer
+    - standing_order   # "doorlopende opdracht" / automatische incasso
+    - qr_code          # QR codes are displayed in the mandir and on the donation page
+  # Whether the stichting holds an ANBI ruling decides if Dutch donors can
+  # deduct gifts, which is a material fundraising argument. Nothing on the
+  # legacy site mentions it either way.
+  anbi_status:
+    known: false
+    verify: true
+    note: >-
+      Ask the board whether the stichting is an ANBI. If it is, publish the
+      RSIN and the ANBI-required disclosures; that is a legal condition for
+      donors to claim tax relief.
+  rsin: null
+  kvk_number: null
+
+people:
+  - name: Pandit Vinay Narain
+    roles:
+      - pandit
+      - geestelijk_verzorger   # academically trained spiritual carer
+    bio:
+      nl: >-
+        Pandit Vinay Narain is een ervaren academisch geschoolde geestelijk
+        verzorger met jarenlange ervaring in het begeleiden van individuen op
+        hun spirituele pad in diverse omstandigheden.
+      en: >-
+        Pandit Vinay Narain is an experienced, academically trained spiritual
+        carer with many years of experience guiding individuals on their
+        spiritual path across a wide range of circumstances.
+
+social:
+  # Verified live on the legacy site. NOTE: the legacy site also displays a
+  # link to X/Twitter and LinkedIn with follower counts; no such accounts were
+  # found and the counts are fabricated (audit A3). They are deliberately
+  # absent from this list.
+  youtube: https://www.youtube.com/@mandirtrilokidhaam32
+  instagram: https://www.instagram.com/mandirtrilokidhaam/
+  facebook_group: https://www.facebook.com/groups/MandirTrilokiDhaam
+  facebook_group_is_private: true
+  whatsapp: null   # a broadcast/community channel is proposed in docs/roadmap.md
+
+web:
+  legacy_url: https://trilokidhaam.nl/
+  # WordPress 7.1 + Divi + WooCommerce. Hosting and the annual fee are donated
+  # by a third party (see docs/discovery/voice-note-2026-09-17.md); get the
+  # details before any migration decision.
+  legacy_stack: wordpress
+  languages:
+    - nl
+    - en
+  default_language: nl
