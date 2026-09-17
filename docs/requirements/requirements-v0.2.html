@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Mandir Triloki Dhaam Eindhoven — Digital Revamp Requirements</title></head>
+<body>
+
+<!-- ============ COVER ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#6E211D;border:0;padding:26pt 22pt 10pt 22pt">
+<p style="margin:0"><span style="font-family:Georgia;font-size:9pt;color:#E8B87A;font-weight:700">STICHTING SENSKAAR TRILOKI DHAAM &nbsp;·&nbsp; EINDHOVEN</span></p>
+<p style="margin:0"><span style="font-family:Georgia;font-size:27pt;color:#FFFFFF;font-weight:700">Digital Revamp</span></p>
+<p style="margin:0"><span style="font-family:Georgia;font-size:17pt;color:#E8B87A">Requirements Document</span></p>
+</td></tr>
+<tr><td style="background-color:#C87B1E;border:0;padding:3pt 22pt 3pt 22pt">
+<p style="margin:0"><span style="font-size:9pt;color:#FFFFFF;font-weight:700">Mandir Triloki Dhaam Eindhoven &nbsp;—&nbsp; Stage 1 scope &nbsp;—&nbsp; target 10 October 2026</span></p>
+</td></tr>
+</table>
+
+<p style="margin:0"><span style="font-size:6pt">&nbsp;</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:22%;border:0;padding:4pt 8pt 4pt 0"><span style="font-size:9pt;color:#5F6368;font-weight:700">VERSION</span></td>
+<td style="width:78%;border:0;padding:4pt 0 4pt 0"><span style="font-size:10.5pt">0.2 — draft for review</span></td>
+</tr>
+<tr>
+<td style="border:0;padding:4pt 8pt 4pt 0"><span style="font-size:9pt;color:#5F6368;font-weight:700">DATE</span></td>
+<td style="border:0;padding:4pt 0 4pt 0"><span style="font-size:10.5pt">17 September 2026</span></td>
+</tr>
+<tr>
+<td style="border:0;padding:4pt 8pt 4pt 0"><span style="font-size:9pt;color:#5F6368;font-weight:700">FOR</span></td>
+<td style="border:0;padding:4pt 0 4pt 0"><span style="font-size:10.5pt">Sandeep, Mayur, and the board of Stichting Senskaar Triloki Dhaam</span></td>
+</tr>
+<tr>
+<td style="border:0;padding:4pt 8pt 4pt 0"><span style="font-size:9pt;color:#5F6368;font-weight:700">SOURCES</span></td>
+<td style="border:0;padding:4pt 0 4pt 0"><span style="font-size:10.5pt">Project brief (voice note, 17 Sep 2026); full content audit of all 82 pages of trilokidhaam.nl</span></td>
+</tr>
+<tr>
+<td style="border:0;padding:4pt 8pt 4pt 0"><span style="font-size:9pt;color:#5F6368;font-weight:700">REPOSITORY</span></td>
+<td style="border:0;padding:4pt 0 4pt 0"><span style="font-family:Roboto Mono;font-size:9.5pt;color:#1A5FB4">github.com/gnanalytica/Digital-Triloki-Dhaam</span></td>
+</tr>
+</table>
+
+<p style="margin:0"><span style="font-size:6pt">&nbsp;</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="width:20pt;background-color:#C87B1E;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FFF6E6;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt;font-weight:700;color:#A6650B">This is a draft for discussion.</span>
+<span style="font-size:10.5pt">Anything marked </span><span style="font-size:10.5pt;font-weight:700;color:#A6650B">TO CONFIRM</span><span style="font-size:10.5pt"> is an open question, not a decision, and must not be published until someone from the temple has verified it.</span>
+</td></tr>
+</table>
+
+<p style="margin:0"><span style="font-size:8pt">&nbsp;</span></p>
+
+<!-- ============ CONTENTS ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">Contents</span>
+</td></tr>
+</table>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:50%;border:0;padding:6pt 10pt 0 0">
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">1</span> &nbsp;Executive summary</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">2</span> &nbsp;The brief</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">3</span> &nbsp;Timeline</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">4</span> &nbsp;Current state</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">5</span> &nbsp;Content requirements</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">6</span> &nbsp;Functional requirements</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">7</span> &nbsp;Non-functional requirements</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">8</span> &nbsp;Proposed structure</span></p>
+</td>
+<td style="width:50%;border:0;padding:6pt 0 0 10pt">
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">9</span> &nbsp;Canonical facts</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">10</span> &nbsp;GDPR and safeguarding</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">11</span> &nbsp;Fix on the live site now</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">12</span> &nbsp;Decisions needed</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">13</span> &nbsp;Out of scope — Stage 2</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">14</span> &nbsp;Technical approach</span></p>
+<p style="margin:0"><span style="font-size:10pt"><span style="font-weight:700;color:#8C2B26">15</span> &nbsp;Definition of done</span></p>
+</td>
+</tr>
+</table>
+<p style="margin:0"><span style="font-size:8pt;color:#5F6368">Short of time? Section 11 is what to fix today. Section 12 is what we need decided.</span></p>
+
+<p style="margin:0"><span style="font-size:8pt">&nbsp;</span></p>
+
+<!-- ============ 1 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">1 &nbsp;Executive summary</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">The brief asks for two stages. </span><span style="font-size:10.5pt;font-weight:700">Stage 1</span><span style="font-size:10.5pt">: the website gives the right information in Dutch and English — weekly services, festivals, mantras and related knowledge — and forms a loop with the temple's social accounts. </span><span style="font-size:10.5pt;font-weight:700">Stage 2</span><span style="font-size:10.5pt">, only once stage 1 is right: a community-building platform that positions the mandir as a centre of Sanatan Dharma.</span></p>
+
+<p><span style="font-size:10.5pt">All 82 pages of the current site were retrieved and read before writing this, the navigation mapped, and the annual-programme posters transcribed. Four conclusions matter.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1E7B34;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF6EC;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#166B2B">1. The temple already owns most of the content it needs.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt">This is the most important finding, and it is good news. Roughly 39,000 characters of careful, knowledgeable Dutch writing already sit on the site — including a 5,000-character essay on mantras, five aarti texts, the scriptures, and a genuinely distinctive piece on the Vedic calendar. The brief explicitly asks for mantras; they already exist. Stage 1 is therefore mostly recovery and translation, not authorship.</span></p>
+</td></tr>
+</table>
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#A6650B;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FFF6E6;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#A6650B">2. That content is unreachable.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt">Of 82 pages, only 10 are in the menu. The other 72 were orphaned by three successive redesigns that were never cleaned up — and the longest, best writing on the site is all among them. Four </span><span style="font-size:10.5pt;font-style:italic">Home</span><span style="font-size:10.5pt"> pages and five </span><span style="font-size:10.5pt;font-style:italic">Contact</span><span style="font-size:10.5pt"> pages are live today.</span></p>
+</td></tr>
+</table>
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#B3261E;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FDECEA;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#B3261E">3. Some of what visitors do see is wrong.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt">The opening hours are published three contradictory ways, one of which tells visitors the temple is open daily 08:00–20:00 when it opens on Sunday afternoons. A volunteer page carries three testimonials from people who are not members of the community, and two pages show follower counts that disagree with each other by a factor of thirty, for accounts that in two cases do not exist. These read as unreplaced placeholders from a template-driven rebuild rather than anything deliberate — but they are live, and on a mandir's own website they cost trust. Four are fixable today; see section 11.</span></p>
+</td></tr>
+</table>
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1A5FB4;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF1FB;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#1A5FB4">4. There is no bilingual mechanism at all.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt">Not a partial one — none. No translation plugin, no language switcher, no hreflang, and the page language hard-coded to Dutch. English is instead mixed into Dutch pages at random, so an English speaker cannot choose English and a Dutch speaker cannot escape it. Meanwhile the 2026 poster </span><span style="font-size:10.5pt;font-style:italic">is</span><span style="font-size:10.5pt"> already fully bilingual — someone is doing this work well, it simply never reaches the website as text.</span></p>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Target: website basics live by Saturday 10 October 2026</span><span style="font-size:10.5pt">, the day before Shardiya Navratri. The main risk is not build time — it is that stage 1 depends on content decisions only the pandit and the board can make, and those take longer than code in a volunteer organisation. The content track should start now rather than on 1 October.</span></p>
+
+<!-- ============ 2 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">2 &nbsp;The brief</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">From the project voice note of 17 September 2026, which sets two stages.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">2.1 &nbsp;Stage 1 — right information, two languages, social loop</span></h3>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:9%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REF</span></td>
+<td style="width:44%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REQUIREMENT</span></td>
+<td style="width:47%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">IN THE BRIEF'S WORDS</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R1</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">The website gives the right information</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"give the right information"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R2</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">In Dutch and English</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"in Dutch and English"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R3</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Weekly services</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"the weekly services"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R4</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Festivals and festivities</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"the festivities"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R5</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Mantras</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"the mantras"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R6</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">The wider body of religious knowledge</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"and that kind of information"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R7</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Website leads people to the social platforms</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"the website is leading people to the social platforms"</span></td>
+</tr>
+<tr>
+<td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">R8</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Social platforms lead people back to the website</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"and from social platforms to the website"</span></td>
+</tr>
+</table>
+
+<p><span style="font-size:10.5pt;font-weight:700">R1 is the load-bearing requirement</span><span style="font-size:10.5pt">, and it is stated first. Given what the audit found, "the right information" is not a vague aspiration — it is a specific, addressable defect list.</span></p>
+
+<p><span style="font-size:10.5pt;font-weight:700">R7 and R8 together describe a loop</span><span style="font-size:10.5pt">, not a row of icons in a footer. The site must give people a reason to follow, and the accounts must give people a reason to come back. The structural half is a permanent, linkable page per festival — that is what makes a bio link or a story sticker worth having. The other half needs a named person willing to post.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">2.2 &nbsp;Stage 2 — community building (deferred)</span></h3>
+
+<p><span style="font-size:10.5pt">To follow only once stage 1 is, in the brief's words, "set up in a right way": a community-building platform; the mandir as a </span><span style="font-size:10.5pt;font-style:italic">centre of Sanatan Dharma</span><span style="font-size:10.5pt">; "where we connect" people; and "link people to the right places." Recorded in section 13 so stage-1 decisions keep the door open. Not to be designed yet.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">2.3 &nbsp;Commercial facts from the brief</span></h3>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1A5FB4;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF1FB;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#1A5FB4">The website is donated.</span><span style="font-size:10.5pt"> Someone donated the site and pays the annual fee. We need to know who, what exactly it covers (domain? hosting? the Divi theme licence?), when it renews, and in whose name the domain is registered — </span><span style="font-size:10.5pt;font-style:italic">before</span><span style="font-size:10.5pt"> any hosting decision. Moving hosting could waste a donor's contribution or hand the temple an unbudgeted bill. This is a relationship question as much as a technical one.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#1A5FB4">The domain must be preserved.</span><span style="font-size:10.5pt"> trilokidhaam.nl carries whatever search reputation the temple has.</span></p>
+</td></tr>
+</table>
+
+<!-- ============ 3 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">3 &nbsp;Timeline</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">The brief asks for 1 October as a start, roughly 10 days of build, and the basics live before Navratri. Shardiya Navratri 2026 begins Sunday 11 October, so those three statements are consistent and give a single date.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#8C2B26;border:0;padding:13pt 16pt 13pt 16pt;text-align:center">
+<p style="margin:0;text-align:center"><span style="font-family:Georgia;font-size:16pt;font-weight:700;color:#FFFFFF">Website basics live by Saturday 10 October 2026</span></p>
+<p style="margin:0;text-align:center"><span style="font-size:9.5pt;color:#E8B87A">the day before Shardiya Navratri opens</span></p>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Navratri is the right thing to aim at: nine consecutive evenings, the busiest stretch of the temple's year, and the week when the most people will look the mandir up — new visitors deciding whether to come, families checking which evening to attend, neighbours wondering what is happening. It is also a real test. Nine evenings of traffic will expose anything still wrong with the hours, the calendar or the directions.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">3.1 &nbsp;The actual risk</span></h3>
+
+<p><span style="font-size:10.5pt">Not the 10 days of build. Stage 1 is mostly a content problem, and the content depends on people: the twelve ceremonies need descriptions only the pandit can give; the Divali date needs confirming; the ANBI question needs the board; someone must decide who the English is for; someone must own the social accounts.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1E7B34;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF6EC;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt">None of that is blocked by a technical decision, and all of it can start immediately. Today is 17 September, which means </span><span style="font-size:10.5pt;font-weight:700;color:#166B2B">three weeks of slack exist before the build window even opens</span><span style="font-size:10.5pt"> — but only if the section 12 questions go out this week. That is the single largest risk reduction available, and it costs nothing.</span>
+</td></tr>
+</table>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">3.2 &nbsp;Suggested sequencing</span></h3>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:17%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">WHEN</span></td>
+<td style="width:21%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">TRACK</span></td>
+<td style="width:62%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">WHAT</span></td>
+</tr>
+<tr>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">This week</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">Live-site triage</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Remove the four pieces of actively wrong information (section 11). Needs only the WordPress login.</span></td>
+</tr>
+<tr>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">This week</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">Content</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Send the section 12 questions. Start the ceremony descriptions with the pandit.</span></td>
+</tr>
+<tr>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">18 Sep – 1 Oct</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">Content</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Editorial pass and translation of the recovered heritage content. Confirm the calendar. Settle the course dates.</span></td>
+</tr>
+<tr>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">1 – 10 Oct</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#1A5FB4">Build</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Build and launch the stage-1 site.</span></td>
+</tr>
+<tr>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">11 – 19 Oct</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">Navratri</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Live. Watch what people actually look for, and fix it.</span></td>
+</tr>
+<tr>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">After</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#1E7B34">Stage 1.5</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Course sign-up automation, calendar connectors, social automation.</span></td>
+</tr>
+</table>
+
+<!-- ============ 4 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">4 &nbsp;Current state</span>
+</td></tr>
+</table>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">4.1 &nbsp;Platform at a glance</span></h3>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:25%;background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">Total pages</span></td>
+<td style="width:25%;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:15pt;font-weight:700;color:#202124">82</span></td>
+<td style="width:25%;background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">In the menu</span></td>
+<td style="width:25%;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:15pt;font-weight:700;color:#1E7B34">10</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">Orphaned</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:15pt;font-weight:700;color:#B3261E">72</span></td>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">Under 100 chars</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:15pt;font-weight:700;color:#A6650B">19</span></td>
+</tr>
+</table>
+
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:30%;background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">CMS</span></td>
+<td style="width:70%;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">WordPress 7.1</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Theme</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Divi (Elegant Themes) page builder</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Also installed</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">WooCommerce 10.1.4 — unused, all shop pages empty</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Page language</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">nl-NL</span><span style="font-size:10pt">, hard-coded</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Translation plugin</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">None</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Sitemap</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">robots.txt advertises one; it returns 404. There is none.</span></td>
+</tr>
+</table>
+
+<p style="margin:0"><span style="font-size:8pt;color:#5F6368">Method: every page retrieved through the site's public WordPress REST API and the text extracted from the Divi layer; the menu parsed from the rendered homepage; both annual-programme images read directly and cross-checked against each other. Nothing here is inferred from a screenshot.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">4.2 &nbsp;What is already good</span></h3>
+
+<p><span style="font-size:10.5pt">Worth stating first, because it changes the shape of the work from authoring to recovery.</span></p>
+
+<ul>
+<li><span style="font-size:10.5pt;font-weight:700;color:#166B2B">The Zondagdienst page is excellent.</span><span style="font-size:10.5pt"> A clear timetable, a patient explanation of what happens in a puja and why — the bell, the tilaka, the incense, the havankund, the prasadh — how to take part, and a frank list of what is expected of visitors. Warm, specific, genuinely useful to someone who has never been. It is the best answer the site has to "what will happen if I come?" Carry it across nearly verbatim and translate it first.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700;color:#166B2B">The 2026 poster is already fully bilingual</span><span style="font-size:10.5pt">, well designed and complete.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700;color:#166B2B">The 2015 knowledge corpus is substantive</span><span style="font-size:10.5pt"> — roughly 39,000 characters of thoughtful writing by people who know the subject.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700;color:#166B2B">The Vedic-calendar page is genuinely distinctive.</span><span style="font-size:10.5pt"> It explains why festival dates computed for the Netherlands can legitimately differ from Indian panchang by a day — a question every Dutch Hindu family has, answered carefully, crediting a named authority.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700;color:#166B2B">Pandit Vinay Narain is academically trained</span><span style="font-size:10.5pt"> in spiritual care. For a Dutch audience that is a real and unusual credential, and it is currently one sentence on an orphaned page.</span></li>
+<li><span style="font-size:10.5pt">The temple produces its own video — aarti, bhajan/kirtan, Hindu Basics — on YouTube.</span></li>
+</ul>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">4.3 &nbsp;What is broken</span></h3>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:10%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">ID</span></td>
+<td style="width:56%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">FINDING</span></td>
+<td style="width:34%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">SEVERITY</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">A1</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Opening hours published three different ways</span></td>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Misleads visitors</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">A2</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">FAQ page describes a temple that does not exist</span></td>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Fix today</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">A3</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Placeholder testimonials and follower counts</span></td>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Costs trust</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">A4</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Maha Shivratri start time missing where it matters</span></td>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Fix today</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">A5</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Stock imagery and stale years</span></td>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Credibility</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">B1</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">The annual programme is a picture</span></td>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Blocks R2, R4</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">B2</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Twelve ceremonies listed, none explained</span></td>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Highest content value</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">B3</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">The best content on the site is unreachable</span></td>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Blocks R5, R6</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">B4</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">No sitemap, no i18n mechanism</span></td>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">R2 absent entirely</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">C1</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Every sign-up is an unmanaged mailbox</span></td>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Lost opportunity</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">C2</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Volunteer flow describes steps that do not exist</span></td>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Dead ends</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">C3</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">The public funnel ends at a private door</span></td>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Breaks R7</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#5F6368">C4</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">WooCommerce installed and unused</span></td>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Maintenance</span></td>
+</tr>
+</table>
+
+<p style="margin:0"><span style="font-size:8pt">&nbsp;</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#B3261E">A1 &nbsp;Opening hours are published three different ways</span></h3>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:58%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">SOURCE</span></td>
+<td style="width:42%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">CLAIM</span></td>
+</tr>
+<tr>
+<td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Homepage, Zondagdienst page, 2026 poster (both languages)</span></td>
+<td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#166B2B">Sunday 13:00 – 15:30 &nbsp;✓ correct</span></td>
+</tr>
+<tr>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-family:Roboto Mono;font-size:9.5pt">/openingstijden/</span><span style="font-size:10pt"> (orphaned, still live)</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;color:#B3261E">Sunday 14:00 – 16:30</span></td>
+</tr>
+<tr>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-family:Roboto Mono;font-size:9.5pt">/faq-2/</span><span style="font-size:10pt"> (within the menu's reach)</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">Daily, 08:00 – 20:00</span></td>
+</tr>
+</table>
+<p><span style="font-size:10.5pt">The e-mail address forks the same way: </span><span style="font-family:Roboto Mono;font-size:9.5pt">trilokidhaam@gmail.com</span><span style="font-size:10.5pt"> nearly everywhere, </span><span style="font-family:Roboto Mono;font-size:9.5pt">contact@trilokidhaam.nl</span><span style="font-size:10.5pt"> on the orphaned contact page.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#B3261E">A2 &nbsp;The FAQ page describes a temple that does not exist</span></h3>
+<p><span style="font-size:10.5pt">It states the mandir is open daily 08:00–20:00, and refers to a "temple office", to booking ceremonies "online", and to "our expert astrologers — schedule an appointment today." There is no office, no booking system and no appointment scheduling.</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#B3261E;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FDECEA;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt">This is the most damaging page on the site. Someone could drive to Tongelresestraat on a Wednesday afternoon and find the mandir shut. </span><span style="font-size:10.5pt;font-weight:700;color:#B3261E">Unpublish it today.</span>
+</td></tr>
+</table>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#B3261E">A3 &nbsp;Placeholder testimonials and follower counts</span></h3>
+<ul>
+<li><span style="font-size:10.5pt">The volunteers page carries three named testimonials — "Anjali Verma", "Ravi Patel", "Meera Singh" — with quotes about their spiritual growth at the mandir. These are template personas, not members of the community.</span></li>
+<li><span style="font-size:10.5pt">The contact page shows Facebook 5,000 · X 3,200 · YouTube 2,800 · Instagram 4,500.</span></li>
+<li><span style="font-size:10.5pt">The media page shows Facebook 150,210 · Twitter 52,845 · LinkedIn 40,995 · YouTube 113,660 — and its own labels contradict its own headings.</span></li>
+</ul>
+<p><span style="font-size:10.5pt">The two pages disagree by a factor of thirty, and the X/Twitter and LinkedIn accounts do not appear to exist. This reads as unreplaced template content rather than anything intended — but invented quotes attributed to named people, on a religious charity's own site, is a trust problem before it is a marketing one.</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1E7B34;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF6EC;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt;font-weight:700;color:#166B2B">Recommendation: real numbers, or no numbers.</span><span style="font-size:10.5pt"> A temple with 200 genuinely engaged local families is more compelling than one claiming 150,000 anonymous followers. And if real volunteers are willing to be quoted, those quotes will be better than the invented ones.</span>
+</td></tr>
+</table>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#A6650B">A4 &nbsp;Maha Shivratri start time missing where it matters</span></h3>
+<p><span style="font-size:10.5pt">The poster gives Maha Shivratri a </span><span style="font-size:10.5pt;font-weight:700">17:00</span><span style="font-size:10.5pt"> start — an hour earlier than every other festival. The homepage promotes the event but shows only the date. A visitor reading the homepage arrives an hour late to one of the busiest nights of the year.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#A6650B">A5 &nbsp;Stock imagery and stale years</span></h3>
+<p><span style="font-size:10.5pt">The live contact page pulls its background photo from Unsplash — a generic stock "community gathering" — while the temple has its own photographs and a YouTube channel of its own footage. The orphaned contact page still refers visitors to "het jaarprogramma 2024". The page holding the 2026 programme is itself still titled "Jaarprogramma 2025", while the menu says 2026.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#A6650B">B1 &nbsp;The annual programme is a picture</span></h3>
+<p><span style="font-size:10.5pt">The Jaarprogramma page contains exactly two JPEGs and no text. The programme therefore cannot be searched, indexed by Google, read by a screen reader, translated, copied into a calendar, or read on a phone without pinch-zooming. It is the single most valuable thing the mandir publishes each year.</span></p>
+<p><span style="font-size:10.5pt">It is now transcribed into structured bilingual data (section 9.3), from which the web calendar, a subscribable calendar feed, search-engine event markup, social posts and next year's poster can all be generated from one source.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#B3261E">B2 &nbsp;Twelve ceremonies listed, none explained</span></h3>
+<p><span style="font-size:10.5pt">The rituals page lists Havan, Grah Shanti, Griha Pravesh, Puja, Hindoe Horoscoop, Shradh, Vivah samskar, </span><span style="font-size:10.5pt;font-weight:700">Antyeshti samskar</span><span style="font-size:10.5pt">, Mundan samskar, Sundarkand path, Kirtan/bhajan and Lezingen. Each is a heading with an empty description. No explanation, no lead time, no indication of cost, no way to book.</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#B3261E;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FDECEA;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt">Antyeshti samskar is funeral rites. A family that has just lost someone is searching for how to reach a pandit </span><span style="font-size:10.5pt;font-style:italic">now</span><span style="font-size:10.5pt">, and the page gives them a word. </span><span style="font-size:10.5pt;font-weight:700;color:#B3261E">This is the highest-value content work on the site</span><span style="font-size:10.5pt">, and it needs the pandit, not a copywriter.</span>
+</td></tr>
+</table>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#A6650B">B3 &nbsp;The best content on the site is unreachable</span></h3>
+<p><span style="font-size:10.5pt">The pages with the most substantial writing are the 2015-era knowledge pages, and not one is in the navigation.</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:74%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">ORPHANED PAGE</span></td>
+<td style="width:26%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">CHARACTERS</span></td>
+</tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Overige hoogtijdagen (other festivals explained)</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">7,019</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Algemene beginselen (general principles)</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">6,160</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">Mantra's &nbsp;— explicitly requested in the brief</span></td><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">5,097</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Vedische astrologie</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">4,423</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Ramayan</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">2,619</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Shiva mantra</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">1,594</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Hanuman jayanti</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">1,368</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Nauratri</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">1,226</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Five aartis, Veda's, Mahabharat &amp; Gita, Puja, Yagya</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">~7,800</span></td></tr>
+<tr><td style="background-color:#F1F0EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700">Total recovered</span></td><td style="background-color:#F1F0EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:12pt;font-weight:700;color:#8C2B26">39,332</span></td></tr>
+</table>
+<p><span style="font-size:10.5pt">Two pages end with "zie de submenu's" — see the submenus. The current menu is flat and has none, so those pointers lead nowhere. Two further defects found while recovering the material:</span></p>
+<ul>
+<li><span style="font-size:10.5pt">The page titled </span><span style="font-size:10.5pt;font-weight:700">"Ganesh mantra"</span><span style="font-size:10.5pt"> is published at the URL </span><span style="font-family:Roboto Mono;font-size:9.5pt">/durga-mantra/</span><span style="font-size:10.5pt">.</span></li>
+<li><span style="font-size:10.5pt">The page titled </span><span style="font-size:10.5pt;font-weight:700">"Durga mantra"</span><span style="font-size:10.5pt"> contains 54 characters. </span><span style="font-size:10.5pt;font-weight:700;color:#B3261E">The Durga mantra text appears to have been lost.</span><span style="font-size:10.5pt"> Worth checking for an older backup.</span></li>
+</ul>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#B3261E">B4 &nbsp;No sitemap, no i18n mechanism</span></h3>
+<p><span style="font-size:10.5pt">robots.txt points at a sitemap that returns 404, so search engines crawl with no guidance — including all 72 orphaned pages, which are the ones most likely to surface the wrong opening hours.</span></p>
+<p><span style="font-size:10.5pt">There is no translation plugin, no hreflang and no language switcher. English is mixed into Dutch pages at random: the volunteers page opens in English and switches to Dutch halfway down; the media and FAQ pages are English; the rest are Dutch. </span><span style="font-size:10.5pt;font-weight:700;color:#B3261E">R2 is absent, not partial.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#5F6368">C1 &nbsp;Every sign-up is an unmanaged mailbox</span></h3>
+<p><span style="font-size:10.5pt">Course registration, volunteering, pastoral care, ceremony enquiries and general contact all resolve to "e-mail trilokidhaam@gmail.com". There is no form anywhere on the site — no confirmation, no record of who signed up for what, no capacity limit, no reminders.</span></p>
+<p><span style="font-size:10.5pt">Four classes are advertised as running "once there are enough sign-ups", but nothing tells a visitor how many have signed up or whether it is going ahead — so there is no reason to believe the e-mail leads anywhere. Meanwhile the temple cannot see demand it may already have.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#5F6368">C2 &nbsp;Volunteer flow describes steps that do not exist</span></h3>
+<p><span style="font-size:10.5pt">The volunteers page presents a four-step process with buttons reading </span><span style="font-size:10.5pt;font-style:italic">Aanmelden</span><span style="font-size:10.5pt">, </span><span style="font-size:10.5pt;font-style:italic">Inschrijven</span><span style="font-size:10.5pt">, </span><span style="font-size:10.5pt;font-style:italic">Training Volgen</span><span style="font-size:10.5pt">. There is no form and the buttons go nowhere.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#5F6368">C3 &nbsp;The public funnel ends at a private door</span></h3>
+<p><span style="font-size:10.5pt">The homepage asks visitors to join the Facebook group for more photos and videos. The group is private. As the far end of the R7 funnel, that is a door that only opens for people already inside. Public content belongs on the site or on the open Instagram and YouTube accounts; keep the group for the community already in it.</span></p>
+
+<h3><span style="font-size:11.5pt;font-weight:700;color:#5F6368">C4 &nbsp;WooCommerce installed and unused</span></h3>
+<p><span style="font-size:10.5pt">Cart, checkout, my-account and shop pages all exist and are empty. Either use it for donations and event tickets, or remove it — an unused commerce plugin is maintenance burden and attack surface for nothing.</span></p>
+
+<!-- ============ 5 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">5 &nbsp;Content requirements</span>
+</td></tr>
+</table>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:9%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REF</span></td>
+<td style="width:73%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REQUIREMENT</span></td>
+<td style="width:18%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">SOURCE</span></td>
+</tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-1</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">One canonical source for every fact. If a fact appears in two places, one is a bug.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">cause of A1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-2</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Every visitor-facing string exists in Dutch and English. Dutch is the default.</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R2</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-3</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Weekly service: timetable, what to expect, how to take part, what is expected of visitors.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R3</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-4</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Festival calendar as text and data, not an image. Each festival has its own permanent URL.</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R4, B1, R8</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-5</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Mantras and aartis restored and reachable from the menu.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R5, B3</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-6</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Knowledge section: scriptures, principles, festivals explained, Vedic calendar.</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R6, B3</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-7</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Each of the twelve ceremonies has a real description, a lead time and a contact route.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">B2</span></td></tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">C-8</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Antyeshti samskar has a phone route, not only an e-mail address.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#B3261E">B2</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-9</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Practical visit information in one place: address, map, parking, transport, shoes, what to bring, accessibility.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">A1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-10</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">No fabricated content of any kind. No invented testimonials, no invented numbers, no stock photography where the temple's own images exist.</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">A3, A5</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-11</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Nothing unverified is published. Unconfirmed facts are held back, not guessed.</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">R1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">C-12</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Devotional, ritual and biographical content is never machine-generated. Where the pandit's input is needed, the field stays empty until he provides it.</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;color:#5F6368">respect; A3</span></td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">C-12 matters beyond accuracy. Getting a samskar's description wrong is a matter of respect, and the current site is evidence of what happens when templated text is allowed to stand in for a community's own voice.</span></p>
+
+<!-- ============ 6 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">6 &nbsp;Functional requirements</span>
+</td></tr>
+</table>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:9%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REF</span></td>
+<td style="width:66%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REQUIREMENT</span></td>
+<td style="width:25%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">PRIORITY</span></td>
+</tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-1</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Dutch/English routing with a visible language switcher on every page, and hreflang for search engines.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-2</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Festival calendar page, generated from data, showing what is next.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-3</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">A permanent page per festival, so a social post has something to link to.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-4</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Subscribable calendar feed (.ics) so people can add the year to their own calendar.</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Should — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-5</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Search-engine event markup (schema.org/Event) so festivals surface in local search.</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Should — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-6</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">One working enquiry/registration form with a confirmation reply, replacing "e-mail us".</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-7</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Course sign-up with a visible capacity or interest count, so "once there are enough sign-ups" becomes credible.</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Should — stage 1.5</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-8</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Donation page: IBAN, standing-order instructions, QR codes, and the ANBI position if there is one.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-9</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Map and directions.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-10</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Embedded temple video from the existing YouTube channel.</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Should — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-11</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Redirects from all 72 orphaned legacy URLs to their new homes.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-12</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Sitemap.</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Must — stage 1</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-13</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Newsletter or WhatsApp broadcast sign-up.</span></td><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Could — stage 1.5</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">F-14</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Online donation by iDEAL or Tikkie.</span></td><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Could — stage 1.5</span></td></tr>
+</table>
+
+<!-- ============ 7 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">7 &nbsp;Non-functional requirements</span>
+</td></tr>
+</table>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:9%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REF</span></td>
+<td style="width:91%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">REQUIREMENT</span></td>
+</tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-1</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Mobile first.</span><span style="font-size:10pt"> Most visitors arrive on a phone, often while deciding whether to travel. The current programme cannot be read on a phone at all.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-2</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Accessible.</span><span style="font-size:10pt"> Real text rather than text in images, sufficient contrast, keyboard navigable, screen-reader friendly. The congregation includes elderly members.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-3</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Fast on a mobile connection.</span><span style="font-size:10pt"> Target a sub-2-second first load.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-4</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Findable.</span><span style="font-size:10pt"> Correct titles and descriptions, working sitemap, event markup, and a Google Business Profile carrying the right opening hours.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-5</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Cheap to run.</span><span style="font-size:10pt"> A volunteer-funded charity should not carry a significant hosting bill.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-6</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Maintainable by two people</span><span style="font-size:10pt"> without specialist knowledge, and documented well enough to hand over.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-7</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">GDPR compliant</span><span style="font-size:10pt"> — see section 10.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">N-8</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Respectful of the subject.</span><span style="font-size:10pt"> Sanskrit and Hindi terms spelled consistently and correctly, with a glossary for Dutch readers who do not know them.</span></td></tr>
+</table>
+
+<!-- ============ 8 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">8 &nbsp;Proposed structure</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Ten menu items became the problem last time, because every redesign added pages without removing any. This proposes seven top-level sections, each with a clear job. Every URL exists twice, once per language: </span><span style="font-family:Roboto Mono;font-size:9.5pt">/nl/…</span><span style="font-size:10.5pt"> and </span><span style="font-family:Roboto Mono;font-size:9.5pt">/en/…</span><span style="font-size:10.5pt">.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:17%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">SECTION</span></td>
+<td style="width:48%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">CONTAINS</span></td>
+<td style="width:35%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">ANSWERS</span></td>
+</tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Home</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">What is next, the Sunday service in one line, this month's festival, a short welcome, donate</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"What is this and when can I come?"</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Visit</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Sunday service timetable and what to expect; address, map, parking, transport; etiquette; accessibility; FAQ rewritten from scratch</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"What happens if I come, and how do I get there?"</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Calendar</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Full annual programme as text, page per festival, .ics feed, the poster as a download</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"When is Divali this year?"</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Ceremonies</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">The twelve samskars and rituals, each with a description, lead time and contact route; pastoral care</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"Can the mandir do this for my family?"</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Learn</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Mantras, aartis, scriptures, general principles, festivals explained, the Vedic calendar, glossary</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"What does this mean?" (R5, R6)</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Community</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Courses and classes with sign-up, volunteering, media and video, social links</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"How do I take part?" (R7)</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10.5pt;font-weight:700;color:#8C2B26">Support</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Donate, standing order, ANBI, about the stichting, contact</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-style:italic;color:#5F6368">"How do I help?"</span></td></tr>
+</table>
+
+<ul>
+<li><span style="font-size:10.5pt;font-weight:700">Visit</span><span style="font-size:10.5pt"> merges what is currently spread across the homepage, the Zondagdienst page, two orphaned contact pages and an orphaned opening-hours page — the four sources that currently disagree.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700">Learn</span><span style="font-size:10.5pt"> is where the 39,000 recovered characters go. It does not exist today, and it satisfies two of the eight requirements on its own.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700">Calendar</span><span style="font-size:10.5pt"> exists so R8 has somewhere to point. One permanent URL per festival is what makes social posting worth doing.</span></li>
+<li><span style="font-size:10.5pt">The current </span><span style="font-size:10.5pt;font-style:italic">Levensvragen</span><span style="font-size:10.5pt"> page (pastoral care) folds into </span><span style="font-size:10.5pt;font-weight:700">Ceremonies</span><span style="font-size:10.5pt">, since that is where someone in difficulty will look.</span></li>
+</ul>
+
+<!-- ============ 9 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">9 &nbsp;Canonical facts</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">The facts the site must state, from one source, in both languages. Items marked </span><span style="font-size:10.5pt;font-weight:700;color:#A6650B">TO CONFIRM</span><span style="font-size:10.5pt"> need the temple before publication.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">9.1 &nbsp;Identity and contact</span></h3>
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="width:28%;background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Public name</span></td><td style="width:72%;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Mandir Triloki Dhaam Eindhoven</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Legal entity</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Stichting Senskaar Triloki Dhaam</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Motto</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-style:italic">Dharmo Rakshati Rakshitah</span><span style="font-size:10pt"> — "Dharma protects those who protect it"</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Address</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Tongelresestraat 371, 5642 NC Eindhoven</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Phone</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">06-45461229</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">E-mail</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">trilokidhaam@gmail.com</span></td></tr>
+<tr><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">Second e-mail</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">contact@trilokidhaam.nl</span><span style="font-size:10pt"> — </span><span style="font-size:10pt;font-weight:700;color:#A6650B">TO CONFIRM:</span><span style="font-size:10pt"> does this mailbox exist and is it monitored? A temple e-mailing from its own domain looks more established than one using gmail.</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Pandit</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Pandit Vinay Narain, academically trained spiritual carer</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Social</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">YouTube @mandirtrilokidhaam32; Instagram @mandirtrilokidhaam; Facebook group (private)</span></td></tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#B3261E">Not to be listed</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">X/Twitter and LinkedIn — no such accounts were found</span></td></tr>
+</table>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">9.2 &nbsp;Weekly service</span></h3>
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#166B2B;border:0;padding:10pt 16pt 10pt 16pt;text-align:center">
+<p style="margin:0;text-align:center"><span style="font-family:Georgia;font-size:15pt;font-weight:700;color:#FFFFFF">Every Sunday, 13:00 – 15:30</span></p>
+<p style="margin:0;text-align:center"><span style="font-size:9pt;color:#CDE9D4">authoritative — delete every other version</span></p>
+</td></tr>
+</table>
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:24%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">TIME</span></td>
+<td style="width:76%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">PROGRAMME</span></td>
+</tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-family:Roboto Mono;font-size:9.5pt;font-weight:700">13:00 – 14:00</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Puja and Bhajan</span><span style="font-size:10pt"> — offerings to the deities and communal devotional singing</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-family:Roboto Mono;font-size:9.5pt;font-weight:700">14:00 – 15:00</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Parvachan</span><span style="font-size:10pt"> — a discourse on a topic from Hinduism, sometimes interactive</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-family:Roboto Mono;font-size:9.5pt;font-weight:700">15:00 – 15:30</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Aarti and Prasadh</span><span style="font-size:10pt"> — homage with music, followed by prasadh and panchamrit</span></td></tr>
+</table>
+<p><span style="font-size:10.5pt">The mandir is </span><span style="font-size:10.5pt;font-weight:700">not</span><span style="font-size:10.5pt"> open outside this service and the festival dates below.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">9.3 &nbsp;Annual programme 2026</span></h3>
+<p><span style="font-size:10.5pt">Transcribed from both poster versions, which agree on every date. Times are start times; the poster gives no end times.</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:22%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">DATE</span></td>
+<td style="width:16%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">DAY</span></td>
+<td style="width:47%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">FESTIVAL</span></td>
+<td style="width:15%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">FROM</span></td>
+</tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">14 January</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Wednesday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Makar Sakranti</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">23 January</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Friday</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Vasant Panchami / Saraswati Puja</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">15 February</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Sunday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Maha Shivratri</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt;font-weight:700;color:#A6650B">17:00</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">2 March</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Monday</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Holika Dahan</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">18 – 27 March</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Wed – Fri</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Chaitra Navratri &nbsp;</span><span style="font-size:9pt;font-weight:700;color:#A6650B">TO CONFIRM</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">26 March</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Thursday</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Ramnaumi</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">1 April</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Wednesday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Hanuman Jayanti</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">3, 10, 17, 24 Aug</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Mondays</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Shravan Somvaar Shivpuja</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">3 September</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Thursday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Krishna Janamashtmi</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">14 September</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Monday</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Ganesh Chaturthi</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">11 – 19 October</span></td><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#8C2B26">Sun – Mon</span></td><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">Shardiya Navratri</span><span style="font-size:10pt;color:#8C2B26"> — every evening &nbsp;· the launch deadline</span></td><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt;font-weight:700;color:#8C2B26">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">20 October</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Tuesday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Vijaya Dashmi (Dussehra)</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">9 November</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Monday</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Divali</span><span style="font-size:10pt"> &nbsp;</span><span style="font-size:9pt;font-weight:700;color:#A6650B">TO CONFIRM</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">18:00</span></td></tr>
+<tr><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">20 December</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;color:#5F6368">Sunday</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Geeta Jayanti</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:9.5pt">13:00</span></td></tr>
+</table>
+
+<p style="margin:0"><span style="font-size:5pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#A6650B;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FFF6E6;border:0;padding:11pt 14pt 11pt 14pt">
+<p style="margin:0"><span style="font-size:10.5pt;font-weight:700;color:#A6650B">TO CONFIRM — Divali.</span><span style="font-size:10.5pt"> The poster says Monday 9 November. Widely published, India-based panchang sources place Diwali and Lakshmi Puja 2026 on Sunday 8 November. The temple's own Vedic-calendar page explains exactly why this gap arises: festival dates are computed from the tithi present at sunrise, and because sunrise in the Netherlands is much later than in India, the Dutch vedic calendar can legitimately place a festival a day apart from the Indian one. The poster's spacing from Dussehra is also internally consistent with the 9th. </span><span style="font-size:10.5pt;font-weight:700">So this is probably correct as printed</span><span style="font-size:10.5pt"> — it needs confirmation, not correction.</span></p>
+<p style="margin:0"><span style="font-size:10.5pt;font-style:italic">Recommendation: publish the reasoning, not just the date.</span><span style="font-size:10.5pt"> A short note explaining that the mandir follows the vedic calendar computed for the Netherlands pre-empts the "but Google says the 8th" question from every visitor, and shows the temple knows precisely what it is doing. It is a small piece of content that would distinguish this site from every other mandir website in the country.</span></p>
+</td></tr>
+</table>
+<p><span style="font-size:10.5pt;font-weight:700;color:#A6650B">TO CONFIRM — Chaitra Navratri.</span><span style="font-size:10.5pt"> A nine-night festival is listed as spanning ten days (18–27 March), with Ramnaumi on the 26th. Intentional, or a typo?</span></p>
+<p><span style="font-size:10.5pt">Also: the poster footers contain at least one typo each in the street name, city, phone number or web address. The source images are too low resolution to identify them reliably — worth a proofread against the original artwork before the next reprint.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">9.4 &nbsp;Donations</span></h3>
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="width:28%;background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">IBAN</span></td><td style="width:72%;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-family:Roboto Mono;font-size:10pt;font-weight:700">NL90 INGB 0007 6605 27</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Account holder</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Stichting Senskaar Triloki Dhaam</span></td></tr>
+<tr><td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#5F6368">Methods today</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Bank transfer, standing order, QR codes displayed in the mandir</span></td></tr>
+<tr><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">ANBI status</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">TO CONFIRM.</span><span style="font-size:10pt"> If the stichting holds an ANBI ruling, Dutch donors can deduct their gifts — the strongest argument a donation page has. It also obliges certain published disclosures. Nothing on the current site mentions it either way.</span></td></tr>
+<tr><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:9.5pt;font-weight:700;color:#A6650B">KvK / RSIN</span></td><td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#A6650B">TO CONFIRM</span></td></tr>
+</table>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">9.5 &nbsp;Courses, 2025/2026</span></h3>
+<p><span style="font-size:10.5pt">Eight Sunday sessions: 7 Sep, 5 Oct, 2 Nov, 7 Dec 2025; 4 Jan, 1 Feb, 1 Mar, 12 Apr 2026. Hindi 12:00–13:00, Hindu Basics 13:00–15:30. Harmonium, dhol, children's music and yoga run "once there are enough sign-ups".</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#A6650B;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#FFF6E6;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt;font-weight:700;color:#A6650B">To decide:</span><span style="font-size:10.5pt"> the published list ends 12 April 2026, which is in the past. Either publish the 2026/2027 dates or state clearly that the year has finished and when the next begins. A visitor landing on a list of past dates concludes the temple is inactive — the opposite of the truth.</span>
+</td></tr>
+</table>
+<p><span style="font-size:10.5pt">Two content bugs: the homepage says "8–10 sessions" while the activities page lists exactly 8; and the Hindi class reuses the Hindu Basics description word for word, which does not describe a language class at all.</span></p>
+
+<!-- ============ 10 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">10 &nbsp;GDPR and safeguarding</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Cheapest to get right before any form exists. The temple will be handling names, e-mail addresses, course registrations, </span><span style="font-size:10.5pt;font-weight:700">children's names</span><span style="font-size:10.5pt"> — there is a children's programme — photographs of identifiable people, and pastoral-care requests. The last of those is special-category data about religious belief under Dutch and EU law.</span></p>
+
+<ul>
+<li><span style="font-size:10.5pt">A privacy statement. There is currently none; the "Terms and Conditions" page contains 39 characters.</span></li>
+<li><span style="font-size:10.5pt">A stated lawful basis for each purpose.</span></li>
+<li><span style="font-size:10.5pt;font-weight:700;color:#B3261E">Explicit parental consent</span><span style="font-size:10.5pt"> before any child's name or image is collected or published.</span></li>
+<li><span style="font-size:10.5pt">A retention period, and someone who actually deletes things.</span></li>
+<li><span style="font-size:10.5pt">A photography and filming policy. The Zondagdienst page already asks visitors to seek permission before filming — the temple should hold itself to the same standard for the images it publishes.</span></li>
+<li><span style="font-size:10.5pt">A named person responsible.</span></li>
+<li><span style="font-size:10.5pt">Confidentiality stated plainly on the pastoral-care route, so people know who reads what they send.</span></li>
+</ul>
+
+<!-- ============ 11 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#B3261E;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#FFFFFF">11 &nbsp;Fix on the live site now</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Four things remove actively misleading information from the current site. They need nothing from the new build — only the WordPress login — and they de-risk the 10 October date whatever else happens. </span><span style="font-size:10.5pt;font-weight:700">If nothing else in this document is acted on this week, these should be.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:7%;background-color:#B3261E;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">#</span></td>
+<td style="width:43%;background-color:#B3261E;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">ACTION</span></td>
+<td style="width:50%;background-color:#B3261E;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">WHY</span></td>
+</tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">1</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Unpublish </span><span style="font-family:Roboto Mono;font-size:9.5pt">/faq-2/</span><span style="font-size:10pt"> and </span><span style="font-family:Roboto Mono;font-size:9.5pt">/faq/</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">They advertise the temple as open daily 08:00–20:00. Someone will make a wasted journey.</span></td></tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">2</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Delete the three volunteer testimonials and every follower count</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Invented quotes attributed to named people, and numbers that contradict each other thirty-fold.</span></td></tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">3</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Unpublish </span><span style="font-family:Roboto Mono;font-size:9.5pt">/openingstijden/</span></td><td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">States 14:00–16:30.</span></td></tr>
+<tr><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">4</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Add "from 17:00" to Maha Shivratri on the homepage</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">Visitors currently arrive an hour late.</span></td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Then, when convenient: publish the annual programme as text alongside the poster; retitle "Jaarprogramma 2025" to 2026; fix the sitemap so the orphaned pages stop being crawled.</span></p>
+
+<!-- ============ 12 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#8C2B26;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#FFFFFF">12 &nbsp;Decisions needed</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Ordered by how much they block the work. Items 1 to 4 are on the critical path, and are the reason to start the content track now rather than on 1 October.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:6%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">#</span></td>
+<td style="width:60%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">QUESTION</span></td>
+<td style="width:13%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">WHO</span></td>
+<td style="width:21%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">BLOCKS</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">1</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">The twelve ceremony descriptions.</span><span style="font-size:10pt"> What each is, how much notice is needed, whether there is a fee or a suggested donation, whether it can be done at home or only at the mandir. </span><span style="font-size:10pt;font-weight:700;color:#B3261E">Antyeshti samskar first</span><span style="font-size:10pt"> — and is there an out-of-hours route for funeral rites? If not, what should a family do instead?</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Pandit</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Ceremonies (C-7, C-8)</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">2</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Is Divali on 9 November intentional?</span><span style="font-size:10pt"> See 9.3.</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Pandit</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Calendar, all Divali publicity</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">3</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Course dates for 2026/2027</span><span style="font-size:10pt">, or a statement that 2025/2026 has finished.</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Community section</span></td>
+</tr>
+<tr>
+<td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#B3261E">4</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Who owns the social accounts, and who is willing to post?</span><span style="font-size:10pt"> R7 and R8 need a person, not just a link. If nobody owns it, we build the plumbing and say so honestly rather than pretending the loop exists.</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">R7, R8</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#A6650B">5</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Is the stichting an ANBI?</span><span style="font-size:10pt"> If so, what are the RSIN and KvK numbers?</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Donation page (F-8)</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#A6650B">6</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">The hosting donor.</span><span style="font-size:10pt"> Who, what does the payment cover, when does it renew, and in whose name is the domain registered?</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Hosting and launch</span></td>
+</tr>
+<tr>
+<td style="background-color:#FFF6E6;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#A6650B">7</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Who is the English for?</span><span style="font-size:10pt"> Second-generation community members, non-Hindu Eindhoven residents, and expats want quite different things from the same page. It changes the tone more than the wording.</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">All translation</span></td>
+</tr>
+<tr>
+<td style="background-color:#F4F5F7;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:11pt;font-weight:700;color:#5F6368">8</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt;font-weight:700">Is contact@trilokidhaam.nl a real mailbox?</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#8C2B26">Board</span></td>
+<td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt">Contact details</span></td>
+</tr>
+</table>
+
+<p><span style="font-size:10.5pt">Two further items worth raising:</span></p>
+<ul>
+<li><span style="font-size:10.5pt;font-weight:700">The lost Durga mantra.</span><span style="font-size:10.5pt"> The page is down to 54 characters. Does anyone have an older copy, or can the pandit supply the text again?</span></li>
+<li><span style="font-size:10.5pt;font-weight:700">Bhaskaranand</span><span style="font-size:10.5pt">, of ashram Sada Shiva Dham in Loenen, is credited as the author of the Vedic-calendar page and his e-mail address is published on it. Is he still associated with the mandir, and does he consent to that address remaining public?</span></li>
+</ul>
+
+<!-- ============ 13 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">13 &nbsp;Out of scope — Stage 2</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">From the brief, deliberately deferred until stage 1 is right. Recorded so stage-1 choices do not close these doors.</span></p>
+<ul>
+<li><span style="font-size:10.5pt">A community platform with member accounts or a directory</span></li>
+<li><span style="font-size:10.5pt">Event registration with real capacity management</span></li>
+<li><span style="font-size:10.5pt">Recurring-donation management</span></li>
+<li><span style="font-size:10.5pt">A referral layer for "the right places" — pandits elsewhere in the Netherlands, ashrams, other mandirs, Hindu pastoral care</span></li>
+<li><span style="font-size:10.5pt">Confidential pastoral-care requests</span></li>
+<li><span style="font-size:10.5pt">Richer teaching content, possibly video-led</span></li>
+</ul>
+<p><span style="font-size:10.5pt">What stage 1 does to keep them open: content stays as structured data rather than inside a page builder; every festival and ceremony gets a real permanent URL; and the design does not assume visitors are anonymous and read-only.</span></p>
+
+<h3><span style="font-size:12pt;font-weight:700;color:#202124">13.1 &nbsp;Wider programme, after stage 1</span></h3>
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:7%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">#</span></td>
+<td style="width:93%;background-color:#8C2B26;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:9.5pt;font-weight:700;color:#FFFFFF">ROUGHLY IN ORDER OF VALUE FOR EFFORT</span></td>
+</tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">1</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Course and event registration</span><span style="font-size:10pt"> — replaces the unmanaged mailbox, and the temple finds out what demand it already has.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">2</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Calendar connectors</span><span style="font-size:10pt"> — .ics feed, Google Calendar, and the festival dates pushed to Google Business Profile so they appear in local search.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">3</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Social posting from the festival data</span><span style="font-size:10pt">, so a festival is announced once and cannot drift between the site and Instagram.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">4</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Online donation</span><span style="font-size:10pt"> — iDEAL or Tikkie suits a Dutch audience far better than a bank transfer.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">5</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Newsletter or WhatsApp broadcast</span><span style="font-size:10pt"> for the weekly service and festivals.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">6</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700">Poster generation</span><span style="font-size:10pt"> from the same festival data, closing the loop with the artwork the temple already makes well.</span></td></tr>
+</table>
+
+<!-- ============ 14 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">14 &nbsp;Technical approach</span>
+</td></tr>
+</table>
+
+<table style="border-collapse:collapse;width:100%">
+<tr>
+<td style="width:20pt;background-color:#1A5FB4;border:0;padding:0"><span style="font-size:9pt">&nbsp;</span></td>
+<td style="background-color:#EAF1FB;border:0;padding:11pt 14pt 11pt 14pt">
+<span style="font-size:10.5pt;font-weight:700;color:#1A5FB4">Decided.</span><span style="font-size:10.5pt"> The site will be maintained by Sandeep and Mayur, so content lives in the project repository as structured data and the site is generated from it — a static bilingual site (Astro or equivalent) deployed to Cloudflare Pages or Vercel.</span>
+</td></tr>
+</table>
+
+<ul>
+<li><span style="font-size:10.5pt">Bilingual routing is a first-class feature rather than a plugin, which is what R2 needs.</span></li>
+<li><span style="font-size:10.5pt">One source of truth for the site, the social posts and next year's poster — the structural fix for A1, the three-way split in the opening hours.</span></li>
+<li><span style="font-size:10.5pt">Hosting cost is effectively zero, which matters for a volunteer-funded charity (N-5).</span></li>
+<li><span style="font-size:10.5pt">Fast and secure by default, with no plugin or licence maintenance.</span></li>
+<li><span style="font-size:10.5pt">A good foundation for the automations and connectors in 13.1.</span></li>
+</ul>
+
+<p><span style="font-size:10.5pt">The trade-off to manage: editing requires repository access, so only Sandeep and Mayur can update the site. Two mitigations — document the editing process properly (N-6), and keep the option of layering a lightweight CMS on top later if volunteers need to edit directly. That can be added without rebuilding, which is why this beats the headless-CMS option now rather than being a bet against it.</span></p>
+
+<p><span style="font-size:10.5pt;font-weight:700">Still open:</span><span style="font-size:10.5pt"> whether the donated WordPress hosting continues in parallel, is retired, or is repurposed. That depends on decision 6.</span></p>
+
+<p><span style="font-size:10.5pt">Already completed and committed to the repository, independent of all of this:</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">✓ &nbsp;The canonical facts, the 2026 calendar, the ceremony catalogue and the course data, as structured bilingual data</span></td></tr>
+<tr><td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">✓ &nbsp;All 39,332 characters of recovered heritage content, with their original URLs recorded for redirects</span></td></tr>
+<tr><td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">✓ &nbsp;The full inventory of all 82 legacy pages</span></td></tr>
+<tr><td style="background-color:#EAF6EC;border:0.75pt solid #DADCE0;padding:7pt"><span style="font-size:10pt">✓ &nbsp;The transcribed brief and the full audit</span></td></tr>
+</table>
+
+<!-- ============ 15 ============ -->
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:7pt 14pt 7pt 14pt">
+<span style="font-family:Georgia;font-size:14pt;font-weight:700;color:#8C2B26">15 &nbsp;Definition of done for stage 1</span>
+</td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">On 10 October 2026, the site should satisfy all of the following.</span></p>
+
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="width:7%;background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">1</span></td><td style="width:93%;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Every fact a visitor needs — hours, address, festival dates, contact — appears exactly once as a source, and is correct.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">2</span></td><td style="background-color:#FDECEA;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#B3261E">Nothing published anywhere contradicts anything else published anywhere.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">3</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Every page is available in Dutch and English, with a switcher and correct hreflang.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">4</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">The full annual programme is readable as text, on a phone, in both languages, with a permanent URL per festival.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">5</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">The mantras, aartis and scriptures are reachable from the menu.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">6</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">All twelve ceremonies have a real description and a working contact route, and funeral rites have a phone number.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">7</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">No fabricated testimonial, follower count or stock photograph remains.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">8</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">At least one form works and sends a confirmation.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">9</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">All 72 orphaned legacy URLs redirect somewhere sensible.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">10</span></td><td style="background-color:#FAFAF8;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">A privacy statement exists.</span></td></tr>
+<tr><td style="background-color:#F6EFEE;border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt;font-weight:700;color:#8C2B26">11</span></td><td style="border:0.75pt solid #DADCE0;padding:6pt"><span style="font-size:10pt">Searching "hindu temple Eindhoven" finds the site with correct opening hours.</span></td></tr>
+</table>
+
+<p><span style="font-size:10.5pt">Test 2 is the one that matters most, and it is the one the current site fails hardest.</span></p>
+
+<p style="margin:0"><span style="font-size:8pt">&nbsp;</span></p>
+<table style="border-collapse:collapse;width:100%">
+<tr><td style="background-color:#F1F0EC;border:0;padding:8pt 14pt 8pt 14pt">
+<p style="margin:0"><span style="font-size:8pt;color:#5F6368">Mandir Triloki Dhaam Eindhoven — Digital Revamp Requirements v0.2, 17 September 2026. Draft for review. Findings traceable to the repository at github.com/gnanalytica/Digital-Triloki-Dhaam, which holds the transcribed brief, the full audit of all 82 legacy pages, and the canonical content data.</span></p>
+</td></tr>
+</table>
+
+</body>
+</html>

@@ -27,14 +27,14 @@ before Shardiya Navratri.
 
 ## Start here
 
-**[Requirements document (Google Doc)](https://docs.google.com/document/d/1akGXltT6FMmDjNoK3zEaNTnJufHHhu6opvkHWwZnsNs/edit)**
+**[Requirements document (Google Doc)](https://docs.google.com/document/d/1FDSfuqP_33JA2hOoaIpL35yANqCoa8Bhf0zeh_AYngc/edit)**
 — the living document, for the board and the pandit to comment on. Section 11
 lists four fixes for the live site that need only the WordPress login; section
 12 lists the eight decisions that block the build.
 
 | | |
 |---|---|
-| [`docs/requirements/`](docs/requirements/) | The requirements document: link to the Doc, plus the source it was generated from. |
+| [`docs/requirements/`](docs/requirements/) | The requirements document: link to the Doc, the HTML source it is generated from, and what Google Docs' HTML importer does and does not support. |
 | [`docs/discovery/voice-note-2026-09-17.md`](docs/discovery/voice-note-2026-09-17.md) | The brief. Transcript of the founding voice note, requirements R1–R8, the deadline, and the open questions for the board. |
 | [`docs/discovery/legacy-site-audit.md`](docs/discovery/legacy-site-audit.md) | What the current site actually publishes. Read section A before anything else. |
 | [`docs/roadmap.md`](docs/roadmap.md) | Two stages, three work tracks, and the four things to fix on the live site today. |
