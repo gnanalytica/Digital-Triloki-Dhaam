@@ -10,21 +10,31 @@ Legacy site: <https://trilokidhaam.nl/>
 
 ## Where things stand
 
-Discovery is done; the build has not started. The architecture is deliberately
-**not yet chosen** — it depends on two answers from the temple board, recorded
-in [`docs/decisions/0001-website-architecture.md`](docs/decisions/0001-website-architecture.md).
+Discovery is done and the requirements document is drafted. **The build has
+not started** and is not starting yet — the next move is agreeing the
+requirements with the temple, not writing code.
 
-Everything committed so far is deliberately **stack-independent**: the facts,
-the calendar, the service catalogue and the recovered heritage content are
-plain YAML and Markdown, and stay useful whichever way the build decision goes.
+Architecture is settled: content lives in this repo as structured data and the
+site is generated from it, since Sandeep and Mayur will maintain it. See
+[`docs/decisions/0001-website-architecture.md`](docs/decisions/0001-website-architecture.md).
+
+The facts, the calendar, the service catalogue and the recovered heritage
+content are plain YAML and Markdown with no framework assumptions, so they are
+usable as-is whatever gets built on top.
 
 **Stage 1 target: website basics live by Saturday 10 October 2026**, the day
 before Shardiya Navratri.
 
 ## Start here
 
+**[Requirements document (Google Doc)](https://docs.google.com/document/d/1akGXltT6FMmDjNoK3zEaNTnJufHHhu6opvkHWwZnsNs/edit)**
+— the living document, for the board and the pandit to comment on. Section 11
+lists four fixes for the live site that need only the WordPress login; section
+12 lists the eight decisions that block the build.
+
 | | |
 |---|---|
+| [`docs/requirements/`](docs/requirements/) | The requirements document: link to the Doc, plus the source it was generated from. |
 | [`docs/discovery/voice-note-2026-09-17.md`](docs/discovery/voice-note-2026-09-17.md) | The brief. Transcript of the founding voice note, requirements R1–R8, the deadline, and the open questions for the board. |
 | [`docs/discovery/legacy-site-audit.md`](docs/discovery/legacy-site-audit.md) | What the current site actually publishes. Read section A before anything else. |
 | [`docs/roadmap.md`](docs/roadmap.md) | Two stages, three work tracks, and the four things to fix on the live site today. |
@@ -42,6 +52,7 @@ content/              Canonical content, stack-independent
 data/
   legacy-page-inventory.csv   All 82 legacy pages: size, language, reachability
 docs/
+  requirements/         The requirements document (Google Doc + HTML source)
   discovery/            The brief and the audit
   decisions/            Architecture decision records
   roadmap.md

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Mandir Triloki Dhaam Eindhoven — Digital Revamp Requirements</title></head>
+<body>
+
+<h1>Mandir Triloki Dhaam Eindhoven</h1>
+<h2>Digital Revamp — Requirements Document</h2>
+
+<table>
+<tr><td>Version</td><td>0.1 — first draft, for review</td></tr>
+<tr><td>Date</td><td>17 September 2026</td></tr>
+<tr><td>Prepared for</td><td>Sandeep, Mayur, and the board of Stichting Senskaar Triloki Dhaam</td></tr>
+<tr><td>Based on</td><td>Project brief (WhatsApp voice note, 17 September 2026) and a full content audit of trilokidhaam.nl</td></tr>
+<tr><td>Status</td><td>Stage 1 scope drafted. Eight items need decisions from the temple before build — see section 12.</td></tr>
+<tr><td>Working repository</td><td>github.com/gnanalytica/Digital-Triloki-Dhaam</td></tr>
+</table>
+
+<p><i>This document is a draft for discussion. Everything in section 9 marked
+&ldquo;TO CONFIRM&rdquo; is an open question, not a decision. Nothing marked
+TO CONFIRM should be published until someone from the temple has verified it.</i></p>
+
+
+<h1>1. Executive summary</h1>
+
+<p>The brief asks for two stages. <b>Stage 1</b>: the website gives the right
+information in Dutch and English &mdash; weekly services, festivals, mantras
+and related knowledge &mdash; and forms a loop with the temple&rsquo;s social
+accounts. <b>Stage 2</b>, only once stage 1 is right: a community-building
+platform that positions the mandir as a centre of Sanatan Dharma.</p>
+
+<p>A full audit of the current site was carried out before writing this
+document. All 82 pages were retrieved and read, the navigation mapped, and
+the annual-programme posters transcribed. Four conclusions matter:</p>
+
+<p><b>1. The temple already owns most of the content it needs.</b> This is the
+most important finding, and it is good news. There are roughly 39,000
+characters of careful, knowledgeable Dutch writing on the site &mdash;
+including a 5,000-character essay on mantras, five aarti texts, the
+scriptures, and a genuinely distinctive piece on the Vedic calendar. The
+brief explicitly asks for mantras; they already exist. Stage 1 is therefore
+mostly <i>recovery and translation</i>, not authorship.</p>
+
+<p><b>2. That content is unreachable.</b> Of 82 pages, only 10 are in the
+menu. The remaining 72 were orphaned by three successive redesigns that were
+never cleaned up, and the longest, best writing on the site is all among
+them. There are four <i>Home</i> pages and five <i>Contact</i> pages live
+today.</p>
+
+<p><b>3. Some of what visitors do see is wrong.</b> The opening hours are
+published three contradictory ways, one of which tells visitors the temple is
+open daily from 08:00 to 20:00 when it opens on Sunday afternoons. A
+volunteer page carries three testimonials from people who are not members of
+the community, and two pages show follower counts that disagree with each
+other by a factor of thirty for accounts that in two cases do not exist.
+These appear to be unreplaced placeholders from a template-driven rebuild
+rather than anything deliberate &mdash; but they are live, and on a mandir&rsquo;s
+own website they cost trust. <b>Four of these can be fixed today by whoever
+holds the WordPress login</b> (section 11).</p>
+
+<p><b>4. There is no bilingual mechanism at all.</b> Not a partial one &mdash;
+none. No translation plugin, no language switcher, no <code>hreflang</code>,
+and the page language is hard-coded to Dutch. English has instead been mixed
+into Dutch pages at random, so an English speaker cannot choose English and a
+Dutch speaker cannot escape English. Meanwhile the 2026 annual programme
+poster <i>is</i> already fully bilingual &mdash; someone is already doing this
+work well, it simply never reaches the website as text.</p>
+
+<p><b>Target: website basics live by Saturday 10 October 2026</b>, the day
+before Shardiya Navratri. The main risk is not build time. It is that stage 1
+depends on content decisions only the pandit and the board can make, and those
+take longer than code in a volunteer organisation. The content track should
+start now rather than on 1 October.</p>
+
+
+<h1>2. The brief</h1>
+
+<p>From the project voice note of 17 September 2026, which sets two stages.</p>
+
+<h2>2.1 Stage 1 — right information, two languages, social loop</h2>
+
+<table>
+<tr><th>Ref</th><th>Requirement</th><th>In the brief&rsquo;s words</th></tr>
+<tr><td>R1</td><td>The website gives the right information</td><td>&ldquo;give the right information&rdquo;</td></tr>
+<tr><td>R2</td><td>In Dutch and English</td><td>&ldquo;in Dutch and English&rdquo;</td></tr>
+<tr><td>R3</td><td>Weekly services</td><td>&ldquo;the weekly services&rdquo;</td></tr>
+<tr><td>R4</td><td>Festivals and festivities</td><td>&ldquo;the festivities&rdquo;</td></tr>
+<tr><td>R5</td><td>Mantras</td><td>&ldquo;the mantras&rdquo;</td></tr>
+<tr><td>R6</td><td>The wider body of religious knowledge</td><td>&ldquo;and that kind of information&rdquo;</td></tr>
+<tr><td>R7</td><td>Website leads people to the social platforms</td><td>&ldquo;the website is leading people to the social platforms&rdquo;</td></tr>
+<tr><td>R8</td><td>Social platforms lead people back to the website</td><td>&ldquo;and from social platforms to the website&rdquo;</td></tr>
+</table>
+
+<p>Two observations on reading these against the current site.</p>
+
+<p><b>R1 is the load-bearing requirement</b>, and it is stated first. Given
+what the audit found, &ldquo;the right information&rdquo; is not a vague
+aspiration &mdash; it is a specific, addressable defect list.</p>
+
+<p><b>R7 and R8 together describe a loop</b>, not a row of icons in a footer.
+The site needs to give people a reason to follow, and the social accounts need
+to give people a reason to come back. The structural half of this is a
+permanent, linkable page per festival &mdash; that is what makes a bio link or
+a story sticker worth having. The other half needs a named person willing to
+post.</p>
+
+<h2>2.2 Stage 2 — community building (deferred)</h2>
+
+<p>Explicitly to follow only once stage 1 is, in the brief&rsquo;s words, &ldquo;set
+up in a right way&rdquo;: a community-building platform; the mandir as a
+<i>centre of Sanatan Dharma</i>; &ldquo;where we connect&rdquo; people; and
+&ldquo;link people to the right places.&rdquo;</p>
+
+<p>Recorded in section 13 so that stage-1 decisions keep the door open. Not
+to be designed yet.</p>
+
+<h2>2.3 Commercial facts from the brief</h2>
+
+<ul>
+<li><b>The website is donated.</b> Someone donated the site and pays the
+annual fee. We need to know who, what exactly it covers (domain? hosting? the
+Divi theme licence?), when it renews, and in whose name the domain is
+registered &mdash; <i>before</i> any hosting decision. Moving hosting could
+waste a donor&rsquo;s contribution or hand the temple an unbudgeted bill. This
+is a relationship question as much as a technical one.</li>
+<li><b>The domain trilokidhaam.nl must be preserved.</b> It carries whatever
+search reputation the temple has.</li>
+</ul>
+
+
+<h1>3. Timeline</h1>
+
+<p>The brief asks for 1 October as a start, roughly 10 days of build, and the
+basics live before Navratri. Shardiya Navratri 2026 begins Sunday 11 October,
+so those three statements are consistent and give a single date:</p>
+
+<p><b>Website basics live by Saturday 10 October 2026.</b></p>
+
+<p>Navratri is the right thing to aim at. Nine consecutive evenings, the
+busiest stretch of the temple&rsquo;s year, and the week when the most people
+will look the mandir up &mdash; new visitors deciding whether to come,
+families checking which evening to attend, neighbours wondering what is
+happening. It is also a real test: nine evenings of traffic will expose
+anything still wrong with the hours, the calendar or the directions.</p>
+
+<h2>3.1 The actual risk</h2>
+
+<p>The risk is not the 10 days of build. It is that stage 1 is mostly a
+content problem, and the content depends on people:</p>
+
+<ul>
+<li>The twelve ceremonies need descriptions only the pandit can give.</li>
+<li>The Divali date needs confirming.</li>
+<li>The ANBI question needs the board.</li>
+<li>Someone must decide who the English is for.</li>
+<li>Someone must own the social accounts.</li>
+</ul>
+
+<p>None of that is blocked by a technical decision, and all of it can start
+immediately. Today is 17 September, which means <b>three weeks of slack exist
+before the build window even opens</b> &mdash; but only if the questions in
+section 12 go out this week. That is the single largest risk reduction
+available, and it costs nothing.</p>
+
+<h2>3.2 Suggested sequencing</h2>
+
+<table>
+<tr><th>When</th><th>Track</th><th>What</th></tr>
+<tr><td>This week</td><td>Live-site triage</td><td>Remove the four pieces of actively wrong information from the current site (section 11). Needs only the WordPress login.</td></tr>
+<tr><td>This week</td><td>Content</td><td>Send the section 12 questions. Start the ceremony descriptions with the pandit.</td></tr>
+<tr><td>18 Sep – 1 Oct</td><td>Content</td><td>Editorial pass and translation of the recovered heritage content. Confirm the calendar. Settle the course dates.</td></tr>
+<tr><td>1 – 10 Oct</td><td>Build</td><td>Build and launch the stage-1 site.</td></tr>
+<tr><td>11 – 19 Oct</td><td>Navratri</td><td>Live. Watch what people actually look for and fix it.</td></tr>
+<tr><td>After</td><td>Stage 1.5</td><td>Course sign-up automation, calendar connectors, social automation.</td></tr>
+</table>
+
+
+<h1>4. Current state</h1>
+
+<h2>4.1 Platform</h2>
+
+<table>
+<tr><td>CMS</td><td>WordPress 7.1</td></tr>
+<tr><td>Theme</td><td>Divi (Elegant Themes) page builder</td></tr>
+<tr><td>Also installed</td><td>WooCommerce 10.1.4 &mdash; unused, all shop pages empty</td></tr>
+<tr><td>Page language</td><td><code>nl-NL</code>, hard-coded</td></tr>
+<tr><td>Translation plugin</td><td>None</td></tr>
+<tr><td>Sitemap</td><td>robots.txt advertises one; it returns 404. There is no sitemap.</td></tr>
+<tr><td>Total pages</td><td>82</td></tr>
+<tr><td>Pages in the menu</td><td>10</td></tr>
+<tr><td>Orphaned pages</td><td>72</td></tr>
+<tr><td>Pages under 100 characters</td><td>19</td></tr>
+</table>
+
+<h2>4.2 Method</h2>
+
+<p>Every page was retrieved through the site&rsquo;s public WordPress REST
+API and the text extracted from the Divi layer; the menu was parsed from the
+rendered homepage; the two annual-programme images were read directly and
+cross-checked against each other. Nothing in this document is inferred from a
+screenshot. The full inventory of all 82 pages, and the recovered text, are
+in the working repository.</p>
+
+<h2>4.3 What is already good</h2>
+
+<p>Worth stating first, because it changes the shape of the work from
+authoring to recovery:</p>
+
+<ul>
+<li><b>The Zondagdienst page is excellent.</b> A clear timetable, a patient
+explanation of what happens in a puja and why &mdash; the bell, the tilaka,
+the incense, the havankund, the prasadh &mdash; how to take part, and a frank
+list of what is expected of visitors. It is warm, specific, and genuinely
+useful to someone who has never been. It is the best answer the site has to
+&ldquo;what will happen if I come?&rdquo; <b>Carry it across nearly verbatim
+and translate it first.</b></li>
+<li><b>The 2026 poster is already fully bilingual</b>, well designed and
+complete. The Dutch/English work the brief asks for is already being done
+here.</li>
+<li><b>The 2015 knowledge corpus is substantive.</b> Roughly 39,000
+characters of thoughtful writing by people who know the subject.</li>
+<li><b>The Vedic-calendar page is genuinely distinctive.</b> It explains why
+festival dates computed for the Netherlands can legitimately differ by a day
+from Indian panchang &mdash; a question every Dutch Hindu family has, answered
+carefully, crediting a named authority.</li>
+<li><b>Pandit Vinay Narain is academically trained</b> in spiritual care. For
+a Dutch audience that is a real and unusual credential, and it is currently
+one sentence on an orphaned page.</li>
+<li>The temple produces <b>its own video</b> &mdash; aarti, bhajan/kirtan,
+Hindu Basics &mdash; on YouTube.</li>
+</ul>
+
+<h2>4.4 What is broken</h2>
+
+<p>Ordered by severity.</p>
+
+<h3>A1 — Opening hours are published three different ways</h3>
+<table>
+<tr><th>Source</th><th>Claim</th></tr>
+<tr><td>Homepage, Zondagdienst page, 2026 poster (both languages)</td><td>Sunday 13:00 – 15:30 — THIS ONE IS CORRECT</td></tr>
+<tr><td>/openingstijden/ (orphaned, still live)</td><td>Sunday 14:00 &ndash; 16:30</td></tr>
+<tr><td>/faq-2/ (in the menu&rsquo;s reach)</td><td>Daily, 08:00 &ndash; 20:00</td></tr>
+</table>
+<p>The e-mail address forks the same way: <code>trilokidhaam@gmail.com</code>
+nearly everywhere, <code>contact@trilokidhaam.nl</code> on the orphaned
+contact page.</p>
+
+<h3>A2 — The FAQ page describes a temple that does not exist</h3>
+<p>It states the mandir is open daily 08:00&ndash;20:00, and refers to a
+&ldquo;temple office&rdquo;, to booking ceremonies &ldquo;online&rdquo;, and to
+&ldquo;our expert astrologers &mdash; schedule an appointment today.&rdquo;
+There is no office, no booking system, and no appointment scheduling.</p>
+<p>This is the most damaging page on the site. Someone could drive to
+Tongelresestraat on a Wednesday afternoon and find the mandir shut.
+<b>Unpublish it today.</b></p>
+
+<h3>A3 — Placeholder testimonials and follower counts</h3>
+<ul>
+<li>The volunteers page carries three named testimonials &mdash;
+&ldquo;Anjali Verma&rdquo;, &ldquo;Ravi Patel&rdquo;, &ldquo;Meera
+Singh&rdquo; &mdash; with quotes about their spiritual growth at the mandir.
+These are template personas, not members of the community.</li>
+<li>The contact page shows Facebook 5,000 &middot; X 3,200 &middot; YouTube
+2,800 &middot; Instagram 4,500.</li>
+<li>The media page shows Facebook 150,210 &middot; Twitter 52,845 &middot;
+LinkedIn 40,995 &middot; YouTube 113,660 &mdash; and its own labels contradict
+its own headings.</li>
+</ul>
+<p>The two pages disagree by a factor of thirty, and the X/Twitter and
+LinkedIn accounts do not appear to exist. This reads as unreplaced template
+content rather than anything intended &mdash; but invented quotes attributed
+to named people, on a religious charity&rsquo;s own site, is a trust problem
+before it is a marketing one.</p>
+<p><b>Recommendation: real numbers, or no numbers.</b> A temple with 200
+genuinely engaged local families is more compelling than one claiming 150,000
+anonymous followers. And if real volunteers are willing to be quoted, those
+quotes will be better than the invented ones.</p>
+
+<h3>A4 — Maha Shivratri start time missing where it matters</h3>
+<p>The poster gives Maha Shivratri a <b>17:00</b> start &mdash; an hour
+earlier than every other festival. The homepage promotes the event but shows
+only the date. A visitor reading the homepage arrives an hour late to one of
+the busiest nights of the year.</p>
+
+<h3>B1 — The annual programme is a picture</h3>
+<p>The Jaarprogramma page contains exactly two JPEGs and no text. The
+programme therefore cannot be searched, indexed by Google, read by a screen
+reader, translated, copied into a calendar, or read on a phone without
+pinch-zooming. It is the single most valuable thing the mandir publishes each
+year.</p>
+<p>It has now been transcribed into structured bilingual data (section 9.3),
+from which the web calendar, a subscribable calendar feed, search-engine event
+markup, social posts and next year&rsquo;s poster can all be generated from
+one source.</p>
+
+<h3>B2 — Twelve ceremonies listed, none explained</h3>
+<p>The rituals page lists Havan, Grah Shanti, Griha Pravesh, Puja, Hindoe
+Horoscoop, Shradh, Vivah samskar, <b>Antyeshti samskar</b>, Mundan samskar,
+Sundarkand path, Kirtan/bhajan and Lezingen. Each is a heading with an
+<b>empty</b> description. No explanation, no lead time, no indication of cost,
+no way to book.</p>
+<p>Antyeshti samskar is funeral rites. A family that has just lost someone is
+searching for how to reach a pandit <i>now</i>, and the page gives them a
+word. <b>This is the highest-value content work on the site</b>, and it needs
+the pandit, not a copywriter.</p>
+
+<h3>B3 — The best content is unreachable</h3>
+<p>The pages with the most substantial writing on the entire site are the
+2015-era knowledge pages, and not one is in the navigation:</p>
+<table>
+<tr><th>Page</th><th>Characters</th></tr>
+<tr><td>Overige hoogtijdagen (other festivals explained)</td><td>7,019</td></tr>
+<tr><td>Algemene beginselen (general principles)</td><td>6,160</td></tr>
+<tr><td>Mantra&rsquo;s</td><td>5,097</td></tr>
+<tr><td>Vedische astrologie</td><td>4,423</td></tr>
+<tr><td>Ramayan</td><td>2,619</td></tr>
+<tr><td>Shiva mantra</td><td>1,594</td></tr>
+<tr><td>Hanuman jayanti</td><td>1,368</td></tr>
+<tr><td>Nauratri</td><td>1,226</td></tr>
+<tr><td>Five aartis, Veda&rsquo;s, Mahabharat &amp; Gita, Puja, Yagya</td><td>~7,800</td></tr>
+<tr><td>Total recovered</td><td>39,332</td></tr>
+</table>
+<p>Two pages end with &ldquo;zie de submenu&rsquo;s&rdquo; &mdash; see the
+submenus. The current menu is flat and has none, so those pointers lead
+nowhere.</p>
+<p>Two defects found while recovering this material:</p>
+<ul>
+<li>The page titled <b>&ldquo;Ganesh mantra&rdquo;</b> is published at the URL
+<code>/durga-mantra/</code>.</li>
+<li>The page titled <b>&ldquo;Durga mantra&rdquo;</b> contains 54 characters.
+<b>The Durga mantra text appears to have been lost.</b> Worth checking for an
+older backup.</li>
+</ul>
+
+<h3>B4 — No sitemap, no i18n mechanism</h3>
+<p>robots.txt points at a sitemap that returns 404, so search engines are
+crawling with no guidance &mdash; including all 72 orphaned pages, which are
+the ones most likely to surface the wrong opening hours.</p>
+<p>There is no translation plugin, no <code>hreflang</code>, and no language
+switcher. English is mixed into Dutch pages at random: the volunteers page
+opens in English and switches to Dutch halfway down; the media and FAQ pages
+are English; the rest are Dutch. <b>R2 is absent, not partial.</b></p>
+
+<h3>C1 — Every sign-up is an unmanaged mailbox</h3>
+<p>Course registration, volunteering, pastoral care, ceremony enquiries and
+general contact all resolve to &ldquo;e-mail trilokidhaam@gmail.com&rdquo;.
+There is no form anywhere on the site. No confirmation, no record of who
+signed up for what, no capacity limit, no reminders.</p>
+<p>Four classes are advertised as running &ldquo;once there are enough
+sign-ups&rdquo;, but nothing tells a visitor how many have signed up or
+whether it is going ahead &mdash; so there is no reason to believe the e-mail
+leads anywhere. Meanwhile the temple cannot see demand it may already have.</p>
+
+<h3>C2 — Volunteer flow describes steps that do not exist</h3>
+<p>The volunteers page presents a four-step process with buttons reading
+<i>Aanmelden</i>, <i>Inschrijven</i>, <i>Training Volgen</i>. There is no form
+and the buttons go nowhere.</p>
+
+<h3>C3 — The public funnel ends at a private door</h3>
+<p>The homepage asks visitors to join the Facebook group for more photos and
+videos. The group is private. As the far end of the R7 funnel, that is a door
+that only opens for people already inside. Public content belongs on the site
+or on the open Instagram and YouTube accounts; keep the group for the
+community already in it.</p>
+
+<h3>C4 — WooCommerce installed and unused</h3>
+<p>Cart, checkout, my-account and shop pages all exist and are empty. Either
+use it for donations and event tickets, or remove it &mdash; an unused
+commerce plugin is maintenance burden and attack surface for nothing.</p>
+
+<h3>A5 — Stock imagery and stale years</h3>
+<p>The live contact page pulls its background photo from Unsplash &mdash; a
+generic stock &ldquo;community gathering&rdquo; &mdash; while the temple has
+its own photographs and a YouTube channel of its own footage. The orphaned
+contact page still refers visitors to &ldquo;het jaarprogramma 2024&rdquo;.
+The page holding the 2026 programme is itself still titled
+&ldquo;Jaarprogramma 2025&rdquo;, while the menu says 2026.</p>
+
+
+<h1>5. Content requirements</h1>
+
+<table>
+<tr><th>Ref</th><th>Requirement</th><th>Source</th></tr>
+<tr><td>C-1</td><td>One canonical source for every fact. If a fact appears in two places, one is a bug.</td><td>Root cause of A1</td></tr>
+<tr><td>C-2</td><td>Every visitor-facing string exists in Dutch and English. Dutch is the default.</td><td>R2</td></tr>
+<tr><td>C-3</td><td>Weekly service: timetable, what to expect, how to take part, what is expected of visitors.</td><td>R3</td></tr>
+<tr><td>C-4</td><td>Festival calendar as text and data, not an image. Each festival has its own permanent URL.</td><td>R4, B1, R8</td></tr>
+<tr><td>C-5</td><td>Mantras and aartis restored and reachable from the menu.</td><td>R5, B3</td></tr>
+<tr><td>C-6</td><td>Knowledge section: scriptures, principles, festivals explained, Vedic calendar.</td><td>R6, B3</td></tr>
+<tr><td>C-7</td><td>Each of the twelve ceremonies has a real description, a lead time, and a contact route.</td><td>B2</td></tr>
+<tr><td>C-8</td><td>Antyeshti samskar has a phone route, not only an e-mail address.</td><td>B2</td></tr>
+<tr><td>C-9</td><td>Practical visit information in one place: address, map, parking, transport, shoes, what to bring, accessibility.</td><td>A1</td></tr>
+<tr><td>C-10</td><td>No fabricated content of any kind. No invented testimonials, no invented numbers, no stock photography where the temple&rsquo;s own images exist.</td><td>A3, A5</td></tr>
+<tr><td>C-11</td><td>Nothing unverified is published. Unconfirmed facts are held back, not guessed.</td><td>R1</td></tr>
+<tr><td>C-12</td><td>Devotional, ritual and biographical content is never machine-generated. Where the pandit&rsquo;s input is needed, the field stays empty until he provides it.</td><td>Respect; A3</td></tr>
+</table>
+
+<p>C-12 matters beyond accuracy. Getting a samskar&rsquo;s description wrong
+is a matter of respect, and the current site is evidence of what happens when
+templated text is allowed to stand in for a community&rsquo;s own voice.</p>
+
+
+<h1>6. Functional requirements</h1>
+
+<table>
+<tr><th>Ref</th><th>Requirement</th><th>Priority</th></tr>
+<tr><td>F-1</td><td>Dutch/English routing with a visible language switcher on every page, and <code>hreflang</code> for search engines.</td><td>Must — stage 1</td></tr>
+<tr><td>F-2</td><td>Festival calendar page, generated from data, showing what is next.</td><td>Must — stage 1</td></tr>
+<tr><td>F-3</td><td>A permanent page per festival, so a social post has something to link to.</td><td>Must — stage 1 (R8)</td></tr>
+<tr><td>F-4</td><td>Subscribable calendar feed (.ics) so people can add the year to their own calendar.</td><td>Should — stage 1</td></tr>
+<tr><td>F-5</td><td>Search-engine event markup (schema.org/Event) so festivals surface in local search.</td><td>Should — stage 1</td></tr>
+<tr><td>F-6</td><td>One working enquiry/registration form with a confirmation reply, replacing &ldquo;e-mail us&rdquo;.</td><td>Must — stage 1</td></tr>
+<tr><td>F-7</td><td>Course sign-up with a visible capacity or interest count, so &ldquo;once there are enough sign-ups&rdquo; becomes credible.</td><td>Should — stage 1.5</td></tr>
+<tr><td>F-8</td><td>Donation page: IBAN, standing-order instructions, QR codes, and the ANBI position if there is one.</td><td>Must — stage 1</td></tr>
+<tr><td>F-9</td><td>Map and directions.</td><td>Must — stage 1</td></tr>
+<tr><td>F-10</td><td>Embedded temple video from the existing YouTube channel.</td><td>Should — stage 1 (R7)</td></tr>
+<tr><td>F-11</td><td>Redirects from all 72 orphaned legacy URLs to their new homes.</td><td>Must — stage 1</td></tr>
+<tr><td>F-12</td><td>Sitemap.</td><td>Must — stage 1</td></tr>
+<tr><td>F-13</td><td>Newsletter or WhatsApp broadcast sign-up.</td><td>Could — stage 1.5</td></tr>
+<tr><td>F-14</td><td>Online donation by iDEAL or Tikkie.</td><td>Could — stage 1.5</td></tr>
+</table>
+
+
+<h1>7. Non-functional requirements</h1>
+
+<table>
+<tr><th>Ref</th><th>Requirement</th></tr>
+<tr><td>N-1</td><td>Mobile first. Most visitors will arrive on a phone, often while deciding whether to travel. The current programme cannot be read on a phone at all.</td></tr>
+<tr><td>N-2</td><td>Accessible. Real text rather than text in images, sufficient contrast, keyboard navigable, screen-reader friendly. The congregation includes elderly members.</td></tr>
+<tr><td>N-3</td><td>Fast on a mobile connection. Target a sub-2-second first load.</td></tr>
+<tr><td>N-4</td><td>Findable. Correct titles and descriptions, working sitemap, event markup, and a Google Business Profile carrying the right opening hours.</td></tr>
+<tr><td>N-5</td><td>Cheap to run. A volunteer-funded charity should not carry a significant hosting bill.</td></tr>
+<tr><td>N-6</td><td>Maintainable by two people without specialist knowledge, and documented well enough to hand over.</td></tr>
+<tr><td>N-7</td><td>GDPR compliant &mdash; see section 10.</td></tr>
+<tr><td>N-8</td><td>Respectful of the subject. Sanskrit and Hindi terms spelled consistently and correctly, with a glossary for Dutch readers who do not know them.</td></tr>
+</table>
+
+
+<h1>8. Proposed structure</h1>
+
+<p>Ten menu items became the problem last time, because every redesign added
+pages without removing any. This proposes seven top-level sections, each with
+a clear job. Every URL exists twice, once per language: <code>/nl/&hellip;</code>
+and <code>/en/&hellip;</code>.</p>
+
+<table>
+<tr><th>Section</th><th>Contains</th><th>Answers the question</th></tr>
+<tr><td>Home</td><td>What is next, the Sunday service in one line, this week&rsquo;s or month&rsquo;s festival, a short welcome, donate</td><td>&ldquo;What is this and when can I come?&rdquo;</td></tr>
+<tr><td>Visit</td><td>Sunday service timetable and what to expect; address, map, parking, transport; etiquette; accessibility; FAQ (rewritten from scratch)</td><td>&ldquo;What happens if I come, and how do I get there?&rdquo;</td></tr>
+<tr><td>Calendar</td><td>Full annual programme as text, page per festival, .ics feed, the poster as a download</td><td>&ldquo;When is Divali this year?&rdquo;</td></tr>
+<tr><td>Ceremonies</td><td>The twelve samskars and rituals, each with a description, lead time and contact route; pastoral care</td><td>&ldquo;Can the mandir do this for my family?&rdquo;</td></tr>
+<tr><td>Learn</td><td>Mantras, aartis, scriptures, general principles, festivals explained, the Vedic calendar, glossary</td><td>&ldquo;What does this mean?&rdquo; (R5, R6)</td></tr>
+<tr><td>Community</td><td>Courses and classes with sign-up, volunteering, media and video, social links</td><td>&ldquo;How do I take part?&rdquo; (R7)</td></tr>
+<tr><td>Support</td><td>Donate, standing order, ANBI, about the stichting, contact</td><td>&ldquo;How do I help?&rdquo;</td></tr>
+</table>
+
+<p>Notes on the mapping:</p>
+<ul>
+<li><b>Visit</b> merges what is currently spread across the homepage, the
+Zondagdienst page, two orphaned contact pages and an orphaned opening-hours
+page &mdash; the four sources that currently disagree.</li>
+<li><b>Learn</b> is where the 39,000 recovered characters go. It is the
+section that does not exist today and it satisfies two of the eight
+requirements on its own.</li>
+<li><b>Calendar</b> exists so that R8 has somewhere to point. One permanent
+URL per festival is what makes social posting worth doing.</li>
+<li>The current <i>Levensvragen</i> page (pastoral care) folds into
+<b>Ceremonies</b>, since that is where someone in difficulty will look.</li>
+</ul>
+
+
+<h1>9. Canonical facts</h1>
+
+<p>These are the facts the site must state, from one source, in both
+languages. Items marked <b>to confirm</b> need the temple before publication.</p>
+
+<h2>9.1 Identity and contact</h2>
+<table>
+<tr><td>Public name</td><td>Mandir Triloki Dhaam Eindhoven</td></tr>
+<tr><td>Legal entity</td><td>Stichting Senskaar Triloki Dhaam</td></tr>
+<tr><td>Motto</td><td><i>Dharmo Rakshati Rakshitah</i> &mdash; &ldquo;Dharma protects those who protect it&rdquo;</td></tr>
+<tr><td>Address</td><td>Tongelresestraat 371, 5642 NC Eindhoven</td></tr>
+<tr><td>Phone</td><td>06-45461229</td></tr>
+<tr><td>E-mail</td><td>trilokidhaam@gmail.com</td></tr>
+<tr><td>Second e-mail</td><td>contact@trilokidhaam.nl &mdash; to confirm: does this mailbox exist and is it monitored? A temple e-mailing from its own domain looks more established than one using gmail.</td></tr>
+<tr><td>Pandit / spiritual carer</td><td>Pandit Vinay Narain, academically trained</td></tr>
+<tr><td>Social</td><td>YouTube @mandirtrilokidhaam32; Instagram @mandirtrilokidhaam; Facebook group (private)</td></tr>
+<tr><td>Not to be listed</td><td>X/Twitter and LinkedIn &mdash; no such accounts were found</td></tr>
+</table>
+
+<h2>9.2 Weekly service</h2>
+<p><b>Every Sunday, 13:00 &ndash; 15:30.</b> This is the fact the current site
+most often gets wrong; treat it as authoritative and delete the
+alternatives.</p>
+<table>
+<tr><th>Time</th><th>Programme</th></tr>
+<tr><td>13:00 &ndash; 14:00</td><td>Puja and Bhajan &mdash; offerings to the deities and communal devotional singing</td></tr>
+<tr><td>14:00 &ndash; 15:00</td><td>Parvachan &mdash; a discourse on a topic from Hinduism, sometimes interactive</td></tr>
+<tr><td>15:00 &ndash; 15:30</td><td>Aarti and Prasadh &mdash; homage with music, followed by prasadh and panchamrit</td></tr>
+</table>
+<p>The mandir is <b>not</b> open outside this service and the festival dates
+below.</p>
+
+<h2>9.3 Annual programme 2026</h2>
+<p>Transcribed from both poster versions, which agree on every date. Times are
+start times; the poster gives no end times.</p>
+<table>
+<tr><th>Date</th><th>Day</th><th>Festival</th><th>From</th></tr>
+<tr><td>14 January</td><td>Wednesday</td><td>Makar Sakranti</td><td>18:00</td></tr>
+<tr><td>23 January</td><td>Friday</td><td>Vasant Panchami / Saraswati Puja</td><td>18:00</td></tr>
+<tr><td>15 February</td><td>Sunday</td><td>Maha Shivratri</td><td>17:00</td></tr>
+<tr><td>2 March</td><td>Monday</td><td>Holika Dahan</td><td>18:00</td></tr>
+<tr><td>18 &ndash; 27 March</td><td>Wed &ndash; Fri</td><td>Chaitra Navratri &mdash; to confirm</td><td>18:00</td></tr>
+<tr><td>26 March</td><td>Thursday</td><td>Ramnaumi</td><td>18:00</td></tr>
+<tr><td>1 April</td><td>Wednesday</td><td>Hanuman Jayanti</td><td>18:00</td></tr>
+<tr><td>3, 10, 17, 24 August</td><td>Mondays</td><td>Shravan Somvaar Shivpuja</td><td>18:00</td></tr>
+<tr><td>3 September</td><td>Thursday</td><td>Krishna Janamashtmi</td><td>18:00</td></tr>
+<tr><td>14 September</td><td>Monday</td><td>Ganesh Chaturthi</td><td>18:00</td></tr>
+<tr><td>11 &ndash; 19 October</td><td>Sun &ndash; Mon</td><td>Shardiya Navratri &mdash; every evening</td><td>18:00</td></tr>
+<tr><td>20 October</td><td>Tuesday</td><td>Vijaya Dashmi (Dussehra)</td><td>18:00</td></tr>
+<tr><td>9 November</td><td>Monday</td><td>Divali &mdash; to confirm</td><td>18:00</td></tr>
+<tr><td>20 December</td><td>Sunday</td><td>Geeta Jayanti</td><td>13:00</td></tr>
+</table>
+
+<p><b>To confirm — Divali.</b> The poster says Monday 9 November. Widely
+published, India-based panchang sources place Diwali and Lakshmi Puja 2026 on
+Sunday 8 November. The temple&rsquo;s own Vedic-calendar page explains exactly
+why this gap arises: festival dates are computed from the tithi present at
+sunrise, and because sunrise in the Netherlands is much later than in India,
+the Dutch vedic calendar can legitimately place a festival a day apart from
+the Indian one. The poster&rsquo;s spacing from Dussehra is also internally
+consistent with the 9th. <b>So this is probably correct as printed</b> &mdash;
+it needs confirmation, not correction.</p>
+<p><i>Recommendation: publish the reasoning, not just the date.</i> A short
+note explaining that the mandir follows the vedic calendar computed for the
+Netherlands pre-empts the &ldquo;but Google says the 8th&rdquo; question from
+every visitor, and demonstrates that the temple knows precisely what it is
+doing. This is a small piece of content that would distinguish the site from
+every other mandir website in the country.</p>
+
+<p><b>To confirm — Chaitra Navratri.</b> A nine-night festival is listed as
+spanning ten days (18&ndash;27 March), with Ramnaumi on the 26th. Intentional,
+or a typo?</p>
+
+<p><b>Also:</b> the poster footers contain at least one typo each in the street
+name, city, phone number or web address. The source images are too low
+resolution to identify them reliably &mdash; worth a proofread against the
+original artwork before the next reprint.</p>
+
+<h2>9.4 Donations</h2>
+<table>
+<tr><td>IBAN</td><td>NL90INGB0007660527</td></tr>
+<tr><td>Account holder</td><td>Stichting Senskaar Triloki Dhaam</td></tr>
+<tr><td>Methods today</td><td>Bank transfer, standing order, QR codes displayed in the mandir</td></tr>
+<tr><td>ANBI status</td><td>To confirm. If the stichting holds an ANBI ruling, Dutch donors can deduct their gifts &mdash; the strongest argument a donation page has. It also obliges certain published disclosures. Nothing on the current site mentions it either way.</td></tr>
+<tr><td>KvK / RSIN</td><td>To confirm</td></tr>
+</table>
+
+<h2>9.5 Courses, 2025/2026</h2>
+<p>Eight Sunday sessions: 7 Sep, 5 Oct, 2 Nov, 7 Dec 2025; 4 Jan, 1 Feb,
+1 Mar, 12 Apr 2026. Hindi 12:00&ndash;13:00, Hindu Basics 13:00&ndash;15:30.
+Harmonium, dhol, children&rsquo;s music and yoga run &ldquo;once there are
+enough sign-ups&rdquo;.</p>
+<p><b>To decide:</b> the published list ends 12 April 2026, which is in the
+past. Either publish the 2026/2027 dates or state clearly that the year has
+finished and when the next begins. A visitor landing on a list of past dates
+concludes the temple is inactive &mdash; the opposite of the truth.</p>
+<p>Two content bugs: the homepage says &ldquo;8&ndash;10 sessions&rdquo; while
+the activities page lists exactly 8; and the Hindi class reuses the Hindu
+Basics description word for word, which does not describe a language class at
+all.</p>
+
+
+<h1>10. GDPR and safeguarding</h1>
+
+<p>Cheapest to get right before any form exists. The temple will be handling
+names, e-mail addresses, course registrations, <b>children&rsquo;s names</b>
+&mdash; there is a children&rsquo;s programme &mdash; photographs of
+identifiable people, and pastoral-care requests. The last of those is
+special-category data about religious belief under Dutch and EU law.</p>
+
+<p>Required:</p>
+<ul>
+<li>A privacy statement. There is currently none; the &ldquo;Terms and
+Conditions&rdquo; page contains 39 characters.</li>
+<li>A stated lawful basis for each purpose.</li>
+<li><b>Explicit parental consent</b> before any child&rsquo;s name or image is
+collected or published.</li>
+<li>A retention period, and someone who actually deletes things.</li>
+<li>A photography and filming policy. The Zondagdienst page already asks
+visitors to seek permission before filming &mdash; the temple should hold
+itself to the same standard for the images it publishes.</li>
+<li>A named person responsible.</li>
+<li>Confidentiality stated plainly on the pastoral-care route, so people know
+who reads what they send.</li>
+</ul>
+
+
+<h1>11. Fix on the live site now</h1>
+
+<p>Four things remove actively misleading information from the current site.
+They need nothing from the new build &mdash; only the WordPress login &mdash;
+and they de-risk the 10 October date regardless of what else happens. If
+nothing else in this document is acted on this week, these should be.</p>
+
+<table>
+<tr><th>#</th><th>Action</th><th>Why</th></tr>
+<tr><td>1</td><td>Unpublish <code>/faq-2/</code> and <code>/faq/</code></td><td>They advertise the temple as open daily 08:00&ndash;20:00. Someone will make a wasted journey.</td></tr>
+<tr><td>2</td><td>Delete the three volunteer testimonials and every follower count</td><td>Invented quotes attributed to named people, and numbers that contradict each other thirty-fold.</td></tr>
+<tr><td>3</td><td>Unpublish <code>/openingstijden/</code></td><td>States 14:00&ndash;16:30.</td></tr>
+<tr><td>4</td><td>Add &ldquo;from 17:00&rdquo; to Maha Shivratri on the homepage</td><td>Visitors currently arrive an hour late.</td></tr>
+</table>
+
+<p>Then, when convenient: publish the annual programme as text alongside the
+poster; retitle &ldquo;Jaarprogramma 2025&rdquo; to 2026; fix the sitemap so
+the orphaned pages stop being crawled.</p>
+
+
+<h1>12. Decisions needed</h1>
+
+<p>Ordered by how much they block the work. Items 1 to 4 are on the critical
+path and are the reason to start the content track now rather than on
+1 October.</p>
+
+<table>
+<tr><th>#</th><th>Question</th><th>Who</th><th>Blocks</th></tr>
+<tr><td>1</td><td>The twelve ceremony descriptions. What each is, how much notice is needed, whether there is a fee or a suggested donation, whether it can be done at home or only at the mandir. Antyeshti samskar first &mdash; and is there an out-of-hours route for funeral rites? If not, what should a family do instead?</td><td>Pandit</td><td>Ceremonies section (C-7, C-8)</td></tr>
+<tr><td>2</td><td>Is Divali on 9 November intentional? See 9.3.</td><td>Pandit</td><td>Calendar, and all Divali publicity</td></tr>
+<tr><td>3</td><td>Course dates for 2026/2027, or a statement that 2025/2026 has finished.</td><td>Board</td><td>Community section</td></tr>
+<tr><td>4</td><td>Who owns the social accounts, and who is willing to post? R7 and R8 need a person, not just a link. If nobody owns it, we build the plumbing and say so honestly rather than pretending the loop exists.</td><td>Board</td><td>R7, R8</td></tr>
+<tr><td>5</td><td>Is the stichting an ANBI? If so, what are the RSIN and KvK numbers?</td><td>Board</td><td>Donation page (F-8)</td></tr>
+<tr><td>6</td><td>The hosting donor. Who, what does the payment cover, when does it renew, and in whose name is the domain registered?</td><td>Board</td><td>Hosting and launch</td></tr>
+<tr><td>7</td><td>Who is the English for? Second-generation community members, non-Hindu Eindhoven residents, and expats want quite different things from the same page. It changes the tone more than the wording.</td><td>Board</td><td>All translation</td></tr>
+<tr><td>8</td><td>Is contact@trilokidhaam.nl a real mailbox?</td><td>Board</td><td>Contact details</td></tr>
+</table>
+
+<p>Two further items worth raising:</p>
+<ul>
+<li><b>The lost Durga mantra.</b> The page is down to 54 characters. Does
+anyone have an older copy, or can the pandit supply the text again?</li>
+<li><b>Bhaskaranand</b>, of ashram Sada Shiva Dham in Loenen, is credited as
+the author of the Vedic-calendar page and his e-mail address is published on
+it. Is he still associated with the mandir, and does he consent to that
+address remaining public?</li>
+</ul>
+
+
+<h1>13. Out of scope — Stage 2</h1>
+
+<p>From the brief, and deliberately deferred until stage 1 is right. Recorded
+so that stage-1 choices do not close these doors:</p>
+
+<ul>
+<li>A community platform with member accounts or a directory</li>
+<li>Event registration with real capacity management</li>
+<li>Recurring-donation management</li>
+<li>A referral layer for &ldquo;the right places&rdquo; &mdash; pandits
+elsewhere in the Netherlands, ashrams, other mandirs, Hindu pastoral care</li>
+<li>Confidential pastoral-care requests</li>
+<li>Richer teaching content, possibly video-led</li>
+</ul>
+
+<p>What stage 1 does to keep them open: content stays as structured data
+rather than inside a page builder; every festival and ceremony gets a real
+permanent URL; and the design does not assume visitors are anonymous and
+read-only.</p>
+
+<h2>13.1 Wider programme, after stage 1</h2>
+<p>Roughly in order of value for effort:</p>
+<ol>
+<li><b>Course and event registration</b> &mdash; replaces the unmanaged
+mailbox, and the temple finds out what demand it already has.</li>
+<li><b>Calendar connectors</b> &mdash; .ics feed, Google Calendar, and the
+festival dates pushed to Google Business Profile so they appear in local
+search.</li>
+<li><b>Social posting from the festival data</b>, so a festival is announced
+once and cannot drift between the site and Instagram.</li>
+<li><b>Online donation</b> &mdash; iDEAL or Tikkie suits a Dutch audience far
+better than a bank transfer.</li>
+<li><b>Newsletter or WhatsApp broadcast</b> for the weekly service and
+festivals.</li>
+<li><b>Poster generation</b> from the same festival data, closing the loop
+with the artwork the temple already makes well.</li>
+</ol>
+
+
+<h1>14. Technical approach</h1>
+
+<p><b>Decided:</b> the site will be maintained by Sandeep and Mayur, so
+content lives in the project repository as structured data and the site is
+generated from it. A static bilingual site &mdash; Astro or equivalent
+&mdash; deployed to Cloudflare Pages or Vercel.</p>
+
+<p>Why this fits:</p>
+<ul>
+<li>Bilingual routing is a first-class feature rather than a plugin, which is
+what R2 needs.</li>
+<li>One source of truth for the site, the social posts and next year&rsquo;s
+poster &mdash; which is the structural fix for A1, the three-way split in the
+opening hours.</li>
+<li>Hosting cost is effectively zero, which matters for a volunteer-funded
+charity (N-5).</li>
+<li>Fast and secure by default, with no plugin or licence maintenance.</li>
+<li>A good foundation for the automations and connectors in section 13.1.</li>
+</ul>
+
+<p>The trade-off to manage: editing requires repository access, so only
+Sandeep and Mayur can update the site. Two mitigations &mdash; document the
+editing process properly (N-6), and keep the option of layering a lightweight
+CMS on top later if volunteers need to edit directly. That can be added
+without rebuilding.</p>
+
+<p><b>Open:</b> whether the donated WordPress hosting continues in parallel,
+is retired, or is repurposed. That depends on decision 6.</p>
+
+<p>Work already completed and committed to the repository, independent of any
+of this:</p>
+<ul>
+<li>The canonical facts, the 2026 calendar, the ceremony catalogue and the
+course data, as structured bilingual data</li>
+<li>All 39,332 characters of recovered heritage content, with their original
+URLs recorded for redirects</li>
+<li>The full inventory of all 82 legacy pages</li>
+<li>The transcribed brief and the full audit</li>
+</ul>
+
+
+<h1>15. Definition of done for stage 1</h1>
+
+<p>On 10 October 2026, the site should satisfy all of the following:</p>
+
+<ol>
+<li>Every fact a visitor needs &mdash; hours, address, festival dates, contact
+&mdash; appears exactly once as a source and is correct.</li>
+<li>Nothing published anywhere contradicts anything else published anywhere.</li>
+<li>Every page is available in Dutch and English, with a switcher and correct
+<code>hreflang</code>.</li>
+<li>The full annual programme is readable as text, on a phone, in both
+languages, with a permanent URL per festival.</li>
+<li>The mantras, aartis and scriptures are reachable from the menu.</li>
+<li>All twelve ceremonies have a real description and a working contact route,
+and funeral rites have a phone number.</li>
+<li>No fabricated testimonial, follower count or stock photograph remains.</li>
+<li>At least one form works and sends a confirmation.</li>
+<li>All 72 orphaned legacy URLs redirect somewhere sensible.</li>
+<li>A privacy statement exists.</li>
+<li>Searching &ldquo;hindu temple Eindhoven&rdquo; finds the site with correct
+opening hours.</li>
+</ol>
+
+<p>Test 2 is the one that matters most, and it is the one the current site
+fails hardest.</p>
+
+</body>
+</html>

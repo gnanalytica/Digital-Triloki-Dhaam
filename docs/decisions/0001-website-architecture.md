@@ -1,6 +1,6 @@
 # 0001 — Website architecture for stage 1
 
-- **Status:** open — blocked on two answers from the temple board
+- **Status:** accepted (Q1 answered 17 Sep 2026) — option B
 - **Date raised:** 2026-09-17
 - **Deadline it feeds:** website basics live by 2026-10-10 (pre-Navratri)
 
@@ -27,16 +27,16 @@ Two facts constrain the choice, and neither is technical:
    update is a slow failure, and the 72 orphaned pages are evidence of what
    happens when site upkeep outruns the people available to do it.
 
-## Blocking questions
+## The deciding question
 
 **Q1. Who edits the site after launch, and are they comfortable with a CMS?**
 
-- If **volunteers** with varying technical confidence → a CMS is required, and
-  the editing experience matters more than the stack.
-- If **Sandeep and Mayur** → content can live in this repo, which is faster,
-  cheaper, more reliable, and already how `content/` is organised.
+**Answered 17 September 2026: Sandeep and Mayur.** Content therefore lives in
+this repository and the site is generated from it. No CMS is required for
+stage 1, which removes the option-C branch below.
 
-**Q2. Rebuild, or repair the existing WordPress in place?**
+**Q2. Rebuild, or repair the existing WordPress in place?** Rebuild, per the
+decision recorded at the end of this document.
 
 ## Options
 
@@ -75,16 +75,23 @@ As B, plus a hosted CMS (Sanity, Directus, Decap) so volunteers can edit.
 - **Against:** the most moving parts; another service to fund and administer;
   the tightest fit against 10 October.
 
-## Recommendation, pending answers
+## Decision
 
-**Option B if Q1 is "Sandeep and Mayur"; option C if Q1 is "volunteers".**
+**Option B.** Q1 came back "Sandeep and Mayur", so content stays in this
+repository as structured data and the site is generated from it — a static
+bilingual site (Astro or equivalent) on Cloudflare Pages or Vercel. The
+`content/` directory as committed is the foundation and needs no rework.
 
-In either case the `content/` directory as committed is the right foundation
-and needs no rework.
+The trade-off to manage is the one named under option B: only repo-holders
+can edit. Two mitigations, neither of which needs deciding now — document the
+editing process well enough to hand over, and keep the option of layering a
+lightweight CMS on top later if volunteers need to edit directly. That can be
+added without rebuilding, which is the main reason option B beats option C
+today rather than being a bet against it.
 
-**Option A is the right answer if the 10 October date is immovable and the
-board cannot be reached in time.** Note that the four highest-severity audit
-findings — false opening hours, fabricated testimonials, invented follower
+**Option A remains the fallback if the 10 October date proves immovable and
+the content decisions do not land in time** — it is the only option certain to
+ship by then. Note that the four highest-severity audit findings — false opening hours, fabricated testimonials, invented follower
 counts, the missing Maha Shivratri start time — are all fixable in the
 existing WordPress **today**, by whoever holds the login. Doing that
 immediately de-risks the deadline regardless of which option wins, because it
@@ -93,6 +100,13 @@ any of this.
 
 ## Consequences
 
-Not yet decided, so nothing is foreclosed. `content/` is deliberately plain
-YAML and Markdown with no framework assumptions, so the discovery work
-committed so far survives any of the three outcomes.
+- `content/` stays plain YAML and Markdown, and becomes the single source of
+  truth for the site, the social posts and next year's poster. That is the
+  structural fix for the three-way split in the opening hours (audit A1).
+- Bilingual routing is a first-class concern of the generator rather than a
+  plugin, which is what R2 requires.
+- Hosting cost drops to effectively zero, which matters for a volunteer-funded
+  charity.
+- Editing requires repository access until and unless a CMS is added.
+- Still open, and dependent on the hosting-donor question: whether the donated
+  WordPress hosting runs in parallel, is retired, or is repurposed.
