@@ -32,8 +32,9 @@ Rules the site keeps, taken from the repository's own:
 
 ## Pages
 
-The home page, `/[lang]`, is the whole site as one flowing page, and the menu scrolls to its sections. When the reader
-reaches the end, the page arrives back at its beginning (`src/components/Wheel.tsx`). Each section also has a page of
+The home page, `/[lang]`, is the whole site as one flowing page, and the menu scrolls to its sections. Sections make
+their entrance as a function of the scroll position, so scrolling back up plays it in reverse
+(`src/components/ScrollFlow.tsx`). Each section also has a page of
 its own, for sharing and for search engines: `/visit` · `/festivals` · `/knowledge` · `/lessons` · `/heritage` ·
 `/join` · `/donate`, plus `/calendar.ics` (the year as a calendar file). The list is in `src/lib/pages.ts`; everything
 is assembled from the sections in `src/components/sections/`.

@@ -14,14 +14,12 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
   const home = rest === '';
   const [read, setRead] = useState(0), [far, setFar] = useState(false), [here, setHere] = useState<string | null>(null);
 
-  // The gold line under the header tracks how far down the page the reader is. On the home page the end of the
-  // page is where the wheel (see Wheel.tsx) takes over.
+  // The gold line under the header tracks how far down the page the reader is.
   useEffect(() => {
     let ticking = false;
     const measure = () => {
       ticking = false;
-      const loop = document.querySelector<HTMLElement>('.loop'), top = document.getElementById('top');
-      const max = loop && top ? loop.offsetTop - top.offsetHeight : document.documentElement.scrollHeight - window.innerHeight;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
       setRead(max > 0 ? Math.min(1, window.scrollY / max) : 0);
       setFar(window.scrollY > window.innerHeight);
     };

@@ -769,3 +769,22 @@
     .seva-scroll tbody th { font-size: .82rem; white-space: nowrap; }
     .seva-btn { padding: 6px 8px; font-size: .8rem; white-space: nowrap; }
   }
+
+  /* ---- scroll-linked transitions (see components/ScrollFlow.tsx) ----
+     --p runs 0 → 1 as a section enters from below, --q runs 1 → 0 as it leaves at the top. Everything here is a
+     function of those two, so it plays forwards scrolling down and backwards scrolling up. */
+  html.flow main > section > .wrap {
+    opacity: calc((.12 + .88 * var(--p, 1)) * (.3 + .7 * var(--q, 1)));
+    transform: translate3d(0, calc((1 - var(--p, 1)) * 90px - (1 - var(--q, 1)) * 40px), 0) scale(calc(.965 + .035 * var(--p, 1)));
+    transform-origin: 50% 0; will-change: opacity, transform;
+  }
+  html.flow main > section > .wrap > h2, html.flow main > section .her-head h2, html.flow main > section.band-give h2 {
+    transform: translate3d(calc((1 - var(--p, 1)) * -70px), 0, 0);
+  }
+  html.flow main > section > .wrap > h2 + p, html.flow main > section > .wrap > .lead { transform: translate3d(calc((1 - var(--p, 1)) * 70px), 0, 0); }
+  html.flow .rangoli { rotate: calc((1 - var(--p, 1)) * -90deg + (1 - var(--q, 1)) * 50deg); scale: calc(.6 + .4 * var(--p, 1)); opacity: calc(.92 * var(--p, 1)); }
+  html.flow .feathers { transform-origin: 50% 100%; rotate: calc((1 - var(--p, 1)) * 26deg); scale: calc(.7 + .3 * var(--p, 1)); opacity: var(--p, 1); }
+  html.flow .sanctum .mandala { rotate: calc((1 - var(--p, 1)) * -40deg + (1 - var(--q, 1)) * 30deg); scale: calc(.8 + .2 * var(--p, 1)); }
+  html.flow .mural img { transform: scale(calc(1.3 - .3 * var(--p, 1))) translate3d(0, calc((1 - var(--q, 1)) * -6%), 0); }
+  html.flow .garland { transform: scaleX(calc(.2 + .8 * var(--p, 1))); opacity: var(--p, 1); }
+  html.flow footer > .wrap { opacity: calc(.15 + .85 * var(--p, 1)); transform: translate3d(0, calc((1 - var(--p, 1)) * 60px), 0); }
