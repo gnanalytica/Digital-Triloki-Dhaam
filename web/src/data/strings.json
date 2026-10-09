@@ -1,0 +1,1217 @@
+{
+  "nav_visit": {
+    "nl": "Uw bezoek",
+    "en": "Your visit",
+    "hi": "आपकी यात्रा"
+  },
+  "nav_sunday": {
+    "nl": "Zondagdienst",
+    "en": "Sunday service",
+    "hi": "रविवार सेवा"
+  },
+  "nav_calendar": {
+    "nl": "Jaarprogramma",
+    "en": "Festivals",
+    "hi": "उत्सव"
+  },
+  "nav_ceremonies": {
+    "nl": "Rituelen",
+    "en": "Ceremonies",
+    "hi": "संस्कार"
+  },
+  "nav_learn": {
+    "nl": "Kennis",
+    "en": "Knowledge",
+    "hi": "ज्ञान"
+  },
+  "nav_join": {
+    "nl": "Doe mee",
+    "en": "Take part",
+    "hi": "जुड़ें"
+  },
+  "nav_donate": {
+    "nl": "Doneren",
+    "en": "Donate",
+    "hi": "दान"
+  },
+  "skip": {
+    "nl": "Naar de inhoud",
+    "en": "Skip to content",
+    "hi": "सामग्री पर जाएँ"
+  },
+  "lang_label": {
+    "nl": "Taal",
+    "en": "Language",
+    "hi": "भाषा"
+  },
+  "temple_kind": {
+    "nl": "Hindoetempel in Eindhoven",
+    "en": "Hindu temple in Eindhoven",
+    "hi": "आइंडहोवन का हिंदू मंदिर"
+  },
+  "every_sunday": {
+    "nl": "Elke zondag",
+    "en": "Every Sunday",
+    "hi": "हर रविवार"
+  },
+  "next_service": {
+    "nl": "Eerstvolgende dienst",
+    "en": "Next service",
+    "hi": "अगली सेवा"
+  },
+  "today": {
+    "nl": "Vandaag",
+    "en": "Today",
+    "hi": "आज"
+  },
+  "from": {
+    "nl": "vanaf",
+    "en": "from",
+    "hi": "से"
+  },
+  "to_confirm": {
+    "nl": "Datum wordt nog bevestigd",
+    "en": "Date to be confirmed",
+    "hi": "तिथि की पुष्टि शेष"
+  },
+  "route": {
+    "nl": "Route in Google Maps",
+    "en": "Directions in Google Maps",
+    "hi": "Google Maps में रास्ता"
+  },
+  "call": {
+    "nl": "Bel",
+    "en": "Call",
+    "hi": "फ़ोन करें"
+  },
+  "email_us": {
+    "nl": "E-mail",
+    "en": "E-mail",
+    "hi": "ई-मेल"
+  },
+  "add_calendar": {
+    "nl": "Zet het jaarprogramma in uw agenda",
+    "en": "Add the festivals to your calendar",
+    "hi": "उत्सव अपने कैलेंडर में जोड़ें"
+  },
+  "all_festivals": {
+    "nl": "Bekijk het hele jaarprogramma",
+    "en": "See the full year",
+    "hi": "पूरा वर्ष देखें"
+  },
+  "plan_visit": {
+    "nl": "Bereid uw bezoek voor",
+    "en": "Plan your visit",
+    "hi": "अपनी यात्रा की तैयारी करें"
+  },
+  "watch": {
+    "nl": "Bekijk op YouTube",
+    "en": "Watch on YouTube",
+    "hi": "YouTube पर देखें"
+  },
+  "welcome_h": {
+    "nl": "Iedereen is welkom, elke zondag om 13:00",
+    "en": "Everyone is welcome, every Sunday at 13:00",
+    "hi": "हर रविवार दोपहर 1 बजे, सबका स्वागत है"
+  },
+  "welcome_p": {
+    "nl": "Mandir Triloki Dhaam is een hindoetempel aan de Tongelresestraat in Eindhoven: een plek van rust, devotie en gemeenschap. U bent welkom, ook als u voor het eerst komt.",
+    "en": "Mandir Triloki Dhaam is a Hindu temple on Tongelresestraat in Eindhoven: a place of calm, devotion and community. You are welcome, also if this is your first visit.",
+    "hi": "मंदिर त्रिलोकी धाम आइंडहोवन की टोंगेलरेसेस्ट्राट पर स्थित हिंदू मंदिर है: शांति, भक्ति और समुदाय का स्थान। पहली बार आ रहे हों, तब भी आपका स्वागत है।"
+  },
+  "hours_note": {
+    "nl": "De mandir is open tijdens de zondagdienst en op de hoogtijdagen uit het jaarprogramma.",
+    "en": "The mandir is open during the Sunday service and on the festival dates in the yearly programme.",
+    "hi": "मंदिर रविवार सेवा के समय और वार्षिक कार्यक्रम के पर्वों पर खुला रहता है।"
+  },
+  "sunday_h": {
+    "nl": "Wat gebeurt er op zondag?",
+    "en": "What happens on a Sunday?",
+    "hi": "रविवार को क्या होता है?"
+  },
+  "sunday_p": {
+    "nl": "Tweeënhalf uur, in drie delen. U mag meezingen, in stilte luisteren en vragen stellen aan de pandit of de sewaks.",
+    "en": "Two and a half hours, in three parts. You can sing along, listen quietly, and ask the pandit or the sewaks anything.",
+    "hi": "ढाई घंटे, तीन भागों में। आप साथ गा सकते हैं, शांति से सुन सकते हैं, और पंडित जी या सेवकों से प्रश्न पूछ सकते हैं।"
+  },
+  "first_h": {
+    "nl": "Komt u voor het eerst?",
+    "en": "Coming for the first time?",
+    "hi": "पहली बार आ रहे हैं?"
+  },
+  "first_p": {
+    "nl": "De mandir is een reine plek waar we elkaar met respect behandelen. Dit is wat we van iedere bezoeker vragen.",
+    "en": "The mandir is a pure place where we treat each other with respect. This is what we ask of every visitor.",
+    "hi": "मंदिर एक पवित्र स्थान है जहाँ हम एक-दूसरे का आदर करते हैं। हर आगंतुक से हमारा यही अनुरोध है।"
+  },
+  "first_bell": {
+    "nl": "Bij het begin van de puja klinkt een bel, en vaak zet de pandit of een sewak een tilaka op uw voorhoofd als teken van zegen. Na de aarti krijgt u prasad en panchamrit.",
+    "en": "A bell rings as the puja begins, and the pandit or a sewak will often place a tilaka on your forehead as a blessing. After the aarti you receive prasad and panchamrit.",
+    "hi": "पूजा के आरंभ में घंटी बजती है, और पंडित जी या सेवक आशीर्वाद स्वरूप आपके माथे पर तिलक लगाते हैं। आरती के बाद प्रसाद और पंचामृत मिलता है।"
+  },
+  "upcoming_h": {
+    "nl": "Binnenkort in de mandir",
+    "en": "Coming up at the mandir",
+    "hi": "मंदिर में आगामी"
+  },
+  "festival_time_note": {
+    "nl": "Hoogtijdagen beginnen om 18:00, tenzij anders vermeld.",
+    "en": "Festivals start at 18:00 unless stated otherwise.",
+    "hi": "पर्व शाम 6 बजे शुरू होते हैं, जब तक अलग समय न लिखा हो।"
+  },
+  "year_h": {
+    "nl": "Jaarprogramma 2026",
+    "en": "Festivals in 2026",
+    "hi": "वार्षिक कार्यक्रम 2026"
+  },
+  "past": {
+    "nl": "Geweest",
+    "en": "Past",
+    "hi": "बीत गया"
+  },
+  "navratri_lead": {
+    "nl": "Negen avonden voor de Godin, elke avond vanaf 18:00.",
+    "en": "Nine evenings for the Goddess, every evening from 18:00.",
+    "hi": "देवी की नौ संध्याएँ, हर शाम 6 बजे से।"
+  },
+  "night": {
+    "nl": "Avond",
+    "en": "Evening",
+    "hi": "संध्या"
+  },
+  "next_festival": {
+    "nl": "Eerstvolgende hoogtijdag",
+    "en": "Next festival",
+    "hi": "अगला पर्व"
+  },
+  "calendar_why": {
+    "nl": "De mandir volgt de Vedische kalender zoals die voor Nederland wordt berekend. Daardoor kan een datum een dag afwijken van kalenders uit India.",
+    "en": "The mandir follows the Vedic calendar as calculated for the Netherlands, so a date can fall a day apart from calendars made for India.",
+    "hi": "मंदिर नीदरलैंड के लिए गणना किए गए वैदिक पंचांग का पालन करता है, इसलिए कोई तिथि भारत के पंचांग से एक दिन अलग हो सकती है।"
+  },
+  "cer_h": {
+    "nl": "Rituelen en ceremoniën voor uw familie",
+    "en": "Rituals and ceremonies for your family",
+    "hi": "आपके परिवार के लिए अनुष्ठान और संस्कार"
+  },
+  "cer_p": {
+    "nl": "Pandit Vinay Narain verzorgt samskars en rituelen voor families. Neem contact op, dan bespreken we wat er nodig is.",
+    "en": "Pandit Vinay Narain performs samskars and rituals for families. Get in touch and we will talk through what is needed.",
+    "hi": "पंडित विनय नारायण परिवारों के लिए संस्कार और अनुष्ठान कराते हैं। संपर्क करें, हम आवश्यकता पर बात करेंगे।"
+  },
+  "cer_urgent_h": {
+    "nl": "Is er iemand overleden?",
+    "en": "Has someone passed away?",
+    "hi": "क्या किसी का देहांत हुआ है?"
+  },
+  "cer_urgent_p": {
+    "nl": "Bel ons voor antyeshti samskar. Wacht niet op een antwoord per e-mail.",
+    "en": "Call us for antyeshti samskar. Do not wait for an e-mail reply.",
+    "hi": "अंत्येष्टि संस्कार के लिए हमें फ़ोन करें। ई-मेल के उत्तर की प्रतीक्षा न करें।"
+  },
+  "cer_request": {
+    "nl": "Vraag een ritueel aan",
+    "en": "Request a ceremony",
+    "hi": "अनुष्ठान का अनुरोध करें"
+  },
+  "care_h": {
+    "nl": "Levensvragen",
+    "en": "Questions of life",
+    "hi": "जीवन के प्रश्न"
+  },
+  "care_p": {
+    "nl": "Pandit Vinay Narain is een academisch geschoolde geestelijk verzorger. Hij kan samen met u nagaan of persoonlijke begeleiding bij uw situatie past.",
+    "en": "Pandit Vinay Narain is an academically trained spiritual carer. He can explore with you whether personal guidance fits your situation.",
+    "hi": "पंडित विनय नारायण अकादमिक रूप से प्रशिक्षित आध्यात्मिक परामर्शदाता हैं। वे आपके साथ देख सकते हैं कि व्यक्तिगत मार्गदर्शन आपकी स्थिति के अनुकूल है या नहीं।"
+  },
+  "care_cta": {
+    "nl": "Vraag een gesprek aan",
+    "en": "Ask for a conversation",
+    "hi": "बातचीत का अनुरोध करें"
+  },
+  "learn_h": {
+    "nl": "Kennis uit de mandir",
+    "en": "Knowledge from the mandir",
+    "hi": "मंदिर से ज्ञान"
+  },
+  "learn_p": {
+    "nl": "Mantra’s, aarti’s en uitleg uit het archief van de mandir.",
+    "en": "Mantras, aartis and explanations from the mandir’s own archive.",
+    "hi": "मंदिर के अपने संग्रह से मंत्र, आरतियाँ और व्याख्याएँ।"
+  },
+  "gayatri_note": {
+    "nl": "De Gayatri-mantra. Zoals alle rivieren uitkomen in de oceaan, zo zijn alle mantra’s verenigd in de Gayatri.",
+    "en": "The Gayatri mantra. As all rivers reach the ocean, so all mantras are united in the Gayatri.",
+    "hi": "गायत्री मंत्र। जैसे सब नदियाँ सागर में मिलती हैं, वैसे ही सब मंत्र गायत्री में समाए हैं।"
+  },
+  "courses_h": {
+    "nl": "Cursussen en lessen",
+    "en": "Courses and classes",
+    "hi": "पाठ्यक्रम और कक्षाएँ"
+  },
+  "courses_fixed": {
+    "nl": "Op cursuszondagen. De data voor 2026/2027 volgen.",
+    "en": "On course Sundays. Dates for 2026/2027 to follow.",
+    "hi": "पाठ्यक्रम वाले रविवारों को। 2026/2027 की तिथियाँ शीघ्र।"
+  },
+  "courses_gated": {
+    "nl": "Start zodra er genoeg aanmeldingen zijn.",
+    "en": "Starts once enough people have signed up.",
+    "hi": "पर्याप्त नामांकन होते ही शुरू होगा।"
+  },
+  "courses_cta": {
+    "nl": "Meld uw interesse",
+    "en": "Register your interest",
+    "hi": "अपनी रुचि दर्ज करें"
+  },
+  "join_h": {
+    "nl": "De mandir maken we samen",
+    "en": "We make the mandir together",
+    "hi": "मंदिर हम सब मिलकर बनाते हैं"
+  },
+  "join_p": {
+    "nl": "Alles in de mandir wordt gedaan door vrijwilligers. Er is altijd plaats voor nog twee handen.",
+    "en": "Everything at the mandir is done by volunteers. There is always room for another pair of hands.",
+    "hi": "मंदिर का हर काम स्वयंसेवक करते हैं। दो और हाथों के लिए सदा स्थान है।"
+  },
+  "join_seva_h": {
+    "nl": "Help mee als sewak",
+    "en": "Help as a sewak",
+    "hi": "सेवक बनकर हाथ बँटाएँ"
+  },
+  "join_seva_p": {
+    "nl": "Bij de zondagdienst, op hoogtijdagen, met muziek of achter de schermen.",
+    "en": "At the Sunday service, on festival days, with music or behind the scenes.",
+    "hi": "रविवार सेवा में, पर्वों पर, संगीत में या पर्दे के पीछे।"
+  },
+  "join_translate_h": {
+    "nl": "Vertaal met ons mee",
+    "en": "Translate with us",
+    "hi": "हमारे साथ अनुवाद करें"
+  },
+  "join_translate_p": {
+    "nl": "Deze site is er in het Nederlands, Engels en Hindi. Vertalingen worden door de gemeenschap gemaakt en nagekeken.",
+    "en": "This site is in Dutch, English and Hindi. Translations are made and checked by the community.",
+    "hi": "यह साइट डच, अंग्रेज़ी और हिंदी में है। अनुवाद समुदाय द्वारा किए और जाँचे जाते हैं।"
+  },
+  "join_fix_h": {
+    "nl": "Ziet u iets dat niet klopt?",
+    "en": "Seen something that is not right?",
+    "hi": "कुछ ग़लत दिखा?"
+  },
+  "join_fix_p": {
+    "nl": "Een datum, een tijd, een spelling: laat het weten, dan passen we het aan.",
+    "en": "A date, a time, a spelling: tell us and we will correct it.",
+    "hi": "तिथि, समय या वर्तनी: बताइए, हम सुधार देंगे।"
+  },
+  "join_fix_cta": {
+    "nl": "Meld een verbetering",
+    "en": "Suggest a correction",
+    "hi": "सुधार सुझाएँ"
+  },
+  "join_follow_h": {
+    "nl": "Blijf op de hoogte",
+    "en": "Stay in touch",
+    "hi": "जुड़े रहें"
+  },
+  "join_follow_p": {
+    "nl": "Beelden van aarti’s, bhajans en lessen op YouTube en Instagram. De Facebookgroep is besloten, voor wie al bij de gemeenschap hoort.",
+    "en": "Footage of aartis, bhajans and classes on YouTube and Instagram. The Facebook group is private, for those already part of the community.",
+    "hi": "आरती, भजन और कक्षाओं के वीडियो YouTube और Instagram पर। Facebook समूह निजी है, समुदाय के सदस्यों के लिए।"
+  },
+  "donate_h": {
+    "nl": "Steun de mandir",
+    "en": "Support the mandir",
+    "hi": "मंदिर को सहयोग दें"
+  },
+  "donate_p": {
+    "nl": "Met uw vrijwillige bijdrage kunnen we onze spirituele en culturele activiteiten voortzetten. U kunt eenmalig overmaken of een maandelijkse overschrijving instellen bij uw bank.",
+    "en": "Your voluntary contribution keeps our spiritual and cultural activities going. You can make a single transfer or set up a monthly one with your bank.",
+    "hi": "आपके स्वैच्छिक सहयोग से हमारी आध्यात्मिक और सांस्कृतिक गतिविधियाँ चलती रहती हैं। आप एक बार या अपने बैंक से मासिक अंतरण कर सकते हैं।"
+  },
+  "donate_holder": {
+    "nl": "Ten name van",
+    "en": "Account holder",
+    "hi": "खाताधारक"
+  },
+  "donate_copy": {
+    "nl": "Kopieer IBAN",
+    "en": "Copy IBAN",
+    "hi": "IBAN कॉपी करें"
+  },
+  "donate_copied": {
+    "nl": "IBAN gekopieerd",
+    "en": "IBAN copied",
+    "hi": "IBAN कॉपी हो गया"
+  },
+  "donate_qr": {
+    "nl": "In de mandir hangen QR-codes voor een donatie ter plaatse.",
+    "en": "QR codes for giving on the spot are displayed in the mandir.",
+    "hi": "मंदिर में दान के लिए QR कोड लगे हैं।"
+  },
+  "contact_h": {
+    "nl": "Contact",
+    "en": "Contact",
+    "hi": "संपर्क"
+  },
+  "motto_tr": {
+    "nl": "De Dharma beschermt wie haar beschermt",
+    "en": "Dharma protects those who protect it",
+    "hi": "धर्म उसकी रक्षा करता है जो धर्म की रक्षा करता है"
+  },
+  "footer_org": {
+    "nl": "Mandir Triloki Dhaam wordt gedragen door Stichting Senskaar Triloki Dhaam.",
+    "en": "Mandir Triloki Dhaam is run by Stichting Senskaar Triloki Dhaam.",
+    "hi": "मंदिर त्रिलोकी धाम का संचालन Stichting Senskaar Triloki Dhaam करती है।"
+  },
+  "f_name": {
+    "nl": "Uw naam",
+    "en": "Your name",
+    "hi": "आपका नाम"
+  },
+  "f_contact": {
+    "nl": "E-mail of telefoon",
+    "en": "E-mail or phone",
+    "hi": "ई-मेल या फ़ोन"
+  },
+  "f_message": {
+    "nl": "Uw bericht",
+    "en": "Your message",
+    "hi": "आपका संदेश"
+  },
+  "f_which": {
+    "nl": "Waar gaat het om?",
+    "en": "What is it about?",
+    "hi": "किस बारे में है?"
+  },
+  "f_send": {
+    "nl": "Verstuur",
+    "en": "Send",
+    "hi": "भेजें"
+  },
+  "f_sent": {
+    "nl": "Verstuurd. In deze mockup wordt er niets echt verzonden.",
+    "en": "Sent. Nothing is actually sent in this mockup.",
+    "hi": "भेज दिया गया। इस मॉकअप में वास्तव में कुछ नहीं भेजा जाता।"
+  },
+  "f_private": {
+    "nl": "Alleen de pandit leest dit bericht.",
+    "en": "Only the pandit reads this message.",
+    "hi": "यह संदेश केवल पंडित जी पढ़ते हैं।"
+  },
+  "c_ask": {
+    "nl": "Namaste. Waarvoor komt u?",
+    "en": "Namaste. What brings you here?",
+    "hi": "नमस्ते। आप किसलिए आए हैं?"
+  },
+  "c_i_first": {
+    "nl": "Ik kom voor het eerst",
+    "en": "I am visiting for the first time",
+    "hi": "मैं पहली बार आ रहा/रही हूँ"
+  },
+  "c_i_date": {
+    "nl": "Ik zoek een datum",
+    "en": "I am looking for a date",
+    "hi": "मुझे कोई तिथि देखनी है"
+  },
+  "c_i_ritual": {
+    "nl": "Ik wil een ritueel aanvragen",
+    "en": "I want to request a ceremony",
+    "hi": "मुझे अनुष्ठान कराना है"
+  },
+  "c_i_help": {
+    "nl": "Ik wil meehelpen",
+    "en": "I want to help",
+    "hi": "मैं सेवा करना चाहता/चाहती हूँ"
+  },
+  "c_i_learn": {
+    "nl": "Ik wil iets leren",
+    "en": "I want to learn",
+    "hi": "मैं सीखना चाहता/चाहती हूँ"
+  },
+  "c_i_talk": {
+    "nl": "Ik zit met een levensvraag",
+    "en": "I have a question of life",
+    "hi": "मेरे मन में जीवन का प्रश्न है"
+  },
+  "c_week_h": {
+    "nl": "Deze week",
+    "en": "This week",
+    "hi": "इस सप्ताह"
+  },
+  "c_seva_opts": {
+    "nl": "Zondagdienst|Hoogtijdagen|Muziek en bhajan|Vertalen en website",
+    "en": "Sunday service|Festival days|Music and bhajan|Translation and website",
+    "hi": "रविवार सेवा|पर्व|संगीत और भजन|अनुवाद और वेबसाइट"
+  },
+  "c_seva_q": {
+    "nl": "Waarbij wilt u helpen?",
+    "en": "What would you like to help with?",
+    "hi": "आप किसमें सहयोग करना चाहेंगे?"
+  },
+  "d_namaste": {
+    "nl": "Namaste",
+    "en": "Namaste",
+    "hi": "नमस्ते"
+  },
+  "d_ask": {
+    "nl": "Waarvoor komt u vandaag?",
+    "en": "What brings you here today?",
+    "hi": "आज आप किसलिए आए हैं?"
+  },
+  "d_first": {
+    "nl": "Eerste bezoek",
+    "en": "First visit",
+    "hi": "पहली बार"
+  },
+  "d_date": {
+    "nl": "Een datum",
+    "en": "A date",
+    "hi": "तिथि"
+  },
+  "d_ritual": {
+    "nl": "Een ritueel",
+    "en": "A ceremony",
+    "hi": "अनुष्ठान"
+  },
+  "d_help": {
+    "nl": "Meehelpen",
+    "en": "Helping",
+    "hi": "सेवा"
+  },
+  "d_learn": {
+    "nl": "Leren",
+    "en": "Learning",
+    "hi": "सीखना"
+  },
+  "d_talk": {
+    "nl": "Een gesprek",
+    "en": "A conversation",
+    "hi": "बातचीत"
+  },
+  "k_h": {
+    "nl": "Kennis uit de mandir",
+    "en": "Knowledge from the mandir",
+    "hi": "मंदिर से ज्ञान"
+  },
+  "k_p": {
+    "nl": "Mantra’s, aarti’s, geschriften en uitleg uit het archief van de mandir. Kies een onderwerp.",
+    "en": "Mantras, aartis, scriptures and explanations from the mandir’s own archive. Choose a subject.",
+    "hi": "मंदिर के अपने संग्रह से मंत्र, आरती, शास्त्र और व्याख्याएँ। कोई विषय चुनें।"
+  },
+  "s_h": {
+    "nl": "Volg de mandir",
+    "en": "Follow the mandir",
+    "hi": "मंदिर से जुड़े रहें"
+  },
+  "s_p": {
+    "nl": "Zo ziet en hoort u de mandir tussen twee bezoeken door.",
+    "en": "How to see and hear the mandir between visits.",
+    "hi": "दो यात्राओं के बीच मंदिर को देखने और सुनने के लिए।"
+  },
+  "s_yt": {
+    "nl": "Aarti’s, bhajans en lessen op video.",
+    "en": "Aartis, bhajans and classes on video.",
+    "hi": "आरती, भजन और कक्षाओं के वीडियो।"
+  },
+  "s_yt_cta": {
+    "nl": "Abonneer op YouTube",
+    "en": "Subscribe on YouTube",
+    "hi": "YouTube पर सब्सक्राइब करें"
+  },
+  "s_ig": {
+    "nl": "Levenslessen in de vorm van quotes, en aankondigingen van het programma.",
+    "en": "Life lessons as quotes, and programme announcements.",
+    "hi": "सुविचारों के रूप में जीवन की सीख, और कार्यक्रम की सूचनाएँ।"
+  },
+  "s_ig_open": {
+    "nl": "Bekijk op Instagram",
+    "en": "View on Instagram",
+    "hi": "Instagram पर देखें"
+  },
+  "s_ig_cta": {
+    "nl": "Volg op Instagram",
+    "en": "Follow on Instagram",
+    "hi": "Instagram पर फ़ॉलो करें"
+  },
+  "s_fb": {
+    "nl": "Besloten groep met meer foto’s en video’s, voor wie bij de gemeenschap hoort.",
+    "en": "A private group with more photos and videos, for members of the community.",
+    "hi": "अधिक फ़ोटो और वीडियो वाला निजी समूह, समुदाय के सदस्यों के लिए।"
+  },
+  "s_fb_cta": {
+    "nl": "Vraag lidmaatschap aan",
+    "en": "Ask to join",
+    "hi": "जुड़ने का अनुरोध करें"
+  },
+  "s_fb_name": {
+    "nl": "Facebookgroep",
+    "en": "Facebook group",
+    "hi": "Facebook समूह"
+  },
+  "s_play": {
+    "nl": "Speel af",
+    "en": "Play",
+    "hi": "चलाएँ"
+  },
+  "her_nav": {
+    "nl": "Erfgoed",
+    "en": "Heritage",
+    "hi": "विरासत"
+  },
+  "her_h": {
+    "nl": "Van India via Suriname naar Eindhoven",
+    "en": "From India, by way of Suriname, to Eindhoven",
+    "hi": "भारत से सूरीनाम होते हुए आइंडहोवन तक"
+  },
+  "her_p": {
+    "nl": "De mandir komt voort uit de Hindostaanse gemeenschap van Suriname. Kies een halte.",
+    "en": "The mandir grows out of the Hindustani community of Suriname. Choose a stop.",
+    "hi": "यह मंदिर सूरीनाम के हिंदुस्तानी समुदाय से निकला है। कोई पड़ाव चुनें।"
+  },
+  "her_concept": {
+    "nl": "Concept: nog te bevestigen door het bestuur",
+    "en": "Concept: to be confirmed by the board",
+    "hi": "प्रारूप: बोर्ड की पुष्टि शेष"
+  },
+  "her_open": {
+    "nl": "Nog te schrijven",
+    "en": "Still to be written",
+    "hi": "अभी लिखा जाना है"
+  },
+  "greet": {
+    "nl": "Raam Raam",
+    "en": "Raam Raam",
+    "hi": "राम राम"
+  },
+  "word_h": {
+    "nl": "Sarnami woord van de week",
+    "en": "Sarnami word of the week",
+    "hi": "इस सप्ताह का सरनामी शब्द"
+  },
+  "word_p": {
+    "nl": "De begroeting van de gemeenschap: twee keer de naam van Raam. Zo opent ook de eigen poster van de mandir.",
+    "en": "The community’s greeting: the name of Raam, twice. It is how the mandir’s own poster opens too.",
+    "hi": "समुदाय का अभिवादन: राम का नाम दो बार। मंदिर का अपना पोस्टर भी इसी से शुरू होता है।"
+  },
+  "word_note": {
+    "nl": "Volgende woorden: te kiezen door Sarnami-sprekers van de mandir.",
+    "en": "Further words: to be chosen by the mandir’s Sarnami speakers.",
+    "hi": "आगे के शब्द: मंदिर के सरनामी बोलने वाले चुनेंगे।"
+  },
+  "music_h": {
+    "nl": "Baithak gana",
+    "en": "Baithak gana",
+    "hi": "बैठक गाना"
+  },
+  "music_p": {
+    "nl": "De muziek die de gemeenschap uit Suriname meenam: zittend gezongen, met drie instrumenten.",
+    "en": "The music the community brought from Suriname: sung seated, with three instruments.",
+    "hi": "वह संगीत जो समुदाय सूरीनाम से साथ लाया: बैठकर गाया जाता है, तीन वाद्यों के साथ।"
+  },
+  "music_soon": {
+    "nl": "Opname volgt",
+    "en": "Recording to follow",
+    "hi": "रिकॉर्डिंग शीघ्र"
+  },
+  "music_cta": {
+    "nl": "Naar de harmonium- en dhollessen",
+    "en": "See the harmonium and dhol lessons",
+    "hi": "हारमोनियम और ढोल की कक्षाएँ देखें"
+  },
+  "voices_h": {
+    "nl": "Stemmen van de ouderen",
+    "en": "Voices of the elders",
+    "hi": "बुज़ुर्गों की आवाज़ें"
+  },
+  "voices_p": {
+    "nl": "Herinneringen aan de mandir, en aan opgroeien als hindoe in Suriname en Nederland. Hier komen ze te staan zodra ze zijn opgetekend, met toestemming van de verteller.",
+    "en": "Memories of the mandir, and of growing up Hindu in Suriname and the Netherlands. They will appear here once they have been recorded, with the teller’s consent.",
+    "hi": "मंदिर की यादें, और सूरीनाम तथा नीदरलैंड में हिंदू के रूप में बड़े होने की यादें। दर्ज होते ही, सुनाने वाले की सहमति से, वे यहाँ दिखाई देंगी।"
+  },
+  "voices_empty": {
+    "nl": "Plaats voor een herinnering",
+    "en": "Room for a memory",
+    "hi": "एक स्मृति के लिए स्थान"
+  },
+  "voices_cta": {
+    "nl": "Deel een herinnering",
+    "en": "Share a memory",
+    "hi": "अपनी स्मृति साझा करें"
+  },
+  "voices_consent": {
+    "nl": "De mandir mag mijn verhaal op de website plaatsen.",
+    "en": "The mandir may publish my story on the website.",
+    "hi": "मंदिर मेरी कथा वेबसाइट पर प्रकाशित कर सकता है।"
+  },
+  "phagwa_on": {
+    "nl": "Bekijk de Phagwa-kleuren",
+    "en": "Preview the Phagwa colours",
+    "hi": "फगवा के रंग देखें"
+  },
+  "phagwa_off": {
+    "nl": "Zet de Phagwa-kleuren uit",
+    "en": "Turn the Phagwa colours off",
+    "hi": "फगवा के रंग हटाएँ"
+  },
+  "phagwa_p": {
+    "nl": "Op de dag van Phagwa krijgt de hele site een zachte waas van kleur.",
+    "en": "On the day of Phagwa the whole site takes on a soft wash of colour.",
+    "hi": "फगवा के दिन पूरी साइट पर रंगों की हल्की छटा आ जाती है।"
+  },
+  "also": {
+    "nl": "Ook",
+    "en": "Also",
+    "hi": "अन्य नाम"
+  },
+  "find_ph": {
+    "nl": "Zoek een feest, bijvoorbeeld Diwali of Phagwa",
+    "en": "Find a festival, for example Diwali or Phagwa",
+    "hi": "पर्व खोजें, जैसे दिवाली या फगवा"
+  },
+  "find_none": {
+    "nl": "Niet gevonden in het programma van 2026.",
+    "en": "Not found in the 2026 programme.",
+    "hi": "2026 के कार्यक्रम में नहीं मिला।"
+  },
+  "find_label": {
+    "nl": "Zoek een feest",
+    "en": "Find a festival",
+    "hi": "पर्व खोजें"
+  },
+  "ph": {
+    "nl": "Placeholder",
+    "en": "Placeholder",
+    "hi": "प्लेसहोल्डर"
+  },
+  "ph_toggle_on": {
+    "nl": "Placeholders verbergen",
+    "en": "Hide placeholder marks",
+    "hi": "प्लेसहोल्डर चिह्न छिपाएँ"
+  },
+  "ph_toggle_off": {
+    "nl": "Placeholders tonen",
+    "en": "Show placeholder marks",
+    "hi": "प्लेसहोल्डर चिह्न दिखाएँ"
+  },
+  "x_nav": {
+    "nl": "De mandir",
+    "en": "The mandir",
+    "hi": "मंदिर"
+  },
+  "in_h": {
+    "nl": "De mandir van binnen",
+    "en": "Inside the mandir",
+    "hi": "मंदिर के भीतर"
+  },
+  "in_p": {
+    "nl": "Tik op een nummer om te zien wie er op het altaar staat.",
+    "en": "Tap a number to see who stands on the altar.",
+    "hi": "वेदी पर कौन विराजमान हैं, यह देखने के लिए किसी अंक पर टैप करें।"
+  },
+  "spot_t": {
+    "nl": "Murti",
+    "en": "Murti",
+    "hi": "मूर्ति"
+  },
+  "spot_d": {
+    "nl": "Naam en verhaal van deze murti: aan te leveren door de pandit.",
+    "en": "Name and story of this murti: to be supplied by the pandit.",
+    "hi": "इस मूर्ति का नाम और कथा: पंडित जी देंगे।"
+  },
+  "ppl_h": {
+    "nl": "Mensen van de mandir",
+    "en": "People of the mandir",
+    "hi": "मंदिर के लोग"
+  },
+  "ppl_role": {
+    "nl": "Pandit en geestelijk verzorger",
+    "en": "Pandit and spiritual carer",
+    "hi": "पंडित और आध्यात्मिक परामर्शदाता"
+  },
+  "ppl_bio": {
+    "nl": "Een ervaren, academisch geschoolde geestelijk verzorger met jarenlange ervaring in het begeleiden van mensen op hun spirituele pad.",
+    "en": "An experienced, academically trained spiritual carer with many years of guiding people on their spiritual path.",
+    "hi": "अनुभवी और अकादमिक रूप से प्रशिक्षित आध्यात्मिक परामर्शदाता, जो वर्षों से लोगों का उनके आध्यात्मिक मार्ग पर साथ दे रहे हैं।"
+  },
+  "ppl_ph": {
+    "nl": "Bestuurslid: naam, rol en foto volgen",
+    "en": "Board member: name, role and photo to follow",
+    "hi": "बोर्ड सदस्य: नाम, भूमिका और फ़ोटो शीघ्र"
+  },
+  "prac_h": {
+    "nl": "Hoe komt u er?",
+    "en": "Getting there",
+    "hi": "कैसे पहुँचें?"
+  },
+  "prac_park": {
+    "nl": "Parkeren",
+    "en": "Parking",
+    "hi": "पार्किंग"
+  },
+  "prac_ov": {
+    "nl": "Openbaar vervoer",
+    "en": "Public transport",
+    "hi": "सार्वजनिक परिवहन"
+  },
+  "prac_acc": {
+    "nl": "Toegankelijkheid",
+    "en": "Accessibility",
+    "hi": "सुगम्यता"
+  },
+  "prac_ph": {
+    "nl": "Volgt van het bestuur.",
+    "en": "To follow from the board.",
+    "hi": "बोर्ड से शीघ्र।"
+  },
+  "prac_map": {
+    "nl": "Hier komt de kaart",
+    "en": "The map goes here",
+    "hi": "यहाँ नक्शा आएगा"
+  },
+  "moon_new": {
+    "nl": "nieuwe maan",
+    "en": "new moon",
+    "hi": "अमावस्या"
+  },
+  "moon_full": {
+    "nl": "volle maan",
+    "en": "full moon",
+    "hi": "पूर्णिमा"
+  },
+  "moon_note": {
+    "nl": "Berekend, bij benadering. Voor tithi’s en feestdagen geldt de kalender van de pandit.",
+    "en": "Calculated, approximate. For tithis and festival dates the pandit’s calendar decides.",
+    "hi": "गणना द्वारा, लगभग। तिथियों और पर्वों के लिए पंडित जी का पंचांग मान्य है।"
+  },
+  "moon_today": {
+    "nl": "De maan vandaag",
+    "en": "The moon today",
+    "hi": "आज का चंद्रमा"
+  },
+  "moon_lit": {
+    "nl": "verlicht",
+    "en": "lit",
+    "hi": "प्रकाशित"
+  },
+  "moon_names": {
+    "nl": "nieuwe maan|wassende sikkel|eerste kwartier|wassende maan|volle maan|afnemende maan|laatste kwartier|afnemende sikkel",
+    "en": "new moon|waxing crescent|first quarter|waxing gibbous|full moon|waning gibbous|last quarter|waning crescent",
+    "hi": "अमावस्या|बढ़ता हँसिया|पहला चतुर्थांश|बढ़ता चंद्र|पूर्णिमा|घटता चंद्र|अंतिम चतुर्थांश|घटता हँसिया"
+  },
+  "gal_h": {
+    "nl": "Foto’s",
+    "en": "Photos",
+    "hi": "तस्वीरें"
+  },
+  "gal_ph": {
+    "nl": "Foto’s van deze hoogtijdag komen hier, met toestemming van wie erop staat.",
+    "en": "Photos of this festival will appear here, with the consent of everyone pictured.",
+    "hi": "इस पर्व की तस्वीरें यहाँ आएँगी, उनमें दिखने वालों की सहमति से।"
+  },
+  "audio_ph": {
+    "nl": "Luister: opname volgt",
+    "en": "Listen: recording to follow",
+    "hi": "सुनें: रिकॉर्डिंग शीघ्र"
+  },
+  "seva_h": {
+    "nl": "Sewa tijdens Navratri",
+    "en": "Seva during Navratri",
+    "hi": "नवरात्रि में सेवा"
+  },
+  "seva_p": {
+    "nl": "Kies een avond en een taak. De taken hieronder zijn voorbeelden; de mandir vult de echte lijst in.",
+    "en": "Choose an evening and a task. The tasks below are examples; the mandir will fill in the real list.",
+    "hi": "एक संध्या और एक कार्य चुनें। नीचे के कार्य उदाहरण हैं; असली सूची मंदिर भरेगा।"
+  },
+  "seva_join": {
+    "nl": "Ik help",
+    "en": "I will help",
+    "hi": "मैं सेवा करूँगा/करूँगी"
+  },
+  "seva_mine": {
+    "nl": "U helpt",
+    "en": "You are helping",
+    "hi": "आप सेवा कर रहे हैं"
+  },
+  "seva_note": {
+    "nl": "In deze mockup wordt uw keuze alleen op dit apparaat bewaard.",
+    "en": "In this mockup your choice is kept on this device only.",
+    "hi": "इस मॉकअप में आपका चयन केवल इसी डिवाइस पर रहता है।"
+  },
+  "diya_h": {
+    "nl": "Steek een diya aan",
+    "en": "Light a diya",
+    "hi": "एक दीया जलाएँ"
+  },
+  "diya_p": {
+    "nl": "Voor iemand aan wie u denkt, of als dank. Elke tik steekt er één aan.",
+    "en": "For someone you are thinking of, or in thanks. Each tap lights one.",
+    "hi": "किसी अपने की याद में, या कृतज्ञता में। हर टैप पर एक दीया जलता है।"
+  },
+  "diya_btn": {
+    "nl": "Steek een diya aan",
+    "en": "Light a diya",
+    "hi": "दीया जलाएँ"
+  },
+  "diya_count": {
+    "nl": "Aangestoken op dit apparaat",
+    "en": "Lit on this device",
+    "hi": "इस डिवाइस पर जलाए गए"
+  },
+  "diya_full": {
+    "nl": "Alle diya’s branden. Dank u.",
+    "en": "Every diya is lit. Thank you.",
+    "hi": "सब दीये जल रहे हैं। धन्यवाद।"
+  },
+  "faq_h": {
+    "nl": "Veelgestelde vragen",
+    "en": "Frequently asked questions",
+    "hi": "अक्सर पूछे जाने वाले प्रश्न"
+  },
+  "wish_h": {
+    "nl": "Meer van de mandir",
+    "en": "More from the mandir",
+    "hi": "मंदिर से और भी"
+  },
+  "wish_p": {
+    "nl": "Zes manieren om ook tussen de bezoeken door bij de mandir te blijven. De opzet staat er; wat als placeholder is gemarkeerd komt van de pandit en het bestuur.",
+    "en": "Six ways to stay close to the mandir between visits. The outline is in place; whatever is marked as a placeholder has to come from the pandit and the board.",
+    "hi": "दर्शन के बीच भी मंदिर से जुड़े रहने के छह तरीक़े। ढाँचा तैयार है; जो प्लेसहोल्डर के रूप में चिह्नित है वह पंडित जी और बोर्ड से आएगा।"
+  },
+  "wish_btn": {
+    "nl": "Dit wil ik",
+    "en": "I want this",
+    "hi": "मुझे यह चाहिए"
+  },
+  "wish_done": {
+    "nl": "Genoteerd",
+    "en": "Noted",
+    "hi": "दर्ज हो गया"
+  },
+  "qr_ph": {
+    "nl": "Hier komt de QR-code voor een donatie",
+    "en": "The QR code for giving goes here",
+    "hi": "दान का QR कोड यहाँ आएगा"
+  },
+  "les_nav": {
+    "nl": "Lessen",
+    "en": "Lessons",
+    "hi": "कक्षाएँ"
+  },
+  "les_h": {
+    "nl": "Lessen en cursussen",
+    "en": "Lessons and courses",
+    "hi": "कक्षाएँ और पाठ्यक्रम"
+  },
+  "les_p": {
+    "nl": "Kies een of meer lessen en meld u aan. Een groep start zodra er genoeg aanmeldingen zijn; u krijgt dan bericht.",
+    "en": "Choose one or more lessons and sign up. A group starts once enough people have signed up; you will then hear from us.",
+    "hi": "एक या अधिक कक्षाएँ चुनें और नामांकन करें। पर्याप्त नामांकन होते ही समूह शुरू होगा; तब आपको सूचना मिलेगी।"
+  },
+  "les_btn": {
+    "nl": "Meld u aan",
+    "en": "Sign up",
+    "hi": "नामांकन करें"
+  },
+  "les_picked": {
+    "nl": "Gekozen",
+    "en": "Chosen",
+    "hi": "चुना गया"
+  },
+  "les_which": {
+    "nl": "Voor welke lessen?",
+    "en": "Which lessons?",
+    "hi": "कौन-सी कक्षाएँ?"
+  },
+  "les_who": {
+    "nl": "Voor wie?",
+    "en": "Who is it for?",
+    "hi": "किसके लिए?"
+  },
+  "les_who_opts": {
+    "nl": "Voor mijzelf|Voor mijn kind|Voor ons allebei",
+    "en": "For myself|For my child|For both of us",
+    "hi": "अपने लिए|अपने बच्चे के लिए|हम दोनों के लिए"
+  },
+  "les_child": {
+    "nl": "Meldt u een kind aan? Dan vragen we eerst uw toestemming als ouder of verzorger voordat we de naam van uw kind vastleggen.",
+    "en": "Signing up a child? We will first ask for your consent as parent or guardian before recording your child’s name.",
+    "hi": "बच्चे का नामांकन कर रहे हैं? बच्चे का नाम दर्ज करने से पहले हम माता-पिता या अभिभावक के रूप में आपकी सहमति लेंगे।"
+  },
+  "les_send": {
+    "nl": "Verstuur aanmelding",
+    "en": "Send sign-up",
+    "hi": "नामांकन भेजें"
+  },
+  "les_sunday": {
+    "nl": "zondag",
+    "en": "Sunday",
+    "hi": "रविवार"
+  },
+  "shop_h": {
+    "nl": "Artikelen voor uw puja",
+    "en": "Items for your puja",
+    "hi": "पूजा की सामग्री"
+  },
+  "shop_p": {
+    "nl": "Bij de mandir is een assortiment artikelen voor puja verkrijgbaar. Wilt u weten wat er is, of iets bestellen? Stuur ons een bericht via WhatsApp.",
+    "en": "The mandir has a range of items for puja available. Would you like to know what there is, or order something? Send us a message on WhatsApp.",
+    "hi": "मंदिर में पूजा की कई सामग्रियाँ उपलब्ध हैं। जानना चाहते हैं कि क्या-क्या है, या कुछ मँगवाना है? हमें WhatsApp पर संदेश भेजें।"
+  },
+  "shop_btn": {
+    "nl": "Stuur een WhatsApp",
+    "en": "Message us on WhatsApp",
+    "hi": "WhatsApp पर संदेश भेजें"
+  },
+  "shop_msg": {
+    "nl": "Namaste, ik heb een vraag over artikelen voor puja.",
+    "en": "Namaste, I have a question about items for puja.",
+    "hi": "नमस्ते, मुझे पूजा की सामग्री के बारे में पूछना है।"
+  },
+  "shop_ph": {
+    "nl": "Het assortiment, met foto’s en prijzen, volgt van de mandir.",
+    "en": "The range, with photos and prices, is to follow from the mandir.",
+    "hi": "सामग्री की सूची, फ़ोटो और मूल्य सहित, मंदिर से शीघ्र।"
+  },
+  "shop_or": {
+    "nl": "Of bel",
+    "en": "Or call",
+    "hi": "या फ़ोन करें"
+  },
+  "word_what": {
+    "nl": "Wat is Sarnami? De taal van de Surinaamse Hindostanen. Ze is in Suriname gegroeid uit het Bhojpuri en Awadhi van de eerste migranten uit Noord-India, en wordt met Latijnse letters geschreven.",
+    "en": "What is Sarnami? The language of the Surinamese Hindustanis. It grew in Suriname out of the Bhojpuri and Awadhi of the first migrants from North India, and is written in Latin letters.",
+    "hi": "सरनामी क्या है? सूरीनाम के हिंदुस्तानियों की भाषा। यह सूरीनाम में उत्तर भारत से आए पहले प्रवासियों की भोजपुरी और अवधी से बनी, और रोमन लिपि में लिखी जाती है।"
+  },
+  "ft_audio_h": {
+    "nl": "Luister naar mantra’s en aarti’s",
+    "en": "Listen to mantras and aartis",
+    "hi": "मंत्र और आरती सुनें"
+  },
+  "ft_audio_p": {
+    "nl": "Opnamen van de pandit en de bhajangroep, bij elke tekst uit de kennisbank.",
+    "en": "Recordings by the pandit and the bhajan group, with each text in the knowledge section.",
+    "hi": "ज्ञान अनुभाग के हर पाठ के साथ पंडित जी और भजन मंडली की रिकॉर्डिंग।"
+  },
+  "ft_audio_soon": {
+    "nl": "opname volgt",
+    "en": "recording to follow",
+    "hi": "रिकॉर्डिंग शीघ्र"
+  },
+  "ft_live_h": {
+    "nl": "Volg de zondagdienst live",
+    "en": "Follow the Sunday service live",
+    "hi": "रविवार सेवा सीधे देखें"
+  },
+  "ft_live_p": {
+    "nl": "Voor wie niet kan komen: ouderen, zieken, familie ver weg.",
+    "en": "For those who cannot come: the elderly, the ill, family far away.",
+    "hi": "जो आ नहीं सकते उनके लिए: बुज़ुर्ग, बीमार, दूर रहने वाले परिजन।"
+  },
+  "ft_live_next": {
+    "nl": "Volgende dienst",
+    "en": "Next service",
+    "hi": "अगली सेवा"
+  },
+  "ft_live_ph": {
+    "nl": "Hier komt de livestream, als het bestuur daartoe besluit.",
+    "en": "The live stream appears here, if the board decides to offer one.",
+    "hi": "यदि बोर्ड निर्णय ले, तो सीधा प्रसारण यहाँ दिखेगा।"
+  },
+  "ft_live_btn": {
+    "nl": "Naar het YouTube-kanaal",
+    "en": "Go to the YouTube channel",
+    "hi": "YouTube चैनल पर जाएँ"
+  },
+  "ft_ask_h": {
+    "nl": "Vraag het de pandit",
+    "en": "Ask the pandit",
+    "hi": "पंडित जी से पूछें"
+  },
+  "ft_ask_p": {
+    "nl": "Stel een vraag over geloof of ritueel. De pandit kiest welke vragen met antwoord op de site komen, zonder uw naam.",
+    "en": "Ask a question about faith or ritual. The pandit chooses which questions appear on the site with an answer, without your name.",
+    "hi": "आस्था या अनुष्ठान के बारे में प्रश्न पूछें। कौन-से प्रश्न उत्तर सहित साइट पर आएँ, यह पंडित जी तय करेंगे; आपका नाम नहीं दिखेगा।"
+  },
+  "ft_ask_q": {
+    "nl": "Uw vraag",
+    "en": "Your question",
+    "hi": "आपका प्रश्न"
+  },
+  "ft_ask_c": {
+    "nl": "E-mail of telefoon, als u persoonlijk antwoord wilt (niet verplicht)",
+    "en": "Email or phone, if you would like a personal answer (optional)",
+    "hi": "ईमेल या फ़ोन, यदि आप व्यक्तिगत उत्तर चाहते हैं (वैकल्पिक)"
+  },
+  "ft_ask_btn": {
+    "nl": "Verstuur uw vraag",
+    "en": "Send your question",
+    "hi": "प्रश्न भेजें"
+  },
+  "ft_ask_none": {
+    "nl": "Beantwoorde vragen komen hier te staan.",
+    "en": "Answered questions will appear here.",
+    "hi": "उत्तर दिए गए प्रश्न यहाँ दिखेंगे।"
+  },
+  "ft_kids_h": {
+    "nl": "Kinderhoek",
+    "en": "Children’s corner",
+    "hi": "बच्चों का कोना"
+  },
+  "ft_kids_p": {
+    "nl": "Eerste Hindi woorden: tik op een woord om te zien hoe je het zegt en wat het betekent.",
+    "en": "First Hindi words: tap a word to see how to say it and what it means.",
+    "hi": "हिंदी के पहले शब्द: किसी शब्द पर टैप करें और देखें कि उसे कैसे बोलते हैं और उसका अर्थ क्या है।"
+  },
+  "ft_kids_story": {
+    "nl": "Verhalen uit de Ramayan",
+    "en": "Stories from the Ramayan",
+    "hi": "रामायण की कहानियाँ"
+  },
+  "ft_kids_colour": {
+    "nl": "Kleurplaten",
+    "en": "Colouring pages",
+    "hi": "रंग भरने के पन्ने"
+  },
+  "ft_kids_ph": {
+    "nl": "Volgt van de pandit en de lesgroep.",
+    "en": "To follow from the pandit and the teaching group.",
+    "hi": "पंडित जी और शिक्षण समूह से शीघ्र।"
+  },
+  "ft_wa_h": {
+    "nl": "Berichten via WhatsApp",
+    "en": "Updates by WhatsApp",
+    "hi": "WhatsApp पर सूचनाएँ"
+  },
+  "ft_wa_p": {
+    "nl": "Een bericht vóór elke hoogtijdag en als een dienst verandert. Niets anders, en u kunt altijd stoppen.",
+    "en": "A message before each festival and when a service changes. Nothing else, and you can stop at any time.",
+    "hi": "हर पर्व से पहले और सेवा में बदलाव होने पर एक संदेश। और कुछ नहीं; आप कभी भी बंद कर सकते हैं।"
+  },
+  "ft_wa_btn": {
+    "nl": "Meld u aan via WhatsApp",
+    "en": "Sign up on WhatsApp",
+    "hi": "WhatsApp पर जुड़ें"
+  },
+  "ft_wa_msg": {
+    "nl": "Raam Raam, ik ontvang graag de berichten van Mandir Triloki Dhaam.",
+    "en": "Raam Raam, I would like to receive updates from Mandir Triloki Dhaam.",
+    "hi": "राम राम, मैं मंदिर त्रिलोकी धाम की सूचनाएँ पाना चाहता/चाहती हूँ।"
+  },
+  "ft_wa_note": {
+    "nl": "Het WhatsApp-nummer moet nog door het bestuur worden bevestigd.",
+    "en": "The WhatsApp number is still to be confirmed by the board.",
+    "hi": "WhatsApp नंबर की पुष्टि बोर्ड द्वारा होनी शेष है।"
+  },
+  "ft_alb_h": {
+    "nl": "Fotoalbums per hoogtijdag",
+    "en": "Photo albums for each festival",
+    "hi": "हर पर्व का फ़ोटो एल्बम"
+  },
+  "ft_alb_p": {
+    "nl": "Eén album per hoogtijdag, met toestemming van wie erop staat.",
+    "en": "One album for each festival, with the consent of everyone pictured.",
+    "hi": "हर पर्व का एक एल्बम, तस्वीर में दिखने वालों की सहमति से।"
+  },
+  "ft_alb_ph": {
+    "nl": "foto’s volgen",
+    "en": "photos to follow",
+    "hi": "तस्वीरें शीघ्र"
+  },
+  "film_pause": {
+    "nl": "Pauzeer de film",
+    "en": "Pause the film",
+    "hi": "फ़िल्म रोकें"
+  },
+  "film_play": {
+    "nl": "Speel de film af",
+    "en": "Play the film",
+    "hi": "फ़िल्म चलाएँ"
+  },
+  "feed_fest": {
+    "nl": "Hoogtijdagen",
+    "en": "Festivals",
+    "hi": "पर्व"
+  },
+  "feed_verse": {
+    "nl": "Mantra’s",
+    "en": "Mantras",
+    "hi": "मंत्र"
+  },
+  "feed_video": {
+    "nl": "Video’s",
+    "en": "Videos",
+    "hi": "वीडियो"
+  },
+  "feed_ig": {
+    "nl": "Instagram",
+    "en": "Instagram",
+    "hi": "Instagram"
+  },
+  "feed_private": {
+    "nl": "Besloten groep voor leden",
+    "en": "Private group for members",
+    "hi": "सदस्यों के लिए निजी समूह"
+  },
+  "feed_loading": {
+    "nl": "Er komt meer",
+    "en": "More is coming",
+    "hi": "और आ रहा है"
+  },
+  "feed_end": {
+    "nl": "Dat is alles voor nu. Tot zondag om 13:00.",
+    "en": "That is everything for now. See you on Sunday at 13:00.",
+    "hi": "अभी के लिए इतना ही। रविवार दोपहर 1 बजे मिलते हैं।"
+  },
+  "to_top": {
+    "nl": "Naar boven",
+    "en": "Back to top",
+    "hi": "ऊपर जाएँ"
+  },
+  "lamps_h": {
+    "nl": "Negen avonden Navratri",
+    "en": "Nine evenings of Navratri",
+    "hi": "नवरात्रि की नौ संध्याएँ"
+  },
+  "lamps_p": {
+    "nl": "Elke avond vanaf 18:00 gaat er een lamp aan.",
+    "en": "One lamp is lit each evening, from 18:00.",
+    "hi": "हर शाम 6 बजे से एक दीपक जलता है।"
+  },
+  "now_on": {
+    "nl": "Nu bezig",
+    "en": "Happening now",
+    "hi": "अभी चल रहा है"
+  },
+  "motd": {
+    "nl": "Mantra van vandaag",
+    "en": "Mantra of the day",
+    "hi": "आज का मंत्र"
+  },
+  "copy": {
+    "nl": "Kopieer de mantra",
+    "en": "Copy the mantra",
+    "hi": "मंत्र कॉपी करें"
+  },
+  "copied": {
+    "nl": "Gekopieerd",
+    "en": "Copied",
+    "hi": "कॉपी हो गया"
+  },
+  "gcal": {
+    "nl": "Zet in Google Agenda",
+    "en": "Add to Google Calendar",
+    "hi": "Google Calendar में जोड़ें"
+  },
+  "ics": {
+    "nl": "Download het jaarprogramma (.ics)",
+    "en": "Download the year (.ics)",
+    "hi": "पूरा वर्ष डाउनलोड करें (.ics)"
+  },
+  "film_label": {
+    "nl": "Korte film zonder geluid: het logo van de mandir, dan het altaar met een groet in het Nederlands, Hindi en Engels.",
+    "en": "Short silent film: the mandir logo, then the altar with a greeting in Dutch, Hindi and English.",
+    "hi": "बिना आवाज़ की छोटी फ़िल्म: मंदिर का लोगो, फिर वेदी और डच, हिंदी व अंग्रेज़ी में अभिवादन।"
+  }
+}

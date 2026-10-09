@@ -1,0 +1,284 @@
+{
+  "cats": [
+    {
+      "id": "mantra",
+      "name": {
+        "nl": "Mantra’s",
+        "en": "Mantras",
+        "hi": "मंत्र"
+      }
+    },
+    {
+      "id": "aarti",
+      "name": {
+        "nl": "Aarti’s",
+        "en": "Aartis",
+        "hi": "आरती"
+      }
+    },
+    {
+      "id": "scripture",
+      "name": {
+        "nl": "Geschriften",
+        "en": "Scriptures",
+        "hi": "शास्त्र"
+      }
+    },
+    {
+      "id": "principle",
+      "name": {
+        "nl": "Beginselen",
+        "en": "Principles",
+        "hi": "सिद्धांत"
+      }
+    },
+    {
+      "id": "festival",
+      "name": {
+        "nl": "Hoogtijdagen",
+        "en": "Festivals",
+        "hi": "पर्व"
+      }
+    }
+  ],
+  "items": [
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Gayatri-mantra",
+        "en": "Gayatri mantra",
+        "hi": "गायत्री मंत्र"
+      },
+      "verse": "ॐ भूर्भुवः स्वः\nतत्सवितुर्वरेण्यं\nभर्गो देवस्य धीमहि\nधियो यो नः प्रचोदयात्",
+      "roman": "Om bhoor bhuvah swah, tat savitur varenyam, bhargo devasya dheemahi, dhiyo yo nah prachodayaat",
+      "body": {
+        "nl": "De Gayatri wordt als de belangrijkste mantra van de Veda’s beschouwd. Zoals alle rivieren uitkomen in de oceaan, zo zijn alle mantra’s verenigd in de Gayatri.",
+        "en": "The Gayatri is regarded as the most important mantra of the Vedas. As all rivers reach the ocean, so all mantras are united in the Gayatri.",
+        "hi": "गायत्री को वेदों का सबसे महत्वपूर्ण मंत्र माना जाता है। जैसे सब नदियाँ सागर में मिलती हैं, वैसे ही सब मंत्र गायत्री में समाए हैं।"
+      }
+    },
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Wat is een mantra?",
+        "en": "What is a mantra?",
+        "hi": "मंत्र क्या है?"
+      },
+      "body": {
+        "nl": "Het woord komt van de Sanskriet-wortels man (denken) en tra (bevrijden): zichzelf bevrijden van alle beperkingen door een mentaal proces. Een mantra is een klank, of een combinatie van subtiele klanken, die uitwerkt op het hele wezen van de beoefenaar en op zijn omgeving. De klankwaarde is even belangrijk als de betekenis.",
+        "en": "The word comes from the Sanskrit roots man (to think) and tra (to liberate): freeing oneself from all limitation through a mental process. A mantra is a sound, or a combination of subtle sounds, that acts on the whole being of the one who uses it and on their surroundings. Its sound matters as much as its meaning.",
+        "hi": "यह शब्द संस्कृत धातुओं मन (सोचना) और त्र (मुक्त करना) से बना है: मानसिक प्रक्रिया द्वारा स्वयं को हर सीमा से मुक्त करना। मंत्र एक ध्वनि या सूक्ष्म ध्वनियों का संयोग है, जो साधक के पूरे अस्तित्व और उसके परिवेश पर प्रभाव डालता है। उसकी ध्वनि उतनी ही महत्वपूर्ण है जितना उसका अर्थ।"
+      }
+    },
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Om, de oerklank",
+        "en": "Om, the primal sound",
+        "hi": "ॐ, आदि ध्वनि"
+      },
+      "verse": "ॐ",
+      "roman": "Om (Aum), Pranava",
+      "body": {
+        "nl": "Om drukt de eeuwige oerklank uit die het hele universum in één lettergreep omvat. De klank bevat verleden, heden en toekomst en is zelf tijdloos. Hij klinkt aan het begin van de meditatie en aan het begin en eind van een gebed.",
+        "en": "Om expresses the eternal primal sound that holds the whole universe in a single syllable. It contains past, present and future and is itself timeless. It is sounded at the start of meditation and at the beginning and end of a prayer.",
+        "hi": "ॐ उस शाश्वत आदि ध्वनि की अभिव्यक्ति है जो पूरे ब्रह्मांड को एक अक्षर में समेटती है। इसमें भूत, वर्तमान और भविष्य समाए हैं और यह स्वयं कालातीत है। ध्यान के आरंभ में और प्रार्थना के आरंभ व अंत में इसका उच्चारण होता है।"
+      }
+    },
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Maha Mrityunjaya-mantra",
+        "en": "Maha Mrityunjaya mantra",
+        "hi": "महामृत्युंजय मंत्र"
+      },
+      "verse": "ॐ त्र्यम्बकं यजामहे\nसुगन्धिं पुष्टिवर्धनम्\nउर्वारुकमिव बन्धनान्\nमृत्योर्मुक्षीय मामृतात्",
+      "roman": "Om tryambakam yajamahe sugandhim pushtivardhanam, urvarukamiva bandhanan mrityor muksheeya maamritat",
+      "body": {
+        "nl": "Wij aanbidden u, Shiva met de drie ogen, de geur van het leven die ons voedt. Zoals de rijpe komkommer wordt bevrijd van de plant, bevrijd ons van gehechtheid en dood. Een gebed om bescherming tegen ziekte, armoede en vrees.",
+        "en": "We worship you, three-eyed Shiva, the fragrance of life that nourishes us. As the ripe cucumber is freed from the vine, free us from attachment and death. A prayer for protection from illness, poverty and fear.",
+        "hi": "हम त्रिनेत्रधारी शिव की उपासना करते हैं, जो जीवन की सुगंध हैं और हमारा पोषण करते हैं। जैसे पका खीरा बेल से मुक्त हो जाता है, वैसे हमें आसक्ति और मृत्यु से मुक्त करें। रोग, दरिद्रता और भय से रक्षा की प्रार्थना।"
+      }
+    },
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Ganesh-mantra",
+        "en": "Ganesh mantra",
+        "hi": "गणेश मंत्र"
+      },
+      "verse": "वक्रतुण्ड महाकाय\nसूर्यकोटि समप्रभ\nनिर्विघ्नं कुरु मे देव\nसर्वकार्येषु सर्वदा",
+      "roman": "Vakratunda mahakaya suryakoti samaprabha, nirvighnam kuru me deva sarvakaryeshu sarvada",
+      "body": {
+        "nl": "O heer Ganesha, stralend als een miljoen zonnen, laat alle hindernissen voor altijd uit mijn leven verdwijnen.",
+        "en": "O Lord Ganesha, radiant as a million suns, let every obstacle leave my life for good.",
+        "hi": "हे गणेश, करोड़ों सूर्यों के समान तेजस्वी, मेरे जीवन से सब विघ्न सदा के लिए दूर करें।"
+      }
+    },
+    {
+      "cat": "mantra",
+      "title": {
+        "nl": "Durga-mantra",
+        "en": "Durga mantra",
+        "hi": "दुर्गा मंत्र"
+      },
+      "verse": "ॐ ऐं ह्रीं क्लीं\nचामुण्डायै विच्चे",
+      "roman": "Aum aing hring kleeng chamundaye vichche"
+    },
+    {
+      "cat": "aarti",
+      "title": {
+        "nl": "Wat is aarti?",
+        "en": "What is aarti?",
+        "hi": "आरती क्या है?"
+      },
+      "body": {
+        "nl": "Aarti is het ritueel waarbij brandende diya’s voor de murti worden rondgedraaid. De diya verlicht de murti, zodat devoten een betere darshan hebben, en devoten verwelkomen God er liefdevol mee. De teksten die daarbij worden gezongen heten ook aarti’s en verschillen per Godsaspect: Durga, Hanuman, Krishna, Shiva en Vishnu.",
+        "en": "Aarti is the ritual of circling lit diyas before the murti. The diya lights the murti so that devotees have a clearer darshan, and with it they lovingly welcome God. The songs sung meanwhile are also called aartis and differ for each aspect of God: Durga, Hanuman, Krishna, Shiva and Vishnu.",
+        "hi": "आरती में जलते दीये मूर्ति के सामने घुमाए जाते हैं। दीया मूर्ति को आलोकित करता है ताकि भक्तों को अच्छे दर्शन हों, और भक्त प्रेम से भगवान का स्वागत करते हैं। उस समय गाए जाने वाले पद भी आरती कहलाते हैं और हर स्वरूप के लिए अलग हैं: दुर्गा, हनुमान, कृष्ण, शिव और विष्णु।"
+      }
+    },
+    {
+      "cat": "aarti",
+      "title": {
+        "nl": "Shiva-aarti",
+        "en": "Shiva aarti",
+        "hi": "शिव आरती"
+      },
+      "verse": "ॐ जय शिव ओंकारा\nस्वामी जय शिव ओंकारा\nब्रह्मा विष्णु सदाशिव\nअर्धांगी धारा",
+      "roman": "Om jai Shiv Omkara, Swami jai Shiv Omkara, Brahma Vishnu Sadashiv, ardhangi dhara"
+    },
+    {
+      "cat": "scripture",
+      "title": {
+        "nl": "De Veda’s",
+        "en": "The Vedas",
+        "hi": "वेद"
+      },
+      "body": {
+        "nl": "Veda betekent kennis. De Veda’s zijn de oorspronkelijke geschriften waarop de hindoe-leefwijze is gebaseerd; de ethische leefwijze die erin wordt aangereikt heet Dharma. De rishi’s ontvingen ze in meditatie en gaven ze mondeling door. Er zijn er vier: Rigveda, Yajurveda, Samaveda en Atharvaveda.",
+        "en": "Veda means knowledge. The Vedas are the original scriptures on which the Hindu way of life rests; the ethical way of living they set out is called Dharma. The rishis received them in meditation and passed them on by word of mouth. There are four: Rigveda, Yajurveda, Samaveda and Atharvaveda.",
+        "hi": "वेद का अर्थ है ज्ञान। वेद वे मूल ग्रंथ हैं जिन पर हिंदू जीवन-पद्धति आधारित है; उनमें बताई नैतिक जीवन-शैली धर्म कहलाती है। ऋषियों ने उन्हें ध्यान में प्राप्त किया और मौखिक रूप से आगे बढ़ाया। वेद चार हैं: ऋग्वेद, यजुर्वेद, सामवेद और अथर्ववेद।"
+      }
+    },
+    {
+      "cat": "scripture",
+      "title": {
+        "nl": "De Ramayan",
+        "en": "The Ramayan",
+        "hi": "रामायण"
+      },
+      "body": {
+        "nl": "Het levensverhaal van Shri Ram, de oudste zoon van koning Dashrath van Ayodhya. Hij wordt voor veertien jaar naar het woud verbannen; zijn vrouw Sita en zijn broer Lakshman gaan met hem mee. Ram verslaat Ravan, bevrijdt Sita en wordt koning van Ayodhya.",
+        "en": "The life story of Shri Ram, eldest son of King Dashrath of Ayodhya. He is exiled to the forest for fourteen years; his wife Sita and his brother Lakshman go with him. Ram defeats Ravan, frees Sita and becomes king of Ayodhya.",
+        "hi": "अयोध्या के राजा दशरथ के ज्येष्ठ पुत्र श्री राम की जीवन-कथा। उन्हें चौदह वर्ष का वनवास मिलता है; पत्नी सीता और भाई लक्ष्मण उनके साथ जाते हैं। राम रावण को पराजित करते हैं, सीता को मुक्त कराते हैं और अयोध्या के राजा बनते हैं।"
+      }
+    },
+    {
+      "cat": "scripture",
+      "title": {
+        "nl": "Mahabharat en Bhagavad Gita",
+        "en": "Mahabharat and Bhagavad Gita",
+        "hi": "महाभारत और भगवद्गीता"
+      },
+      "body": {
+        "nl": "De Mahabharat vertelt de strijd tussen de neven Pandava’s en Kaurava’s bij Kurukshetra. Tijdens die strijd onderwijst Krishna, als wagenmenner van Arjun, de Bhagavad Gita: de essentie van de Dharma in de vorm van een dialoog.",
+        "en": "The Mahabharat tells of the war between the cousins, the Pandavas and the Kauravas, at Kurukshetra. During it Krishna, as Arjun’s charioteer, teaches the Bhagavad Gita: the essence of Dharma in the form of a dialogue.",
+        "hi": "महाभारत कुरुक्षेत्र में चचेरे भाइयों, पांडवों और कौरवों, के युद्ध की कथा है। उसी युद्ध में कृष्ण, अर्जुन के सारथी बनकर, भगवद्गीता का उपदेश देते हैं: संवाद के रूप में धर्म का सार।"
+      }
+    },
+    {
+      "cat": "principle",
+      "title": {
+        "nl": "Sanatan Dharma",
+        "en": "Sanatan Dharma",
+        "hi": "सनातन धर्म"
+      },
+      "body": {
+        "nl": "Hindoes noemen hun levenswijze Sanatan Dharma: de eeuwige leer. Ze is niet ontstaan door een profeet of stichter en is meer een manier van leven dan een vast geloof. De hoofdgedachte is dat ieder een eigen weg bewandelt naar verlossing.",
+        "en": "Hindus call their way of life Sanatan Dharma: the eternal teaching. It did not begin with a prophet or founder, and it is more a way of living than a fixed creed. Its central thought is that each person walks their own path to liberation.",
+        "hi": "हिंदू अपनी जीवन-पद्धति को सनातन धर्म कहते हैं: शाश्वत शिक्षा। इसका आरंभ किसी पैग़ंबर या संस्थापक से नहीं हुआ, और यह बँधे मत से अधिक जीने का ढंग है। मूल विचार यह है कि हर व्यक्ति मुक्ति की ओर अपने मार्ग पर चलता है।"
+      }
+    },
+    {
+      "cat": "principle",
+      "title": {
+        "nl": "Karma, samsara en moksha",
+        "en": "Karma, samsara and moksha",
+        "hi": "कर्म, संसार और मोक्ष"
+      },
+      "body": {
+        "nl": "Bij de dood leeft de ziel voort en wordt zij herboren. De keten van daden en hun gevolgen heet karma. Het uiteindelijke doel is moksha: loskomen van de cyclus van samsara, het moment waarop de atman opgaat in Brahman.",
+        "en": "At death the soul lives on and is born again. The chain of deeds and their consequences is called karma. The final goal is moksha: release from the cycle of samsara, the moment the atman merges into Brahman.",
+        "hi": "मृत्यु के बाद आत्मा बनी रहती है और पुनर्जन्म लेती है। कर्मों और उनके फलों की शृंखला कर्म कहलाती है। अंतिम लक्ष्य मोक्ष है: संसार के चक्र से मुक्ति, वह क्षण जब आत्मा ब्रह्म में लीन हो जाती है।"
+      }
+    },
+    {
+      "cat": "principle",
+      "title": {
+        "nl": "Eén God, vele vormen",
+        "en": "One God, many forms",
+        "hi": "एक ईश्वर, अनेक रूप"
+      },
+      "body": {
+        "nl": "In de kern is de Sanatan Dharma monotheïstisch: één God met talloze verschijningsvormen. Brahma toont de scheppende kracht, Vishnu beschermt het heelal, en Shiva laat alles vergaan zodat het opnieuw kan beginnen.",
+        "en": "At its core Sanatan Dharma is monotheistic: one God in countless forms. Brahma shows the creating power, Vishnu protects the universe, and Shiva lets all things pass so that they can begin again.",
+        "hi": "मूल रूप से सनातन धर्म एकेश्वरवादी है: एक ईश्वर, असंख्य रूप। ब्रह्मा सृजन की शक्ति दिखाते हैं, विष्णु सृष्टि की रक्षा करते हैं, और शिव सबका लय करते हैं ताकि सब फिर से आरंभ हो सके।"
+      }
+    },
+    {
+      "cat": "festival",
+      "title": {
+        "nl": "Navratri",
+        "en": "Navratri",
+        "hi": "नवरात्रि"
+      },
+      "body": {
+        "nl": "Negen nachten ter ere van de negen manifestaties van de godin Durga als Goddelijke Moeder, tweemaal per jaar gevierd: in de maand Chaitra en in de maand Ashwin. Er wordt puja gedaan, thuis of in de mandir, er worden yagya’s verricht en er kan worden gevast.",
+        "en": "Nine nights in honour of the nine manifestations of the goddess Durga as Divine Mother, celebrated twice a year: in the month of Chaitra and in the month of Ashwin. Puja is done at home or in the mandir, yagyas are performed, and many fast.",
+        "hi": "देवी दुर्गा के नौ स्वरूपों के सम्मान में नौ रातें, वर्ष में दो बार: चैत्र और आश्विन मास में। घर या मंदिर में पूजा होती है, यज्ञ किए जाते हैं और व्रत रखा जाता है।"
+      }
+    },
+    {
+      "cat": "festival",
+      "title": {
+        "nl": "Maha Shivratri",
+        "en": "Maha Shivratri",
+        "hi": "महाशिवरात्रि"
+      },
+      "body": {
+        "nl": "De veertiende nacht van de donkere helft van de maand Phalgun, waarop het huwelijk van Shiva en Parvati wordt herdacht. Toegewijden vasten, en ’s avonds volgt de Shiva-puja met lezing uit de Shiva Puran, bhajans en kirtans.",
+        "en": "The fourteenth night of the dark half of the month of Phalgun, remembering the wedding of Shiva and Parvati. Devotees fast, and in the evening comes the Shiva puja with a reading from the Shiva Puran, bhajans and kirtans.",
+        "hi": "फाल्गुन मास के कृष्ण पक्ष की चौदहवीं रात, जब शिव और पार्वती के विवाह का स्मरण किया जाता है। भक्त व्रत रखते हैं, और संध्या को शिव पूजा, शिव पुराण का पाठ, भजन और कीर्तन होते हैं।"
+      }
+    },
+    {
+      "cat": "festival",
+      "title": {
+        "nl": "Hanuman Jayanti",
+        "en": "Hanuman Jayanti",
+        "hi": "हनुमान जयंती"
+      },
+      "verse": "मनोजवं मारुततुल्यवेगं\nजितेन्द्रियं बुद्धिमतां वरिष्ठम्\nवातात्मजं वानरयूथमुख्यं\nश्रीरामदूतं शरणं प्रपद्ये",
+      "roman": "Manojavam marutatulyavegam, jitendriyam buddhimatam varishtham, vatatmajam vanarayuthamukhyam, Shri Ramadutam sharanam prapadye",
+      "body": {
+        "nl": "De geboortedag van Hanuman, op de volle maan van de maand Chaitra. Er wordt gevast, en de Hanuman Chalisa en de Sundarkand worden gereciteerd. Van Hanuman leert men wat echte nederigheid en belangeloos dienen is.",
+        "en": "The birthday of Hanuman, on the full moon of the month of Chaitra. People fast, and the Hanuman Chalisa and the Sundarkand are recited. From Hanuman one learns what true humility and selfless service are.",
+        "hi": "हनुमान जी का जन्मदिन, चैत्र मास की पूर्णिमा को। व्रत रखा जाता है, और हनुमान चालीसा व सुंदरकांड का पाठ होता है। हनुमान जी से सच्ची विनम्रता और निःस्वार्थ सेवा सीखी जाती है।"
+      }
+    },
+    {
+      "cat": "festival",
+      "title": {
+        "nl": "De Vedische kalender in Nederland",
+        "en": "The Vedic calendar in the Netherlands",
+        "hi": "नीदरलैंड में वैदिक पंचांग"
+      },
+      "body": {
+        "nl": "De dag van een feest wordt meestal bepaald door de tithi (maandag) die bij zonsopgang aanwezig is. Omdat de zon in Nederland veel later opkomt dan in India, kan hier bij zonsopgang al de volgende tithi gelden. Daarom valt een feest in Nederland soms een dag anders dan in India.",
+        "en": "The day of a festival is usually set by the tithi (lunar day) present at sunrise. Because the sun rises much later in the Netherlands than in India, the next tithi may already apply here at sunrise. That is why a festival in the Netherlands sometimes falls a day apart from India.",
+        "hi": "पर्व का दिन प्रायः सूर्योदय के समय की तिथि से तय होता है। नीदरलैंड में सूर्य भारत से बहुत देर से उगता है, इसलिए यहाँ सूर्योदय पर अगली तिथि लग चुकी हो सकती है। इसी कारण नीदरलैंड में कोई पर्व कभी-कभी भारत से एक दिन अलग पड़ता है।"
+      }
+    }
+  ]
+}

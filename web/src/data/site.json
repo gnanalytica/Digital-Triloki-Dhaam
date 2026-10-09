@@ -1,0 +1,588 @@
+{
+  "temple": {
+    "name": "Mandir Triloki Dhaam",
+    "street": "Tongelresestraat 371",
+    "postal": "5642 NC Eindhoven",
+    "phone": "06-45461229",
+    "tel": "+31645461229",
+    "email": "trilokidhaam@gmail.com",
+    "iban": "NL90 INGB 0007 6605 27",
+    "holder": "Stichting Senskaar Triloki Dhaam",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tongelresestraat+371+5642+NC+Eindhoven",
+    "youtube": "https://www.youtube.com/@mandirtrilokidhaam32",
+    "instagram": "https://www.instagram.com/mandirtrilokidhaam/",
+    "facebook": "https://www.facebook.com/groups/MandirTrilokiDhaam"
+  },
+  "img": {
+    "altar": "assets/altar.jpg",
+    "shiva": "assets/shiva.jpg"
+  },
+  "videos": [
+    {
+      "id": "QAQ7TqJfOgA",
+      "title": {
+        "nl": "Sfeerimpressie van een aarti",
+        "en": "An aarti at the mandir",
+        "hi": "मंदिर में आरती की झलक"
+      }
+    },
+    {
+      "id": "RPDuwYl1r48",
+      "title": {
+        "nl": "Bhajan en kirtan",
+        "en": "Bhajan and kirtan",
+        "hi": "भजन और कीर्तन"
+      }
+    },
+    {
+      "id": "HZCfYq6LsEM",
+      "title": {
+        "nl": "Cursus Hindu Basics",
+        "en": "The Hindu Basics course",
+        "hi": "हिंदू बेसिक्स पाठ्यक्रम"
+      }
+    }
+  ],
+  "instagram": [
+    {
+      "id": "DdYkE_SsHld",
+      "date": "2026-09-17"
+    },
+    {
+      "id": "Db4GqZmMtGI",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "Db22oTmM6Zs",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "DUYL5jiAKOu",
+      "date": "2026-02-05"
+    }
+  ],
+  "programme": [
+    {
+      "start": "13:00",
+      "end": "14:00",
+      "mins": 60,
+      "title": {
+        "nl": "Puja en bhajan",
+        "en": "Puja and bhajan",
+        "hi": "पूजा और भजन"
+      },
+      "desc": {
+        "nl": "Offeren aan de goden en samen religieuze liederen zingen.",
+        "en": "Offerings to the deities and singing devotional songs together.",
+        "hi": "देवताओं को अर्पण और मिलकर भजन गाना।"
+      }
+    },
+    {
+      "start": "14:00",
+      "end": "15:00",
+      "mins": 60,
+      "title": {
+        "nl": "Pravachan",
+        "en": "Pravachan",
+        "hi": "प्रवचन"
+      },
+      "desc": {
+        "nl": "Lezing over een onderwerp uit het hindoeïsme, soms met ruimte voor vragen.",
+        "en": "A talk on a topic from Hinduism, sometimes with room for questions.",
+        "hi": "हिंदू धर्म के किसी विषय पर प्रवचन, कभी-कभी प्रश्नों के लिए समय के साथ।"
+      }
+    },
+    {
+      "start": "15:00",
+      "end": "15:30",
+      "mins": 30,
+      "title": {
+        "nl": "Aarti en prasad",
+        "en": "Aarti and prasad",
+        "hi": "आरती और प्रसाद"
+      },
+      "desc": {
+        "nl": "Eerbetoon aan de goden met muziek, daarna prasad en panchamrit.",
+        "en": "Homage to the deities with music, then prasad and panchamrit.",
+        "hi": "संगीत के साथ आरती, फिर प्रसाद और पंचामृत।"
+      }
+    }
+  ],
+  "festivals": [
+    {
+      "id": "makar-sankranti",
+      "date": "2026-01-14",
+      "name": {
+        "nl": "Makar Sankranti",
+        "en": "Makar Sankranti",
+        "hi": "मकर संक्रांति"
+      }
+    },
+    {
+      "id": "vasant-panchami",
+      "date": "2026-01-23",
+      "name": {
+        "nl": "Vasant Panchami, Saraswati Puja",
+        "en": "Vasant Panchami, Saraswati Puja",
+        "hi": "वसंत पंचमी, सरस्वती पूजा"
+      }
+    },
+    {
+      "id": "maha-shivratri",
+      "date": "2026-02-15",
+      "time": "17:00",
+      "name": {
+        "nl": "Maha Shivratri",
+        "en": "Maha Shivratri",
+        "hi": "महाशिवरात्रि"
+      }
+    },
+    {
+      "id": "holika-dahan",
+      "date": "2026-03-02",
+      "name": {
+        "nl": "Holika Dahan",
+        "en": "Holika Dahan",
+        "hi": "होलिका दहन"
+      }
+    },
+    {
+      "id": "chaitra-navratri",
+      "date": "2026-03-18",
+      "name": {
+        "nl": "Chaitra Navratri",
+        "en": "Chaitra Navratri",
+        "hi": "चैत्र नवरात्रि"
+      }
+    },
+    {
+      "id": "ramnavami",
+      "date": "2026-03-26",
+      "name": {
+        "nl": "Ramnavami",
+        "en": "Ramnavami",
+        "hi": "रामनवमी"
+      }
+    },
+    {
+      "id": "hanuman-jayanti",
+      "date": "2026-04-01",
+      "name": {
+        "nl": "Hanuman Jayanti",
+        "en": "Hanuman Jayanti",
+        "hi": "हनुमान जयंती"
+      }
+    },
+    {
+      "id": "shravan-somvaar",
+      "date": "2026-08-03",
+      "end": "2026-08-24",
+      "name": {
+        "nl": "Shravan Somvaar Shivpuja",
+        "en": "Shravan Somvaar Shivpuja",
+        "hi": "श्रावण सोमवार शिवपूजा"
+      },
+      "note": {
+        "nl": "Vier maandagen",
+        "en": "Four Mondays",
+        "hi": "चार सोमवार"
+      }
+    },
+    {
+      "id": "krishna-janmashtami",
+      "date": "2026-09-03",
+      "name": {
+        "nl": "Krishna Janmashtami",
+        "en": "Krishna Janmashtami",
+        "hi": "कृष्ण जन्माष्टमी"
+      }
+    },
+    {
+      "id": "ganesh-chaturthi",
+      "date": "2026-09-14",
+      "name": {
+        "nl": "Ganesh Chaturthi",
+        "en": "Ganesh Chaturthi",
+        "hi": "गणेश चतुर्थी"
+      }
+    },
+    {
+      "id": "shardiya-navratri",
+      "date": "2026-10-11",
+      "end": "2026-10-19",
+      "nights": 9,
+      "name": {
+        "nl": "Shardiya Navratri",
+        "en": "Shardiya Navratri",
+        "hi": "शारदीय नवरात्रि"
+      },
+      "note": {
+        "nl": "Negen avonden, elke avond",
+        "en": "Nine evenings, every evening",
+        "hi": "नौ संध्याएँ, हर शाम"
+      }
+    },
+    {
+      "id": "vijaya-dashami",
+      "date": "2026-10-20",
+      "name": {
+        "nl": "Vijaya Dashami (Dussehra)",
+        "en": "Vijaya Dashami (Dussehra)",
+        "hi": "विजयादशमी (दशहरा)"
+      }
+    },
+    {
+      "id": "divali",
+      "date": "2026-11-09",
+      "pending": true,
+      "name": {
+        "nl": "Diwali",
+        "en": "Diwali",
+        "hi": "दिवाली"
+      }
+    },
+    {
+      "id": "geeta-jayanti",
+      "date": "2026-12-20",
+      "time": "13:00",
+      "name": {
+        "nl": "Geeta Jayanti",
+        "en": "Geeta Jayanti",
+        "hi": "गीता जयंती"
+      }
+    }
+  ],
+  "festivalDefaultTime": "18:00",
+  "ceremonies": [
+    {
+      "id": "antyeshti",
+      "urgent": true,
+      "name": {
+        "nl": "Antyeshti samskar",
+        "en": "Antyeshti samskar",
+        "hi": "अंत्येष्टि संस्कार"
+      },
+      "gloss": {
+        "nl": "uitvaartrituelen",
+        "en": "funeral rites",
+        "hi": "अंतिम संस्कार"
+      }
+    },
+    {
+      "id": "shradh",
+      "name": {
+        "nl": "Shradh",
+        "en": "Shradh",
+        "hi": "श्राद्ध"
+      },
+      "gloss": {
+        "nl": "rituelen voor overledenen",
+        "en": "rites for the departed",
+        "hi": "दिवंगतों के लिए"
+      }
+    },
+    {
+      "id": "vivah",
+      "name": {
+        "nl": "Vivah samskar",
+        "en": "Vivah samskar",
+        "hi": "विवाह संस्कार"
+      },
+      "gloss": {
+        "nl": "huwelijk",
+        "en": "marriage",
+        "hi": "विवाह"
+      }
+    },
+    {
+      "id": "mundan",
+      "name": {
+        "nl": "Mundan samskar",
+        "en": "Mundan samskar",
+        "hi": "मुंडन संस्कार"
+      },
+      "gloss": {
+        "nl": "eerste haarknipbeurt",
+        "en": "first haircut",
+        "hi": "पहला मुंडन"
+      }
+    },
+    {
+      "id": "griha-pravesh",
+      "name": {
+        "nl": "Griha Pravesh",
+        "en": "Griha Pravesh",
+        "hi": "गृह प्रवेश"
+      },
+      "gloss": {
+        "nl": "intrek in een nieuw huis",
+        "en": "moving into a new home",
+        "hi": "नए घर में प्रवेश"
+      }
+    },
+    {
+      "id": "puja",
+      "name": {
+        "nl": "Puja",
+        "en": "Puja",
+        "hi": "पूजा"
+      },
+      "desc": {
+        "nl": "Een Vedische ceremonie van enkele uren, bedoeld om hindernissen weg te nemen of positieve tendensen te bevorderen. Uitgevoerd door een daartoe opgeleide pandit die de mantra’s uit de Veda’s reciteert.",
+        "en": "A Vedic ceremony lasting a few hours, performed to clear obstacles or strengthen positive tendencies, by a trained pandit who recites the mantras from the Vedas.",
+        "hi": "कुछ घंटों का वैदिक अनुष्ठान, बाधाएँ दूर करने या शुभ प्रवृत्तियों को बढ़ाने के लिए। प्रशिक्षित पंडित वेदों के मंत्रों का पाठ करते हैं।"
+      }
+    },
+    {
+      "id": "yagya",
+      "name": {
+        "nl": "Yagya",
+        "en": "Yagya",
+        "hi": "यज्ञ"
+      },
+      "desc": {
+        "nl": "Rituelen met een levensondersteunend effect, voor het welzijn van een persoon, een familie, een organisatie of een samenleving.",
+        "en": "Rituals with a life-supporting effect, for the wellbeing of a person, a family, an organisation or a community.",
+        "hi": "व्यक्ति, परिवार, संस्था या समाज के कल्याण के लिए किए जाने वाले जीवन-पोषक अनुष्ठान।"
+      }
+    },
+    {
+      "id": "havan",
+      "name": {
+        "nl": "Havan",
+        "en": "Havan",
+        "hi": "हवन"
+      }
+    },
+    {
+      "id": "grah-shanti",
+      "name": {
+        "nl": "Grah Shanti",
+        "en": "Grah Shanti",
+        "hi": "ग्रह शांति"
+      }
+    },
+    {
+      "id": "sundarkand",
+      "name": {
+        "nl": "Sundarkand path",
+        "en": "Sundarkand path",
+        "hi": "सुंदरकांड पाठ"
+      }
+    },
+    {
+      "id": "kirtan",
+      "name": {
+        "nl": "Kirtan en bhajan",
+        "en": "Kirtan and bhajan",
+        "hi": "कीर्तन और भजन"
+      }
+    },
+    {
+      "id": "horoscope",
+      "name": {
+        "nl": "Hindoe-horoscoop",
+        "en": "Hindu horoscope",
+        "hi": "कुंडली"
+      }
+    },
+    {
+      "id": "lezingen",
+      "name": {
+        "nl": "Lezingen",
+        "en": "Lectures",
+        "hi": "व्याख्यान"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": "hindu-basics",
+      "fixed": true,
+      "time": "13:00 – 15:30",
+      "name": {
+        "nl": "Hindu Basics",
+        "en": "Hindu Basics",
+        "hi": "हिंदू बेसिक्स"
+      },
+      "desc": {
+        "nl": "Een brede inleiding in de fundamenten van Sanatan Dharma: filosofie, rituelen en cultuur. Ook samen met kinderen.",
+        "en": "A broad introduction to the foundations of Sanatan Dharma: philosophy, ritual and culture. Children welcome with a parent.",
+        "hi": "सनातन धर्म की बुनियाद का परिचय: दर्शन, अनुष्ठान और संस्कृति। बच्चों के साथ भी।"
+      }
+    },
+    {
+      "id": "hindi",
+      "fixed": true,
+      "time": "12:00 – 13:00",
+      "name": {
+        "nl": "Hindilessen",
+        "en": "Hindi classes",
+        "hi": "हिंदी कक्षाएँ"
+      },
+      "desc": {
+        "nl": "Voor kinderen en volwassenen, vóór de zondagdienst.",
+        "en": "For children and adults, before the Sunday service.",
+        "hi": "बच्चों और बड़ों के लिए, रविवार सेवा से पहले।"
+      }
+    },
+    {
+      "id": "harmonium",
+      "name": {
+        "nl": "Harmonium",
+        "en": "Harmonium",
+        "hi": "हारमोनियम"
+      },
+      "desc": {
+        "nl": "Van de basis tot gevorderde technieken, onder begeleiding van ervaren muzikanten.",
+        "en": "From the basics to advanced technique, guided by experienced musicians.",
+        "hi": "शुरुआत से उन्नत तकनीक तक, अनुभवी संगीतकारों के साथ।"
+      }
+    },
+    {
+      "id": "dhol",
+      "name": {
+        "nl": "Dhol",
+        "en": "Dhol",
+        "hi": "ढोल"
+      },
+      "desc": {
+        "nl": "Ontdek de ritmische wereld van de dhol.",
+        "en": "Discover the rhythmic world of the dhol.",
+        "hi": "ढोल की लय की दुनिया को जानें।"
+      }
+    },
+    {
+      "id": "kids-music",
+      "name": {
+        "nl": "Muziek voor kinderen",
+        "en": "Music for children",
+        "hi": "बच्चों के लिए संगीत"
+      },
+      "desc": {
+        "nl": "Een speelse kennismaking met muziek voor de kleintjes.",
+        "en": "A playful first step into music for the youngest.",
+        "hi": "छोटे बच्चों का संगीत से खेल-खेल में परिचय।"
+      }
+    },
+    {
+      "id": "yoga",
+      "name": {
+        "nl": "Yoga en meditatie",
+        "en": "Yoga and meditation",
+        "hi": "योग और ध्यान"
+      },
+      "desc": {
+        "nl": "Sessies om lichaam en geest in balans te brengen.",
+        "en": "Sessions to bring body and mind into balance.",
+        "hi": "शरीर और मन में संतुलन लाने वाले सत्र।"
+      }
+    }
+  ],
+  "etiquette": [
+    {
+      "nl": "Doe uw schoenen uit voordat u de gebedsruimte ingaat.",
+      "en": "Take off your shoes before entering the prayer hall.",
+      "hi": "प्रार्थना-कक्ष में जाने से पहले जूते उतारें।"
+    },
+    {
+      "nl": "Draag gepaste kleding, geen korte kleding.",
+      "en": "Dress modestly; no short clothing.",
+      "hi": "शालीन वस्त्र पहनें; छोटे कपड़े नहीं।"
+    },
+    {
+      "nl": "Eet geen vlees, vis of ei en drink geen alcohol voor uw bezoek.",
+      "en": "No meat, fish, egg or alcohol before your visit.",
+      "hi": "आने से पहले मांस, मछली, अंडा या मदिरा न लें।"
+    },
+    {
+      "nl": "Zet uw telefoon op stil.",
+      "en": "Put your phone on silent.",
+      "hi": "फ़ोन साइलेंट पर रखें।"
+    },
+    {
+      "nl": "Vraag het even voordat u foto’s of video’s maakt.",
+      "en": "Ask before taking photos or video.",
+      "hi": "फ़ोटो या वीडियो लेने से पहले पूछ लें।"
+    },
+    {
+      "nl": "Bloemen, fruit of zoetigheid meenemen om te offeren mag.",
+      "en": "You may bring flowers, fruit or sweets to offer.",
+      "hi": "चाहें तो चढ़ाने के लिए फूल, फल या मिठाई लाएँ।"
+    }
+  ],
+  "knowledge": [
+    {
+      "title": {
+        "nl": "Mantra’s",
+        "en": "Mantras",
+        "hi": "मंत्र"
+      },
+      "desc": {
+        "nl": "Wat een mantra is, en de Gayatri-, Shiva- en Ganesh-mantra.",
+        "en": "What a mantra is, and the Gayatri, Shiva and Ganesh mantras.",
+        "hi": "मंत्र क्या है, और गायत्री, शिव व गणेश मंत्र।"
+      }
+    },
+    {
+      "title": {
+        "nl": "Aarti’s",
+        "en": "Aartis",
+        "hi": "आरतियाँ"
+      },
+      "desc": {
+        "nl": "Durga, Hanuman, Krishna, Shiva en Vishnu.",
+        "en": "Durga, Hanuman, Krishna, Shiva and Vishnu.",
+        "hi": "दुर्गा, हनुमान, कृष्ण, शिव और विष्णु।"
+      }
+    },
+    {
+      "title": {
+        "nl": "Geschriften",
+        "en": "Scriptures",
+        "hi": "शास्त्र"
+      },
+      "desc": {
+        "nl": "De Veda’s, de Ramayan, de Mahabharat en de Gita.",
+        "en": "The Vedas, the Ramayan, the Mahabharat and the Gita.",
+        "hi": "वेद, रामायण, महाभारत और गीता।"
+      }
+    },
+    {
+      "title": {
+        "nl": "Hoogtijdagen uitgelegd",
+        "en": "The festivals explained",
+        "hi": "पर्वों का अर्थ"
+      },
+      "desc": {
+        "nl": "Navratri, Maha Shivratri, Hanuman Jayanti en meer.",
+        "en": "Navratri, Maha Shivratri, Hanuman Jayanti and more.",
+        "hi": "नवरात्रि, महाशिवरात्रि, हनुमान जयंती और अन्य।"
+      }
+    },
+    {
+      "title": {
+        "nl": "De Vedische kalender",
+        "en": "The Vedic calendar",
+        "hi": "वैदिक पंचांग"
+      },
+      "desc": {
+        "nl": "Waarom een feestdag in Nederland een dag kan verschillen van India.",
+        "en": "Why a festival in the Netherlands can fall a day apart from India.",
+        "hi": "नीदरलैंड में कोई पर्व भारत से एक दिन आगे-पीछे क्यों हो सकता है।"
+      }
+    },
+    {
+      "title": {
+        "nl": "Algemene beginselen",
+        "en": "General principles",
+        "hi": "मूल सिद्धांत"
+      },
+      "desc": {
+        "nl": "De grondgedachten van Sanatan Dharma.",
+        "en": "The core ideas of Sanatan Dharma.",
+        "hi": "सनातन धर्म के मूल विचार।"
+      }
+    }
+  ]
+}

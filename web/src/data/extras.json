@@ -1,0 +1,167 @@
+{
+  "faq": [
+    {
+      "q": {
+        "nl": "Wanneer is de mandir open?",
+        "en": "When is the mandir open?",
+        "hi": "मंदिर कब खुला रहता है?"
+      },
+      "a": {
+        "nl": "Elke zondag van 13:00 tot 15:30, en op de hoogtijdagen uit het jaarprogramma. Daarbuiten is de mandir gesloten.",
+        "en": "Every Sunday from 13:00 to 15:30, and on the festival dates in the yearly programme. Outside those times the mandir is closed.",
+        "hi": "हर रविवार 13:00 से 15:30 तक, और वार्षिक कार्यक्रम के पर्वों पर। इनके अलावा मंदिर बंद रहता है।"
+      }
+    },
+    {
+      "q": {
+        "nl": "Kost een bezoek iets?",
+        "en": "Does a visit cost anything?",
+        "hi": "क्या आने का कोई शुल्क है?"
+      },
+      "a": {
+        "nl": "Na de aarti wordt om een vrijwillige donatie gevraagd.",
+        "en": "After the aarti a voluntary donation is asked for.",
+        "hi": "आरती के बाद स्वैच्छिक दान का अनुरोध किया जाता है।"
+      }
+    },
+    {
+      "q": {
+        "nl": "Wat trek ik aan?",
+        "en": "What should I wear?",
+        "hi": "क्या पहनकर आएँ?"
+      },
+      "a": {
+        "nl": "Gepaste kleding, geen korte kleding. Uw schoenen doet u uit voordat u de gebedsruimte ingaat.",
+        "en": "Modest clothing, nothing short. You take your shoes off before entering the prayer hall.",
+        "hi": "शालीन वस्त्र, छोटे कपड़े नहीं। प्रार्थना-कक्ष में जाने से पहले जूते उतार दें।"
+      }
+    },
+    {
+      "q": {
+        "nl": "Mag ik iets meenemen?",
+        "en": "May I bring something?",
+        "hi": "क्या कुछ साथ ला सकते हैं?"
+      },
+      "a": {
+        "nl": "U kunt bloemen, fruit of zoetigheid meenemen om te offeren. In de mandir is alleen vegetarisch eten toegestaan.",
+        "en": "You may bring flowers, fruit or sweets to offer. Only vegetarian food is allowed in the mandir.",
+        "hi": "चढ़ाने के लिए फूल, फल या मिठाई ला सकते हैं। मंदिर में केवल शाकाहारी भोजन की अनुमति है।"
+      }
+    },
+    {
+      "q": {
+        "nl": "Mag ik foto’s of video’s maken?",
+        "en": "May I take photos or video?",
+        "hi": "क्या फ़ोटो या वीडियो ले सकते हैं?"
+      },
+      "a": {
+        "nl": "Vraag het eerst aan de pandit of aan een van de vrijwilligers.",
+        "en": "Please ask the pandit or one of the volunteers first.",
+        "hi": "पहले पंडित जी या किसी सेवक से पूछ लें।"
+      }
+    }
+  ],
+  "spots": [
+    [
+      9,
+      50
+    ],
+    [
+      22,
+      49
+    ],
+    [
+      34,
+      48
+    ],
+    [
+      46,
+      49
+    ],
+    [
+      58,
+      47
+    ],
+    [
+      71,
+      49
+    ],
+    [
+      85,
+      50
+    ]
+  ],
+  "tasks": [
+    {
+      "nl": "Prasad klaarmaken",
+      "en": "Preparing prasad",
+      "hi": "प्रसाद बनाना"
+    },
+    {
+      "nl": "Muziek en bhajan",
+      "en": "Music and bhajan",
+      "hi": "संगीत और भजन"
+    },
+    {
+      "nl": "Opbouwen en opruimen",
+      "en": "Setting up and clearing",
+      "hi": "सजावट और सफ़ाई"
+    }
+  ],
+  "words": [
+    {
+      "hi": "नमस्ते",
+      "ro": "namaste",
+      "m": {
+        "nl": "hallo",
+        "en": "hello",
+        "hi": "अभिवादन"
+      }
+    },
+    {
+      "hi": "धन्यवाद",
+      "ro": "dhanyavaad",
+      "m": {
+        "nl": "dank je wel",
+        "en": "thank you",
+        "hi": "आभार"
+      }
+    },
+    {
+      "hi": "माँ",
+      "ro": "maa",
+      "m": {
+        "nl": "moeder",
+        "en": "mother",
+        "hi": "माता"
+      }
+    },
+    {
+      "hi": "पानी",
+      "ro": "paani",
+      "m": {
+        "nl": "water",
+        "en": "water",
+        "hi": "जल"
+      }
+    },
+    {
+      "hi": "फूल",
+      "ro": "phool",
+      "m": {
+        "nl": "bloem",
+        "en": "flower",
+        "hi": "पुष्प"
+      }
+    },
+    {
+      "hi": "दीया",
+      "ro": "diya",
+      "m": {
+        "nl": "lampje",
+        "en": "lamp",
+        "hi": "दीपक"
+      }
+    }
+  ]
+}
