@@ -48,12 +48,12 @@ export function Together({ lang, site, today }: { lang: Lang; site: Site; today:
           <div>
             <h3>{T.t('join_seva_h')}</h3>
             <p><G lang={lang}>{T.t('join_seva_p')}</G></p>
-            <p><Link className="btn btn-line" href={`/${lang}?route=help#wegwijs`}>{T.t('c_i_help')}</Link></p>
+            <p><Link className="btn btn-line" href={`/${lang}?route=help#wegwijs`} onClick={() => window.dispatchEvent(new CustomEvent('mtd:route', { detail: 'help' }))}>{T.t('c_i_help')}</Link></p>
           </div>
           <div>
             <h3>{T.t('join_translate_h')}</h3>
             <p>{T.t('join_translate_p')}</p>
-            <p><Link className="btn btn-line" href={`/${lang}?route=help#wegwijs`}>{T.t('nav_join')}</Link></p>
+            <p><Link className="btn btn-line" href={`/${lang}?route=help#wegwijs`} onClick={() => window.dispatchEvent(new CustomEvent('mtd:route', { detail: 'help' }))}>{T.t('nav_join')}</Link></p>
           </div>
         </div>
 

@@ -28,10 +28,14 @@ export function RouteTabs({ lang, site, today }: { lang: Lang; site: Site; today
   const hours = `${site.service.start} – ${site.service.end}`;
   const form = { lang, phone: x.phone, email: x.email };
 
-  // Other pages can link straight to one of the routes: /nl?route=help#wegwijs
+  // Other pages can link straight to one of the routes (/nl?route=help#wegwijs), and sections on the same page
+  // can ask for one with a "mtd:route" event.
   useEffect(() => {
-    const want = new URLSearchParams(window.location.search).get('route');
-    if (want && ROUTES.some((r) => r.id === want)) setPick(want as RouteId);
+    const open = (want: string | null) => { if (want && ROUTES.some((r) => r.id === want)) setPick(want as RouteId); };
+    open(new URLSearchParams(window.location.search).get('route'));
+    const onAsk = (ev: Event) => open((ev as CustomEvent<string>).detail);
+    window.addEventListener('mtd:route', onAsk);
+    return () => window.removeEventListener('mtd:route', onAsk);
   }, []);
 
   function onKey(ev: React.KeyboardEvent) {

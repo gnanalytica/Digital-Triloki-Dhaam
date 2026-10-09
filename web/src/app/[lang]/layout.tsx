@@ -5,7 +5,9 @@ import { Footer } from '@/components/Footer';
 import { GlossPopover } from '@/components/GlossPopover';
 import { Header } from '@/components/Header';
 import { Sprite } from '@/components/Ornament';
+import { Wheel } from '@/components/Wheel';
 import { getSite } from '@/lib/content';
+import { todayInAmsterdam } from '@/lib/dates';
 import { tr } from '@/lib/i18n';
 import { LANGS, isLang } from '@/lib/types';
 import '../globals.css';
@@ -44,6 +46,7 @@ export default async function Layout({ children, params }: { children: React.Rea
         <Header lang={lang} site={site} />
         {children}
         <Footer lang={lang} site={site} />
+        <Wheel lang={lang} site={site} today={todayInAmsterdam()} />
         <GlossPopover />
       </body>
     </html>

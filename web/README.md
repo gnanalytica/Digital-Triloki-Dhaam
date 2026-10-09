@@ -32,8 +32,11 @@ Rules the site keeps, taken from the repository's own:
 
 ## Pages
 
-`/[lang]` home · `/visit` · `/festivals` · `/knowledge` · `/lessons` · `/heritage` · `/join` · `/donate` ·
-`/calendar.ics` (the year as a calendar file). Each page is assembled from the sections in `src/components/sections/`.
+The home page, `/[lang]`, is the whole site as one flowing page, and the menu scrolls to its sections. When the reader
+reaches the end, the page arrives back at its beginning (`src/components/Wheel.tsx`). Each section also has a page of
+its own, for sharing and for search engines: `/visit` · `/festivals` · `/knowledge` · `/lessons` · `/heritage` ·
+`/join` · `/donate`, plus `/calendar.ics` (the year as a calendar file). The list is in `src/lib/pages.ts`; everything
+is assembled from the sections in `src/components/sections/`.
 
 Dates on a page (next service, next festival, lit lamps) are rendered on the server for "today in Amsterdam",
 refreshed hourly, and then follow the visitor's own clock in the browser.

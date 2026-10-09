@@ -11,14 +11,17 @@ const NAMES: Record<Lang, string> = { nl: 'Nederlands', en: 'English', hi: 'เคนเ
 export function Header({ lang, site }: { lang: Lang; site: Site }) {
   const T = tr(lang), path = usePathname() || `/${lang}`;
   const rest = path.replace(/^\/(nl|en|hi)(?=\/|$)/, '');
-  const [read, setRead] = useState(0), [far, setFar] = useState(false);
+  const home = rest === '';
+  const [read, setRead] = useState(0), [far, setFar] = useState(false), [here, setHere] = useState<string | null>(null);
 
-  // The gold line under the header tracks how far down the page the reader is.
+  // The gold line under the header tracks how far down the page the reader is. On the home page the end of the
+  // page is where the wheel (see Wheel.tsx) takes over.
   useEffect(() => {
     let ticking = false;
     const measure = () => {
       ticking = false;
-      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const loop = document.querySelector<HTMLElement>('.loop'), top = document.getElementById('top');
+      const max = loop && top ? loop.offsetTop - top.offsetHeight : document.documentElement.scrollHeight - window.innerHeight;
       setRead(max > 0 ? Math.min(1, window.scrollY / max) : 0);
       setFar(window.scrollY > window.innerHeight);
     };
@@ -27,6 +30,27 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [path]);
+
+  // Arriving on the home page from another page with a section in the address (/nl#jaar): go to that section once
+  // the page has been laid out.
+  useEffect(() => {
+    const id = home ? decodeURIComponent(window.location.hash.slice(1)) : '';
+    if (!id) return;
+    const go = () => document.getElementById(id)?.scrollIntoView({ behavior: 'instant' });
+    const timers = [setTimeout(go, 80), setTimeout(go, 600)];
+    return () => timers.forEach(clearTimeout);
+  }, [home, path]);
+
+  // On the home page the menu marks the section the reader is in.
+  useEffect(() => {
+    setHere(null);
+    if (!home) return;
+    const spy = new IntersectionObserver((entries) => {
+      for (const en of entries) if (en.isIntersecting) setHere(en.target.id);
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    for (const p of PAGES) { const el = document.getElementById(p.anchor); if (el) spy.observe(el); }
+    return () => spy.disconnect();
+  }, [home, path]);
 
   return (
     <>
@@ -41,9 +65,9 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
             </span>
           </Link>
           <nav className="nav" aria-label="Main">
-            <Link href={`/${lang}`} aria-current={rest === '' ? 'page' : undefined}>{T.t('nav_home')}</Link>
+            <Link href={`/${lang}`} aria-current={home && !here ? 'page' : undefined} onClick={(ev) => { if (!home) return; ev.preventDefault(); window.history.replaceState(null, '', `/${lang}`); window.scrollTo({ top: 0 }); }}>{T.t('nav_home')}</Link>
             {PAGES.map((p) => (
-              <Link key={p.slug} href={`/${lang}/${p.slug}`} aria-current={rest === `/${p.slug}` ? 'page' : undefined}>{T.t(p.label)}</Link>
+              <Link key={p.slug} href={`/${lang}#${p.anchor}`} aria-current={(home ? here === p.anchor : rest === `/${p.slug}`) ? 'page' : undefined}>{T.t(p.label)}</Link>
             ))}
           </nav>
           <div className="icons">
