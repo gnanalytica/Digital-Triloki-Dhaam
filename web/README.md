@@ -56,8 +56,8 @@ and is not built.
 ## Deploying on Vercel
 
 Set the project's **Root Directory** to `web` (Project → Settings → Build and Deployment). The framework is detected
-as Next.js; nothing else needs setting. The `vercel.json` at the repository root only applies while the Root
-Directory is the repository root, where it serves the static mockups.
+as Next.js; nothing else needs setting. Do not add a `vercel.json` at the repository root: Vercel applies it even with
+the Root Directory set to `web`, and the one that used to serve the static mockups from there made this site 404.
 
 The site tells search engines not to index it until `SITE_INDEXABLE=1` is set. Set `SITE_URL` to the public address
 at the same time.
