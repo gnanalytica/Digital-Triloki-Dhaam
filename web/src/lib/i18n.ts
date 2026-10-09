@@ -11,6 +11,7 @@ const EXTRA: Record<string, Tr> = {
   // Short enough for three columns of buttons on a phone.
   seva_join: { nl: 'Ik help', en: 'I will help', hi: 'सेवा करूँ' },
   seva_mine: { nl: 'U helpt', en: 'Helping', hi: 'आप जुड़े हैं' },
+  nav_home: { nl: 'Home', en: 'Home', hi: 'मुखपृष्ठ' },
   home_more: { nl: 'Verder op de site', en: 'More on this site', hi: 'साइट पर और' },
   all_festivals: { nl: 'Het hele jaarprogramma', en: 'The whole year', hi: 'पूरा वार्षिक कार्यक्रम' },
 };

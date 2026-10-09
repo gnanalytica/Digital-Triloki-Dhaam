@@ -41,6 +41,7 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
             </span>
           </Link>
           <nav className="nav" aria-label="Main">
+            <Link href={`/${lang}`} aria-current={rest === '' ? 'page' : undefined}>{T.t('nav_home')}</Link>
             {PAGES.map((p) => (
               <Link key={p.slug} href={`/${lang}/${p.slug}`} aria-current={rest === `/${p.slug}` ? 'page' : undefined}>{T.t(p.label)}</Link>
             ))}
