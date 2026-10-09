@@ -20,3 +20,6 @@ Thumbs.db
 # Scratch
 *.log
 tmp/
+# Tool state and local renders
+.omc/
+video/out/

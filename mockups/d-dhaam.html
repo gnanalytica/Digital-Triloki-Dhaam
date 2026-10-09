@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mandir Triloki Dhaam Eindhoven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marble: #fdfcfa;
+    --ink: #1b1c3a;
+    --indigo: #1a1c4e;
+    --sindoor: #c5321c;
+    --haldi: #d9a021;
+    --haldi-soft: #f0d48a;
+    --lotus: #fbeef0;
+    --line: #e6dfd0;
+    --muted: #5d5e78;
+    --lotus-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 30'%3E%3Cg fill='%23f0d48a' fill-opacity='.5' stroke='%23d9a021' stroke-width='1.1' stroke-linejoin='round'%3E%3Cpath d='M36 24C27 25 19 22 15 15C23 15 31 18 36 24ZM36 24C45 25 53 22 57 15C49 15 41 18 36 24Z'/%3E%3Cpath d='M36 24C30 22 25 17 24 9C30 11 34 17 36 24ZM36 24C42 22 47 17 48 9C42 11 38 17 36 24Z'/%3E%3Cpath d='M36 4C41 10 41 18 36 24C31 18 31 10 36 4Z'/%3E%3C/g%3E%3C/svg%3E");
+    --display: 'Tiro Devanagari Hindi', Georgia, serif;
+    --body: 'Palanquin', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--marble); color: var(--ink); font: 400 1.0625rem/1.65 var(--body); }
+  html:lang(hi) body { line-height: 1.8; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--sindoor); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--sindoor); outline-offset: 4px; border-radius: 2px; }
+  h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 1.12; text-wrap: balance; }
+  h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+  h3 { font-size: 1.45rem; }
+  p { margin: 0; max-width: 60ch; }
+  .wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 12px; top: 12px; background: var(--ink); color: #fff; padding: 8px 14px; z-index: 10; }
+  .muted { color: var(--muted); }
+  .center { text-align: center; }
+  .center p, p.center { margin-inline: auto; }
+
+  /* header */
+  .top-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 28px; padding: 20px 0; }
+  .brand { font: 400 1.5rem/1 var(--display); color: var(--ink); text-decoration: none; margin-right: auto; display: flex; align-items: center; gap: 10px; }
+  /* the real logo, with a breathing glow behind the trishul and a slow sweep of light across the gold */
+  .logo { position: relative; display: block; height: 116px; aspect-ratio: 385 / 400; isolation: isolate; }
+  .logo img { width: 100%; height: 100%; animation: logo-rise 1.1s cubic-bezier(.2, .7, .2, 1) both; }
+  .logo::before { content: ''; position: absolute; z-index: -1; left: 50%; top: 27%; width: 130%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 212, 138, .5), rgba(240, 212, 138, 0) 64%); transform: translate(-50%, -50%); animation: logo-glow 4.5s ease-in-out infinite; }
+  .shine { position: absolute; inset: 0; -webkit-mask: url(assets/logo.png) center / 100% 100% no-repeat; mask: url(assets/logo.png) center / 100% 100% no-repeat;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, .95) 50%, rgba(255, 255, 255, 0) 58%) no-repeat; background-size: 300% 100%; background-position: 150% 0;
+    animation: logo-shine 5.5s ease-in-out 1.2s infinite; }
+  @keyframes logo-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes logo-glow { 0%, 100% { opacity: .3; transform: translate(-50%, -50%) scale(.88); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); } }
+  @keyframes logo-shine { 0% { background-position: 150% 0; } 45%, 100% { background-position: -50% 0; } }
+  .nav { display: flex; gap: 24px; overflow-x: auto; scrollbar-width: none; }
+  .nav a { color: var(--ink); text-decoration: none; font-weight: 500; white-space: nowrap; padding: 4px 0; border-bottom: 1px solid transparent; }
+  .nav a:hover { border-color: var(--haldi); }
+  .icons { display: flex; gap: 10px; }
+  .icons a { color: var(--ink); display: grid; place-items: center; width: 34px; height: 34px; }
+  .icons a:hover { color: var(--sindoor); }
+  .icons svg, .soc-ic svg { width: 24px; height: 24px; }
+  .langs { display: flex; gap: 14px; }
+  .langs button { border: 0; background: none; padding: 4px 0; font: 500 1rem/1.2 var(--body); color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+  .langs button[aria-pressed="true"] { color: var(--ink); border-color: var(--haldi); font-weight: 600; }
+
+  /* hero */
+  .hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding: 40px 0 72px; }
+  .mandala { position: absolute; left: -230px; top: -150px; width: 700px; height: 700px; color: var(--haldi); pointer-events: none;
+    -webkit-mask-image: radial-gradient(circle, #000 30%, transparent 70%); mask-image: radial-gradient(circle, #000 30%, transparent 70%); }
+  .mandala path, .mandala circle { fill: none; stroke: currentColor; stroke-width: .45; }
+  .mandala .fill { fill: currentColor; fill-opacity: .07; }
+  .mandala .bead { fill: currentColor; stroke: none; }
+  .hero .mandala { opacity: .6; animation: bloom 2.200s cubic-bezier(.2, .7, .2, 1) both; }
+  @keyframes bloom { from { opacity: 0; transform: rotate(-24deg) scale(.86); } to { opacity: .6; transform: none; } }
+  .hero-text { position: relative; }
+  .hero h1 { font-size: clamp(4rem, 11vw, 8.5rem); letter-spacing: -.02em; line-height: 1; }
+  .hero h1 em { font-style: italic; }
+  .hero p { margin-top: 22px; font-size: 1.2rem; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; border-top: 1px solid; border-image: linear-gradient(90deg, var(--haldi), rgba(217, 160, 33, 0)) 1; }
+  .fact { padding: 18px 20px 0 0; }
+  .fact + .fact { padding-left: 24px; border-left: 1px solid var(--line); }
+  .fact span { display: block; color: var(--muted); font-size: .98rem; }
+  .fact b { display: block; font: 400 1.5rem/1.2 var(--display); margin: 2px 0; }
+  .fact i { font-style: normal; color: var(--sindoor); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* the altar photo in a gold frame */
+  .shrine { width: 100%; max-width: 580px; margin-inline: auto; }
+  .shrine-photo { border: 5px solid var(--haldi); border-image: linear-gradient(135deg, #8a5a00, #e9bd4f 22%, #fff3c4 40%, #d9a021 62%, #7a4e00) 1; padding: 8px; background: #fff; outline: 1px solid var(--haldi); outline-offset: 7px; }
+  .shrine-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%; }
+
+  /* the lotus line: a fine gold line that fades out, with one lotus on it. Used as the section divider,
+     under every section heading, and (line only) for the quieter separators. */
+  .garland { display: flex; align-items: center; height: 30px; width: min(1160px, 100% - 40px); margin-inline: auto; background: var(--lotus-mark) center / 72px 30px no-repeat; }
+  .garland::before, .garland::after { content: ''; flex: 1; height: 1px; }
+  .garland::before { margin-right: 46px; background: linear-gradient(90deg, rgba(217, 160, 33, 0), var(--haldi) 40%); }
+  .garland::after { margin-left: 46px; background: linear-gradient(270deg, rgba(217, 160, 33, 0), var(--haldi) 40%); }
+  .band h2::after { content: ''; display: block; height: 22px; margin-top: 14px; background:
+    var(--lotus-mark) left center / 53px 22px no-repeat,
+    linear-gradient(90deg, var(--haldi), rgba(217, 160, 33, 0)) 62px 60% / min(300px, 60%) 1px no-repeat; }
+
+  .band { padding: 80px 0; }
+
+  /* six routes as one tab bar joined to its answer panel */
+  .arcade { display: grid; grid-template-columns: repeat(6, 1fr); margin-top: 36px; background: #fff; border: 1px solid var(--line); border-bottom: 0; }
+  .niche { border: 0; border-left: 1px solid var(--line); background: none; cursor: pointer; font: 600 1.05rem/1.25 var(--body); color: var(--ink); display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 8px 18px; min-width: 0; }
+  .niche:first-child { border-left: 0; }
+  .niche svg { width: 38px; height: 38px; }
+  .niche .i { fill: none; stroke: var(--sindoor); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .niche:hover { background: var(--lotus); }
+  .niche[aria-selected="true"] { background: var(--indigo); color: #fff; }
+  .niche[aria-selected="true"] .i { stroke: var(--haldi-soft); }
+  .niche:focus-visible { outline-offset: -4px; outline-color: var(--haldi); }
+
+  .panel { background: #fff; border: 1px solid var(--line); border-top: 2px solid var(--haldi); padding: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .panel > div > * + * { margin-top: 16px; }
+  .big { font: 400 clamp(1.7rem, 3vw, 2.3rem)/1.15 var(--display); color: var(--sindoor); font-variant-numeric: tabular-nums; }
+  .list { list-style: none; padding: 0; margin: 0; }
+  .list li { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; justify-content: space-between; align-items: baseline; }
+  .list b { font-weight: 600; }
+  .list .t { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--muted); }
+  .flag { background: #fbefcf; padding: 1px 8px; font-size: .9rem; margin-left: 8px; }
+  .urgent { background: var(--lotus); padding: 20px 22px; border-left: 3px solid var(--sindoor); }
+  .urgent a { font: 400 2rem/1.2 var(--display); text-decoration: none; font-variant-numeric: tabular-nums; }
+
+  form { display: grid; gap: 14px; }
+  label { font-weight: 600; display: grid; gap: 4px; }
+  input[type="text"], select, textarea { font: 400 1.05rem/1.4 var(--body); padding: 10px 2px; border: 0; border-bottom: 1.5px solid var(--ink); background: transparent; color: var(--ink); width: 100%; border-radius: 0; }
+  input[type="text"]:focus-visible, select:focus-visible, textarea:focus-visible { outline: 0; border-color: var(--sindoor); box-shadow: 0 2px 0 var(--sindoor); }
+  textarea { min-height: 84px; resize: vertical; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
+  .checks { display: grid; gap: 6px; }
+  .checks label { display: flex; align-items: center; gap: 10px; font-weight: 400; cursor: pointer; }
+  .checks input { accent-color: var(--sindoor); width: 18px; height: 18px; }
+  .btn { justify-self: start; display: inline-block; padding: 12px 26px; background: var(--ink); color: #fff; font: 600 1rem/1.3 var(--body); border: 1px solid var(--ink); cursor: pointer; text-decoration: none; border-radius: 99px; }
+  .btn:hover { background: var(--sindoor); border-color: var(--sindoor); }
+  .btn-line { background: none; color: var(--ink); }
+  .btn-line:hover { color: #fff; }
+  [role="status"] { color: var(--sindoor); font-weight: 600; min-height: 1.6em; }
+
+  /* knowledge: the inner sanctum */
+  .sanctum { background: var(--indigo); color: #f3efe6; position: relative; overflow: hidden; }
+  .sanctum .mandala { left: auto; right: -280px; top: -240px; width: 820px; height: 820px; opacity: .4; color: var(--haldi-soft); }
+  .sanctum .wrap { position: relative; }
+  .sanctum .muted { color: #b9bad6; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 32px 0 8px; }
+  .chip { border: 0; background: none; color: #b9bad6; font: 500 1.05rem/1.3 var(--body); padding: 6px 0; cursor: pointer; border-bottom: 2px solid transparent; }
+  .chip:hover { color: #fff; }
+  .chip[aria-pressed="true"] { color: var(--haldi-soft); border-color: var(--haldi); }
+  .sanctum :focus-visible { outline-color: var(--haldi-soft); }
+  .library { columns: 3; column-gap: 44px; margin-top: 16px; }
+  .entry { break-inside: avoid; padding: 26px 0 30px; border-top: 1px solid rgba(240, 212, 138, .35); }
+  .entry small { color: var(--haldi-soft); font-size: .92rem; font-weight: 500; }
+  .entry h3 { margin: 2px 0 12px; color: #fff; }
+  .verse { font: 400 1.5rem/1.7 var(--display); color: var(--haldi-soft); white-space: pre-line; margin-bottom: 8px; }
+  .verse.one { font-size: 5rem; line-height: 1.1; }
+  .roman { font: italic 400 1rem/1.5 var(--display); color: #b9bad6; margin-bottom: 12px; }
+  .entry p { font-size: 1rem; }
+
+  /* together */
+  .trio { display: grid; grid-template-columns: 1.15fr 1fr 1fr; margin-top: 44px; }
+  .trio > div { padding: 0 36px; border-left: 1px solid var(--line); }
+  .trio > div:first-child { padding-left: 0; border: 0; }
+  .trio > div:last-child { padding-right: 0; }
+  .trio > div > * + * { margin-top: 12px; }
+
+  /* socials */
+  .social { background: var(--lotus); }
+  .soc-stack { display: grid; gap: 44px; margin-top: 40px; }
+  .soc-stack > div + div { border-top: 1px solid; border-image: linear-gradient(90deg, var(--haldi), rgba(217, 160, 33, 0)) 1; padding-top: 44px; }
+  .soc-stack p { margin-top: 14px; }
+  .soc-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .soc-ic { width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; flex: none; }
+  .soc-yt { background: none; }
+  .soc-yt svg { width: 44px; height: 44px; }
+  .soc-head b { font: 400 1.45rem/1.1 var(--display); display: block; }
+  .soc-head span { color: var(--muted); font-size: .98rem; }
+  .soc-head .btn { margin-left: auto; }
+  .videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+  .video { position: relative; border: 0; padding: 0; background: #000; cursor: pointer; aspect-ratio: 16 / 9; width: 100%; display: block; }
+  .video img { width: 100%; height: 100%; object-fit: cover; opacity: .9; }
+  .video::after { content: ''; position: absolute; left: 50%; top: 50%; width: 52px; height: 52px; margin: -26px; border-radius: 50%; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.5 7.5v9l7-4.5z' fill='%231b1c3a'/%3E%3C/svg%3E") center / 30px no-repeat; }
+  .videos iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+  .videos figure { margin: 0; }
+  .videos figcaption { font-weight: 600; margin-top: 8px; font-size: 1rem; }
+  .grams { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 22px; }
+  .gram { display: block; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1rem; }
+  .gram span { position: relative; display: block; background: var(--ink); margin-bottom: 8px; }
+  .gram img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .gram span::after { content: ''; position: absolute; right: 10px; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.5 7.5v9l7-4.5z' fill='%231b1c3a'/%3E%3C/svg%3E") center / 20px no-repeat; }
+
+  .give { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+  .iban { font: 400 clamp(1.5rem, 3vw, 2.1rem)/1.2 var(--display); font-variant-numeric: tabular-nums; }
+
+  footer { padding: 24px 0 88px; text-align: center; }
+  .shikhara { width: 240px; margin: 0 auto 20px; color: var(--haldi); }
+  .shikhara path { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linejoin: round; }
+  .motto { font: 400 2rem/1.4 var(--display); }
+  .foot { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid; border-image: linear-gradient(90deg, rgba(217, 160, 33, 0), var(--haldi) 20%, var(--haldi) 80%, rgba(217, 160, 33, 0)) 1; text-align: left; }
+  footer address { font-style: normal; }
+  .foot h3 { font-size: 1.2rem; margin-bottom: 6px; }
+
+  @media (max-width: 920px) {
+    .nav { order: 4; width: 100%; }
+    .hero { grid-template-columns: 1fr; gap: 36px; padding: 16px 0 48px; }
+    .mandala { width: 460px; height: 460px; left: -190px; top: -110px; }
+    .arcade { grid-template-columns: repeat(3, 1fr); }
+    .niche { padding: 16px 4px 14px; font-size: .98rem; }
+    .niche:nth-child(4) { border-left: 0; }
+    .niche:nth-child(n+4) { border-top: 1px solid var(--line); }
+    .panel { grid-template-columns: 1fr; gap: 28px; padding: 26px 22px; }
+    .library { columns: 1; }
+    .trio, .give, .foot { grid-template-columns: 1fr; gap: 32px; }
+    .grams { grid-template-columns: 1fr 1fr; }
+    .trio > div { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+    .trio > div:first-child { padding-top: 0; }
+    .videos { grid-template-columns: 1fr; }
+    .soc-head .btn { margin-left: 0; }
+    .band { padding: 56px 0; }
+    .icons { display: none; }
+    .logo { height: 88px; }
+  }
+  @media (min-width: 921px) and (max-width: 1100px) { .library { columns: 2; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero .mandala { animation: none; }
+    .logo img, .logo::before, .shine { animation: none; }
+    .shine { display: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip"></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></symbol>
+  <symbol id="ic-yt-red" viewBox="0 0 24 24"><rect x="1" y="4.500" width="22" height="15" rx="4.500" fill="#ff0000"/><path d="M10 8.800v6.400l5.500-3.200z" fill="#fff"/></symbol>
+  <linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".25" stop-color="#fa7e1e"/><stop offset=".5" stop-color="#d62976"/><stop offset=".75" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient>
+  <symbol id="ic-ig-color" viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="url(#ig-grad)"/><rect x="6" y="6" width="12" height="12" rx="3.6" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15.6" cy="8.4" r=".9" fill="#fff"/></symbol>
+  <symbol id="ic-fb-color" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.3 22.3v-7.4h2.4l.4-2.9h-2.8v-1.800c0-.8.3-1.400 1.500-1.400h1.400V6.200c-.3 0-1.100-.1-2.100-.1-2.200 0-3.600 1.300-3.600 3.700V12H8.100v2.900h2.400v7.400z" fill="#fff"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="ic-fb" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 21v-7.2h2.3l.4-2.8h-2.7V9.4c0-.9.3-1.4 1.5-1.4H16V5.5c-.4-.1-1.1-.1-1.9-.1-2 0-3.3 1.2-3.3 3.4V11H8.4v2.8h2.4V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="wrap">
+  <div class="top-row">
+    <a class="brand" href="#"><span class="logo"><img src="assets/logo.png" alt="Mandir Triloki Dhaam" width="385" height="400"><span class="shine" aria-hidden="true"></span></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#wegwijs" data-t="nav_visit"></a>
+      <a href="#kennis" data-t="nav_learn"></a>
+      <a href="#samen" data-t="nav_join"></a>
+      <a href="#volg" data-t="s_h"></a>
+      <a href="#doneren" data-t="nav_donate"></a>
+    </nav>
+    <div class="icons">
+      <a href="https://www.youtube.com/@mandirtrilokidhaam32" aria-label="YouTube"><svg><use href="#ic-yt-red"/></svg></a>
+      <a href="https://www.instagram.com/mandirtrilokidhaam/" aria-label="Instagram"><svg><use href="#ic-ig-color"/></svg></a>
+      <a href="https://www.facebook.com/groups/MandirTrilokiDhaam" aria-label="Facebook"><svg><use href="#ic-fb-color"/></svg></a>
+    </div>
+    <div class="langs" role="group" aria-label="Taal / Language / भाषा">
+      <button data-lang="nl" lang="nl">Nederlands</button>
+      <button data-lang="en" lang="en">English</button>
+      <button data-lang="hi" lang="hi">हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <svg class="mandala" viewBox="-110 -110 220 220" aria-hidden="true"></svg>
+    <div class="hero-text">
+      <h1><em data-t="d_namaste"></em></h1>
+      <p data-t="welcome_p"></p>
+      <div class="facts" id="facts"></div>
+    </div>
+    <div class="shrine">
+      <div class="shrine-photo"><img id="altar" alt="De murti's in de gebedsruimte van Mandir Triloki Dhaam, met bloemen en diya's ervoor"></div>
+    </div>
+  </div>
+
+  <div class="garland" aria-hidden="true"></div>
+
+  <section class="band" id="wegwijs">
+    <div class="wrap">
+      <h2 data-t="d_ask"></h2>
+      <div class="arcade" role="tablist" id="arcade"></div>
+      <div class="panel" role="tabpanel" id="panel" tabindex="0"></div>
+      <p class="muted center" style="margin-top:18px" data-t="hours_note"></p>
+    </div>
+  </section>
+
+  <section class="band sanctum" id="kennis">
+    <svg class="mandala" viewBox="-110 -110 220 220" aria-hidden="true"></svg>
+    <div class="wrap">
+      <h2 data-t="k_h"></h2>
+      <p class="muted" style="margin-top:12px;font-size:1.15rem" data-t="k_p"></p>
+      <div class="chips" id="chips" role="group"></div>
+      <div class="library" id="library"></div>
+    </div>
+  </section>
+
+  <section class="band" id="samen">
+    <div class="wrap">
+      <h2 data-t="join_h"></h2>
+      <p class="muted" style="margin-top:12px;font-size:1.15rem" data-t="join_p"></p>
+      <div class="trio">
+        <div>
+          <h3 data-t="join_fix_h"></h3>
+          <p data-t="join_fix_p"></p>
+          <form>
+            <label><span data-t="f_message"></span><textarea required></textarea></label>
+            <label><span data-t="f_contact"></span><input type="text"></label>
+            <button class="btn" data-t="join_fix_cta"></button>
+            <div role="status"></div>
+          </form>
+        </div>
+        <div>
+          <h3 data-t="join_seva_h"></h3>
+          <p data-t="join_seva_p"></p>
+          <p><button class="btn btn-line" data-goto="help" data-t="c_i_help"></button></p>
+        </div>
+        <div>
+          <h3 data-t="join_translate_h"></h3>
+          <p data-t="join_translate_p"></p>
+          <p><button class="btn btn-line" data-goto="help" data-t="nav_join"></button></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band social" id="volg">
+    <div class="wrap">
+      <h2 data-t="s_h"></h2>
+      <p class="muted" style="margin-top:12px;font-size:1.15rem" data-t="s_p"></p>
+      <div class="soc-stack">
+        <div>
+          <div class="soc-head">
+            <span class="soc-ic soc-yt"><svg aria-hidden="true"><use href="#ic-yt-red"/></svg></span>
+            <div><b>YouTube</b><span>@mandirtrilokidhaam32</span></div>
+            <a class="btn" href="https://www.youtube.com/@mandirtrilokidhaam32" data-t="s_yt_cta"></a>
+          </div>
+          <p data-t="s_yt"></p>
+          <div class="videos" id="videos"></div>
+        </div>
+        <div>
+          <div class="soc-head">
+            <span class="soc-ic soc-yt"><svg aria-hidden="true"><use href="#ic-ig-color"/></svg></span>
+            <div><b>Instagram</b><span>@mandirtrilokidhaam</span></div>
+            <a class="btn" href="https://www.instagram.com/mandirtrilokidhaam/" data-t="s_ig_cta"></a>
+          </div>
+          <p data-t="s_ig"></p>
+          <div class="grams" id="grams"></div>
+        </div>
+        <div>
+          <div class="soc-head">
+            <span class="soc-ic soc-yt"><svg aria-hidden="true"><use href="#ic-fb-color"/></svg></span>
+            <div><b data-t="s_fb_name"></b><span data-t="s_fb"></span></div>
+            <a class="btn btn-line" href="https://www.facebook.com/groups/MandirTrilokiDhaam" data-t="s_fb_cta"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="doneren">
+    <div class="wrap give">
+      <div>
+        <h2 data-t="donate_h"></h2>
+        <p style="margin-top:14px" data-t="donate_p"></p>
+      </div>
+      <div>
+        <div class="iban">NL90 INGB 0007 6605 27</div>
+        <p><span data-t="donate_holder"></span>: Stichting Senskaar Triloki Dhaam</p>
+        <p style="margin-top:16px"><button class="btn" data-copy-iban data-t="donate_copy"></button></p>
+        <p class="muted" style="margin-top:12px" data-t="donate_qr"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="garland" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <svg class="shikhara" viewBox="0 0 240 124" aria-hidden="true">
+      <path d="M0 122H240M90 122V82h6V68h6V54Q120 12 138 54v14h6v14h6v40M120 33V16l11 4-11 4M40 122V94h6V84q14-26 28 0v10h6v28M160 122V94h6V84q14-26 28 0v10h6v28M110 122v-20q10-14 20 0v20M54 122v-12q6-8 12 0v12M174 122v-12q6-8 12 0v12"/>
+    </svg>
+    <div class="motto" lang="sa">धर्मो रक्षति रक्षितः</div>
+    <p class="muted" style="margin-inline:auto" data-t="motto_tr"></p>
+    <div class="foot">
+      <div>
+        <h3 data-t="contact_h"></h3>
+        <address>Tongelresestraat 371<br>5642 NC Eindhoven<br><a href="tel:+31645461229">06-45461229</a><br><a href="mailto:trilokidhaam@gmail.com">trilokidhaam@gmail.com</a></address>
+      </div>
+      <div>
+        <h3 data-t="every_sunday"></h3>
+        <p>13:00 – 15:30</p>
+        <p><a id="maps" data-t="route"></a></p>
+      </div>
+      <div>
+        <h3 data-t="s_h"></h3>
+        <p><a href="https://www.youtube.com/@mandirtrilokidhaam32">YouTube</a><br><a href="https://www.instagram.com/mandirtrilokidhaam/">Instagram</a><br><a href="https://www.facebook.com/groups/MandirTrilokiDhaam" data-t="s_fb_name"></a></p>
+        <p class="muted" style="margin-top:12px;font-size:.95rem" data-t="footer_org"></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared/content.js"></script>
+<script src="shared/knowledge.js"></script>
+<script src="shared/site.js"></script>
+<script>
+var pick = 'first', kcat = 'mantra';
+
+// Route icons, drawn on a 32 x 32 grid: mandir, calendar, diya, heart in a hand, book, speech bubbles.
+var NICHES = [
+  { id: 'first', label: 'd_first', icon: 'M4 28h24M7 28V17h18v11M9 17c0-6 4-9 7-12 3 3 7 6 7 12M16 5V1.5l4 1.5-4 1.5M13 28v-5a3 3 0 0 1 6 0v5' },
+  { id: 'date', label: 'd_date', icon: 'M5 8h22v19H5zM5 13h22M10 5v5M22 5v5M10 18h2M15 18h2M20 18h2M10 22h2M15 22h2' },
+  { id: 'ritual', label: 'd_ritual', icon: 'M4 19h24c0 5-5 8-12 8S4 24 4 19zM16 16c-3.5-3-1.5-6 0-10 1.500 4 3.500 7 0 10z' },
+  { id: 'help', label: 'd_help', icon: 'M16 18c-5-3.500-7-6-7-8.500a3.500 3.500 0 0 1 7-1 3.500 3.500 0 0 1 7 1c0 2.500-2 5-7 8.500zM4 22c4 0 6 5 12 5s8-5 12-5' },
+  { id: 'learn', label: 'd_learn', icon: 'M4 8c5-2 9-1 12 2 3-3 7-4 12-2v16c-5-2-9-1-12 2-3-3-7-4-12-2zM16 10v16' },
+  { id: 'talk', label: 'd_talk', icon: 'M4 5h16v11h-9l-4 4v-4H4zM24 11h4v11h-3v4l-4-4h-8v-2' }
+];
+
+// A quiet lotus: two rings of petals inside one circle. Nothing else.
+function mandala(svg) {
+  var out = '<circle r="106"/>';
+  function ring(n, a, b, w, cls, offset) {
+    var h = b - a, p = 'M0,' + -a + 'C' + w + ',' + -(a + h * .3) + ' ' + w * .75 + ',' + -(b - h * .28) + ' 0,' + -b +
+      'C' + -w * .75 + ',' + -(b - h * .28) + ' ' + -w + ',' + -(a + h * .3) + ' 0,' + -a + 'Z';
+    for (var i = 0; i < n; i++) out += '<path class="' + cls + '" d="' + p + '" transform="rotate(' + (360 / n * i + (offset || 0)) + ')"/>';
+  }
+  ring(16, 50, 100, 15, 'p');
+  ring(8, 16, 50, 15, 'p fill', 22.5);
+  svg.innerHTML = out;
+}
+document.querySelectorAll('.mandala').forEach(mandala);
+
+function panelHTML() {
+  var M = window.MTD, D = M.data, e = M.esc, L = M.L, t = M.t;
+  var fields = '<label><span>' + e(t('f_name')) + '</span><input type="text" required></label>' +
+    '<label><span>' + e(t('f_contact')) + '</span><input type="text" required></label>';
+  var send = function (key) { return '<button class="btn">' + e(t(key)) + '</button><div role="status"></div>'; };
+  var options = function (items) { return items.map(function (c) { return '<option>' + e(L(c.name)) + '</option>'; }).join(''); };
+  var col = function (a, b) { return '<div>' + a + '</div><div>' + b + '</div>'; };
+
+  if (pick === 'first') {
+    var s = M.nextService();
+    return col(
+      '<h3>' + e(t('first_h')) + '</h3>' +
+      '<div class="big">' + e(s.today ? t('today') : M.fmt(s.date, { weekday: 'long', day: 'numeric', month: 'long' })) + ', 13:00 – 15:30</div>' +
+      '<p>' + e(D.temple.street) + ', ' + e(D.temple.postal) + '<br><a href="' + D.temple.maps + '">' + e(t('route')) + '</a></p>' +
+      '<ul class="list">' + D.programme.map(function (p) { return '<li><span><b>' + e(L(p.title)) + '</b><br><span class="muted">' + e(L(p.desc)) + '</span></span><span class="t">' + p.start + '</span></li>'; }).join('') + '</ul>' +
+      '<p>' + e(t('first_bell')) + '</p>',
+      '<p>' + e(t('first_p')) + '</p>' +
+      '<ul class="list">' + D.etiquette.map(function (x) { return '<li>' + e(L(x)) + '</li>'; }).join('') + '</ul>');
+  }
+  if (pick === 'date') {
+    return col(
+      '<h3>' + e(t('upcoming_h')) + '</h3>' +
+      '<ul class="list"><li><span><b>' + e(t('every_sunday')) + '</b></span><span class="t">13:00 – 15:30</span></li>' +
+      M.upcoming(5).map(function (f) {
+        return '<li><span><b>' + e(L(f.name)) + '</b>' + (f.pending ? '<span class="flag">' + e(t('to_confirm')) + '</span>' : '') +
+          '<br><span class="muted">' + e(M.range(f)) + (f.note ? ', ' + e(L(f.note)).toLowerCase() : '') + '</span></span><span class="t">' + e(t('from')) + ' ' + f.time + '</span></li>';
+      }).join('') + '</ul>',
+      '<p>' + e(t('festival_time_note')) + '</p><p class="muted">' + e(t('calendar_why')) + '</p>' +
+      '<p><a class="btn" href="#">' + e(t('add_calendar')) + '</a></p>');
+  }
+  if (pick === 'ritual') {
+    return col(
+      '<h3>' + e(t('cer_h')) + '</h3><p>' + e(t('cer_p')) + '</p>' +
+      '<div class="urgent"><b>' + e(t('cer_urgent_h')) + '</b><p>' + e(t('cer_urgent_p')) + '</p><a href="tel:' + D.temple.tel + '">' + D.temple.phone + '</a></div>',
+      '<form><label><span>' + e(t('f_which')) + '</span><select>' + options(D.ceremonies) + '</select></label>' + fields + send('cer_request') + '</form>');
+  }
+  if (pick === 'help') {
+    return col(
+      '<h3>' + e(t('join_seva_h')) + '</h3><p>' + e(t('join_p')) + '</p><p>' + e(t('join_translate_p')) + '</p>',
+      '<form><fieldset><legend>' + e(t('c_seva_q')) + '</legend><div class="checks">' +
+      t('c_seva_opts').split('|').map(function (o) { return '<label><input type="checkbox">' + e(o) + '</label>'; }).join('') +
+      '</div></fieldset>' + fields + send('f_send') + '</form>');
+  }
+  if (pick === 'learn') {
+    return col(
+      '<h3>' + e(t('courses_h')) + '</h3>' +
+      '<ul class="list">' + D.courses.map(function (c) {
+        return '<li><span><b>' + e(L(c.name)) + '</b><br><span class="muted">' + e(L(c.desc)) + ' ' + e(t(c.fixed ? 'courses_fixed' : 'courses_gated')) + '</span></span>' + (c.time ? '<span class="t">' + c.time + '</span>' : '') + '</li>';
+      }).join('') + '</ul>',
+      '<form><label><span>' + e(t('f_which')) + '</span><select>' + options(D.courses) + '</select></label>' + fields + send('courses_cta') + '</form>' +
+      '<p><a href="#kennis">' + e(t('k_h')) + '</a></p>');
+  }
+  return col(
+    '<h3>' + e(t('care_h')) + '</h3><p>' + e(t('care_p')) + '</p><p class="muted">' + e(t('f_private')) + '</p>',
+    '<form><label><span>' + e(t('f_message')) + '</span><textarea></textarea></label>' + fields + send('care_cta') + '</form>');
+}
+
+function render() {
+  var M = window.MTD, D = M.data, K = window.MTD_KNOWLEDGE, e = M.esc, L = M.L, t = M.t;
+  document.getElementById('altar').src = D.img.altar;
+  document.getElementById('maps').href = D.temple.maps;
+
+  var s = M.nextService(), f = M.upcoming(1)[0];
+  document.getElementById('facts').innerHTML =
+    '<div class="fact"><span>' + e(t('next_service')) + '</span><b>' + e(s.today ? t('today') : M.fmt(s.date, { weekday: 'long', day: 'numeric', month: 'long' })) + '</b><i>13:00 – 15:30</i></div>' +
+    (f ? '<div class="fact"><span>' + e(t('next_festival')) + '</span><b>' + e(L(f.name)) + '</b><i>' + e(M.range(f)) + ', ' + e(t('from')) + ' ' + f.time + '</i></div>' : '');
+
+  document.getElementById('arcade').innerHTML = NICHES.map(function (n) {
+    var on = n.id === pick;
+    return '<button class="niche" role="tab" data-pick="' + n.id + '" aria-selected="' + on + '" tabindex="' + (on ? 0 : -1) + '">' +
+      '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="i" d="' + n.icon + '"/></svg>' +
+      e(t(n.label)) + '</button>';
+  }).join('');
+  document.getElementById('panel').innerHTML = panelHTML();
+
+  document.getElementById('chips').innerHTML = K.cats.map(function (c) {
+    return '<button class="chip" data-kcat="' + c.id + '" aria-pressed="' + (c.id === kcat) + '">' + e(L(c.name)) + '</button>';
+  }).join('');
+  document.getElementById('library').innerHTML = K.items.filter(function (k) { return k.cat === kcat; }).map(function (k) {
+    return '<article class="entry"><h3>' + e(L(k.title)) + '</h3>' +
+      (k.verse ? '<div class="verse' + (k.verse.length < 3 ? ' one' : '') + '" lang="sa">' + e(k.verse) + '</div><div class="roman" lang="sa-Latn">' + e(k.roman) + '</div>' : '') +
+      (k.body ? '<p>' + e(L(k.body)) + '</p>' : '') + '</article>';
+  }).join('');
+
+  var vids = document.getElementById('videos');
+  if (!vids.children.length) {
+    vids.innerHTML = D.videos.map(function (v) {
+      // A published artifact cannot embed YouTube, so there the thumbnail links out instead.
+      var open = window.MTD_ARTIFACT ? '<a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=' + v.id + '" data-vlink="' + v.id + '">' : '<button class="video" data-video="' + v.id + '">';
+      return '<figure>' + open + '<img loading="lazy" alt="" src="assets/yt-' + v.id + '.jpg">' + (window.MTD_ARTIFACT ? '</a>' : '</button>') + '<figcaption data-v="' + v.id + '"></figcaption></figure>';
+    }).join('');
+  }
+  document.getElementById('grams').innerHTML = D.instagram.map(function (g) {
+    var when = M.fmt(g.date, { day: 'numeric', month: 'long', year: 'numeric' });
+    return '<a class="gram" target="_blank" rel="noopener" href="https://www.instagram.com/reel/' + g.id + '/" aria-label="' + e(t('s_ig_open')) + ': ' + e(when) + '">' +
+      '<span><img loading="lazy" alt="" src="assets/ig-' + g.id + '.jpg"></span>' + e(when) + '</a>';
+  }).join('');
+  D.videos.forEach(function (v) {
+    vids.querySelector('[data-v="' + v.id + '"]').textContent = L(v.title);
+    var b = vids.querySelector('[data-video="' + v.id + '"], [data-vlink="' + v.id + '"]');
+    if (b) b.setAttribute('aria-label', t('s_play') + ': ' + L(v.title));
+  });
+}
+
+document.addEventListener('click', function (ev) {
+  var k = ev.target.closest('[data-kcat]');
+  if (k) { kcat = k.dataset.kcat; render(); document.querySelector('[data-kcat="' + kcat + '"]').focus(); return; }
+  var v = ev.target.closest('[data-video]');
+  if (v) {
+    var frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + v.dataset.video + '?autoplay=1';
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+    frame.allowFullscreen = true;
+    frame.title = v.getAttribute('aria-label');
+    v.replaceWith(frame);
+    return;
+  }
+  var b = ev.target.closest('[data-pick], [data-goto]');
+  if (!b) return;
+  pick = b.dataset.pick || b.dataset.goto;
+  render();
+  if (b.dataset.goto) { document.getElementById('wegwijs').scrollIntoView(); document.getElementById('panel').focus({ preventScroll: true }); }
+  else document.querySelector('[data-pick="' + pick + '"]').focus();
+});
+document.getElementById('arcade').addEventListener('keydown', function (ev) {
+  if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return;
+  ev.preventDefault();
+  var i = NICHES.findIndex(function (n) { return n.id === pick; });
+  pick = NICHES[(i + (ev.key === 'ArrowRight' ? 1 : NICHES.length - 1)) % NICHES.length].id;
+  render();
+  document.querySelector('[data-pick="' + pick + '"]').focus();
+});
+</script>
+</body>
+</html>
