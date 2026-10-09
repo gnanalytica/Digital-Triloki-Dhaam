@@ -8,6 +8,9 @@ const EXTRA: Record<string, Tr> = {
   form_fail: { nl: 'Versturen is niet gelukt. Probeer het opnieuw, of bel of mail de mandir.', en: 'Sending failed. Please try again, or phone or e-mail the mandir.', hi: 'भेजा नहीं जा सका। कृपया फिर प्रयास करें, या मंदिर को फ़ोन या ईमेल करें।' },
   form_off: { nl: 'Dit formulier is nog niet aangesloten. Bel of mail de mandir:', en: 'This form is not connected yet. Please phone or e-mail the mandir:', hi: 'यह फ़ॉर्म अभी जुड़ा नहीं है। कृपया मंदिर को फ़ोन या ईमेल करें:' },
   seva_note: { nl: 'Uw keuze wordt voorlopig alleen op dit apparaat bewaard.', en: 'For now your choice is kept on this device only.', hi: 'फ़िलहाल आपका चयन केवल इसी डिवाइस पर रहता है।' },
+  // Short enough for three columns of buttons on a phone.
+  seva_join: { nl: 'Ik help', en: 'I will help', hi: 'सेवा करूँ' },
+  seva_mine: { nl: 'U helpt', en: 'Helping', hi: 'आप जुड़े हैं' },
   home_more: { nl: 'Verder op de site', en: 'More on this site', hi: 'साइट पर और' },
   all_festivals: { nl: 'Het hele jaarprogramma', en: 'The whole year', hi: 'पूरा वार्षिक कार्यक्रम' },
 };

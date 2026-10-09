@@ -757,3 +757,15 @@
   .feed-grid .card { break-inside: avoid; margin-bottom: 20px; }
   @media (max-width: 920px) { .feed.feed-grid { columns: 2; column-gap: 14px; } .feed-grid .card { margin-bottom: 14px; } }
   @media (max-width: 560px) { .feed.feed-grid { columns: 1; } }
+  /* phone: the menu scrolls sideways, so its right edge fades to show there is more; the seva table fits without scrolling */
+  @media (max-width: 920px) {
+    .nav { padding-right: 36px; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 44px), transparent); }
+  }
+  @media (max-width: 560px) {
+    .seva-scroll { padding: 8px 6px; }
+    .seva-scroll table { width: 100%; min-width: 0; }
+    .seva-scroll th, .seva-scroll td { padding: 6px 3px; }
+    .seva-scroll thead th { font-size: .92rem; line-height: 1.2; }
+    .seva-scroll tbody th { font-size: .82rem; white-space: nowrap; }
+    .seva-btn { padding: 6px 8px; font-size: .8rem; white-space: nowrap; }
+  }
