@@ -12,13 +12,18 @@ export function moons(year: number): Moon[] {
   for (let i = k; i < k + 16; i++) {
     for (const [type, part] of [['new', 0], ['full', 0.5]] as const) {
       const t = REF + (i + part) * SYNODIC;
-      if (t >= from && t < to) out.push({ type, date: new Date(t * 864e5) });
+      if (t < from || t >= to) continue;
+      // Kept as a calendar day (the UTC one), so the server and every visitor's browser draw it in the same place.
+      const d = new Date(t * 864e5);
+      out.push({ type, date: new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) });
     }
   }
   return out;
 }
 
 export function moonAt(now: Date): { index: number; lit: number } {
-  const p = ((((+now / 864e5 - REF) / SYNODIC) % 1) + 1) % 1;
+  // Taken at noon on the calendar day, not at the exact instant, so it does not depend on the time zone it is computed in.
+  const noon = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 12) / 864e5;
+  const p = ((((noon - REF) / SYNODIC) % 1) + 1) % 1;
   return { index: Math.round(p * 8) % 8, lit: Math.round(((1 - Math.cos(p * Math.PI * 2)) / 2) * 100) };
 }
