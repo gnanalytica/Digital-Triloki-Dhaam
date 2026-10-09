@@ -52,6 +52,15 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
     return () => spy.disconnect();
   }, [home, path]);
 
+  // On the home page the menu scrolls rather than navigates, whatever else is in the address (?route=…).
+  function jump(ev: React.MouseEvent, anchor: string) {
+    const el = home ? document.getElementById(anchor) : null;
+    if (!el) return;
+    ev.preventDefault();
+    window.history.pushState(null, '', `/${lang}#${anchor}`);
+    el.scrollIntoView();
+  }
+
   return (
     <>
       <header className="top small" id="top">
@@ -67,7 +76,7 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
           <nav className="nav" aria-label="Main">
             <Link href={`/${lang}`} aria-current={home && !here ? 'page' : undefined} onClick={(ev) => { if (!home) return; ev.preventDefault(); window.history.replaceState(null, '', `/${lang}`); window.scrollTo({ top: 0 }); }}>{T.t('nav_home')}</Link>
             {PAGES.map((p) => (
-              <Link key={p.slug} href={`/${lang}#${p.anchor}`} aria-current={(home ? here === p.anchor : rest === `/${p.slug}`) ? 'page' : undefined}>{T.t(p.label)}</Link>
+              <Link key={p.slug} href={`/${lang}#${p.anchor}`} onClick={(ev) => jump(ev, p.anchor)} aria-current={(home ? here === p.anchor : rest === `/${p.slug}`) ? 'page' : undefined}>{T.t(p.label)}</Link>
             ))}
           </nav>
           <div className="icons">
