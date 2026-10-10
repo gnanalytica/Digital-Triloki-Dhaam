@@ -1,7 +1,8 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { LANGS, type Lang } from '@/lib/types';
+import { tr } from '@/lib/i18n';
+import { LANGS, type Lang, type Site } from '@/lib/types';
 
 /**
  * Projector mode, for showing the site on a screen in the mandir with nobody at the keyboard. Open the home page
@@ -11,13 +12,18 @@ import { LANGS, type Lang } from '@/lib/types';
  *   /nl?screen=nl         Dutch only        (any list works: ?screen=nl,en,hi)
  *   /nl?screen&speed=90   faster; the default is 60 pixels a second
  *
- * The page scrolls itself slowly from top to bottom, fades, and starts again in the next language. The menu, the
+ * The page scrolls itself slowly from top to bottom, then shows a closing screen with large QR codes (the WhatsApp
+ * group, the website, and the donation link once there is one) for people in the room to scan, and starts again
+ * in the next language. The menu, the
  * forms and the buttons are hidden (see html.screen in globals.css), since nobody can use them. Escape, or any
  * click, leaves projector mode.
  */
-export function ScreenMode({ lang }: { lang: Lang }) {
-  const path = usePathname();
+const CLOSING_SECONDS = 18;
+
+export function ScreenMode({ lang, site }: { lang: Lang; site: Site }) {
+  const path = usePathname(), T = tr(lang);
   const [fading, setFading] = useState(false), [on, setOn] = useState(false);
+  const [codes, setCodes] = useState<{ label: string; svg: string }[]>([]);
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
@@ -29,6 +35,18 @@ export function ScreenMode({ lang }: { lang: Lang }) {
     root.classList.add('screen');
     setOn(true);
 
+    // The codes for the closing screen, drawn in the browser so the website's own address is always the right one.
+    const links = [
+      ...(site.temple.whatsappGroup ? [{ label: T.t('con_group'), url: site.temple.whatsappGroup }] : []),
+      { label: T.t('screen_site'), url: `${window.location.origin}/${lang}` },
+      ...(site.temple.donateLink ? [{ label: T.t('screen_give'), url: site.temple.donateLink.replace('{amount}', '') }] : []),
+    ];
+    let alive = true;
+    import('qrcode').then(async (QR) => {
+      const made = await Promise.all(links.map(async (l) => ({ label: l.label, svg: await QR.toString(l.url, { type: 'svg', margin: 1, errorCorrectionLevel: 'M' }) })));
+      if (alive) setCodes(made);
+    }).catch(() => {});
+
     let frame = 0, last = 0, y = 0, done = false;
     const end = () => document.documentElement.scrollHeight - window.innerHeight;
     const step = (now: number) => {
@@ -37,7 +55,7 @@ export function ScreenMode({ lang }: { lang: Lang }) {
       last = now;
       y += (speed * dt) / 1000;
       window.scrollTo(0, y);
-      if (y >= end() - 1 && !done) { done = true; setFading(true); setTimeout(next, 1400); return; }
+      if (y >= end() - 1 && !done) { done = true; setFading(true); setTimeout(next, CLOSING_SECONDS * 1000); return; }
       frame = requestAnimationFrame(step);
     };
     const next = () => {
@@ -54,11 +72,25 @@ export function ScreenMode({ lang }: { lang: Lang }) {
     window.addEventListener('keydown', onKey);
     window.addEventListener('click', leave);
     return () => {
-      clearTimeout(start); cancelAnimationFrame(frame);
+      alive = false; clearTimeout(start); cancelAnimationFrame(frame);
       window.removeEventListener('keydown', onKey); window.removeEventListener('click', leave);
       root.classList.remove('screen');
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang, path]);
 
-  return on ? <div className={'screen-fade' + (fading ? ' on' : '')} aria-hidden="true" /> : null;
+  if (!on) return null;
+  return (
+    <div className={'screen-fade' + (fading ? ' on' : '')} aria-hidden="true">
+      <div className="screen-end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/assets/logo.png" alt="" />
+        <h2>{T.t('con_h')}</h2>
+        <p>{T.t('screen_scan')}</p>
+        <div className="screen-codes">
+          {codes.map((c) => <figure key={c.label}><div dangerouslySetInnerHTML={{ __html: c.svg }} /><figcaption>{c.label}</figcaption></figure>)}
+        </div>
+      </div>
+    </div>
+  );
 }

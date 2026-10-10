@@ -67,7 +67,7 @@
   .have { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; margin-top: 3mm; font-size: 10pt; }
   .have ul { margin: 0; padding: 0; list-style: none; }
   .have li { padding: 1mm 0 1mm 6mm; background: var(--lotus-mark) 0 1.6mm / 4.6mm auto no-repeat; }
-  .give { position: absolute; left: 0; right: 0; bottom: 0; padding: 8mm 16mm 9mm; background: linear-gradient(180deg, #1b1f6e, #241a63); color: #f3efe6; display: grid; grid-template-columns: 1fr 44mm; gap: 10mm; align-items: center; }
+  .give { position: absolute; left: 0; right: 0; bottom: 0; padding: 8mm 16mm 9mm; background: linear-gradient(180deg, #1b1f6e, #241a63); color: #f3efe6; display: grid; grid-template-columns: 1fr 36mm 36mm; gap: 7mm; align-items: start; }
   .give h2 { color: var(--haldi-soft); font-size: 22pt; margin: 0; }
   .give .en { color: #c9c9e2; }
   .iban { font: 400 20pt/1.2 var(--display); color: #fff; margin-top: 3mm; letter-spacing: .02em; }
@@ -75,11 +75,12 @@
   .give dt { color: var(--haldi-soft); }
   .give dd { margin: 0; }
   .give .small { font-size: 9pt; color: #c9c9e2; margin-top: 3mm; }
-  .qr { width: 44mm; height: 44mm; background: #fff; display: grid; place-items: center; text-align: center; }
-  .qr img { width: 40mm; height: 40mm; display: block; }
-  .qr .todo { width: 40mm; height: 40mm; border: .6mm dashed #c9962a; color: #7a5a10; font-size: 8.5pt; line-height: 1.35; display: grid; place-content: center; padding: 3mm; }
-  .qr-cap { grid-column: 2; text-align: center; font-size: 8.5pt; color: #c9c9e2; margin-top: -8mm; }
-  .contact { margin-top: 4mm; padding-top: 3mm; border-top: .3mm solid rgba(240,212,138,.5); font-size: 9pt; color: #dcdbee; grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 4mm; white-space: nowrap; }
+  .code { margin-top: 2mm; text-align: center; font-size: 8.5pt; line-height: 1.3; color: #dcdbee; }
+  .code b { display: block; color: var(--haldi-soft); font-weight: 600; margin-top: 1.5mm; }
+  .qr { width: 36mm; height: 36mm; background: #fff; display: grid; place-items: center; text-align: center; }
+  .qr img { width: 33mm; height: 33mm; display: block; }
+  .qr .todo { width: 32mm; height: 32mm; border: .6mm dashed #c9962a; color: #7a5a10; font-size: 8.5pt; line-height: 1.35; display: grid; place-content: center; padding: 3mm; }
+  .contact { margin-top: 4mm; padding-top: 3mm; border-top: .3mm solid rgba(240,212,138,.5); font-size: 8.1pt; color: #dcdbee; grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 3mm; white-space: nowrap; }
   .contact b { color: var(--haldi-soft); font-weight: 600; }
 </style>
 </head>
@@ -181,8 +182,8 @@
       </dl>
       <p class="small">Elk bedrag helpt. U kunt ook in de mandir geven; vraag het een van de vrijwilligers.<br><i>Every amount helps. You can also give at the mandir; ask one of the volunteers.</i></p>
     </div>
-    <div class="qr" id="qr"><div class="todo">QR-code van de bank volgt.<br>Bestand: payment-qr.png</div></div>
-    <p class="qr-cap" id="qr-cap"></p>
+    <div class="code"><div class="qr" id="qr"><div class="todo">QR-code van de bank volgt.<br>Bestand: payment-qr.png</div></div><b>Doneren / Donate</b></div>
+    <div class="code"><div class="qr"><img src="whatsapp-group-qr.svg" alt=""></div><b>WhatsApp-groep / group</b>Blijf op de hoogte<br><i>Stay in touch</i></div>
     <div class="contact">
       <span><b>Tongelresestraat 371</b>, 5642 NC Eindhoven</span>
       <span><b>06-45461229</b> · <b>06-21190531</b> · trilokidhaam@gmail.com</span>
@@ -204,7 +205,7 @@
   document.getElementById('rangoli').innerHTML = out;
   // The bank's payment QR, once the mandir has supplied it.
   var img = new Image();
-  img.onload = function () { document.getElementById('qr').innerHTML = ''; document.getElementById('qr').appendChild(img); document.getElementById('qr-cap').textContent = 'Scan om te geven / Scan to give'; };
+  img.onload = function () { document.getElementById('qr').innerHTML = ''; document.getElementById('qr').appendChild(img); };
   img.src = 'payment-qr.png';
 })();
 </script>

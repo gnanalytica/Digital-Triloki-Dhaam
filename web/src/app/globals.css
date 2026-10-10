@@ -770,24 +770,61 @@
     .seva-btn { padding: 6px 8px; font-size: .8rem; white-space: nowrap; }
   }
 
-  /* ---- scroll-linked transitions (see components/ScrollFlow.tsx) ----
-     --p runs 0 → 1 as a section enters from below, --q runs 1 → 0 as it leaves at the top. Everything here is a
-     function of those two, so it plays forwards scrolling down and backwards scrolling up. */
+  /* ---- motion (see components/ScrollFlow.tsx) ----
+     Three layers, so the page is never still and never jumps:
+     1. Entering and leaving: --p runs 0 → 1 as a section comes in from below, --q runs 1 → 0 as it leaves at the top;
+        --ip and --iq do the same for each block inside it. All a function of the scroll position, so it reverses.
+     2. While a section is being read: --m runs 0 → 1 across its passage; ornament turns and patterns drift with it.
+     3. Ambient: slow movement that needs no scrolling at all (rangolis turning, patterns drifting, emblems breathing).
+     The scroll layers use the individual translate / rotate / scale properties and the ambient layer uses transform,
+     so the two add up instead of overriding each other. All of it is off for reduced-motion visitors. */
   html.flow main > section > .wrap {
-    opacity: calc((.12 + .88 * var(--p, 1)) * (.3 + .7 * var(--q, 1)));
-    transform: translate3d(0, calc((1 - var(--p, 1)) * 90px - (1 - var(--q, 1)) * 40px), 0) scale(calc(.965 + .035 * var(--p, 1)));
-    transform-origin: 50% 0; will-change: opacity, transform;
+    opacity: calc((.1 + .9 * var(--p, 1)) * (.02 + .98 * var(--q, 1)));
+    translate: 0 calc((1 - var(--p, 1)) * 90px - (1 - var(--q, 1)) * 110px);
+    scale: calc(.965 + .035 * var(--p, 1) - .05 * (1 - var(--q, 1)));
+    transform-origin: 50% 30%;
   }
-  html.flow main > section > .wrap > h2, html.flow main > section .her-head h2, html.flow main > section.band-give h2 {
-    transform: translate3d(calc((1 - var(--p, 1)) * -70px), 0, 0);
+  html.flow main > section > .wrap > h2, html.flow main > section.band-give h2 { translate: calc((1 - var(--p, 1)) * -70px + (1 - var(--q, 1)) * 90px) 0; }
+  html.flow main > section > .wrap > h2 + p, html.flow main > section > .wrap > .lead { translate: calc((1 - var(--p, 1)) * 70px - (1 - var(--q, 1)) * 90px) 0; }
+  html.flow .fi {
+    opacity: calc(var(--ip, 1) * (.05 + .95 * var(--iq, 1)));
+    translate: 0 calc((1 - var(--ip, 1)) * 70px - (1 - var(--iq, 1)) * 50px);
+    scale: calc(.93 + .07 * var(--ip, 1) - .05 * (1 - var(--iq, 1)));
   }
-  html.flow main > section > .wrap > h2 + p, html.flow main > section > .wrap > .lead { transform: translate3d(calc((1 - var(--p, 1)) * 70px), 0, 0); }
-  html.flow .rangoli { rotate: calc((1 - var(--p, 1)) * -90deg + (1 - var(--q, 1)) * 50deg); scale: calc(.6 + .4 * var(--p, 1)); opacity: calc(.92 * var(--p, 1)); }
-  html.flow .feathers { transform-origin: 50% 100%; rotate: calc((1 - var(--p, 1)) * 26deg); scale: calc(.7 + .3 * var(--p, 1)); opacity: var(--p, 1); }
-  html.flow .sanctum .mandala { rotate: calc((1 - var(--p, 1)) * -40deg + (1 - var(--q, 1)) * 30deg); scale: calc(.8 + .2 * var(--p, 1)); }
-  html.flow .mural img { transform: scale(calc(1.3 - .3 * var(--p, 1))) translate3d(0, calc((1 - var(--q, 1)) * -6%), 0); }
-  html.flow .garland { transform: scaleX(calc(.2 + .8 * var(--p, 1))); opacity: var(--p, 1); }
-  html.flow footer > .wrap { opacity: calc(.15 + .85 * var(--p, 1)); transform: translate3d(0, calc((1 - var(--p, 1)) * 60px), 0); }
+  html.flow main > section::before { translate: 0 calc((var(--m, .5) - .5) * -120px); }
+  html.flow .rangoli { rotate: calc(var(--m, .5) * 220deg - 110deg); scale: calc((.55 + .45 * var(--p, 1)) * (.7 + .3 * var(--q, 1))); opacity: calc(.92 * var(--p, 1) * var(--q, 1)); }
+  html.flow .feathers { transform-origin: 50% 100%; rotate: calc((1 - var(--p, 1)) * 26deg - (1 - var(--q, 1)) * 26deg); scale: calc(.7 + .3 * var(--p, 1)); opacity: calc(var(--p, 1) * var(--q, 1)); }
+  html.flow .sanctum .mandala { rotate: calc(var(--m, .5) * 120deg - 60deg); scale: calc(.8 + .2 * var(--p, 1)); }
+  html.flow .sanctum .wrap::before { translate: 0 calc((var(--m, .5) - .5) * 160px); }
+  html.flow .mural img { transform: scale(calc(1.32 - .32 * var(--p, 1) + .12 * (1 - var(--q, 1)))) translate3d(0, calc((var(--m, .5) - .5) * -9%), 0); }
+  html.flow .garland { scale: calc(.2 + .8 * var(--p, 1)) 1; opacity: calc(var(--p, 1) * (.2 + .8 * var(--q, 1))); }
+  html.flow footer > .wrap { opacity: calc(.15 + .85 * var(--p, 1)); translate: 0 calc((1 - var(--p, 1)) * 60px); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes amb-spin { to { transform: rotate(360deg); } }
+    @keyframes amb-sway { 0%, 100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+    @keyframes amb-breathe { 0%, 100% { transform: scale(1); box-shadow: 0 8px 20px -10px rgba(90, 14, 28, .55); } 50% { transform: scale(1.07); box-shadow: 0 10px 30px -6px rgba(232, 115, 12, .7); } }
+    @keyframes amb-drift { to { background-position: 1008px 504px; } }
+    @keyframes amb-zoom { from { scale: 1; } to { scale: 1.07; } }
+    @keyframes amb-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes amb-glow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+    .rangoli { animation: amb-spin 150s linear infinite; }
+    .rg-b, .rg-d { animation-direction: reverse; }
+    .sanctum .mandala { animation: amb-spin 240s linear infinite reverse; }
+    .feathers { animation: amb-sway 9s ease-in-out infinite; }
+    main h2::before { animation: amb-breathe 6s ease-in-out infinite; }
+    /* 1008px is a whole number of every pattern's tile (48, 56 and 72px), so the drift loops without a seam. */
+    main > section::before, footer::before { background-position: 0 0; animation: amb-drift 260s linear infinite; }
+    .mural img { animation: amb-zoom 22s ease-in-out infinite alternate; }
+    .to-top { animation: amb-float 4s ease-in-out infinite; }
+    .diyas li:nth-child(odd) svg { animation: amb-float 3.4s ease-in-out infinite; }
+    .diyas li:nth-child(even) svg { animation: amb-float 3.4s ease-in-out -1.7s infinite; }
+    .ring .mk.next .dot { animation: amb-glow 2.4s ease-in-out infinite; }
+    .lesson, .wish, .channel, .person, .instr article, .practical > div { transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease; }
+    .lesson:hover, .wish:hover, .channel:hover, .person:hover, .practical > div:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -18px rgba(90, 14, 28, .45); }
+    .niche svg { transition: transform .3s cubic-bezier(.2, .7, .2, 1); }
+    .niche:hover svg, .niche[aria-selected="true"] svg { transform: translateY(-3px) scale(1.12); }
+  }
 
   /* ---- projector mode (see components/ScreenMode.tsx): nothing to click, nothing that needs a hand ---- */
   html.screen { scroll-behavior: auto; cursor: none; scrollbar-width: none; }
@@ -839,3 +876,14 @@
   .channel .btn { align-self: stretch; justify-content: center; text-align: center; padding: 11px 14px; }
   .channel .btn-wa { display: block; }
   .channel-call { font-size: .95rem; font-weight: 600; }
+  .screen-fade { display: grid; place-items: center; background: linear-gradient(180deg, #1b1f6e, #241a63); }
+  .screen-end { text-align: center; color: #f3efe6; padding: 4vh 4vw; }
+  .screen-end img { height: 16vh; margin: 0 auto 2vh; }
+  .screen-end h2 { color: var(--haldi-soft); font-size: clamp(2rem, 5vw, 4.5rem); }
+  .screen-end h2::before, .screen-end h2::after { content: none; }
+  .screen-end p { margin: 1.5vh auto 0; font-size: clamp(1.1rem, 2.2vw, 2rem); color: #dcdbee; }
+  .screen-codes { display: flex; justify-content: center; gap: 6vw; margin-top: 5vh; }
+  .screen-codes figure { margin: 0; }
+  .screen-codes figure > div { width: min(34vh, 24vw); aspect-ratio: 1; background: #fff; padding: 1.2vh; }
+  .screen-codes svg { width: 100%; height: 100%; display: block; }
+  .screen-codes figcaption { margin-top: 1.6vh; font: 400 clamp(1.2rem, 2.4vw, 2.2rem)/1.2 var(--display); color: var(--haldi-soft); }

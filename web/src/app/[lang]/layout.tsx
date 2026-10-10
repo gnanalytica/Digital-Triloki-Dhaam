@@ -47,7 +47,7 @@ export default async function Layout({ children, params }: { children: React.Rea
         {children}
         <Footer lang={lang} site={site} />
         <ScrollFlow />
-        <ScreenMode lang={lang} />
+        <ScreenMode lang={lang} site={site} />
         <GlossPopover />
       </body>
     </html>
