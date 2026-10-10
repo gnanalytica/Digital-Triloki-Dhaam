@@ -10,6 +10,7 @@ export function Sprite() {
       <symbol id="ic-yt-red" viewBox="0 0 24 24"><rect x="1" y="4.5" width="22" height="15" rx="4.5" fill="#ff0000" /><path d="M10 8.8v6.4l5.5-3.2z" fill="#fff" /></symbol>
       <symbol id="ic-ig-color" viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="url(#ig-grad)" /><rect x="6" y="6" width="12" height="12" rx="3.6" fill="none" stroke="#fff" strokeWidth="1.6" /><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" strokeWidth="1.6" /><circle cx="15.6" cy="8.4" r=".9" fill="#fff" /></symbol>
       <symbol id="ic-fb-color" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2" /><path d="M13.3 22.3v-7.4h2.4l.4-2.9h-2.8v-1.8c0-.8.3-1.4 1.5-1.4h1.4V6.200c-.3 0-1.100-.1-2.100-.1-2.200 0-3.600 1.300-3.600 3.700V12H8.100v2.900h2.400v7.400z" fill="#fff" /></symbol>
+      <symbol id="ic-wa-color" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#25d366" /><path fill="#fff" transform="translate(3.6 3.6) scale(.7)" d="M12 3a9 9 0 0 0-7.7 13.600L3 21l4.500-1.200A9 9 0 1 0 12 3zm0 1.800a7.200 7.200 0 1 1-3.700 13.400l-.3-.2-2.400.6.7-2.300-.2-.3A7.200 7.200 0 0 1 12 4.800zm-3 3.400c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.100s.9 2.500 1 2.600c.1.200 1.800 2.800 4.400 3.800 2.200.9 2.600.7 3.100.6.5 0 1.500-.6 1.700-1.200.2-.6.2-1.100.2-1.200-.1-.1-.2-.2-.5-.3l-1.700-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.1-.3-.1-1.100-.4-2-1.300-.8-.7-1.300-1.500-1.400-1.800-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.5.1-.1 0-.3 0-.5l-.8-1.800c-.2-.4-.4-.4-.5-.4z" /></symbol>
     </svg>
   );
 }

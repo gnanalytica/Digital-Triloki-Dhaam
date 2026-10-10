@@ -36,6 +36,11 @@ const EXTRA: Record<string, Tr> = {
   con_group_p: { nl: 'Groep van de mandir', en: 'The mandir’s group', hi: 'मंदिर का समूह' },
   // The group is the mandir's own; what is posted there is up to its members, so nothing is promised about it.
   ft_wa_p: { nl: 'Word lid van de WhatsApp-groep van de mandir en hoor over hoogtijdagen en wijzigingen in de diensten.', en: 'Join the mandir’s WhatsApp group to hear about festivals and changes to the services.', hi: 'मंदिर के WhatsApp समूह से जुड़ें और पर्वों तथा सेवाओं में बदलाव की जानकारी पाएँ।' },
+  cta_yt: { nl: 'Abonneer op YouTube', en: 'Subscribe on YouTube', hi: 'YouTube पर सब्सक्राइब करें' },
+  cta_ig: { nl: 'Volg op Instagram', en: 'Follow on Instagram', hi: 'Instagram पर फ़ॉलो करें' },
+  cta_fb: { nl: 'Word lid van de groep', en: 'Join the group', hi: 'समूह से जुड़ें' },
+  cta_wa: { nl: 'Stuur een bericht', en: 'Send a message', hi: 'संदेश भेजें' },
+  cta_call: { nl: 'Bel', en: 'Call', hi: 'फ़ोन करें' },
   con_soon: { nl: 'Link volgt van de mandir.', en: 'Link to follow from the mandir.', hi: 'लिंक मंदिर से शीघ्र।' },
   don_pick: { nl: 'Kies een bedrag', en: 'Choose an amount', hi: 'राशि चुनें' },
   don_other: { nl: 'Ander bedrag', en: 'Other amount', hi: 'अन्य राशि' },

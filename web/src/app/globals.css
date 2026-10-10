@@ -830,3 +830,12 @@
   .qr-link { display: block; width: 100%; max-width: 170px; aspect-ratio: 1; }
   .qr-link svg { width: 100%; height: 100%; display: block; }
   .qr-empty { border: 2px dashed #c9962a; background: repeating-linear-gradient(45deg, #fff8e6, #fff8e6 10px, #fff 10px, #fff 20px); }
+  .channels { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .channel { gap: 14px; padding: 20px; }
+  .channel-head { display: flex; align-items: center; gap: 12px; align-self: stretch; text-align: left; min-height: 52px; }
+  .channel-head svg { width: 44px; height: 44px; flex: none; }
+  .channel-head h3 { margin: 0; font-size: 1.2rem; line-height: 1.2; }
+  .channel-head p { font-size: .9rem; }
+  .channel .btn { align-self: stretch; justify-content: center; text-align: center; padding: 11px 14px; }
+  .channel .btn-wa { display: block; }
+  .channel-call { font-size: .95rem; font-weight: 600; }

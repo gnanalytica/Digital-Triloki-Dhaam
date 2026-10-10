@@ -81,6 +81,7 @@ export function Header({ lang, site }: { lang: Lang; site: Site }) {
             <a href={site.temple.youtube} aria-label="YouTube"><svg><use href="#ic-yt-red" /></svg></a>
             <a href={site.temple.instagram} aria-label="Instagram"><svg><use href="#ic-ig-color" /></svg></a>
             <a href={site.temple.facebook} aria-label="Facebook"><svg><use href="#ic-fb-color" /></svg></a>
+            {site.temple.whatsappGroup && <a href={site.temple.whatsappGroup} aria-label="WhatsApp"><svg><use href="#ic-wa-color" /></svg></a>}
           </div>
           <div className="langs" role="group" aria-label="Taal / Language / भाषा">
             {LANGS.map((l) => <Link key={l} href={`/${l}${rest}`} lang={l} hrefLang={l} aria-current={l === lang ? 'true' : undefined}>{NAMES[l]}</Link>)}

@@ -16,13 +16,14 @@ async function Code({ url, label }: { url: string; label: string }) {
  */
 export async function Connect({ lang, site }: { lang: Lang; site: Site }) {
   const T = tr(lang), x = site.temple;
-  const channels = [
-    { name: 'YouTube', handle: '@' + x.youtube.split('@')[1], url: x.youtube },
-    { name: 'Instagram', handle: '@' + x.instagram.replace(/\/$/, '').split('/').pop(), url: x.instagram },
-    { name: T.t('s_fb_name'), handle: T.t('feed_private'), url: x.facebook },
-    ...(x.whatsappGroup ? [{ name: T.t('con_group'), handle: T.t('con_group_p'), url: x.whatsappGroup }] : []),
-    { name: T.t('con_wa'), handle: x.phone, url: whatsappURL(x.tel, T.t('ft_wa_msg')) },
-    ...(x.tel2 && x.phone2 ? [{ name: T.t('con_wa'), handle: x.phone2, url: whatsappURL(x.tel2, T.t('ft_wa_msg')) }] : []),
+  const wa = (tel: string, phone: string) => ({ icon: 'wa', name: T.t('con_wa'), handle: phone, url: whatsappURL(tel, T.t('ft_wa_msg')), cta: T.t('cta_wa'), call: tel });
+  const channels: { icon: string; name: string; handle: string; url: string; cta: string; call?: string }[] = [
+    { icon: 'yt-red', name: 'YouTube', handle: '@' + x.youtube.split('@')[1], url: x.youtube, cta: T.t('cta_yt') },
+    { icon: 'ig-color', name: 'Instagram', handle: '@' + x.instagram.replace(/\/$/, '').split('/').pop(), url: x.instagram, cta: T.t('cta_ig') },
+    { icon: 'fb-color', name: T.t('s_fb_name'), handle: T.t('feed_private'), url: x.facebook, cta: T.t('cta_fb') },
+    ...(x.whatsappGroup ? [{ icon: 'wa-color', name: T.t('con_group'), handle: T.t('con_group_p'), url: x.whatsappGroup, cta: T.t('con_group_btn') }] : []),
+    { ...wa(x.tel, x.phone), icon: 'wa-color' },
+    ...(x.tel2 && x.phone2 ? [{ ...wa(x.tel2, x.phone2), icon: 'wa-color' }] : []),
   ];
   return (
     <section className="band social" id="verbinden">
@@ -32,12 +33,14 @@ export async function Connect({ lang, site }: { lang: Lang; site: Site }) {
         <div className="channels">
           {channels.map((c) => (
             <article key={c.url} className="channel">
+              <div className="channel-head"><svg aria-hidden="true"><use href={`#ic-${c.icon}`} /></svg><div><h3>{c.name}</h3><p>{c.handle}</p></div></div>
               <Code url={c.url} label={`${c.name} ${c.handle}`} />
-              <h3>{c.name}</h3><p>{c.handle}</p>
+              <a className={'btn' + (c.icon === 'wa-color' ? ' btn-wa' : '')} target="_blank" rel="noopener" href={c.url}>{c.cta}</a>
+              {c.call && <a className="channel-call" href={`tel:${c.call}`}>{T.t('cta_call')} {c.handle}</a>}
             </article>
           ))}
           {[...(x.whatsappGroup ? [] : [T.t('con_group')]), 'TikTok'].map((name) => (
-            <Ph key={name} T={T} as="article" className="channel"><div className="qr-link qr-empty" aria-hidden="true" /><h3>{name}</h3><p>{T.t('con_soon')}</p></Ph>
+            <Ph key={name} T={T} as="article" className="channel"><div className="channel-head"><div><h3>{name}</h3><p>{T.t('con_soon')}</p></div></div><div className="qr-link qr-empty" aria-hidden="true" /></Ph>
           ))}
         </div>
       </div>

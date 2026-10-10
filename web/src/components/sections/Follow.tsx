@@ -75,6 +75,7 @@ export function Follow({ lang, site, today }: { lang: Lang; site: Site; today: s
           <a href={x.youtube}><svg aria-hidden="true"><use href="#ic-yt-red" /></svg><span><b>YouTube</b>@{x.youtube.split('@')[1]}</span></a>
           <a href={x.instagram}><svg aria-hidden="true"><use href="#ic-ig-color" /></svg><span><b>Instagram</b>@{x.instagram.replace(/\/$/, '').split('/').pop()}</span></a>
           <a href={x.facebook}><svg aria-hidden="true"><use href="#ic-fb-color" /></svg><span><b>{T.t('s_fb_name')}</b><span>{T.t('feed_private')}</span></span></a>
+          {x.whatsappGroup && <a href={x.whatsappGroup}><svg aria-hidden="true"><use href="#ic-wa-color" /></svg><span><b>{T.t('con_group')}</b><span>{T.t('con_group_p')}</span></span></a>}
         </div>
         <p className="shop-actions" style={{ marginTop: 22 }}>
           {x.whatsappGroup && <a className="btn btn-wa" target="_blank" rel="noopener" href={x.whatsappGroup}><WhatsAppIcon />{T.t('con_group_btn')}</a>}
