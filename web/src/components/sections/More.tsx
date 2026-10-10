@@ -8,7 +8,7 @@ import { useNow } from '@/lib/useNow';
 import type { KnowledgeItem, Lang, Site, Tr } from '@/lib/types';
 import { ContactForm } from '../ContactForm';
 import { Ph } from '../Ph';
-import { WhatsApp } from './Small';
+import { WhatsApp, WhatsAppIcon } from './Small';
 
 const TEXTS = (knowledge.items as KnowledgeItem[]).filter((k) => k.verse).slice(0, 5);
 const WORDS = extras.words as { hi: string; ro: string; m: Tr }[];
@@ -70,7 +70,9 @@ export function More({ lang, site, today }: { lang: Lang; site: Site; today: str
 
           <article className="wish feat">
             <Head k="wa" />
-            <WhatsApp site={site} T={T} text={T.t('ft_wa_msg')} label={T.t('ft_wa_btn')} />
+            {site.temple.whatsappGroup
+              ? <p className="shop-actions"><a className="btn btn-wa" target="_blank" rel="noopener" href={site.temple.whatsappGroup}><WhatsAppIcon />{T.t('con_group_btn')}</a></p>
+              : <WhatsApp site={site} T={T} text={T.t('ft_wa_msg')} label={T.t('ft_wa_btn')} />}
           </article>
 
           <article className="wish feat">

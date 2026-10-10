@@ -34,7 +34,7 @@ export type Site = {
   temple: {
     name: string; legalName: string; street: string; postal: string; phone: string; tel: string; email: string;
     phone2?: string; tel2?: string;
-    iban: string; ibanRaw: string; holder: string; donateLink: string | null; amounts: number[]; maps: string; youtube: string; instagram: string; facebook: string;
+    iban: string; ibanRaw: string; holder: string; donateLink: string | null; amounts: number[]; maps: string; youtube: string; instagram: string; facebook: string; whatsappGroup?: string;
   };
   /** The weekly Sunday service. `cancelled` lists Sundays without a day programme, YYYY-MM-DD. */
   service: { start: string; end: string; cancelled: string[] };

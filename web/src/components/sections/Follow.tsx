@@ -7,6 +7,7 @@ import { tr } from '@/lib/i18n';
 import { useNow } from '@/lib/useNow';
 import type { KnowledgeItem, Lang, Site } from '@/lib/types';
 import { Feathers } from '../Ornament';
+import { WhatsAppIcon } from './Small';
 
 const VERSES = (knowledge.items as KnowledgeItem[]).filter((k) => k.verse);
 const KINDS = ['fest', 'verse', 'video', 'ig'] as const;
@@ -75,7 +76,10 @@ export function Follow({ lang, site, today }: { lang: Lang; site: Site; today: s
           <a href={x.instagram}><svg aria-hidden="true"><use href="#ic-ig-color" /></svg><span><b>Instagram</b>@{x.instagram.replace(/\/$/, '').split('/').pop()}</span></a>
           <a href={x.facebook}><svg aria-hidden="true"><use href="#ic-fb-color" /></svg><span><b>{T.t('s_fb_name')}</b><span>{T.t('feed_private')}</span></span></a>
         </div>
-        <p style={{ marginTop: 18 }}><Link className="btn btn-line" href={`/${lang}/connect`}>{T.t('con_more')}</Link></p>
+        <p className="shop-actions" style={{ marginTop: 22 }}>
+          {x.whatsappGroup && <a className="btn btn-wa" target="_blank" rel="noopener" href={x.whatsappGroup}><WhatsAppIcon />{T.t('con_group_btn')}</a>}
+          <Link className="btn btn-line" href={`/${lang}/connect`}>{T.t('con_more')}</Link>
+        </p>
         <div className="feed-chips" role="group">
           {KINDS.map((k) => <button key={k} className="feed-chip" aria-pressed={filter === k} onClick={() => { setFilter(filter === k ? null : k); setShown(BATCH); }}>{T.t('feed_' + k)}</button>)}
         </div>

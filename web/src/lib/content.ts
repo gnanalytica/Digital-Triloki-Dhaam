@@ -18,7 +18,7 @@ type TempleYml = {
   contact: { email: string; phone_display: string; phone_e164: string; phone_secondary_display?: string; phone_secondary_e164?: string };
   weekly_service: { start: string; end: string; no_service_dates?: string[]; programme: { start: string; end: string; title: Tr; description: Tr }[] };
   donations: { iban: string; account_holder: string; online_link?: string | null; suggested_amounts?: number[] };
-  social: { youtube: string; instagram: string; facebook_group: string };
+  social: { youtube: string; instagram: string; facebook_group: string; facebook_group_invite?: string; whatsapp_group?: string };
 };
 type FestivalYml = {
   id: string; date?: string; dates?: string[]; end_date?: string; start_time?: string; end_time?: string; name: Tr; note?: Tr;
@@ -78,7 +78,8 @@ export function getSite(): Site {
       maps: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(temple.address.one_line),
       youtube: temple.social.youtube,
       instagram: temple.social.instagram,
-      facebook: temple.social.facebook_group,
+      facebook: temple.social.facebook_group_invite ?? temple.social.facebook_group,
+      whatsappGroup: temple.social.whatsapp_group,
     },
     service: { start: temple.weekly_service.start, end: temple.weekly_service.end, cancelled: (temple.weekly_service.no_service_dates ?? []).map(iso) },
     programme,

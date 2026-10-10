@@ -32,6 +32,10 @@ const EXTRA: Record<string, Tr> = {
   con_more: { nl: 'Alle kanalen en QR-codes', en: 'All channels and QR codes', hi: 'सभी चैनल और QR कोड' },
   con_wa: { nl: 'WhatsApp of bellen', en: 'WhatsApp or call', hi: 'WhatsApp या फ़ोन' },
   con_group: { nl: 'WhatsApp-groep', en: 'WhatsApp group', hi: 'WhatsApp समूह' },
+  con_group_btn: { nl: 'Word lid van de WhatsApp-groep', en: 'Join the WhatsApp group', hi: 'WhatsApp समूह से जुड़ें' },
+  con_group_p: { nl: 'Groep van de mandir', en: 'The mandir’s group', hi: 'मंदिर का समूह' },
+  // The group is the mandir's own; what is posted there is up to its members, so nothing is promised about it.
+  ft_wa_p: { nl: 'Word lid van de WhatsApp-groep van de mandir en hoor over hoogtijdagen en wijzigingen in de diensten.', en: 'Join the mandir’s WhatsApp group to hear about festivals and changes to the services.', hi: 'मंदिर के WhatsApp समूह से जुड़ें और पर्वों तथा सेवाओं में बदलाव की जानकारी पाएँ।' },
   con_soon: { nl: 'Link volgt van de mandir.', en: 'Link to follow from the mandir.', hi: 'लिंक मंदिर से शीघ्र।' },
   don_pick: { nl: 'Kies een bedrag', en: 'Choose an amount', hi: 'राशि चुनें' },
   don_other: { nl: 'Ander bedrag', en: 'Other amount', hi: 'अन्य राशि' },

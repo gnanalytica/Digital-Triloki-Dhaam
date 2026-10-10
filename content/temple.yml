@@ -156,8 +156,15 @@ social:
   youtube: https://www.youtube.com/@mandirtrilokidhaam32
   instagram: https://www.instagram.com/mandirtrilokidhaam/
   facebook_group: https://www.facebook.com/groups/MandirTrilokiDhaam
+  # Invitation link to the private group, supplied by the mandir on 10 October 2026.
+  # This is the one to publish: the plain group address shows nothing to non-members.
+  facebook_group_invite: https://fb.me/g/27EFyiNf2H/zXT9E5U5
   facebook_group_is_private: true
   whatsapp: null   # a broadcast/community channel is proposed in docs/roadmap.md
+  # Invitation link to the mandir's WhatsApp group, supplied by the mandir on
+  # 10 October 2026. Anyone with this link can join; if spam appears, reset the
+  # link in WhatsApp and replace it here.
+  whatsapp_group: https://chat.whatsapp.com/LgtcosMy5mW6A7mZG6Prvk
 
 web:
   legacy_url: https://trilokidhaam.nl/

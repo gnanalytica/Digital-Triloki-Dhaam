@@ -11,8 +11,8 @@ async function Code({ url, label }: { url: string; label: string }) {
 }
 
 /**
- * Every way to stay in touch, each with a QR code: the three social accounts and the two WhatsApp numbers.
- * TikTok and the WhatsApp group are waiting for their links from the mandir.
+ * Every way to stay in touch, each with a QR code: the social accounts, the WhatsApp group and the two WhatsApp numbers.
+ * TikTok is waiting for its link from the mandir.
  */
 export async function Connect({ lang, site }: { lang: Lang; site: Site }) {
   const T = tr(lang), x = site.temple;
@@ -20,6 +20,7 @@ export async function Connect({ lang, site }: { lang: Lang; site: Site }) {
     { name: 'YouTube', handle: '@' + x.youtube.split('@')[1], url: x.youtube },
     { name: 'Instagram', handle: '@' + x.instagram.replace(/\/$/, '').split('/').pop(), url: x.instagram },
     { name: T.t('s_fb_name'), handle: T.t('feed_private'), url: x.facebook },
+    ...(x.whatsappGroup ? [{ name: T.t('con_group'), handle: T.t('con_group_p'), url: x.whatsappGroup }] : []),
     { name: T.t('con_wa'), handle: x.phone, url: whatsappURL(x.tel, T.t('ft_wa_msg')) },
     ...(x.tel2 && x.phone2 ? [{ name: T.t('con_wa'), handle: x.phone2, url: whatsappURL(x.tel2, T.t('ft_wa_msg')) }] : []),
   ];
@@ -35,7 +36,7 @@ export async function Connect({ lang, site }: { lang: Lang; site: Site }) {
               <h3>{c.name}</h3><p>{c.handle}</p>
             </article>
           ))}
-          {[T.t('con_group'), 'TikTok'].map((name) => (
+          {[...(x.whatsappGroup ? [] : [T.t('con_group')]), 'TikTok'].map((name) => (
             <Ph key={name} T={T} as="article" className="channel"><div className="qr-link qr-empty" aria-hidden="true" /><h3>{name}</h3><p>{T.t('con_soon')}</p></Ph>
           ))}
         </div>
