@@ -12,7 +12,7 @@ export default async function Page(props: PageProps) {
     <main id="main">
       <Inside lang={lang} site={site} />
       <RouteTabs lang={lang} site={site} today={today} />
-      <Faq lang={lang} />
+      <Faq lang={lang} site={site} />
     </main>
   );
 }

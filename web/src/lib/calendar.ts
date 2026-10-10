@@ -9,7 +9,7 @@ function span(f: Festival): [string, string] {
 }
 export const place = (site: Site) => `${site.temple.name}, ${site.temple.street}, ${site.temple.postal}`;
 /** An all-day entry whose title carries the start time: the programme gives no end time, so none is invented. */
-const title = (f: Festival, T: T) => `${T.L(f.name)} (${T.t('from')} ${f.time})`;
+const title = (f: Festival, T: T) => `${T.L(f.name)} (${T.hours(f)})`;
 
 export function googleCalendarURL(f: Festival, site: Site, T: T): string {
   const s = span(f);

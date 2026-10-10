@@ -46,13 +46,27 @@ contact:
       more trustworthy public presence. If it does not, remove it everywhere.
   phone_display: 06-45461229
   phone_e164: "+31645461229"
+  # Second number for WhatsApp and calls, given by the mandir on 10 October 2026.
+  # WhatsApp on the first number reaches Mataji only.
+  phone_secondary_display: 06-21190531
+  phone_secondary_e164: "+31621190531"
 
 # The single weekly service. This is the fact the legacy site most often gets
 # wrong; treat it as authoritative.
 weekly_service:
   day: sunday
-  start: "13:00"
-  end: "15:30"
+  # Changed on 10 October 2026 on the mandir's word: "normal service time is now
+  # one hour later, starts from 2pm". Only the start was stated. The end and the
+  # three parts below are shifted by the same hour; `end_verify` stays true until
+  # the mandir confirms 16:30.
+  start: "14:00"
+  end: "16:30"
+  end_verify: true
+  # Sundays with no day programme. On 11 and 18 October 2026 the Navratri evening
+  # programme (18:00 - 21:30) takes its place.
+  no_service_dates:
+    - 2026-10-11
+    - 2026-10-18
   timezone: Europe/Amsterdam
   label:
     nl: Zondagdienst
@@ -60,16 +74,16 @@ weekly_service:
   # Source: 2026 annual programme poster (both language versions) and the
   # Zondagdienst page. Two orphaned legacy pages disagree; they are wrong.
   programme:
-    - start: "13:00"
-      end: "14:00"
+    - start: "14:00"
+      end: "15:00"
       title:
         nl: Puja en Bhajan
         en: Puja and Bhajan
       description:
         nl: Offeren aan de goden en het samen zingen van religieuze liederen.
         en: Offerings to the deities and communal singing of devotional songs.
-    - start: "14:00"
-      end: "15:00"
+    - start: "15:00"
+      end: "16:00"
       title:
         nl: Parvachan
         en: Parvachan (discourse)
@@ -78,8 +92,8 @@ weekly_service:
         en: >-
           A discourse on a topic from Hinduism. Sessions are sometimes
           interactive, with room for questions.
-    - start: "15:00"
-      end: "15:30"
+    - start: "16:00"
+      end: "16:30"
       title:
         nl: Aarti en Prasadh
         en: Aarti and Prasadh
@@ -97,6 +111,10 @@ opening_model: by_service_only
 donations:
   iban: NL90INGB0007660527
   account_holder: Stichting Senskaar Triloki Dhaam
+  # An online donation link is to follow from the mandir. Use {amount} where the
+  # provider accepts an amount in the address; leave null until it is supplied.
+  online_link: null
+  suggested_amounts: [5, 10, 20, 50]
   bank: ING
   methods:
     - bank_transfer

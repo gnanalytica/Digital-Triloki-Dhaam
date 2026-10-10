@@ -8,7 +8,7 @@ import { useNow } from '@/lib/useNow';
 import type { KnowledgeItem, Lang, Site, Tr } from '@/lib/types';
 import { ContactForm } from '../ContactForm';
 import { Ph } from '../Ph';
-import { whatsappURL } from './Small';
+import { WhatsApp } from './Small';
 
 const TEXTS = (knowledge.items as KnowledgeItem[]).filter((k) => k.verse).slice(0, 5);
 const WORDS = extras.words as { hi: string; ro: string; m: Tr }[];
@@ -20,7 +20,7 @@ const WORDS = extras.words as { hi: string; ro: string; m: Tr }[];
 export function More({ lang, site, today }: { lang: Lang; site: Site; today: string }) {
   const T = tr(lang), now = useNow(today);
   const [shown, setShown] = useState<Record<number, boolean>>({});
-  const service = nextService(now), past = festivalsAt(site.festivals, now).filter((f) => f.past).slice(-6);
+  const service = nextService(now, site.service), past = festivalsAt(site.festivals, now).filter((f) => f.past).slice(-6);
   const Head = ({ k }: { k: string }) => <><h4>{T.t(`ft_${k}_h`)}</h4><p>{T.t(`ft_${k}_p`)}</p></>;
   return (
     <section className="band band-wish" id="wensen">
@@ -70,8 +70,7 @@ export function More({ lang, site, today }: { lang: Lang; site: Site; today: str
 
           <article className="wish feat">
             <Head k="wa" />
-            <a className="btn btn-wa" target="_blank" rel="noopener" href={whatsappURL(site, T.t('ft_wa_msg'))}>{T.t('ft_wa_btn')}</a>
-            <p className="muted small">{T.t('ft_wa_note')}</p>
+            <WhatsApp site={site} T={T} text={T.t('ft_wa_msg')} label={T.t('ft_wa_btn')} />
           </article>
 
           <article className="wish feat">

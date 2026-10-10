@@ -1,7 +1,6 @@
 import { Garland } from '@/components/Ornament';
 import { Donate } from '@/components/sections/Donate';
 import { Follow } from '@/components/sections/Follow';
-import { Heritage } from '@/components/sections/Heritage';
 import { Hero } from '@/components/sections/Hero';
 import { Inside } from '@/components/sections/Inside';
 import { Intro } from '@/components/sections/Intro';
@@ -32,12 +31,11 @@ export default async function Home(props: PageProps) {
       <Year {...all} />
       <Knowledge lang={lang} today={today} />
       <Lessons lang={lang} site={site} />
-      <Heritage lang={lang} site={site} />
       <Mural image="shiva" variant="b" />
       <Together {...all} />
       <Follow {...all} />
       <Puja lang={lang} site={site} />
-      <Faq lang={lang} />
+      <Faq lang={lang} site={site} />
       <More {...all} />
       <Donate lang={lang} site={site} />
     </main>

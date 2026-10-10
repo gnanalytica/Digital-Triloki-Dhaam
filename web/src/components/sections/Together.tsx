@@ -28,6 +28,7 @@ export function Together({ lang, site, today }: { lang: Lang; site: Site; today:
   const T = tr(lang), now = useNow(today);
   const [seva, setSeva] = useStored<Record<string, boolean>>('seva', {});
   const [diyas, setDiyas] = useStored('diyas', 0);
+  const [voice, setVoice] = useState(false);
   const navratri = festivalsAt(site.festivals, now).find((f) => f.nights && !f.past);
   return (
     <section className="band" id="samen">
@@ -48,7 +49,13 @@ export function Together({ lang, site, today }: { lang: Lang; site: Site; today:
           <div>
             <h3>{T.t('join_seva_h')}</h3>
             <p><G lang={lang}>{T.t('join_seva_p')}</G></p>
-            <p><Link className="btn btn-line" href={`/${lang}?route=help#wegwijs`} onClick={() => window.dispatchEvent(new CustomEvent('mtd:route', { detail: 'help' }))}>{T.t('c_i_help')}</Link></p>
+            {/* The mandir phones volunteers back, so a phone number is asked for, not "e-mail or phone". */}
+            <ContactForm lang={lang} kind="volunteer" phone={site.temple.phone} email={site.temple.email}>
+              <label><span>{T.t('f_name')}</span><input type="text" name="name" required autoComplete="name" /></label>
+              <label><span>{T.t('f_phone')}</span><input type="text" name="phone" required autoComplete="tel" inputMode="tel" /></label>
+              <label><span>{T.t('f_email_opt')}</span><input type="text" name="email" autoComplete="email" /></label>
+              <button className="btn">{T.t('join_reg_btn')}</button>
+            </ContactForm>
           </div>
           <div>
             <h3>{T.t('join_translate_h')}</h3>
@@ -95,6 +102,21 @@ export function Together({ lang, site, today }: { lang: Lang; site: Site; today:
               <span className="diya-count">{diyas >= DIYAS ? T.t('diya_full') : `${T.t('diya_count')}: ${diyas}`}</span>
             </p>
           </div>
+        </div>
+
+        <div className="voices">
+          <h3>{T.t('voices_h')}</h3>
+          <p>{T.t('voices_p')}</p>
+          {/* Nobody's words are invented: the slots stay empty until people tell their own story. */}
+          <div className="slots">{[1, 2, 3].map((n) => <div key={n} className="slot">{T.t('voices_empty')}</div>)}</div>
+          <p><button type="button" className="btn" aria-expanded={voice} aria-controls="voice-form" onClick={() => setVoice(!voice)}>{T.t('voices_cta')}</button></p>
+          <ContactForm lang={lang} kind="story" phone={site.temple.phone} email={site.temple.email} id="voice-form" hidden={!voice}>
+            <label><span>{T.t('f_name')}</span><input type="text" name="name" required autoComplete="name" /></label>
+            <label><span>{T.t('f_contact')}</span><input type="text" name="contact" required /></label>
+            <label><span>{T.t('f_message')}</span><textarea name="message" required /></label>
+            <div className="checks"><label><input type="checkbox" name="consent" value="yes" required /><span>{T.t('voices_consent')}</span></label></div>
+            <button className="btn">{T.t('f_send')}</button>
+          </ContactForm>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ export const PAGES = [
   { slug: 'festivals', anchor: 'jaar', label: 'nav_calendar' },
   { slug: 'knowledge', anchor: 'kennis', label: 'nav_learn' },
   { slug: 'lessons', anchor: 'lessen', label: 'les_nav' },
-  { slug: 'heritage', anchor: 'erfgoed', label: 'her_nav' },
   { slug: 'join', anchor: 'samen', label: 'nav_join' },
+  { slug: 'connect', anchor: 'volg', label: 'nav_connect' },
   { slug: 'donate', anchor: 'doneren', label: 'nav_donate' },
 ] as const;

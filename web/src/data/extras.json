@@ -7,9 +7,9 @@
         "hi": "मंदिर कब खुला रहता है?"
       },
       "a": {
-        "nl": "Elke zondag van 13:00 tot 15:30, en op de hoogtijdagen uit het jaarprogramma. Daarbuiten is de mandir gesloten.",
-        "en": "Every Sunday from 13:00 to 15:30, and on the festival dates in the yearly programme. Outside those times the mandir is closed.",
-        "hi": "हर रविवार 13:00 से 15:30 तक, और वार्षिक कार्यक्रम के पर्वों पर। इनके अलावा मंदिर बंद रहता है।"
+        "nl": "Elke zondag van {start} tot {end}, en op de hoogtijdagen uit het jaarprogramma. Daarbuiten is de mandir gesloten.",
+        "en": "Every Sunday from {start} to {end}, and on the festival dates in the yearly programme. Outside those times the mandir is closed.",
+        "hi": "हर रविवार {start} से {end} तक, और वार्षिक कार्यक्रम के पर्वों पर। इनके अलावा मंदिर बंद रहता है।"
       }
     },
     {

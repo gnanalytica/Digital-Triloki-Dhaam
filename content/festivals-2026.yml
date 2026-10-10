@@ -152,6 +152,8 @@ festivals:
       en: Shardiya Navratri
     deity: durga
     every_evening: true
+    # From the mandir, 10 October 2026: "Navratri is from 6 pm till 9:30".
+    end_time: "21:30"
     note:
       nl: Elke avond vanaf 18:00 uur
       en: Every evening from 18:00 hours

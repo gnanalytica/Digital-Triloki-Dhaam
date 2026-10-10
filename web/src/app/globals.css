@@ -796,7 +796,7 @@
   html.screen form, html.screen .find, html.screen .cal-actions, html.screen .feed-chips, html.screen .feed-more, html.screen .chips,
   html.screen .page-links, html.screen .ph-tag, html.screen #wensen, html.screen #faq, html.screen #puja .frames { display: none !important; }
   /* Content the mandir has not supplied yet is not shown to an audience at all. */
-  html.screen .ph, html.screen .gallery, html.screen .practical, html.screen .sub:has(+ .practical), html.screen .spot,
+  html.screen .ph, html.screen .gallery, html.screen .spot,
   html.screen #binnen .lead, html.screen .duo > div:first-child, html.screen .voices, html.screen .concept { display: none !important; }
   html.screen .top-row { justify-content: center; }
   html.screen .brand { margin: 0; }
@@ -805,3 +805,28 @@
   .screen-fade.on { opacity: 1; }
   html.screen .murtis { grid-template-columns: 1fr; }
   html.screen .people { grid-template-columns: minmax(0, 420px); }
+
+  /* ---- after the mandir's first feedback (10 October 2026) ---- */
+  .practical { grid-template-columns: 1fr 1fr 1.4fr; }
+  @media (max-width: 920px) { .practical { grid-template-columns: 1fr; } }
+  .sb-note { margin-top: 12px; padding: 10px 14px; background: #fbefcf; border-left: 3px solid var(--saffron); font-size: .98rem; max-width: none; }
+  .les-next { flex: none !important; color: var(--maroon); }
+  #samen .trio form { margin-top: 14px; }
+  #samen .voices { margin-top: 56px; padding-top: 40px; }
+  #samen .voices h3 { color: var(--maroon); font-size: 1.7rem; margin-bottom: 8px; }
+  .amounts { margin-top: 22px; }
+  .amounts h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .amount-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .amount { min-width: 68px; padding: 10px 16px; border: 1.5px solid var(--maroon); border-radius: 99px; background: rgba(255, 255, 255, .6); color: var(--maroon); font: 600 1.05rem/1.2 var(--body); cursor: pointer; font-variant-numeric: tabular-nums; }
+  .amount:hover { background: #fff; }
+  .amount[aria-pressed="true"] { background: var(--maroon); color: #fff; }
+  .amount-other { margin-top: 14px; max-width: 220px; }
+  .amounts > p { margin-top: 14px; }
+  .amount-how { background: rgba(255, 255, 255, .7); padding: 12px 16px; border-left: 3px solid var(--maroon); }
+  .channels { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 22px; margin-top: 36px; }
+  .channel { background: #fff; padding: 18px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .channel h3 { font-size: 1.25rem; margin-top: 10px; color: var(--maroon); }
+  .channel p { font-size: .95rem; color: var(--muted); overflow-wrap: anywhere; }
+  .qr-link { display: block; width: 100%; max-width: 170px; aspect-ratio: 1; }
+  .qr-link svg { width: 100%; height: 100%; display: block; }
+  .qr-empty { border: 2px dashed #c9962a; background: repeating-linear-gradient(45deg, #fff8e6, #fff8e6 10px, #fff 10px, #fff 20px); }

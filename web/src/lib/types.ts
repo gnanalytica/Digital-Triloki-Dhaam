@@ -13,6 +13,8 @@ export type Festival = {
   end?: string;
   /** Start time, HH:MM. */
   time: string;
+  /** End time, HH:MM, where the mandir has given one. */
+  until?: string;
   name: Tr;
   note?: Tr;
   /** Number of consecutive evenings, for Navratri. */
@@ -24,16 +26,18 @@ export type FestivalNow = Festival & { past: boolean };
 
 export type ProgrammePart = { start: string; end: string; mins: number; title: Tr; desc: Tr };
 export type Ceremony = { id: string; name: Tr; gloss?: Tr; desc?: Tr; urgent?: boolean };
-export type Course = { id: string; name: Tr; desc: Tr; fixed?: boolean; time?: string };
+export type Course = { id: string; name: Tr; desc: Tr; fixed?: boolean; time?: string; next?: { date: string; theme?: Tr } };
 export type Video = { id: string; title: Tr };
 export type Reel = { id: string; date: string };
 
 export type Site = {
   temple: {
     name: string; legalName: string; street: string; postal: string; phone: string; tel: string; email: string;
-    iban: string; ibanRaw: string; holder: string; maps: string; youtube: string; instagram: string; facebook: string;
+    phone2?: string; tel2?: string;
+    iban: string; ibanRaw: string; holder: string; donateLink: string | null; amounts: number[]; maps: string; youtube: string; instagram: string; facebook: string;
   };
-  service: { start: string; end: string };
+  /** The weekly Sunday service. `cancelled` lists Sundays without a day programme, YYYY-MM-DD. */
+  service: { start: string; end: string; cancelled: string[] };
   programme: ProgrammePart[];
   festivals: Festival[];
   year: number;

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 import knowledge from '@/data/knowledge.json';
 import { festivalsAt } from '@/lib/dates';
@@ -31,7 +32,7 @@ export function Follow({ lang, site, today }: { lang: Lang; site: Site; today: s
     fest: fests.map((f) => (
       <article key={f.id} className={'card card-fest' + (f.past ? ' past' : '')}>
         <small>{T.t('feed_fest')}</small><span className="when">{T.range(f)}</span><h3>{T.L(f.name)}</h3>
-        <p className="muted">{f.past ? T.t('past') : `${T.t('from')} ${f.time}${f.note ? ', ' + T.L(f.note).toLowerCase() : ''}`}</p>
+        <p className="muted">{f.past ? T.t('past') : `${T.hours(f)}${f.note ? ', ' + T.L(f.note).toLowerCase() : ''}`}</p>
         {f.pending && <p><span className="flag" style={{ margin: 0 }}>{T.t('to_confirm')}</span></p>}
       </article>
     )),
@@ -74,12 +75,13 @@ export function Follow({ lang, site, today }: { lang: Lang; site: Site; today: s
           <a href={x.instagram}><svg aria-hidden="true"><use href="#ic-ig-color" /></svg><span><b>Instagram</b>@{x.instagram.replace(/\/$/, '').split('/').pop()}</span></a>
           <a href={x.facebook}><svg aria-hidden="true"><use href="#ic-fb-color" /></svg><span><b>{T.t('s_fb_name')}</b><span>{T.t('feed_private')}</span></span></a>
         </div>
+        <p style={{ marginTop: 18 }}><Link className="btn btn-line" href={`/${lang}/connect`}>{T.t('con_more')}</Link></p>
         <div className="feed-chips" role="group">
           {KINDS.map((k) => <button key={k} className="feed-chip" aria-pressed={filter === k} onClick={() => { setFilter(filter === k ? null : k); setShown(BATCH); }}>{T.t('feed_' + k)}</button>)}
         </div>
         <div className="feed feed-grid">{visible}</div>
         <div className={'feed-more' + (done ? ' done' : '')}>
-          {done ? <span role="status">{T.t('feed_end')}</span> : <button type="button" className="btn btn-line" onClick={() => setShown(shown + BATCH)}>{T.t('feed_loading')}</button>}
+          {done ? <span role="status">{T.t('feed_end').replace('{start}', site.service.start)}</span> : <button type="button" className="btn btn-line" onClick={() => setShown(shown + BATCH)}>{T.t('feed_loading')}</button>}
         </div>
       </div>
     </section>

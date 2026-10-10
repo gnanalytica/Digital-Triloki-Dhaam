@@ -49,7 +49,7 @@ export function RouteTabs({ lang, site, today }: { lang: Lang; site: Site; today
 
   let panel: React.ReactNode;
   if (pick === 'first') {
-    const s = nextService(now);
+    const s = nextService(now, site.service);
     panel = (
       <>
         <div>
@@ -79,7 +79,7 @@ export function RouteTabs({ lang, site, today }: { lang: Lang; site: Site; today
               <li key={f.id}>
                 <span><b>{T.L(f.name)}</b>{f.pending && <span className="flag">{T.t('to_confirm')}</span>}<br />
                   <span className="muted">{T.range(f)}{f.note ? ', ' + T.L(f.note).toLowerCase() : ''}</span></span>
-                <span className="t">{T.t('from')} {f.time}</span>
+                <span className="t">{T.hours(f)}</span>
               </li>
             ))}
           </ul>
@@ -118,8 +118,10 @@ export function RouteTabs({ lang, site, today }: { lang: Lang; site: Site; today
             <fieldset><legend>{T.t('c_seva_q')}</legend>
               <div className="checks">{T.t('c_seva_opts').split('|').map((o) => <label key={o}><input type="checkbox" name="help_with" value={o} />{o}</label>)}</div>
             </fieldset>
-            <WhoFields lang={lang} />
-            <button className="btn">{T.t('f_send')}</button>
+            <label><span>{T.t('f_name')}</span><input type="text" name="name" required autoComplete="name" /></label>
+            <label><span>{T.t('f_phone')}</span><input type="text" name="phone" required autoComplete="tel" inputMode="tel" /></label>
+            <label><span>{T.t('f_email_opt')}</span><input type="text" name="email" autoComplete="email" /></label>
+            <button className="btn">{T.t('join_reg_btn')}</button>
           </ContactForm>
         </div>
       </>

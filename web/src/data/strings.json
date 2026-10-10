@@ -110,9 +110,9 @@
     "hi": "YouTube पर देखें"
   },
   "welcome_h": {
-    "nl": "Iedereen is welkom, elke zondag om 13:00",
-    "en": "Everyone is welcome, every Sunday at 13:00",
-    "hi": "हर रविवार दोपहर 1 बजे, सबका स्वागत है"
+    "nl": "Iedereen is welkom, elke zondag om {start}",
+    "en": "Everyone is welcome, every Sunday at {start}",
+    "hi": "हर रविवार {start} बजे, सबका स्वागत है"
   },
   "welcome_p": {
     "nl": "Mandir Triloki Dhaam is een hindoetempel aan de Tongelresestraat in Eindhoven: een plek van rust, devotie en gemeenschap. U bent welkom, ook als u voor het eerst komt.",
@@ -1160,9 +1160,9 @@
     "hi": "और आ रहा है"
   },
   "feed_end": {
-    "nl": "Dat is alles voor nu. Tot zondag om 13:00.",
-    "en": "That is everything for now. See you on Sunday at 13:00.",
-    "hi": "अभी के लिए इतना ही। रविवार दोपहर 1 बजे मिलते हैं।"
+    "nl": "Dat is alles voor nu. Tot zondag om {start}.",
+    "en": "That is everything for now. See you on Sunday at {start}.",
+    "hi": "अभी के लिए इतना ही। रविवार {start} बजे मिलते हैं।"
   },
   "to_top": {
     "nl": "Naar boven",

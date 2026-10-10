@@ -10,7 +10,7 @@ export default async function Page(props: PageProps) {
   return (
     <main id="main">
       <Lessons lang={lang} site={site} />
-      <Faq lang={lang} />
+      <Faq lang={lang} site={site} />
     </main>
   );
 }

@@ -57,6 +57,12 @@ courses:
       start: "13:00"
       end: "15:30"
       day: sunday
+    # From the mandir, 10 October 2026. The 2026/2027 dates as a whole are still to come.
+    next_session:
+      date: 2026-11-01
+      theme:
+        nl: Diwali
+        en: Diwali
     sessions_ref: academic_year_2025_2026_sessions
     audience:
       nl: Voor deelnemers, ook samen met kinderen

@@ -35,8 +35,8 @@ Rules the site keeps, taken from the repository's own:
 The home page, `/[lang]`, is the whole site as one flowing page, and the menu scrolls to its sections. Sections make
 their entrance as a function of the scroll position, so scrolling back up plays it in reverse
 (`src/components/ScrollFlow.tsx`). Each section also has a page of
-its own, for sharing and for search engines: `/visit` · `/festivals` · `/knowledge` · `/lessons` · `/heritage` ·
-`/join` · `/donate`, plus `/calendar.ics` (the year as a calendar file). The list is in `src/lib/pages.ts`; everything
+its own, for sharing and for search engines: `/visit` · `/festivals` · `/knowledge` · `/lessons` · `/join` ·
+`/connect` (all channels with QR codes) · `/donate`, plus `/calendar.ics` (the year as a calendar file). The list is in `src/lib/pages.ts`; everything
 is assembled from the sections in `src/components/sections/`.
 
 Dates on a page (next service, next festival, lit lamps) are rendered on the server for "today in Amsterdam",
@@ -48,10 +48,10 @@ Every form posts to `src/app/api/contact/route.ts`, which e-mails the message to
 [Resend](https://resend.com). Nothing is stored. Set these in Vercel (see `.env.example`):
 
 - `RESEND_API_KEY`: from a Resend account.
-- `CONTACT_TO`: where messages go, for example `trilokidhaam@gmail.com`.
+- `CONTACT_TO`: optional. Messages go to the e-mail address in `content/temple.yml` unless this is set.
 - `CONTACT_FROM`: a sender on a domain verified in Resend.
 
-Until all three are set, the forms say they are not connected yet and show the phone number and e-mail address
+Until the key and the sender are set, the forms say they are not connected yet and show the phone number and e-mail address
 instead. They never claim a message was sent when it was not.
 
 Seva sign-ups and lit diyas are kept in the visitor's browser only; sharing them between visitors needs a database

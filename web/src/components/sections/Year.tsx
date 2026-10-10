@@ -106,7 +106,7 @@ export function Year({ lang, site, today }: { lang: Lang; site: Site; today: str
             <h3>{T.L(chosen.name)}</h3>
             <div className="when">{T.range(chosen)}</div>
             {ALIASES[chosen.id] && <p className="alias">{T.t('also')}: {ALIASES[chosen.id].join(', ')}.{ALIAS_NOTE[chosen.id] ? ' ' + T.L(ALIAS_NOTE[chosen.id]) : ''}</p>}
-            <p className="meta">{chosen.past ? T.t('past') : `${T.fmt(cd, { weekday: 'long' })}, ${T.t('from')} ${chosen.time}`}{chosen.note ? `. ${T.L(chosen.note)}.` : ''}</p>
+            <p className="meta">{chosen.past ? T.t('past') : `${T.fmt(cd, { weekday: 'long' })}, ${T.hours(chosen)}`}{chosen.note ? `. ${T.L(chosen.note)}.` : ''}</p>
             {chosen.pending && <p><span className="flag" style={{ margin: 0 }}>{T.t('to_confirm')}</span></p>}
             {about && <p><G lang={lang}>{T.L(about)}</G></p>}
             {chosen.nights && <LampRow festival={chosen} now={now} T={T} />}

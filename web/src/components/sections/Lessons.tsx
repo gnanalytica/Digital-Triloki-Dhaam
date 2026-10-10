@@ -20,6 +20,7 @@ export function Lessons({ lang, site }: { lang: Lang; site: Site }) {
             <article key={c.id} className="lesson">
               <h4>{T.L(c.name)}</h4>
               <p>{T.L(c.desc)}</p>
+              {c.next && <p className="les-next"><b>{T.t('les_next')}:</b> {T.fmt(c.next.date, { weekday: 'long', day: 'numeric', month: 'long' })}{c.next.theme ? `, ${T.t('les_theme')} ${T.L(c.next.theme)}` : ''}</p>}
               <small>{c.time ? `${T.t('les_sunday')} ${c.time}. ` : ''}{T.t(c.fixed ? 'courses_fixed' : 'courses_gated')}</small>
               <button type="button" className={'btn' + (picked[c.id] ? '' : ' btn-line')} aria-pressed={!!picked[c.id]} onClick={() => toggle(c.id)}>{T.t(picked[c.id] ? 'les_picked' : 'les_btn')}</button>
             </article>

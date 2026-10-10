@@ -16,7 +16,7 @@ export function Footer({ lang, site }: { lang: Lang; site: Site }) {
           <div className="foot">
             <div>
               <h3>{T.t('contact_h')}</h3>
-              <address>{x.street}<br />{x.postal}<br /><a href={`tel:${x.tel}`}>{x.phone}</a><br /><a href={`mailto:${x.email}`}>{x.email}</a></address>
+              <address>{x.street}<br />{x.postal}<br /><a href={`tel:${x.tel}`}>{x.phone}</a>{x.tel2 && <>, <a href={`tel:${x.tel2}`}>{x.phone2}</a></>}<br /><a href={`mailto:${x.email}`}>{x.email}</a></address>
             </div>
             <div>
               <h3>{T.t('every_sunday')}</h3>

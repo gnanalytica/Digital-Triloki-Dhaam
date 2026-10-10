@@ -1,7 +1,7 @@
 import { getSite } from '@/lib/content';
 
 // Every form on the site posts here. The message is e-mailed to the mandir through Resend (https://resend.com).
-// Nothing is stored. Until RESEND_API_KEY, CONTACT_TO and CONTACT_FROM are set, this answers 503 and the form
+// Nothing is stored. Until RESEND_API_KEY and CONTACT_FROM are set, this answers 503 and the form
 // tells the visitor to phone or e-mail instead, so nobody is told "sent" when nothing was.
 const KINDS: Record<string, string> = {
   ceremony: 'Aanvraag ceremonie',
@@ -28,8 +28,9 @@ export async function POST(request: Request) {
     .map(([key, value]) => `${key}: ${String(value).trim().slice(0, MAX)}`);
   if (!lines.length || lines.join('\n').length > MAX * 2) return Response.json({ error: 'bad_request' }, { status: 400 });
 
-  const { RESEND_API_KEY: key, CONTACT_TO: to, CONTACT_FROM: from } = process.env;
-  if (!key || !to || !from) return Response.json({ error: 'not_configured' }, { status: 503 });
+  // Messages go to the mandir's own address (content/temple.yml) unless CONTACT_TO says otherwise.
+  const { RESEND_API_KEY: key, CONTACT_FROM: from } = process.env, to = process.env.CONTACT_TO || getSite().temple.email;
+  if (!key || !from) return Response.json({ error: 'not_configured' }, { status: 503 });
 
   const contact = typeof fields.contact === 'string' ? fields.contact.trim() : '';
   const sent = await fetch('https://api.resend.com/emails', {

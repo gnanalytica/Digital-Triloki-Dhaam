@@ -36,7 +36,8 @@ export function Inside({ lang, site }: { lang: Lang; site: Site }) {
 
         <h3 className="sub">{T.t('prac_h')}</h3>
         <div className="practical">
-          {['prac_park', 'prac_ov', 'prac_acc'].map((k) => <Ph key={k} T={T}><h4>{T.t(k)}</h4><p>{T.t('prac_ph')}</p></Ph>)}
+          <div><h4>{T.t('prac_park')}</h4><p>{T.t('prac_park_p')}</p></div>
+          <div><h4>{T.t('prac_ov')}</h4><p>{T.t('prac_ov_p')} <b>{x.street}, {x.postal}</b>.</p><p style={{ marginTop: 10 }}><a target="_blank" rel="noopener" href="https://9292.nl/">9292.nl</a></p></div>
           <Ph T={T} className="map"><p>{T.t('prac_map')}</p><p><b>{x.street}, {x.postal}</b></p><a className="btn btn-line" target="_blank" rel="noopener" href={x.maps}>{T.t('route')}</a></Ph>
         </div>
       </div>
