@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import { GlossPopover } from '@/components/GlossPopover';
 import { Header } from '@/components/Header';
 import { Sprite } from '@/components/Ornament';
+import { ScreenMode } from '@/components/ScreenMode';
 import { ScrollFlow } from '@/components/ScrollFlow';
 import { getSite } from '@/lib/content';
 import { tr } from '@/lib/i18n';
@@ -46,6 +47,7 @@ export default async function Layout({ children, params }: { children: React.Rea
         {children}
         <Footer lang={lang} site={site} />
         <ScrollFlow />
+        <ScreenMode lang={lang} />
         <GlossPopover />
       </body>
     </html>

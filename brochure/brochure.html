@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Mandir Triloki Dhaam: bouw mee aan onze digitale mandir</title>
+<!--
+  Donation brochure for the digital platform. A4, two sides, Dutch and English.
+  Print: open in Chrome, Print, A4, margins "None", background graphics on. Or run ./build.sh for brochure.pdf.
+
+  Facts come from content/temple.yml (IBAN, account holder, address, phone, e-mail, Sunday service).
+  No amounts are stated: the board has not approved a budget. No ANBI or tax-relief claim is made.
+  What is "already there" is what is live on the new website; everything under "what we want to build" is a plan.
+  The payment QR is supplied by the mandir: save it as brochure/payment-qr.png and it replaces the marked box.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --marble: #fdfcfa; --ink: #2b1b24; --maroon: #7a1528; --saffron: #e8730c; --sindoor: #b3470a; --haldi: #d9a021; --haldi-soft: #f0d48a; --indigo: #1b1f6e; --lead: #4a3741;
+    --display: 'Tiro Devanagari Hindi', Georgia, serif; --body: 'Palanquin', system-ui, sans-serif;
+    --lotus-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 30'%3E%3Cg fill='%23f0d48a' fill-opacity='.5' stroke='%23d9a021' stroke-width='1.1' stroke-linejoin='round'%3E%3Cpath d='M36 24C27 25 19 22 15 15C23 15 31 18 36 24ZM36 24C45 25 53 22 57 15C49 15 41 18 36 24Z'/%3E%3Cpath d='M36 24C30 22 25 17 24 9C30 11 34 17 36 24ZM36 24C42 22 47 17 48 9C42 11 38 17 36 24Z'/%3E%3Cpath d='M36 4C41 10 41 18 36 24C31 18 31 10 36 4Z'/%3E%3C/g%3E%3C/svg%3E"); }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; background: #d8d2c6; }
+  body { font: 400 10.6pt/1.5 var(--body); color: var(--ink); }
+  .page { position: relative; width: 210mm; height: 297mm; margin: 0 auto 8mm; overflow: hidden; background: var(--marble); page-break-after: always; }
+  @media print { html, body { background: none; } .page { margin: 0; } }
+  h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 1.12; color: var(--maroon); }
+  p { margin: 0; }
+  .en { color: var(--lead); font-style: italic; }
+  .ribbon { height: 4mm; background: linear-gradient(90deg, #e8730c, #f5b301, #d81b60, #7b1fa2, #1a5fb4, #0a8f86, #3c9a3c, #f5b301, #e8730c); }
+  .lotus { height: 8mm; background: var(--lotus-mark) center / 19mm 8mm no-repeat, linear-gradient(90deg, rgba(217,160,33,0), var(--haldi) 30%, var(--haldi) 70%, rgba(217,160,33,0)) center / 100% .3mm no-repeat; }
+  .lotus::after { content: ''; display: block; width: 24mm; height: 8mm; margin: 0 auto; background: var(--page, var(--marble)) var(--lotus-mark) center / 19mm 8mm no-repeat; }
+
+  /* ---- front ---- */
+  .front { --page: #fff3de; background: linear-gradient(180deg, var(--marble) 0, #fff3de 46%, #ffd98a 100%); }
+  .front .head { display: flex; align-items: center; gap: 6mm; padding: 9mm 16mm 0; }
+  .front .head img { height: 30mm; }
+  .front .head b { display: block; font: 400 17pt/1.15 var(--display); color: var(--maroon); }
+  .front .head span { font-size: 10pt; color: var(--lead); }
+  .photo { position: relative; margin: 6mm 0 0; height: 84mm; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+  .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(253,252,250,.0) 55%, #fff3de 100%), linear-gradient(0deg, rgba(253,252,250,0) 80%, var(--marble) 100%); }
+  .title { padding: 2mm 16mm 0; text-align: center; }
+  .greet { font: italic 400 15pt/1.2 var(--display); color: var(--sindoor); }
+  .title h1 { font-size: 30pt; margin-top: 1.5mm; white-space: nowrap; }
+  .title h1 + p { font: italic 400 17pt/1.2 var(--display); color: var(--lead); margin-top: 1.5mm; }
+  .pitch { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; padding: 5mm 16mm 0; font-size: 11pt; line-height: 1.5; position: relative; z-index: 1; }
+  .pitch p + p { margin-top: 2.5mm; }
+  .screen-note { position: absolute; left: 16mm; right: 16mm; bottom: 12mm; display: flex; align-items: center; gap: 6mm; padding: 5mm 7mm; background: var(--maroon); color: #fff; }
+  .screen-note svg { width: 13mm; height: 13mm; flex: none; fill: none; stroke: var(--haldi-soft); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .screen-note b { display: block; font: 400 15pt/1.2 var(--display); color: var(--haldi-soft); }
+  .screen-note span { font-size: 10.5pt; }
+  .rangoli { position: absolute; width: 74mm; height: 74mm; opacity: .9; }
+  .front .rangoli { right: -31mm; top: -27mm; width: 82mm; height: 82mm; }
+  .front .head, .front .title { position: relative; z-index: 1; }
+
+  /* ---- back ---- */
+  .back { padding: 0 16mm; }
+  .back .ribbon { margin: 0 -16mm; }
+  .back h2 { font-size: 21pt; margin-top: 8mm; }
+  .back h2 + .en { font: italic 400 12.5pt/1.2 var(--display); margin-top: 1mm; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 9mm; margin-top: 4mm; }
+  .item { padding-top: 2.5mm; border-top: .5mm solid var(--haldi); }
+  .item h3 { font-size: 12.5pt; }
+  .item p { font-size: 9.6pt; line-height: 1.45; margin-top: .8mm; }
+  .item .en { font-size: 9.2pt; }
+  .have { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; margin-top: 3mm; font-size: 10pt; }
+  .have ul { margin: 0; padding: 0; list-style: none; }
+  .have li { padding: 1mm 0 1mm 6mm; background: var(--lotus-mark) 0 1.6mm / 4.6mm auto no-repeat; }
+  .give { position: absolute; left: 0; right: 0; bottom: 0; padding: 8mm 16mm 9mm; background: linear-gradient(180deg, #1b1f6e, #241a63); color: #f3efe6; display: grid; grid-template-columns: 1fr 44mm; gap: 10mm; align-items: center; }
+  .give h2 { color: var(--haldi-soft); font-size: 22pt; margin: 0; }
+  .give .en { color: #c9c9e2; }
+  .iban { font: 400 20pt/1.2 var(--display); color: #fff; margin-top: 3mm; letter-spacing: .02em; }
+  .give dl { margin: 2mm 0 0; display: grid; grid-template-columns: auto 1fr; gap: .6mm 5mm; font-size: 10pt; }
+  .give dt { color: var(--haldi-soft); }
+  .give dd { margin: 0; }
+  .give .small { font-size: 9pt; color: #c9c9e2; margin-top: 3mm; }
+  .qr { width: 44mm; height: 44mm; background: #fff; display: grid; place-items: center; text-align: center; }
+  .qr img { width: 40mm; height: 40mm; display: block; }
+  .qr .todo { width: 40mm; height: 40mm; border: .6mm dashed #c9962a; color: #7a5a10; font-size: 8.5pt; line-height: 1.35; display: grid; place-content: center; padding: 3mm; }
+  .qr-cap { grid-column: 2; text-align: center; font-size: 8.5pt; color: #c9c9e2; margin-top: -8mm; }
+  .contact { margin-top: 4mm; padding-top: 3mm; border-top: .3mm solid rgba(240,212,138,.5); font-size: 9pt; color: #dcdbee; grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 4mm; white-space: nowrap; }
+  .contact b { color: var(--haldi-soft); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<section class="page front">
+  <div class="ribbon"></div>
+  <div class="head">
+    <img src="logo.png" alt="">
+    <div><b>Mandir Triloki Dhaam Eindhoven</b><span>Stichting Senskaar Triloki Dhaam</span></div>
+  </div>
+  <div class="photo"><img src="altar.jpg" alt=""></div>
+  <div class="title">
+    <p class="greet">Raam Raam</p>
+    <h1>Bouw mee aan onze digitale mandir</h1>
+    <p>Help us build our digital mandir</p>
+  </div>
+  <div class="lotus" style="margin: 5mm 16mm 0"></div>
+  <div class="pitch">
+    <div>
+      <p>Onze mandir is elke zondag een thuis voor iedereen. Wij willen dat thuis ook online bouwen: een plek waar de gemeenschap elkaar vindt, waar kennis over Sanatan Dharma wordt gedeeld en waar jong en oud bij de mandir betrokken blijven.</p>
+      <p>De nieuwe website is de eerste stap. Met uw gift bouwen we verder.</p>
+    </div>
+    <div class="en">
+      <p>Every Sunday our mandir is a home for everyone. We want to build that home online too: a place where the community finds each other, where knowledge of Sanatan Dharma is shared, and where young and old stay close to the mandir.</p>
+      <p>The new website is the first step. With your gift we build on.</p>
+    </div>
+  </div>
+  <svg class="rangoli" viewBox="-110 -110 220 220" aria-hidden="true" id="rangoli"></svg>
+  <div class="screen-note">
+    <svg viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="17" rx="1.5"/><path d="M11 28h10M16 22v6"/></svg>
+    <div><b>Kijk op het scherm naast u</b><span>De nieuwe website, in het Nederlands, Engels en Hindi. <i>See the new website on the screen beside you, in Dutch, English and Hindi.</i></span></div>
+  </div>
+</section>
+
+<section class="page back">
+  <div class="ribbon"></div>
+
+  <h2>Wat er al is</h2>
+  <p class="en">What is already there</p>
+  <div class="have">
+    <ul>
+      <li>Een nieuwe website in drie talen</li>
+      <li>Het jaarprogramma als kalender voor uw telefoon</li>
+      <li>Mantra’s, aarti’s en uitleg uit ons eigen archief</li>
+      <li>Aanmelden voor lessen, sewa en ceremonies</li>
+    </ul>
+    <ul class="en">
+      <li>A new website in three languages</li>
+      <li>The year’s programme as a calendar for your phone</li>
+      <li>Mantras, aartis and teachings from our own archive</li>
+      <li>Signing up for lessons, seva and ceremonies</li>
+    </ul>
+  </div>
+
+  <h2>Wat we willen bouwen</h2>
+  <p class="en">What we want to build</p>
+  <div class="cols">
+    <div class="item">
+      <h3>Een gemeenschap</h3>
+      <p>Berichten vóór elke hoogtijdag, een plek voor vrijwilligers en de verhalen van onze ouderen.</p>
+      <p class="en">A community: a message before each festival, a place for volunteers, and the stories of our elders.</p>
+    </div>
+    <div class="item">
+      <h3>Kennis delen</h3>
+      <p>Mantra’s en aarti’s om te beluisteren, lessen voor kinderen en uitleg bij elke hoogtijdag.</p>
+      <p class="en">Sharing knowledge: mantras and aartis to listen to, lessons for children, and each festival explained.</p>
+    </div>
+    <div class="item">
+      <h3>Campagnes en sociale media</h3>
+      <p>Regelmatig beeld en verhaal op YouTube en Instagram, zodat ook wie ons nog niet kent de mandir vindt.</p>
+      <p class="en">Campaigns and social media: regular pictures and stories on YouTube and Instagram, so those who do not know us yet can find the mandir.</p>
+    </div>
+    <div class="item">
+      <h3>Eigen video en foto</h3>
+      <p>Opnamen van diensten en hoogtijdagen, met toestemming van wie in beeld is.</p>
+      <p class="en">Our own video and photography: recordings of services and festivals, with the consent of everyone pictured.</p>
+    </div>
+    <div class="item">
+      <h3>Online regelen</h3>
+      <p>Een afspraak met de pandit, online doneren en puja-artikelen bestellen.</p>
+      <p class="en">Arranging things online: an appointment with the pandit, giving online, and ordering items for puja.</p>
+    </div>
+    <div class="item">
+      <h3>Onderhoud</h3>
+      <p>Hosting, beveiliging en iemand die de website elke week actueel houdt.</p>
+      <p class="en">Upkeep: hosting, security, and someone who keeps the website current every week.</p>
+    </div>
+  </div>
+
+  <div class="give">
+    <div>
+      <h2>Zo geeft u</h2>
+      <p class="en">How to give</p>
+      <div class="iban">NL90 INGB 0007 6605 27</div>
+      <dl>
+        <dt>Ten name van / Name</dt><dd>Stichting Senskaar Triloki Dhaam</dd>
+        <dt>Omschrijving / Reference</dt><dd>Digitaal platform</dd>
+      </dl>
+      <p class="small">Elk bedrag helpt. U kunt ook in de mandir geven; vraag het een van de vrijwilligers.<br><i>Every amount helps. You can also give at the mandir; ask one of the volunteers.</i></p>
+    </div>
+    <div class="qr" id="qr"><div class="todo">QR-code van de bank volgt.<br>Bestand: payment-qr.png</div></div>
+    <p class="qr-cap" id="qr-cap"></p>
+    <div class="contact">
+      <span><b>Tongelresestraat 371</b>, 5642 NC Eindhoven</span>
+      <span><b>06-45461229</b> · trilokidhaam@gmail.com</span>
+      <span>Elke zondag / Every Sunday <b>13:00 – 15:30</b></span>
+    </div>
+  </div>
+</section>
+
+<script>
+// The rangoli from the website, in the same colours.
+(function () {
+  var p = ['#d81b60', '#f5b301', '#0a8f86', '#7b1fa2', '#e8730c'], out = '<circle r="108" fill="' + p[4] + '"/><circle r="100" fill="#fff8ec"/>';
+  function ring(n, a, b, w, fill, offset) {
+    var h = b - a, d = 'M0,' + -a + 'C' + w + ',' + -(a + h * .3) + ' ' + w * .75 + ',' + -(b - h * .28) + ' 0,' + -b + 'C' + -w * .75 + ',' + -(b - h * .28) + ' ' + -w + ',' + -(a + h * .3) + ' 0,' + -a + 'Z';
+    for (var i = 0; i < n; i++) out += '<path fill="' + fill + '" stroke="#b98416" stroke-width=".5" d="' + d + '" transform="rotate(' + (360 / n * i + (offset || 0)) + ')"/>';
+  }
+  ring(24, 74, 99, 7.5, p[2]); ring(16, 46, 78, 11, p[1], 11.25); ring(8, 16, 50, 13, p[0]);
+  out += '<circle r="15" fill="' + p[3] + '"/><circle r="5" fill="#fff"/>';
+  document.getElementById('rangoli').innerHTML = out;
+  // The bank's payment QR, once the mandir has supplied it.
+  var img = new Image();
+  img.onload = function () { document.getElementById('qr').innerHTML = ''; document.getElementById('qr').appendChild(img); document.getElementById('qr-cap').textContent = 'Scan om te geven / Scan to give'; };
+  img.src = 'payment-qr.png';
+})();
+</script>
+</body>
+</html>

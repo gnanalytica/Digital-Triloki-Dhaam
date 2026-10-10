@@ -788,3 +788,20 @@
   html.flow .mural img { transform: scale(calc(1.3 - .3 * var(--p, 1))) translate3d(0, calc((1 - var(--q, 1)) * -6%), 0); }
   html.flow .garland { transform: scaleX(calc(.2 + .8 * var(--p, 1))); opacity: var(--p, 1); }
   html.flow footer > .wrap { opacity: calc(.15 + .85 * var(--p, 1)); transform: translate3d(0, calc((1 - var(--p, 1)) * 60px), 0); }
+
+  /* ---- projector mode (see components/ScreenMode.tsx): nothing to click, nothing that needs a hand ---- */
+  html.screen { scroll-behavior: auto; cursor: none; scrollbar-width: none; }
+  html.screen::-webkit-scrollbar { display: none; }
+  html.screen .nav, html.screen .icons, html.screen .langs, html.screen .to-top, html.screen .film-toggle, html.screen .skip,
+  html.screen form, html.screen .find, html.screen .cal-actions, html.screen .feed-chips, html.screen .feed-more, html.screen .chips,
+  html.screen .page-links, html.screen .ph-tag, html.screen #wensen, html.screen #faq, html.screen #puja .frames { display: none !important; }
+  /* Content the mandir has not supplied yet is not shown to an audience at all. */
+  html.screen .ph, html.screen .gallery, html.screen .practical, html.screen .sub:has(+ .practical), html.screen .spot,
+  html.screen #binnen .lead, html.screen .duo > div:first-child, html.screen .voices, html.screen .concept { display: none !important; }
+  html.screen .top-row { justify-content: center; }
+  html.screen .brand { margin: 0; }
+  html.screen .top .logo { height: 84px; }
+  .screen-fade { position: fixed; inset: 0; z-index: 90; background: var(--marble); opacity: 0; pointer-events: none; transition: opacity 1.2s ease; }
+  .screen-fade.on { opacity: 1; }
+  html.screen .murtis { grid-template-columns: 1fr; }
+  html.screen .people { grid-template-columns: minmax(0, 420px); }
