@@ -44,9 +44,15 @@ export async function POST(request: Request) {
       body: JSON.stringify({ secret: secret ?? '', tab, lang: body.lang ?? '', fields }),
     });
     const next = posted.headers.get('location');
-    const result = next ? await fetch(next) : posted;
-    const answer = (await result.json().catch(() => null)) as { ok?: boolean } | null;
-    if (!answer?.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
+    if (!next) return Response.json({ error: 'send_failed' }, { status: 502 });
+    // The redirect is only issued once the script has run, so the row is normally written by now. Reading the
+    // script's own answer occasionally fails; it is tried a few times, and only an explicit "not ok" from the
+    // script counts as a failure. Otherwise a visitor would be told to try again and the row would appear twice.
+    let answer: { ok?: boolean } | null = null;
+    for (let attempt = 0; attempt < 3 && !answer; attempt++) {
+      answer = (await fetch(next).then((r) => r.json()).catch(() => null)) as { ok?: boolean } | null;
+    }
+    if (answer && answer.ok === false) return Response.json({ error: 'send_failed' }, { status: 502 });
   } catch { return Response.json({ error: 'send_failed' }, { status: 502 }); }
   return Response.json({ ok: true });
 }
