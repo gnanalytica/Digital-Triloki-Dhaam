@@ -44,15 +44,17 @@ refreshed hourly, and then follow the visitor's own clock in the browser.
 
 ## Forms
 
-Every form posts to `src/app/api/contact/route.ts`, which e-mails the message to the mandir through
-[Resend](https://resend.com). Nothing is stored. Set these in Vercel (see `.env.example`):
+Every form posts to `src/app/api/contact/route.ts`, which adds one row to the mandir's Google Sheet: one tab per kind
+of form (Lessen, Vrijwilligers, Ceremonies, Vragen aan de pandit…). That Sheet is the pandit's overview of who signed
+up. The row is written by the Apps Script in `google-sheet/Code.gs`; the set-up steps are at the top of that file and
+end with two values to set in Vercel (see `.env.example`):
 
-- `RESEND_API_KEY`: from a Resend account.
-- `CONTACT_TO`: optional. Messages go to the e-mail address in `content/temple.yml` unless this is set.
-- `CONTACT_FROM`: a sender on a domain verified in Resend.
+- `SHEET_WEBHOOK_URL`: the script's web app URL.
+- `SHEET_SECRET`: the phrase chosen in the script.
 
-Until the key and the sender are set, the forms say they are not connected yet and show the phone number and e-mail address
-instead. They never claim a message was sent when it was not.
+No e-mail service is involved. The Sheet can e-mail the mandir about new rows by itself (Tools → Notification
+settings). Until both values are set, the forms say they are not connected yet and show the phone number and e-mail
+address instead. They never claim a message was sent when it was not.
 
 Seva sign-ups and lit diyas are kept in the visitor's browser only; sharing them between visitors needs a database
 and is not built.

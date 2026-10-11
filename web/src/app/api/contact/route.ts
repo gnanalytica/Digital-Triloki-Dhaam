@@ -1,47 +1,47 @@
-import { getSite } from '@/lib/content';
-
-// Every form on the site posts here. The message is e-mailed to the mandir through Resend (https://resend.com).
-// Nothing is stored. Until RESEND_API_KEY and CONTACT_FROM are set, this answers 503 and the form
-// tells the visitor to phone or e-mail instead, so nobody is told "sent" when nothing was.
+// Every form on the site posts here, and each message becomes one row in the mandir's Google Sheet: one tab per
+// kind of form, so the pandit has an overview of who signed up for what. The row is written by a small Apps Script
+// attached to that Sheet (google-sheet/Code.gs); nothing is stored on the website itself and no e-mail service is
+// involved. The Sheet can e-mail the mandir about new rows on its own (Tools > Notification settings).
+//
+// Until SHEET_WEBHOOK_URL and SHEET_SECRET are set, this answers 503 and the form tells the visitor to phone or
+// e-mail instead, so nobody is told "sent" when nothing was.
 const KINDS: Record<string, string> = {
-  ceremony: 'Aanvraag ceremonie',
-  volunteer: 'Aanmelding vrijwilliger',
-  conversation: 'Verzoek om een gesprek',
-  lessons: 'Aanmelding lessen',
-  story: 'Verhaal voor "Stemmen van de ouderen"',
-  correction: 'Melding van een fout op de site',
-  question: 'Vraag aan de pandit',
+  ceremony: 'Ceremonies',
+  volunteer: 'Vrijwilligers',
+  conversation: 'Gesprekken',
+  lessons: 'Lessen',
+  story: 'Verhalen',
+  correction: 'Correcties',
+  question: 'Vragen aan de pandit',
 };
 const MAX = 4000;
 
 export async function POST(request: Request) {
   let body: { kind?: string; lang?: string; fields?: Record<string, unknown> };
   try { body = await request.json(); } catch { return Response.json({ error: 'bad_request' }, { status: 400 }); }
-  const subject = KINDS[body.kind ?? ''];
-  const fields = body.fields && typeof body.fields === 'object' ? body.fields : null;
-  if (!subject || !fields) return Response.json({ error: 'bad_request' }, { status: 400 });
+  const tab = KINDS[body.kind ?? ''];
+  const input = body.fields && typeof body.fields === 'object' ? body.fields : null;
+  if (!tab || !input) return Response.json({ error: 'bad_request' }, { status: 400 });
   // The hidden "website" field is only ever filled in by bots: accept and drop.
-  if (fields.website) return Response.json({ ok: true });
+  if (input.website) return Response.json({ ok: true });
 
-  const lines = Object.entries(fields)
-    .filter(([key, value]) => /^[a-z_]{1,30}$/.test(key) && typeof value === 'string' && value.trim())
-    .map(([key, value]) => `${key}: ${String(value).trim().slice(0, MAX)}`);
-  if (!lines.length || lines.join('\n').length > MAX * 2) return Response.json({ error: 'bad_request' }, { status: 400 });
+  const fields: Record<string, string> = {};
+  for (const [key, value] of Object.entries(input)) {
+    if (/^[a-z_]{1,30}$/.test(key) && typeof value === 'string' && value.trim()) fields[key] = value.trim().slice(0, MAX);
+  }
+  if (!Object.keys(fields).length || JSON.stringify(fields).length > MAX * 2) return Response.json({ error: 'bad_request' }, { status: 400 });
 
-  // Messages go to the mandir's own address (content/temple.yml) unless CONTACT_TO says otherwise.
-  const { RESEND_API_KEY: key, CONTACT_FROM: from } = process.env, to = process.env.CONTACT_TO || getSite().temple.email;
-  if (!key || !from) return Response.json({ error: 'not_configured' }, { status: 503 });
+  const { SHEET_WEBHOOK_URL: url, SHEET_SECRET: secret } = process.env;
+  if (!url || !secret) return Response.json({ error: 'not_configured' }, { status: 503 });
 
-  const contact = typeof fields.contact === 'string' ? fields.contact.trim() : '';
-  const sent = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-    body: JSON.stringify({
-      from, to: [to], subject: `[Website] ${subject}`,
-      reply_to: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) ? contact : undefined,
-      text: `${subject}\nVia de website van ${getSite().temple.name}, taal: ${body.lang ?? '?'}\n\n${lines.join('\n')}\n`,
-    }),
-  });
-  if (!sent.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
+  try {
+    const sent = await fetch(url, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ secret, tab, lang: body.lang ?? '', fields }),
+    });
+    const answer = (await sent.json().catch(() => null)) as { ok?: boolean } | null;
+    if (!sent.ok || !answer?.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
+  } catch { return Response.json({ error: 'send_failed' }, { status: 502 }); }
   return Response.json({ ok: true });
 }
