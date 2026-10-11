@@ -29,7 +29,7 @@ export function Lessons({ lang, site }: { lang: Lang; site: Site }) {
         <ContactForm lang={lang} kind="lessons" phone={site.temple.phone} email={site.temple.email} id="les-form" hidden={!any}>
           <fieldset><legend>{T.t('les_which')}</legend>
             <div className="checks">
-              {site.courses.map((c) => <label key={c.id}><input type="checkbox" name="lessons" value={c.name.nl} checked={!!picked[c.id]} onChange={() => toggle(c.id)} />{T.L(c.name)}</label>)}
+              {site.courses.map((c) => <label key={c.id}><input type="checkbox" name="lessons" value={c.name.en ?? c.name.nl} checked={!!picked[c.id]} onChange={() => toggle(c.id)} />{T.L(c.name)}</label>)}
             </div>
           </fieldset>
           <label><span>{T.t('f_name')}</span><input type="text" name="name" required autoComplete="name" /></label>

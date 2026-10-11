@@ -7,12 +7,12 @@
 // e-mail instead, so nobody is told "sent" when nothing was.
 const KINDS: Record<string, string> = {
   ceremony: 'Ceremonies',
-  volunteer: 'Vrijwilligers',
-  conversation: 'Gesprekken',
-  lessons: 'Lessen',
-  story: 'Verhalen',
-  correction: 'Correcties',
-  question: 'Vragen aan de pandit',
+  volunteer: 'Volunteers',
+  conversation: 'Conversations',
+  lessons: 'Lessons',
+  story: 'Stories',
+  correction: 'Corrections',
+  question: 'Questions for the pandit',
 };
 const MAX = 4000;
 

@@ -45,7 +45,7 @@ refreshed hourly, and then follow the visitor's own clock in the browser.
 ## Forms
 
 Every form posts to `src/app/api/contact/route.ts`, which adds one row to the mandir's Google Sheet: one tab per kind
-of form (Lessen, Vrijwilligers, Ceremonies, Vragen aan de pandit…). That Sheet is the pandit's overview of who signed
+of form (Lessons, Volunteers, Ceremonies, Questions for the pandit…). That Sheet is the pandit's overview of who signed
 up. The row is written by the Apps Script in `google-sheet/Code.gs`; the set-up steps are at the top of that file and
 end with two values to set in Vercel (see `.env.example`):
 

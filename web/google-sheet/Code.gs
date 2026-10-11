@@ -1,8 +1,8 @@
 /**
  * Mandir Triloki Dhaam: website forms -> this Google Sheet.
  *
- * Every form on the website ends up here as one row. Each kind of form gets its own tab (Lessen, Vrijwilligers,
- * Ceremonies, Vragen aan de pandit, ...), created the first time it is needed. Columns are added by themselves
+ * Every form on the website ends up here as one row. Each kind of form gets its own tab (Lessons, Volunteers,
+ * Ceremonies, Questions for the pandit, ...), created the first time it is needed. Columns are added by themselves
  * when a form sends a field the tab has not seen before.
  *
  * Set-up, once, signed in as the mandir's Google account:
@@ -24,7 +24,7 @@ function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
     if (SECRET && data.secret !== SECRET) return reply({ ok: false, error: 'forbidden' });
-    const tab = String(data.tab || 'Overig').slice(0, 60);
+    const tab = String(data.tab || 'Other').slice(0, 60);
     const fields = data.fields || {};
     const book = SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
     const lock = LockService.getScriptLock();
@@ -32,13 +32,13 @@ function doPost(e) {
     try {
       const sheet = book.getSheetByName(tab) || book.insertSheet(tab);
       let head = sheet.getLastColumn() ? sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0] : [];
-      if (!head.length) { head = ['Datum', 'Taal']; sheet.appendRow(head); sheet.setFrozenRows(1); sheet.getRange(1, 1, 1, 2).setFontWeight('bold'); }
+      if (!head.length) { head = ['Date', 'Language']; sheet.appendRow(head); sheet.setFrozenRows(1); sheet.getRange(1, 1, 1, 2).setFontWeight('bold'); }
       Object.keys(fields).forEach(function (key) {
         if (head.indexOf(key) < 0) { head.push(key); sheet.getRange(1, head.length).setValue(key).setFontWeight('bold'); }
       });
       const row = head.map(function (key) {
-        if (key === 'Datum') return new Date();
-        if (key === 'Taal') return data.lang || '';
+        if (key === 'Date') return new Date();
+        if (key === 'Language') return data.lang || '';
         // A leading apostrophe keeps Sheets from treating what a visitor typed (=..., +31...) as a formula.
         return fields[key] === undefined ? '' : "'" + String(fields[key]);
       });
