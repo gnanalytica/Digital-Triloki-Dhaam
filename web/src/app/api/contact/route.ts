@@ -35,13 +35,18 @@ export async function POST(request: Request) {
   if (!url) return Response.json({ error: 'not_configured' }, { status: 503 });
 
   try {
-    const sent = await fetch(url, {
+    // Apps Script answers a POST with a redirect to where the result can be read. Followed automatically, the
+    // redirect carries the POST's headers along and Google answers with an error page, so it is followed by hand.
+    const posted = await fetch(url, {
       method: 'POST',
+      redirect: 'manual',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ secret: secret ?? '', tab, lang: body.lang ?? '', fields }),
     });
-    const answer = (await sent.json().catch(() => null)) as { ok?: boolean } | null;
-    if (!sent.ok || !answer?.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
+    const next = posted.headers.get('location');
+    const result = next ? await fetch(next) : posted;
+    const answer = (await result.json().catch(() => null)) as { ok?: boolean } | null;
+    if (!answer?.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
   } catch { return Response.json({ error: 'send_failed' }, { status: 502 }); }
   return Response.json({ ok: true });
 }
