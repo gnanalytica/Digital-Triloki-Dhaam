@@ -16,6 +16,9 @@
  * After changing this script, use Deploy > Manage deployments > Edit > New version, so the URL stays the same.
  */
 const SECRET = '';
+// The Sheet to write to. Needed when this script is a standalone project (script.new) rather than one opened from
+// the Sheet's own Extensions menu. Leave '' for a script that lives inside the Sheet.
+const SHEET_ID = '1whCxQLXFvl38ARQt59_Z278kFi65i73adyVhmT9TQxM';
 
 function doPost(e) {
   try {
@@ -23,7 +26,7 @@ function doPost(e) {
     if (SECRET && data.secret !== SECRET) return reply({ ok: false, error: 'forbidden' });
     const tab = String(data.tab || 'Overig').slice(0, 60);
     const fields = data.fields || {};
-    const book = SpreadsheetApp.getActiveSpreadsheet();
+    const book = SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
     const lock = LockService.getScriptLock();
     lock.waitLock(20000);
     try {
