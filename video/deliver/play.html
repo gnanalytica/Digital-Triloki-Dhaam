@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<title>Mandir Triloki Dhaam: doneerscherm</title>
+<!-- Open this file in a browser on the screen's computer and press F (or double-click) for full screen.
+     The film plays without sound and repeats for as long as the page is open. -->
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1f6e; overflow: hidden; cursor: none; }
+  video { width: 100vw; height: 100vh; object-fit: contain; display: block; }
+</style>
+<video src="donate-loop.mp4" autoplay muted loop playsinline></video>
+<script>
+  const v = document.querySelector('video');
+  const full = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen());
+  document.addEventListener('dblclick', full);
+  document.addEventListener('keydown', (e) => { if (e.key === 'f' || e.key === 'F') full(); });
+  v.play().catch(() => {});
+</script>
+</html>

@@ -11,6 +11,7 @@ import { LANGS, type Lang, type Site } from '@/lib/types';
  *   /nl?screen            Dutch, then English, alternating each time round
  *   /nl?screen=nl         Dutch only        (any list works: ?screen=nl,en,hi)
  *   /nl?screen&speed=90   faster; the default is 60 pixels a second
+ *   /nl?screen=still      the same look, standing still (for filming)
  *
  * The page scrolls itself slowly from top to bottom, then shows a closing screen with large QR codes (the WhatsApp
  * group, the website, and the donation link once there is one) for people in the room to scan, and starts again
@@ -27,6 +28,12 @@ export function ScreenMode({ lang, site }: { lang: Lang; site: Site }) {
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
+    // ?screen=still: the projector look (no menu, forms or placeholders) on any page, without the self-scrolling.
+    // Used when the page is filmed, with the camera doing the scrolling.
+    if (query.get('screen') === 'still') {
+      document.documentElement.classList.add('screen');
+      return () => document.documentElement.classList.remove('screen');
+    }
     if (!query.has('screen') || path !== `/${lang}`) return;
     const wanted = (query.get('screen') || 'nl,en').split(',').filter((l): l is Lang => (LANGS as readonly string[]).includes(l));
     const langs = wanted.length ? wanted : [lang];
