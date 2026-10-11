@@ -163,5 +163,91 @@
         "hi": "दीपक"
       }
     }
+  ],
+  "murtis": [
+    {
+      "name": {
+        "nl": "Hanuman",
+        "en": "Hanuman",
+        "hi": "हनुमान"
+      },
+      "body": {
+        "nl": "De toegewijde dienaar van Shri Ram: het toonbeeld van kracht, moed en onbaatzuchtige toewijding.",
+        "en": "The devoted servant of Shri Ram: the image of strength, courage and selfless devotion.",
+        "hi": "श्री राम के परम भक्त: बल, साहस और निःस्वार्थ भक्ति के प्रतीक।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Vishnu",
+        "en": "Vishnu",
+        "hi": "विष्णु"
+      },
+      "body": {
+        "nl": "De instandhouder van het universum, die de dharma beschermt en als avatar, zoals Ram en Krishna, op aarde verschijnt.",
+        "en": "The preserver of the universe, who protects dharma and comes to earth as avatars such as Ram and Krishna.",
+        "hi": "सृष्टि के पालनहार, जो धर्म की रक्षा करते हैं और राम तथा कृष्ण जैसे अवतारों में पृथ्वी पर आते हैं।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Lakshmi",
+        "en": "Lakshmi",
+        "hi": "लक्ष्मी"
+      },
+      "body": {
+        "nl": "De godin van voorspoed, geluk en welzijn, en de gemalin van Vishnu; zij wordt in het bijzonder met Diwali vereerd.",
+        "en": "The goddess of prosperity, good fortune and well-being, and the consort of Vishnu; she is honoured especially at Diwali.",
+        "hi": "समृद्धि, सौभाग्य और कल्याण की देवी, भगवान विष्णु की अर्धांगिनी; दिवाली पर इनकी विशेष पूजा होती है।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Kalki",
+        "en": "Kalki",
+        "hi": "कल्कि"
+      },
+      "body": {
+        "nl": "De tiende avatar van Vishnu, die volgens de geschriften aan het einde van het huidige tijdperk komt om de dharma te herstellen.",
+        "en": "The tenth avatar of Vishnu, who according to the scriptures will come at the end of the present age to restore dharma.",
+        "hi": "भगवान विष्णु के दसवें अवतार, जो शास्त्रों के अनुसार वर्तमान युग के अंत में धर्म की पुनर्स्थापना के लिए आएँगे।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Shiva",
+        "en": "Shiva",
+        "hi": "शिव"
+      },
+      "body": {
+        "nl": "De heer van transformatie, die oplost wat oud is zodat de schepping zich kan vernieuwen; ook de heer van meditatie en yoga.",
+        "en": "The lord of transformation, who dissolves what is old so that creation can renew itself; also the lord of meditation and yoga.",
+        "hi": "परिवर्तन के देव, जो पुराने का लय करते हैं ताकि सृष्टि का नवीकरण हो; ध्यान और योग के भी अधिपति।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Parvati",
+        "en": "Parvati",
+        "hi": "पार्वती"
+      },
+      "body": {
+        "nl": "De Goddelijke Moeder, gemalin van Shiva en moeder van Ganesh; zij belichaamt liefde, toewijding en kracht (shakti).",
+        "en": "The Divine Mother, consort of Shiva and mother of Ganesh; she embodies love, devotion and strength (shakti).",
+        "hi": "जगत जननी, भगवान शिव की अर्धांगिनी और गणेश जी की माता; प्रेम, भक्ति और शक्ति की मूर्ति।"
+      }
+    },
+    {
+      "name": {
+        "nl": "Ganesh",
+        "en": "Ganesh",
+        "hi": "गणेश"
+      },
+      "body": {
+        "nl": "De wegnemer van hindernissen en heer van wijsheid; hij wordt als eerste vereerd bij elke puja en elk nieuw begin.",
+        "en": "The remover of obstacles and lord of wisdom; he is honoured first at every puja and every new beginning.",
+        "hi": "विघ्नहर्ता और बुद्धि के देव; हर पूजा और हर नए आरंभ में सबसे पहले इनका पूजन होता है।"
+      }
+    }
   ]
 }

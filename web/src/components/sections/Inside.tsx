@@ -2,9 +2,13 @@
 import { useState } from 'react';
 import extras from '@/data/extras.json';
 import { tr } from '@/lib/i18n';
-import type { Lang, Site } from '@/lib/types';
+import type { Lang, Site, Tr } from '@/lib/types';
 import { G } from '../Gloss';
 import { Ph } from '../Ph';
+
+// The murtis on the altar, left to right, as named by the mandir (11 October 2026). The one-line descriptions are
+// general ones, written for newcomers; the pandit should confirm them, and will add a video for each.
+const MURTIS = extras.murtis as { name: Tr; body: Tr }[];
 
 /** Inside the mandir: the altar with numbered murtis, the people, and how to get there. Mostly awaiting the temple's own content. */
 export function Inside({ lang, site }: { lang: Lang; site: Site }) {
@@ -21,11 +25,20 @@ export function Inside({ lang, site }: { lang: Lang; site: Site }) {
             <img src="/assets/altar.jpg" alt="Het altaar van Mandir Triloki Dhaam met de murti's op een rij" loading="lazy" />
             <div>
               {(extras.spots as number[][]).map((s, n) => (
-                <button key={n} type="button" className="spot" aria-pressed={n === spot} style={{ left: s[0] + '%', top: s[1] + '%' }} onClick={() => setSpot(n)}>{n + 1}</button>
+                <button key={n} type="button" className="spot" aria-pressed={n === spot} aria-label={T.L(MURTIS[n].name)} style={{ left: s[0] + '%', top: s[1] + '%' }} onClick={() => setSpot(n)}>{n + 1}</button>
               ))}
             </div>
           </div>
-          <div id="murti-info" aria-live="polite"><Ph T={T}><h3>{T.t('spot_t')} {spot + 1}</h3><p><G lang={lang}>{T.t('spot_d')}</G></p></Ph></div>
+          <div id="murti-info" aria-live="polite">
+            <div className="murti-card">
+              <small>{T.t('spot_t')} {spot + 1} / {MURTIS.length}</small>
+              <h3>{T.L(MURTIS[spot].name)}</h3>
+              <p><G lang={lang}>{T.L(MURTIS[spot].body)}</G></p>
+              <div className="murti-pick" role="group">
+                {MURTIS.map((m, n) => <button key={m.name.nl} type="button" className="chip-m" aria-pressed={n === spot} onClick={() => setSpot(n)}>{T.L(m.name)}</button>)}
+              </div>
+            </div>
+          </div>
         </div>
 
         <h3 className="sub">{T.t('ppl_h')}</h3>
