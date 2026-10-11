@@ -3,7 +3,7 @@
 // attached to that Sheet (google-sheet/Code.gs); nothing is stored on the website itself and no e-mail service is
 // involved. The Sheet can e-mail the mandir about new rows on its own (Tools > Notification settings).
 //
-// Until SHEET_WEBHOOK_URL and SHEET_SECRET are set, this answers 503 and the form tells the visitor to phone or
+// Until SHEET_WEBHOOK_URL is set, this answers 503 and the form tells the visitor to phone or
 // e-mail instead, so nobody is told "sent" when nothing was.
 const KINDS: Record<string, string> = {
   ceremony: 'Ceremonies',
@@ -32,13 +32,13 @@ export async function POST(request: Request) {
   if (!Object.keys(fields).length || JSON.stringify(fields).length > MAX * 2) return Response.json({ error: 'bad_request' }, { status: 400 });
 
   const { SHEET_WEBHOOK_URL: url, SHEET_SECRET: secret } = process.env;
-  if (!url || !secret) return Response.json({ error: 'not_configured' }, { status: 503 });
+  if (!url) return Response.json({ error: 'not_configured' }, { status: 503 });
 
   try {
     const sent = await fetch(url, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ secret, tab, lang: body.lang ?? '', fields }),
+      body: JSON.stringify({ secret: secret ?? '', tab, lang: body.lang ?? '', fields }),
     });
     const answer = (await sent.json().catch(() => null)) as { ok?: boolean } | null;
     if (!sent.ok || !answer?.ok) return Response.json({ error: 'send_failed' }, { status: 502 });
