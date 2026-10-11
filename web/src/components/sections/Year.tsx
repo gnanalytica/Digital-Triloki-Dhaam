@@ -99,9 +99,9 @@ export function Year({ lang, site, today }: { lang: Lang; site: Site; today: str
         <div className="year">
           <div className="ring">
             <Ring year={site.year} fests={fests} next={next} chosen={chosen} now={now} T={T} onPick={setPicked} />
-            <div className="ring-centre"><span>{T.fmt(cd, { month: 'long' })}</span><b>{sameMonthEnd ? `${cd.getDate()} – ${day(chosen.end!).getDate()}` : cd.getDate()}</b><i>{T.L(chosen.name)}</i></div>
+            <div className="ring-centre" key={chosen.id}><span>{T.fmt(cd, { month: 'long' })}</span><b>{sameMonthEnd ? `${cd.getDate()} – ${day(chosen.end!).getDate()}` : cd.getDate()}</b><i>{T.L(chosen.name)}</i></div>
           </div>
-          <div className="fest" aria-live="polite">
+          <div className="fest" aria-live="polite" key={chosen.id}>
             {next?.id === chosen.id && <span className="badge">{daysTo > 0 ? T.inDays(daysTo) : T.t('today')}</span>}
             <h3>{T.L(chosen.name)}</h3>
             <div className="when">{T.range(chosen)}</div>

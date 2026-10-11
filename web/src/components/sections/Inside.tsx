@@ -30,7 +30,9 @@ export function Inside({ lang, site }: { lang: Lang; site: Site }) {
             </div>
           </div>
           <div id="murti-info" aria-live="polite">
-            <div className="murti-card">
+            {/* The key remounts the card for each murti, so its text is always fresh even when a browser's
+                translate feature or an extension has replaced the text on the page. */}
+            <div className="murti-card" key={spot} translate="no">
               <small>{T.t('spot_t')} {spot + 1} / {MURTIS.length}</small>
               <h3>{T.L(MURTIS[spot].name)}</h3>
               <p><G lang={lang}>{T.L(MURTIS[spot].body)}</G></p>

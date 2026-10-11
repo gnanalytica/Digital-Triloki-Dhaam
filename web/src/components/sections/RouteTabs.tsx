@@ -168,7 +168,7 @@ export function RouteTabs({ lang, site, today }: { lang: Lang; site: Site; today
             </button>
           ))}
         </div>
-        <div className="panel" role="tabpanel" tabIndex={0}>{panel}</div>
+        <div className="panel" role="tabpanel" tabIndex={0} key={pick}>{panel}</div>
         <p className="muted center" style={{ marginTop: 18 }}>{T.t('hours_note')}</p>
       </div>
     </section>
