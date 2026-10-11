@@ -7,4 +7,4 @@ dist
 out
 out/
 deliver/*.mp4
-public/site-scroll.mp4
+public/site-*.mp4
