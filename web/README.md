@@ -67,3 +67,21 @@ the Root Directory set to `web`, and the one that used to serve the static mocku
 
 The site tells search engines not to index it until `SITE_INDEXABLE=1` is set. Set `SITE_URL` to the public address
 at the same time.
+
+### The domain
+
+`trilokidhaam.nl` stays registered at TransIP, and its DNS stays there too, so the mandir keeps control of it; do not
+move the nameservers to Vercel. The domain is added to the Vercel project (`www` redirects to the bare domain), and
+the site goes live on it when these records are set in TransIP (Domeinen → trilokidhaam.nl → DNS):
+
+| Name | Type | Value |
+| --- | --- | --- |
+| `@` | A | `216.150.1.1` |
+| `@` | A | `216.150.16.1` |
+| `www` | CNAME | `bb4ce80d3e8f771b.vercel-dns-016.com.` |
+
+Remove the old `@` A record (85.10.159.95, the WordPress server) and any AAAA records. Leave MX and the mail TXT
+records alone: they carry the mandir's e-mail. If there are CAA records, they must allow `letsencrypt.org`.
+
+Every page of the old WordPress site redirects permanently to the page that now covers it; the list is in
+`next.config.ts`.
